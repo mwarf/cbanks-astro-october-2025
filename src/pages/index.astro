@@ -2,12 +2,13 @@
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
 import { Hero } from '@/components/sections/hero';
-import { Logos } from '@/components/sections/logos';
+
 import { Features } from '@/components/sections/features';
 import { ResourceAllocation } from '@/components/sections/resource-allocation';
 import { Testimonials } from '@/components/sections/testimonials';
 import { Pricing1 } from '@/components/sections/pricing1';
 import { FAQ } from '@/components/sections/faq';
+import { Logos } from '@/components/sections/logos';
 
 import CreamContainer from '@/components/elements/cream-container';
 
@@ -17,7 +18,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <CreamContainer className="via-muted to-muted/80">
     <Hero />
-    <!-- <Logos /> Some kind of problem with react-fast-marquee with Astro? -->
+    <Logos client:only="react"/> 
     <Features />
     <ResourceAllocation />
   </CreamContainer>

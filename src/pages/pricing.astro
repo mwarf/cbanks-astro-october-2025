@@ -1,0 +1,15 @@
+---
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import CreamContainer from '@/components/elements/cream-container';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Pricing2 from '@/components/sections/pricing2';
+import { Pricing1 } from '@/components/sections/pricing1';
+
+
+---
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <CreamContainer>
+    <Pricing1 client:load className="py-28 text-center lg:pt-44 lg:pb-32" />
+    <Pricing2 />
+  </CreamContainer>
+</DefaultLayout>

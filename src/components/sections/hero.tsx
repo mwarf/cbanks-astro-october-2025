@@ -4,31 +4,31 @@ import {
   ChartNoAxesColumn,
   CircleDot,
   Diamond,
-} from 'lucide-react';
+} from "lucide-react";
 
-import { DashedLine } from '../elements/dashed-line';
+import { DashedLine } from "../elements/dashed-line";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
-    title: 'Tailored workflows',
-    description: 'Track progress across custom issue flows for your team.',
+    title: "Tailored workflows",
+    description: "Track progress across custom issue flows for your team.",
     icon: CircleDot,
   },
   {
-    title: 'Cross-team projects',
-    description: 'Collaborate across teams and departments.',
+    title: "Cross-team projects",
+    description: "Collaborate across teams and departments.",
     icon: Blend,
   },
   {
-    title: 'Milestones',
-    description: 'Break projects down into concrete phases.',
+    title: "Milestones",
+    description: "Break projects down into concrete phases.",
     icon: Diamond,
   },
   {
-    title: 'Progress insights',
-    description: 'Track scope, velocity, and progress over time.',
+    title: "Progress insights",
+    description: "Track scope, velocity, and progress over time.",
     icon: ChartNoAxesColumn,
   },
 ];
@@ -96,7 +96,7 @@ export const Hero = () => {
           <img
             src="/hero.webp"
             alt="hero"
-            className="rounded-3xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
+            className="rounded-3xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none size-full"
           />
         </div>
       </div>

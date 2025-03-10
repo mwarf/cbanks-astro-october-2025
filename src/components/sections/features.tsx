@@ -1,23 +1,21 @@
+import { ChevronRight } from "lucide-react";
 
+import { DashedLine } from "../elements/dashed-line";
 
-import { ChevronRight } from 'lucide-react';
-
-import { DashedLine } from '../elements/dashed-line';
-
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
-    title: 'Purpose-built for product development',
-    image: '/features/triage-card.svg',
+    title: "Purpose-built for product development",
+    image: "/features/triage-card.svg",
   },
   {
-    title: 'Manage projects end-to-end',
-    image: '/features/cycle-card.svg',
+    title: "Manage projects end-to-end",
+    image: "/features/cycle-card.svg",
   },
   {
-    title: 'Build momentum and healthy habits',
-    image: '/features/overview-card.svg',
+    title: "Build momentum and healthy habits",
+    image: "/features/overview-card.svg",
   },
 ];
 
@@ -55,8 +53,7 @@ export const Features = () => {
                     <img
                       src={item.image}
                       alt={`${item.title} interface`}
-                      fill
-                      className="object-cover object-left-top ps-4 pt-2"
+                      className="object-cover object-left-top ps-4 pt-2 w-full h-full"
                     />
                     <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
                   </div>
@@ -64,7 +61,7 @@ export const Features = () => {
                   <a
                     href="#"
                     className={
-                      'group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6'
+                      "group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
                     }
                   >
                     <h3 className="max-w-60 font-sans text-2xl leading-tight font-bold tracking-tight">

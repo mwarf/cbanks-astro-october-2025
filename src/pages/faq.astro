@@ -1,0 +1,22 @@
+---
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import CreamContainer from '@/components/elements/cream-container';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { DashedLine } from '@/components/elements/dashed-line';
+import { Testimonials } from '@/components/sections/testimonials';
+import { FAQ } from '@/components/sections/faq';
+---
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <CreamContainer>
+    <FAQ
+      client:load
+      className="py-28 text-center lg:pt-44 lg:pb-32"
+      className2="max-w-xl lg:grid-cols-1"
+      headerTag="h1"
+    />
+    <DashedLine className="mx-auto max-w-xl" />
+    <Testimonials dashedLineClassName="hidden"
+    client:load
+    />
+  </CreamContainer>
+</DefaultLayout>

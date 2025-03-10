@@ -1,75 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,500;1,300&display=swap');
+/* Import base styles */
+@import "@fontsource/dm-sans";
+@import "@fontsource/dm-mono";
+@import "@fontsource/inter";
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@nobie-org/tailwindcss-animate';
 @plugin '@tailwindcss/typography';
 
 @variant dark (&:is(.dark *));
 
-@font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-Regular.ttf') format('ttf');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-Italic.ttf') format('ttf');
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-Medium.ttf') format('ttf');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-MediumItalic.ttf') format('ttf');
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-SemiBold.ttf') format('ttf');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-SemiBoldItalic.ttf') format('ttf');
-	font-weight: 600;
-	font-style: italic;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-Bold.ttf') format('ttf');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-BoldItalic.ttf') format('ttf');
-	font-weight: 700;
-	font-style: italic;
-	font-display: swap;
-}
-
 @theme {
-  --font-sans: 'DM Sans', 'sans-serif';
-  --font-mono: 'DM Mono', 'monospace';
-  --font-dm-sans: 'DM Sans', 'sans-serif';
-  --font-dm-mono: 'DM Mono', 'monospace';
-  --font-inter: 'Inter', 'sans-serif';
+  --font-sans: "DM Sans", "sans-serif";
+  --font-mono: "DM Mono", "monospace";
+  --font-dm-sans: "DM Sans", "sans-serif";
+  --font-dm-mono: "DM Mono", "monospace";
+  --font-inter: "Inter", "sans-serif";
 
   --color-cream: hsl(var(--cream));
   --color-background: hsl(var(--background));
@@ -167,26 +113,17 @@
   h1,
   h2 {
     font-family: var(--font-dm-sans), sans-serif;
-    -webkit-font-feature-settings:
-      'ss02' on,
-      'ss03' on,
-      'ss04' on;
-    -moz-font-feature-settings:
-      'ss02' on,
-      'ss03' on,
-      'ss04' on;
-    -ms-font-feature-settings:
-      'ss02' on,
-      'ss03' on,
-      'ss04' on;
-    font-feature-settings:
-      'ss02' on,
-      'ss03' on,
-      'ss04' on; /* Enables the special `a` character and other characters for DM Sans */
+    -webkit-font-feature-settings: "ss02" on, "ss03" on, "ss04" on;
+    -moz-font-feature-settings: "ss02" on, "ss03" on, "ss04" on;
+    -ms-font-feature-settings: "ss02" on, "ss03" on, "ss04" on;
+    font-feature-settings: "ss02" on, "ss03" on, "ss04" on; /* Enables the special `a` character and other characters for DM Sans */
   }
 
   .font-mono {
     font-family: var(--font-dm-mono), monospace;
+  }
+  .font-inter {
+    font-family: var(--font-inter), sans-serif;
   }
 }
 
@@ -194,7 +131,7 @@
   button {
     cursor: pointer;
   }
-  [class*='border'] {
+  [class*="border"] {
     @apply border-border;
   }
 }

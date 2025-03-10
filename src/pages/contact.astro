@@ -1,0 +1,11 @@
+---
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import CreamContainer from '@/components/elements/cream-container';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import ContactSection from '@/components/sections/contact-section';
+---
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <CreamContainer>
+    <ContactSection />
+  </CreamContainer>
+</DefaultLayout>

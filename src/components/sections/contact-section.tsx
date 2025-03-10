@@ -1,19 +1,15 @@
-import React from 'react';
+import { Facebook, Linkedin, Twitter } from "lucide-react";
 
+import { DashedLine } from "../elements/dashed-line";
 
-
-import { Facebook, Linkedin, Twitter } from 'lucide-react';
-
-import { DashedLine } from '../elements/dashed-line';
-
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 const contactInfo = [
   {
-    title: 'Corporate office',
+    title: "Corporate office",
     content: (
       <p className="text-muted-foreground mt-3">
         1 Carlsberg Close
@@ -23,7 +19,7 @@ const contactInfo = [
     ),
   },
   {
-    title: 'Email us',
+    title: "Email us",
     content: (
       <div className="mt-3">
         <div>
@@ -48,7 +44,7 @@ const contactInfo = [
     ),
   },
   {
-    title: 'Follow us',
+    title: "Follow us",
     content: (
       <div className="mt-3 flex gap-6 lg:gap-10">
         <a href="#" className="text-muted-foreground hover:text-foreground">
@@ -58,14 +54,14 @@ const contactInfo = [
           <Twitter className="size-5" />
         </a>
         <a href="#" className="text-muted-foreground hover:text-foreground">
-          <aedin className="size-5" />
+          <Linkedin className="size-5" />
         </a>
       </div>
     ),
   },
 ];
 
-export default function Contact() {
+export default function ContactSection() {
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
       <div className="container max-w-2xl">
@@ -101,14 +97,14 @@ export default function Contact() {
             </div>
             <div className="space-y-2">
               <Label>
-                Company name{' '}
+                Company name{" "}
                 <span className="text-muted-foreground">(optional)</span>
               </Label>
               <Input placeholder="Company name" />
             </div>
             <div className="space-y-2">
               <Label>
-                Number of employees{' '}
+                Number of employees{" "}
                 <span className="text-muted-foreground">(optional)</span>
               </Label>
               <Input placeholder="e.g. 10-50" />

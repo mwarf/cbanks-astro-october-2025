@@ -1,8 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import { render } from 'astro:content';
-import FormattedDate from '@/components/elements/blog-date';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import { BlogPost } from '@/components/sections/blog-post';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -19,27 +19,9 @@ const { Content } = await render(post);
 
 ---
 <DefaultLayout>
-	<div class="container py-32 flex items-center justify-center flex-col">
-		<div class="hero-image">
-			{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-		</div>
-		<div class="prose">
-			<div class="title">
-				<div class="date">
-					<FormattedDate date={pubDate} />
-					{
-						updatedDate && (
-							<div class="last-updated-on">
-								Last updated on <FormattedDate date={updatedDate} />
-							</div>
-						)
-					}
-				</div>
-				<h1>{title}</h1>
-				<hr />
-			</div>
+	<div class="py-28 lg:pt-44 lg:pb-32">
+		<BlogPost post={post} client:load >
 			<Content />
-		</div>
-	</article>
-</div>
+		</BlogPost>
+	</div>
 </DefaultLayout>

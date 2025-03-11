@@ -48,7 +48,7 @@ const About = () => {
   );
 };
 
-export default About;
+export { About };
 
 interface ImageSectionProps {
   images: { src: string; alt: string }[];

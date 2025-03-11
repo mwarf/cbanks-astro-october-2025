@@ -16,8 +16,6 @@
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
     "@fontsource-variable/inter": "^5.2.5",
-    "@fontsource/dm-mono": "^5.2.5",
-    "@fontsource/inter": "^5.2.5",
     "@hookform/resolvers": "^3.9.1",
     "@nobie-org/tailwindcss-animate": "^1.0.0",
     "@radix-ui/react-accordion": "^1.2.2",

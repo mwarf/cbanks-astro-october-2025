@@ -21,6 +21,30 @@ const imageURL = new URL(finalImage, Astro.url);
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
+
+<!-- Preconnect to Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Load Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Preload local fonts -->
+<link 
+  rel="preload" 
+  href="/fonts/dm-sans/DMSans-Regular.ttf" 
+  as="font" 
+  type="font/ttf" 
+  crossorigin="anonymous"
+/>
+<link 
+  rel="preload" 
+  href="/fonts/dm-sans/DMSans-Bold.ttf" 
+  as="font" 
+  type="font/ttf" 
+  crossorigin="anonymous"
+/>
+
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="robots" content={`${SITE_METADATA.robots.index ? 'index' : 'noindex'}, ${SITE_METADATA.robots.follow ? 'follow' : 'nofollow'}`} />
 <meta name="keywords" content={SITE_METADATA.keywords.join(', ')} />

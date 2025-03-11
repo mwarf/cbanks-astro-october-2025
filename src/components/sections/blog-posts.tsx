@@ -23,7 +23,11 @@ const BlogPosts = ({ posts }: { posts: any[] }) => {
         <div className="container">
           <div className="mt-20 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
-              <a className="rounded-xl border" href={`/blog/${post.id}/`}>
+              <a
+                key={post.id}
+                className="rounded-xl border"
+                href={`/blog/${post.id}/`}
+              >
                 <div className="p-2">
                   <img
                     src={post.data.image}

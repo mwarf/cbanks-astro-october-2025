@@ -1,30 +1,28 @@
-
-
 const investors = [
   {
-    name: 'Dennis Bouvard',
-    company: 'Blackbird Ventures',
-    image: '/investors/1.webp',
+    name: "Dennis Bouvard",
+    company: "Blackbird Ventures",
+    image: "/investors/1.webp",
   },
   {
-    name: 'Renatus Gerard',
-    company: 'Center Studies',
-    image: '/investors/2.webp',
+    name: "Renatus Gerard",
+    company: "Center Studies",
+    image: "/investors/2.webp",
   },
   {
-    name: 'Leslie Alexander',
-    company: 'TechNexus',
-    image: '/investors/3.webp',
+    name: "Leslie Alexander",
+    company: "TechNexus",
+    image: "/investors/3.webp",
   },
   {
-    name: 'Matthew Stephens',
-    company: 'Etymol Cap',
-    image: '/investors/4.webp',
+    name: "Matthew Stephens",
+    company: "Etymol Cap",
+    image: "/investors/4.webp",
   },
   {
-    name: 'Josephine Newman',
-    company: 'Vandenberg',
-    image: '/investors/5.webp',
+    name: "Josephine Newman",
+    company: "Vandenberg",
+    image: "/investors/5.webp",
   },
 ];
 

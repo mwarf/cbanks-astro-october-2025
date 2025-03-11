@@ -1,21 +1,21 @@
-import { DashedLine } from '@/components/elements/dashed-line';
+import { DashedLine } from "@/components/elements/dashed-line";
 
 const stats = [
   {
-    value: '$150M',
-    label: 'Raised',
+    value: "$150M",
+    label: "Raised",
   },
   {
-    value: '20K',
-    label: 'Companies',
+    value: "20K",
+    label: "Companies",
   },
   {
-    value: '1.3B',
-    label: 'Monthly transactions',
+    value: "1.3B",
+    label: "Monthly transactions",
   },
   {
-    value: '1.5K',
-    label: 'Connections per minute',
+    value: "1.5K",
+    label: "Connections per minute",
   },
 ];
 
@@ -32,7 +32,7 @@ export function AboutHero() {
             Mainline is bringing modern software to life with AI magic.
           </p>
 
-          <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg font-medium text-balance md:block lg:mt-12">
+          <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-balance text-lg font-medium md:block lg:mt-12">
             At Mainline, we are dedicated to transforming the way teams plan,
             execute, and deliver projects. Our mission is to provide our
             customers with an unbeatable edge over delays, inefficiencies, and
@@ -54,7 +54,7 @@ export function AboutHero() {
         >
           <DashedLine
             orientation="vertical"
-            className="absolute top-0 left-0 max-lg:hidden"
+            className="absolute left-0 top-0 max-lg:hidden"
           />
           <DashedLine
             orientation="horizontal"

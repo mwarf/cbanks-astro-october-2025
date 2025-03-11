@@ -24,7 +24,7 @@ export function Footer() {
         <h2 className="text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
           Start your free trial today
         </h2>
-        <p className="text-muted-foreground mx-auto max-w-xl leading-snug font-medium text-balance">
+        <p className="text-muted-foreground mx-auto max-w-xl text-balance font-medium leading-snug">
           Mainline is the fit-for-purpose tool for planning and building modern
           software products.
         </p>

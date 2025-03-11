@@ -206,7 +206,7 @@ const PlanHeaders = ({
                   >
                     {plan.name}
                   </Button>
-                )
+                ),
             )}
           </CollapsibleContent>
         </Collapsible>
@@ -285,7 +285,7 @@ const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
                       </div>
                     )}
                   </div>
-                )
+                ),
               )}
             </div>
           </div>

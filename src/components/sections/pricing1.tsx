@@ -59,7 +59,7 @@ export const Pricing1 = ({ className }: { className?: string }) => {
           <h2 className="text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
             Pricing
           </h2>
-          <p className="text-muted-foreground mx-auto max-w-xl leading-snug font-medium text-balance">
+          <p className="text-muted-foreground mx-auto max-w-xl text-balance font-medium leading-snug">
             Use Mainline for free with your whole team. Upgrade to enable
             unlimited issues, enhanced security controls, and additional
             features.

@@ -113,10 +113,22 @@
   h1,
   h2 {
     font-family: var(--font-dm-sans), sans-serif;
-    -webkit-font-feature-settings: "ss02" on, "ss03" on, "ss04" on;
-    -moz-font-feature-settings: "ss02" on, "ss03" on, "ss04" on;
-    -ms-font-feature-settings: "ss02" on, "ss03" on, "ss04" on;
-    font-feature-settings: "ss02" on, "ss03" on, "ss04" on; /* Enables the special `a` character and other characters for DM Sans */
+    -webkit-font-feature-settings:
+      "ss02" on,
+      "ss03" on,
+      "ss04" on;
+    -moz-font-feature-settings:
+      "ss02" on,
+      "ss03" on,
+      "ss04" on;
+    -ms-font-feature-settings:
+      "ss02" on,
+      "ss03" on,
+      "ss04" on;
+    font-feature-settings:
+      "ss02" on,
+      "ss03" on,
+      "ss04" on; /* Enables the special `a` character and other characters for DM Sans */
   }
 
   .font-mono {

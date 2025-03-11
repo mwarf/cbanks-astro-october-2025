@@ -1,111 +1,111 @@
-import { DashedLine } from '../elements/dashed-line';
+import { DashedLine } from "../elements/dashed-line";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: 'Reusable issue templates.',
+    title: "Reusable issue templates.",
     description:
-      'Draft lightning-fast documents with our Smart Instructions and Templates.',
+      "Draft lightning-fast documents with our Smart Instructions and Templates.",
     images: [
       {
-        src: '/resource-allocation/templates.webp',
-        alt: 'Issue template interface',
+        src: "/resource-allocation/templates.webp",
+        alt: "Issue template interface",
         width: 495,
         height: 186,
       },
     ],
     className:
-      'flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2',
-    fade: [''],
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: [""],
   },
   {
-    title: 'Simplify your stack.',
-    description: 'No more Confluence, SharePoint, or Microsoft Word.',
+    title: "Simplify your stack.",
+    description: "No more Confluence, SharePoint, or Microsoft Word.",
     images: [
-      { src: '/logos/jira.svg', alt: 'Jira logo', width: 48, height: 48 },
-      { src: '/logos/excel.svg', alt: 'Excel logo', width: 48, height: 48 },
+      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
+      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
       {
-        src: '/logos/notion.svg',
-        alt: 'Notion logo',
+        src: "/logos/notion.svg",
+        alt: "Notion logo",
         width: 48,
         height: 48,
       },
-      { src: '/logos/word.svg', alt: 'Word logo', width: 48, height: 48 },
+      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
       {
-        src: '/logos/monday.svg',
-        alt: 'Monday logo',
-        width: 48,
-        height: 48,
-      },
-      {
-        src: '/logos/drive.svg',
-        alt: 'Google Drive logo',
+        src: "/logos/monday.svg",
+        alt: "Monday logo",
         width: 48,
         height: 48,
       },
       {
-        src: '/logos/jira.svg',
-        alt: 'Jira logo',
+        src: "/logos/drive.svg",
+        alt: "Google Drive logo",
         width: 48,
         height: 48,
       },
-      { src: '/logos/asana.svg', alt: 'Asana logo', width: 48, height: 48 },
+      {
+        src: "/logos/jira.svg",
+        alt: "Jira logo",
+        width: 48,
+        height: 48,
+      },
+      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
     ],
     className:
-      'flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0',
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
     fade: [],
   },
 ];
 
 const bottomItems = [
   {
-    title: 'Graveyard it.',
+    title: "Graveyard it.",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.',
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
     images: [
       {
-        src: '/resource-allocation/graveyard.webp',
-        alt: 'Graveyard interface',
+        src: "/resource-allocation/graveyard.webp",
+        alt: "Graveyard interface",
         width: 305,
         height: 280,
       },
     ],
     className:
-      '[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2',
-    fade: ['bottom'],
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: ["bottom"],
   },
   {
-    title: 'Task discussions.',
+    title: "Task discussions.",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.',
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
     images: [
       {
-        src: '/resource-allocation/discussions.webp',
-        alt: 'Task discussions interface',
+        src: "/resource-allocation/discussions.webp",
+        alt: "Task discussions interface",
         width: 320,
         height: 103,
       },
     ],
     className:
-      'justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3',
-    fade: [''],
+      "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3",
+    fade: [""],
   },
   {
-    title: 'Notifications.',
+    title: "Notifications.",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.',
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
     images: [
       {
-        src: '/resource-allocation/notifications.webp',
-        alt: 'Notifications interface',
+        src: "/resource-allocation/notifications.webp",
+        alt: "Notifications interface",
         width: 305,
         height: 280,
       },
     ],
     className:
-      '[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2',
-    fade: ['bottom'],
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: ["bottom"],
   },
 ];
 
@@ -113,7 +113,7 @@ export const ResourceAllocation = () => {
   return (
     <section id="resource-allocation" className="pb-28 lg:pb-32">
       <div className="">
-        <h2 className="container text-center text-3xl font-semibold tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="container text-balance text-center text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
           Mainline your resource allocation and execution
         </h2>
 
@@ -124,7 +124,7 @@ export const ResourceAllocation = () => {
           />
 
           {/* Top Features Grid - 2 items */}
-          <div className="relative container flex max-md:flex-col">
+          <div className="container relative flex max-md:flex-col">
             {topItems.map((item, i) => (
               <Item key={i} item={item} isLast={i === topItems.length - 1} />
             ))}
@@ -135,7 +135,7 @@ export const ResourceAllocation = () => {
           />
 
           {/* Bottom Features Grid - 3 items */}
-          <div className="relative container grid max-w-7xl md:grid-cols-3">
+          <div className="container relative grid max-w-7xl md:grid-cols-3">
             {bottomItems.map((item, i) => (
               <Item
                 key={i}
@@ -165,7 +165,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
   return (
     <div
       className={cn(
-        'relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8',
+        "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8",
         className,
         item.className,
       )}
@@ -173,13 +173,13 @@ const Item = ({ item, isLast, className }: ItemProps) => {
       <div className="title-container text-balance">
         <h3 className="inline font-semibold">{item.title} </h3>
         <span className="text-muted-foreground font-medium">
-          {' '}
+          {" "}
           {item.description}
         </span>
       </div>
 
-      {item.fade.includes('bottom') && (
-        <div className="from-muted/80 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent md:hidden" />
+      {item.fade.includes("bottom") && (
+        <div className="from-muted/80 bg-linear-to-t absolute inset-0 z-10 via-transparent to-transparent md:hidden" />
       )}
       {item.images.length > 4 ? (
         <div className="relative overflow-hidden">
@@ -198,7 +198,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     height={image.height}
                     className="object-contain object-left-top"
                   />
-                  <div className="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
+                  <div className="from-muted/80 bg-linear-to-l absolute inset-y-0 right-0 z-10 w-16 to-transparent" />
                 </div>
               ))}
             </div>
@@ -216,7 +216,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     height={image.height}
                     className="object-contain object-left-top"
                   />
-                  <div className="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
+                  <div className="from-muted bg-linear-to-r absolute inset-y-0 bottom-0 left-0 z-10 w-14 to-transparent" />
                 </div>
               ))}
             </div>
@@ -241,7 +241,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
         <>
           <DashedLine
             orientation="vertical"
-            className="absolute top-0 right-0 max-md:hidden"
+            className="absolute right-0 top-0 max-md:hidden"
           />
           <DashedLine
             orientation="horizontal"

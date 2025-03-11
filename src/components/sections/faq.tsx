@@ -82,7 +82,7 @@ export const FAQ = ({
                 Got Questions?
               </h2>
             )}
-            <p className="text-muted-foreground max-w-md leading-snug font-medium lg:mx-auto">
+            <p className="text-muted-foreground max-w-md font-medium leading-snug lg:mx-auto">
               If you can't find what you're looking for,{" "}
               <a href="/contact" className="underline underline-offset-4">
                 get in touch

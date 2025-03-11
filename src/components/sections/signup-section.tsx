@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 
 const SignupSection = () => {
   return (
-    <section className="py-28 lg:pt-44 lg:pb-32">
+    <section className="py-28 lg:pb-32 lg:pt-44">
       <div className="container">
         <div className="flex flex-col gap-4">
           <Card className="mx-auto w-full max-w-sm">

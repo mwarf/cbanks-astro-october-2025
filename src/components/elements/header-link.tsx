@@ -13,7 +13,7 @@ export default function HeaderLink({
       {...props}
       className={cn(
         "inline-block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200",
-        className
+        className,
       )}
     >
       {children}

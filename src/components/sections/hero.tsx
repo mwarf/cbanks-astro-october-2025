@@ -39,7 +39,7 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl md:whitespace-nowrap lg:text-6xl">
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:whitespace-nowrap md:text-5xl lg:text-6xl">
             Mainline your product.
           </h1>
 
@@ -53,7 +53,7 @@ export const Hero = () => {
             <a href="#">
               <Button
                 variant="outline"
-                className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
+                className="from-background bg-linear-to-r h-auto gap-2 to-transparent shadow-md"
               >
                 <span className="max-w-56 truncate text-start md:max-w-none">
                   Mainline raises $12M from Roba Ventures
@@ -68,7 +68,7 @@ export const Hero = () => {
         <div className="relative flex flex-1 flex-col justify-center space-y-5 max-lg:pt-10 lg:ps-10">
           <DashedLine
             orientation="vertical"
-            className="absolute top-0 left-0 max-lg:hidden"
+            className="absolute left-0 top-0 max-lg:hidden"
           />
           <DashedLine
             orientation="horizontal"
@@ -91,12 +91,12 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
+      <div className="mt-12 lg:container max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:mt-24">
         <div className="relative h-[793px] w-full">
           <img
             src="/hero.webp"
             alt="hero"
-            className="rounded-3xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none size-full"
+            className="size-full rounded-3xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
           />
         </div>
       </div>

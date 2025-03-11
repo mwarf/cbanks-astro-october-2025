@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const About = () => {
+export const AboutSection = () => {
   return (
     <section className="container mt-10 flex max-w-5xl flex-col-reverse gap-8 md:mt-14 md:gap-14 lg:mt-20 lg:flex-row lg:items-end">
       {/* Images Left - Text Right */}
@@ -48,7 +48,6 @@ const About = () => {
   );
 };
 
-export default About;
 
 interface ImageSectionProps {
   images: { src: string; alt: string }[];
@@ -63,7 +62,7 @@ export function ImageSection({ images, className }: ImageSectionProps) {
           key={index}
           className="relative aspect-[2/1.5] overflow-hidden rounded-2xl"
         >
-          <img src={image.src} alt={image.alt} className="object-cover" />
+          <img src={image.src} alt={image.alt} className="object-cover size-full" />
         </div>
       ))}
     </div>

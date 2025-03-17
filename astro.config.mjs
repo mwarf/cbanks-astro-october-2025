@@ -2,7 +2,6 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import vercelStatic from "@astrojs/vercel/static";
 
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
@@ -16,5 +15,4 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  adapter: vercelStatic(),
 });

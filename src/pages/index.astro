@@ -22,9 +22,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <Features />
     <ResourceAllocation />
   </CreamContainer>
-  <Testimonials client:load/>
+  <Testimonials client:only='react'/>
   <CreamContainer variant="bottom">
-    <Pricing1 client:load/>
-    <FAQ client:load/>
+    <Pricing1 client:only='react'/>
+    <FAQ client:only='react'/>
   </CreamContainer>
 </DefaultLayout>

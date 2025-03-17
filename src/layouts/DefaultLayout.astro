@@ -12,7 +12,7 @@ const { title, description } = Astro.props;
     </head>
     <body class={`h-screen antialiased`}
     >
-        <Navbar currentPage={Astro.url.pathname} client:load />
+        <Navbar currentPage={Astro.url.pathname} client:only='react' />
         <main><slot /></main>
         <Footer />
     </body>

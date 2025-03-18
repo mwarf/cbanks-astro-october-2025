@@ -8,37 +8,36 @@
 @variant dark (&:is(.dark *));
 
 @font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-Regular.ttf') format('truetype');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-Medium.ttf') format('truetype');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-SemiBold.ttf') format('truetype');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'DM Sans';
-	src: url('/fonts/dm-sans/DMSans-Bold.ttf') format('truetype');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans/DMSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
-
 
 @theme {
   --font-sans: "DM Sans", "sans-serif";
@@ -141,7 +140,8 @@
     font-family: var(--font-dm-sans), sans-serif;
   }
   h1,
-  h2, .font-sans-settings {
+  h2,
+  .font-sans-settings {
     font-family: var(--font-dm-sans), sans-serif;
     -webkit-font-feature-settings:
       "ss02" on,

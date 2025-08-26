@@ -2,6 +2,7 @@
 import BaseHead from '@/components/BaseHead.astro';
 import { Navbar } from '@/components/sections/navbar';
 import { Footer } from '@/components/sections/footer';
+import Banner from '@/components/sections/banner';
 
 const { title, description } = Astro.props;
 ---
@@ -12,6 +13,7 @@ const { title, description } = Astro.props;
     </head>
     <body class={`h-screen antialiased`}
     >
+        <Banner client:only="react" url="https://www.shadcnblocks.com/template/mainline?bundle=astro" />
         <Navbar currentPage={Astro.url.pathname} client:only='react' />
         <main><slot /></main>
         <Footer />

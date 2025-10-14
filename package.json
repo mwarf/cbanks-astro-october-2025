@@ -1,8 +1,8 @@
 {
   "name": "mainline-astro-template",
   "type": "module",
-  "version": "1.0.0",
-  "author": "Shadcnblocks.com",
+  "version": "1.2.0",
+  "author": "shadcnblocks.com",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

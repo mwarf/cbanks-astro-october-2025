@@ -1,11 +1,11 @@
 ---
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
-import CreamContainer from '@/components/elements/cream-container';
+import { Background } from '@/components/background';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import ContactSection from '@/components/sections/contact-section';
+import { Contact } from '@/components/blocks/contact';
 ---
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <CreamContainer>
-    <ContactSection />
-  </CreamContainer>
+  <Background>
+    <Contact />
+  </Background>
 </DefaultLayout>

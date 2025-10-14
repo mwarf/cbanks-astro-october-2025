@@ -5,25 +5,34 @@ export const SITE_TITLE = "Mainline - Modern Astro Template";
 export const SITE_DESCRIPTION =
   "A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.";
 
+export const GITHUB_URL =
+  "https://github.com/shadcnblocks/mainline-astro-template";
+
 export const SITE_METADATA = {
   title: {
-    default: SITE_TITLE,
+    default: "Mainline - Modern Astro Template",
     template: "%s | Mainline",
   },
-  description: SITE_DESCRIPTION,
+  description:
+    "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
   keywords: [
     "Astro",
-    "React",
-    "JavaScript",
-    "TypeScript",
-    "TailwindCSS",
-    "Template",
-    "Shadcn/UI",
-    "Web Development",
+    "astro template",
+    "astro theme",
+    "astro starter",
+    "shadcn template",
+    "shadcn theme",
+    "shadcn starter",
+    "tailwind template",
+    "tailwind theme",
+    "tailwind starter",
+    "mdx template",
+    "mdx theme",
+    "mdx starter",
   ],
-  authors: [{ name: "Mainline Team" }],
-  creator: "Mainline Team",
-  publisher: "Mainline",
+  authors: [{ name: "shadcnblocks.com" }],
+  creator: "shadcnblocks.com",
+  publisher: "shadcnblocks.com",
   robots: {
     index: true,
     follow: true,
@@ -40,8 +49,9 @@ export const SITE_METADATA = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: SITE_TITLE,
-    description: SITE_DESCRIPTION,
+    title: "Mainline - Modern Astro Template",
+    description:
+      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
     siteName: "Mainline",
     images: [
       {
@@ -54,9 +64,10 @@ export const SITE_METADATA = {
   },
   twitter: {
     card: "summary_large_image",
-    title: SITE_TITLE,
-    description: SITE_DESCRIPTION,
+    title: "Mainline - Modern Astro Template",
+    description:
+      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
     images: ["/og-image.jpg"],
-    creator: "@mainline",
+    creator: "@ausrobdev",
   },
 };

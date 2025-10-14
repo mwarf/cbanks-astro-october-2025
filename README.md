@@ -1,63 +1,75 @@
 # Mainline Astro Template
 
-Mainline Astro Template is a premium template built by https://www.shadcnblocks.com
+Mainline is a free template built with shadcn/ui, Tailwind 4 and Astro 5.
 
 - [Demo](https://mainline-astro-template.vercel.app/)
 - [Documentation](https://docs.shadcnblocks.com/templates/getting-started)
-
-## Screenshot
 
 ![Mainline Astro Template screenshot](./public/og-image.jpg)
 
 ## Getting Started
 
 ```bash
-# Install dependencies
 npm install
+```
 
-# Run the development server
+```bash
 npm run dev
 ```
 
-Open [http://localhost:4321](http://localhost:4321) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Tech Stack
+## Features
 
-- Astro 5.x
-- Tailwind 4
-- shadcn/ui
+### Core Technology Stack
 
-## Key Components
+- **Astro 5** built with Astro
+- **Tailwind CSS 4** for styling
+- **shadcn/ui** components
+- **TypeScript** support
+- **React 19**
 
-### Blog Posts (`src/components/sections/blog-posts.tsx`)
+### Key Features
 
-The blog posts component is a responsive grid layout that displays blog posts in an elegant card format. Each blog post card includes:
+- **Shadcn UI**: uses [shadcn/ui](https://ui.shadcn.com/) core UI components
+- **Theme System**: Dark/light mode with `astro-themes`, compatible with [tweakcn](https://tweakcn.com)
+- **MDX Support**: For content pages
+- **Animations**: Motion library (Framer Motion) integration
+- **Prettier**: Pre-configured code formatting
+- **Custom Fonts**: DM Sans font family included
+- **Icons**: Lucide React + React Icons libraries
+- **Styleglide Integration**: For component previews/development
+- **Responsive Design**: Mobile-friendly layout
+- **SEO Ready**: Proper metadata and OG images included
 
-- Featured image
-- Title and description
-- Author information with avatar
-- Reading time badge
-- Clean separators and hover effects
+### Pre-built Pages
 
-The component accepts a `posts` array prop where each post should have the following structure:
+- Home/Landing page
+- About page
+- Pricing page
+- FAQ page
+- Contact page with form
+- Login/Signup pages
 
-```typescript
-{
-  id: string;
-  data: {
-    title: string;
-    description: string;
-    image: string;
-    authorName: string;
-    authorImage: string;
-  }
-}
-```
+### Blocks
 
-## Deploy
+- Hero section
+- Logo showcase/marquee
+- Features section
+- Resource allocation section
+- Testimonials with carousel
+- Pricing table
+- FAQ with accordion
+- Footer
+- Navigation bar
 
-You can deploy this template to your preferred hosting platform that supports Astro applications. Some recommended options include:
+## Deployment
 
-- [Netlify](https://netlify.com)
-- [Vercel](https://vercel.com)
-- [Cloudflare Pages](https://pages.cloudflare.com)
+Production-ready and tested for deployment on [Vercel](https://vercel.com)
+
+## Credits
+
+- Template by [shadcnblocks.com](https://shadcnblocks.com)
+- Design by [Callum Flack](https://x.com/callumflack)
+- Dev by [Yassine Zaanouni](https://x.com/YassineZaanouni)
+- Produced by [Rob Austin](https://x.com/ausrobdev)

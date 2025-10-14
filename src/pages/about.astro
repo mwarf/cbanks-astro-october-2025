@@ -1,17 +1,17 @@
 ---
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
-import CreamContainer from '@/components/elements/cream-container';
+import { Background } from '@/components/background';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { AboutHero } from '@/components/sections/about-hero';
-import { DashedLine } from '@/components/elements/dashed-line';
-import { Investors } from '@/components/sections/investors';
-import { AboutSection } from '@/components/sections/about-section';
+import { AboutHero } from '@/components/blocks/about-hero';
+import { DashedLine } from '@/components/dashed-line';
+import { Investors } from '@/components/blocks/investors';
+import { AboutSection } from '@/components/blocks/about-section';
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
-    <CreamContainer>
+    <Background>
       <div class="py-28 lg:py-32 lg:pt-44">
         <AboutHero />
         <AboutSection />
@@ -20,5 +20,5 @@ import { AboutSection } from '@/components/sections/about-section';
           <Investors />
         </div>
       </div>
-    </CreamContainer>
+    </Background>
 </DefaultLayout>

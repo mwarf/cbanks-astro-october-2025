@@ -1,13 +1,13 @@
 ---
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
-import CreamContainer from '@/components/elements/cream-container';
+import { Background } from '@/components/background';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { DashedLine } from '@/components/elements/dashed-line';
-import { Testimonials } from '@/components/sections/testimonials';
-import { FAQ } from '@/components/sections/faq';
+import { DashedLine } from '@/components/dashed-line';
+import { Testimonials } from '@/components/blocks/testimonials';
+import { FAQ } from '@/components/blocks/faq';
 ---
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <CreamContainer>
+  <Background>
     <FAQ
       client:only='react'
       className="py-28 text-center lg:pt-44 lg:pb-32"
@@ -17,5 +17,5 @@ import { FAQ } from '@/components/sections/faq';
     <DashedLine className="mx-auto max-w-xl" />
     <Testimonials dashedLineClassName="hidden" client:only='react'
     />
-  </CreamContainer>
+  </Background>
 </DefaultLayout>

@@ -3,3 +3,4 @@ pnpm-lock.yaml
 package-lock.json
 src/components/ui
 .astro
+public

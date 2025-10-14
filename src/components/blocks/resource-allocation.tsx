@@ -111,9 +111,12 @@ const bottomItems = [
 
 export const ResourceAllocation = () => {
   return (
-    <section id="resource-allocation" className="pb-28 lg:pb-32">
+    <section
+      id="resource-allocation"
+      className="overflow-hidden pb-28 lg:pb-32"
+    >
       <div className="">
-        <h2 className="container text-balance text-center text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="container text-balance text-center text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
           Mainline your resource allocation and execution
         </h2>
 
@@ -172,10 +175,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
     >
       <div className="title-container text-balance">
         <h3 className="inline font-semibold">{item.title} </h3>
-        <span className="text-muted-foreground font-medium">
-          {" "}
-          {item.description}
-        </span>
+        <span className="text-muted-foreground"> {item.description}</span>
       </div>
 
       {item.fade.includes("bottom") && (

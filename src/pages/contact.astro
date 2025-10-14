@@ -2,10 +2,10 @@
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 import { Background } from '@/components/background';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import ContactSection from '@/components/blocks/contact-section';
+import { Contact } from '@/components/blocks/contact';
 ---
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <Background>
-    <ContactSection />
+    <Contact />
   </Background>
 </DefaultLayout>

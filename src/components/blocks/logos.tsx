@@ -2,6 +2,14 @@ import Marquee from "react-fast-marquee";
 
 import { cn } from "@/lib/utils";
 
+type Company = {
+  name: string;
+  logo: string;
+  width: number;
+  height: number;
+  href: string;
+};
+
 export const Logos = () => {
   const topRowCompanies = [
     {
@@ -73,10 +81,10 @@ export const Logos = () => {
   ];
 
   return (
-    <section className="pb-28 lg:pb-32">
+    <section className="overflow-hidden pb-28 lg:pb-32">
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
-          <h2 className="mb-4 text-balance text-xl font-bold md:text-2xl lg:text-3xl">
+          <h2 className="mb-4 text-balance text-xl md:text-2xl lg:text-3xl">
             Powering the world's best product teams.
             <br className="max-md:hidden" />
             <span className="text-muted-foreground">
@@ -99,14 +107,6 @@ export const Logos = () => {
       </div>
     </section>
   );
-};
-
-type Company = {
-  name: string;
-  logo: string;
-  width: number;
-  height: number;
-  href: string;
 };
 
 type LogoRowProps = {
@@ -133,7 +133,7 @@ const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
                 alt={`${company.name} logo`}
                 width={company.width}
                 height={company.height}
-                className="object-contain transition-opacity hover:opacity-70"
+                className="dark:opacity/100 object-contain opacity-50 transition-opacity hover:opacity-70 dark:invert"
               />
             </a>
           ))}

@@ -61,7 +61,7 @@ const contactInfo = [
   },
 ];
 
-export default function ContactSection() {
+export const Contact = () => {
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
       <div className="container max-w-2xl">
@@ -127,4 +127,4 @@ export default function ContactSection() {
       </div>
     </section>
   );
-}
+};

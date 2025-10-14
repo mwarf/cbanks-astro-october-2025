@@ -1,12 +1,8 @@
-"use client";
+import { useState, useEffect } from "react";
 
-import { useState } from "react";
-
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Github } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
-import { useBannerVisibility } from "@/hooks/use-banner-visibility";
-
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -39,20 +35,23 @@ const ITEMS = [
   { label: "About Us", href: "/about" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
-const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
+export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const { isVisible: bannerVisible } = useBannerVisibility();
+  const [pathname, setPathname] = useState("");
+
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
 
   return (
-    <header
+    <section
       className={cn(
-        "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-full border backdrop-blur-md transition-all duration-300",
-        bannerVisible ? "top-22 lg:top-20" : "top-5 lg:top-12",
+        "bg-background/70 rounded-4xl absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 border backdrop-blur-md transition-all duration-300",
+        "top-5 lg:top-12",
       )}
     >
       <div className="flex items-center justify-between px-6 py-3">
@@ -104,8 +103,8 @@ const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
                   <a
                     href={link.href}
                     className={cn(
-                      "relative bg-transparent px-1.5 text-sm font-medium",
-                      currentPage === link.href && "text-muted-foreground",
+                      "relative bg-transparent px-1.5 text-sm font-medium transition-opacity hover:opacity-75",
+                      pathname === link.href && "text-muted-foreground",
                     )}
                   >
                     {link.label}
@@ -123,6 +122,13 @@ const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
             <Button variant="outline">
               <span className="relative z-10">Login</span>
             </Button>
+          </a>
+          <a
+            href="https://github.com/shadcnblocks/mainline-nextjs-template"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <Github className="size-4" />
+            <span className="sr-only">GitHub</span>
           </a>
 
           {/* Hamburger Menu Button (Mobile Only) */}
@@ -168,7 +174,7 @@ const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
                       openDropdown === link.label ? null : link.label,
                     )
                   }
-                  className="text-primary flex w-full items-center justify-between text-base font-medium"
+                  className="text-foreground flex w-full items-center justify-between text-base font-medium"
                 >
                   {link.label}
                   <ChevronRight
@@ -216,8 +222,8 @@ const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
                 key={link.label}
                 href={link.href}
                 className={cn(
-                  "text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0",
-                  currentPage === link.href && "text-muted-foreground",
+                  "text-foreground hover:text-foreground/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0",
+                  pathname === link.href && "text-muted-foreground",
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -227,8 +233,6 @@ const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
           )}
         </nav>
       </div>
-    </header>
+    </section>
   );
 };
-
-export { Navbar };

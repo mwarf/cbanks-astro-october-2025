@@ -49,17 +49,17 @@ const plans = [
   },
 ];
 
-export const Pricing1 = ({ className }: { className?: string }) => {
+export const Pricing = ({ className }: { className?: string }) => {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
     <section className={cn("py-28 lg:py-32", className)}>
       <div className="container max-w-5xl">
         <div className="space-y-4 text-center">
-          <h2 className="text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Pricing
           </h2>
-          <p className="text-muted-foreground mx-auto max-w-xl text-balance font-medium leading-snug">
+          <p className="text-muted-foreground mx-auto max-w-xl text-balance leading-snug">
             Use Mainline for free with your whole team. Upgrade to enable
             unlimited issues, enhanced security controls, and additional
             features.
@@ -78,7 +78,7 @@ export const Pricing1 = ({ className }: { className?: string }) => {
             >
               <CardContent className="flex flex-col gap-7 px-6 py-5">
                 <div className="space-y-2">
-                  <h3 className="text-primary font-semibold">{plan.name}</h3>
+                  <h3 className="text-foreground font-semibold">{plan.name}</h3>
                   <div className="space-y-1">
                     <div className="text-muted-foreground text-lg font-medium">
                       {isAnnual ? plan.yearlyPrice : plan.monthlyPrice}{" "}
@@ -119,14 +119,12 @@ export const Pricing1 = ({ className }: { className?: string }) => {
                   ))}
                 </div>
 
-                <a href="/signup">
-                  <Button
-                    className="w-fit"
-                    variant={plan.name === "Startup" ? "default" : "outline"}
-                  >
-                    Get started
-                  </Button>
-                </a>
+                <Button
+                  className="w-fit"
+                  variant={plan.name === "Startup" ? "default" : "outline"}
+                >
+                  Get started
+                </Button>
               </CardContent>
             </Card>
           ))}

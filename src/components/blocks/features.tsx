@@ -33,10 +33,10 @@ export const Features = () => {
 
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
-          <h2 className="text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Made for modern product teams
           </h2>
-          <p className="text-muted-foreground font-medium leading-snug">
+          <p className="text-muted-foreground leading-snug">
             Mainline is built on the habits that make the best product teams
             successful: staying focused, moving quickly, and always aiming for
             high-quality work.
@@ -53,7 +53,7 @@ export const Features = () => {
                     <img
                       src={item.image}
                       alt={`${item.title} interface`}
-                      className="h-full w-full object-cover object-left-top ps-4 pt-2"
+                      className="object-cover object-left-top ps-4 pt-2"
                     />
                     <div className="from-background bg-linear-to-t absolute inset-0 z-10 via-transparent to-transparent" />
                   </div>
@@ -64,7 +64,7 @@ export const Features = () => {
                       "group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
                     }
                   >
-                    <h3 className="max-w-60 font-sans text-2xl font-bold leading-tight tracking-tight">
+                    <h3 className="font-display max-w-60 text-2xl font-bold leading-tight tracking-tight">
                       {item.title}
                     </h3>
                     <div className="rounded-full border p-2">

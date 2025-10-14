@@ -1,21 +1,21 @@
-import { DashedLine } from "@/components/dashed-line";
+import { DashedLine } from '@/components/dashed-line';
 
 const stats = [
   {
-    value: "$150M",
-    label: "Raised",
+    value: '$150M',
+    label: 'Raised',
   },
   {
-    value: "20K",
-    label: "Companies",
+    value: '20K',
+    label: 'Companies',
   },
   {
-    value: "1.3B",
-    label: "Monthly transactions",
+    value: '1.3B',
+    label: 'Monthly transactions',
   },
   {
-    value: "1.5K",
-    label: "Connections per minute",
+    value: '1.5K',
+    label: 'Connections per minute',
   },
 ];
 
@@ -24,15 +24,15 @@ export function AboutHero() {
     <section className="">
       <div className="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24">
         <div className="flex-[1.5]">
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
             Democratising quality software
           </h1>
 
-          <p className="text-muted-foreground mt-5 font-sans text-2xl font-medium md:text-3xl lg:text-4xl">
+          <p className="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
             Mainline is bringing modern software to life with AI magic.
           </p>
 
-          <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-balance text-lg font-medium md:block lg:mt-12">
+          <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
             At Mainline, we are dedicated to transforming the way teams plan,
             execute, and deliver projects. Our mission is to provide our
             customers with an unbeatable edge over delays, inefficiencies, and
@@ -50,11 +50,11 @@ export function AboutHero() {
         </div>
 
         <div
-          className={`relative flex flex-1 flex-col justify-center gap-3 pt-10 lg:ps-10 lg:pt-0`}
+          className={`relative flex flex-1 flex-col justify-center gap-3 pt-10 lg:pt-0 lg:pl-10`}
         >
           <DashedLine
             orientation="vertical"
-            className="absolute left-0 top-0 max-lg:hidden"
+            className="absolute top-0 left-0 max-lg:hidden"
           />
           <DashedLine
             orientation="horizontal"
@@ -62,12 +62,10 @@ export function AboutHero() {
           />
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col gap-1">
-              <div className="font-sans text-4xl font-medium tracking-wide md:text-5xl">
+              <div className="font-display text-4xl tracking-wide md:text-5xl">
                 {stat.value}
               </div>
-              <div className="text-muted-foreground font-medium">
-                {stat.label}
-              </div>
+              <div className="text-muted-foreground">{stat.label}</div>
             </div>
           ))}
         </div>

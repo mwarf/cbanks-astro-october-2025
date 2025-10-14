@@ -1,4 +1,4 @@
-import { DashedLine } from "@/components/elements/dashed-line";
+import { DashedLine } from "@/components/dashed-line";
 
 const stats = [
   {

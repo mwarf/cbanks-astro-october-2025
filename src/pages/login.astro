@@ -1,12 +1,12 @@
 ---
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
-import CreamContainer from '@/components/elements/cream-container';
+import { Background } from '@/components/background';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import LoginSection from '@/components/sections/login-section';
+import LoginSection from '@/components/blocks/login-section';
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <CreamContainer>
+  <Background>
     <LoginSection />
-  </CreamContainer>
+  </Background>
 </DefaultLayout>

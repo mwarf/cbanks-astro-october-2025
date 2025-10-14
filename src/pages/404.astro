@@ -1,5 +1,5 @@
 ---
-import CreamContainer from "@/components/elements/cream-container";
+import { Background } from "@/components/background";
 import { Button } from "@/components/ui/button";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import DefaultLayout from "@/layouts/DefaultLayout.astro";
@@ -7,7 +7,7 @@ import { ArrowLeft } from "lucide-react";
 ---
 
 <DefaultLayout title="404: Not Found" description="Sorry, the page you're looking for doesn't exist.">
-  <CreamContainer>
+  <Background>
     <div class="container flex min-h-[70vh] flex-col items-center justify-center py-28 text-center lg:min-h-[80vh] lg:py-32">
       <div class="relative z-10 max-w-2xl">
         <h1 class="from-foreground to-foreground/70 relative mb-6 bg-linear-to-br bg-clip-text py-2 text-5xl font-bold text-transparent sm:text-6xl lg:text-7xl">
@@ -38,5 +38,5 @@ import { ArrowLeft } from "lucide-react";
         </div>
       </div>
     </div>
-  </CreamContainer>
+  </Background>
 </DefaultLayout> 

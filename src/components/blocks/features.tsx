@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
 
-import { DashedLine } from "../elements/dashed-line";
+import { DashedLine } from "../dashed-line";
 
 import { Card, CardContent } from "@/components/ui/card";
 

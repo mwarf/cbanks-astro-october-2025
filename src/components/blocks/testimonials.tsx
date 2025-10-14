@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
-import { DashedLine } from "../elements/dashed-line";
+import { DashedLine } from "../dashed-line";
 
 const items = [
   {
@@ -136,8 +136,8 @@ export const Testimonials = ({
                 ))}
               </CarouselContent>
               <div className="mt-8 flex gap-3">
-                <CarouselPrevious className="bg-muted hover:bg-muted/80 static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8" />
-                <CarouselNext className="bg-muted hover:bg-muted/80 static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8" />
+                <CarouselPrevious className="bg-muted hover:bg-muted/80 size-14.5 static translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8" />
+                <CarouselNext className="bg-muted hover:bg-muted/80 size-14.5 static translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8" />
               </div>
             </Carousel>
           </div>

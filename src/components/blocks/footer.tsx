@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 
+import { GITHUB_URL } from "@/consts";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -30,9 +31,7 @@ export function Footer() {
         </p>
         <div>
           <Button size="lg" className="mt-4" asChild>
-            <a href="https://github.com/shadcnblocks/mainline-nextjs-template">
-              Get template
-            </a>
+            <a href={GITHUB_URL}>Get template</a>
           </Button>
         </div>
       </div>

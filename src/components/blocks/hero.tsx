@@ -6,6 +6,7 @@ import {
   Diamond,
 } from "lucide-react";
 
+import { GITHUB_URL } from "@/consts";
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
 
@@ -39,19 +40,17 @@ export const Hero = () => {
         {/* Left side - Main content */}
         <div className="flex-1">
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Mainline Next.js template
+            Mainline Astro template
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
             Mainline is an open-source website template built with shadcn/ui,
-            Tailwind 4 & Next.js
+            Tailwind 4 & Astro 5
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <a href="https://github.com/shadcnblocks/mainline-nextjs-template">
-                Get template
-              </a>
+              <a href={GITHUB_URL}>Get template</a>
             </Button>
             <Button
               variant="outline"

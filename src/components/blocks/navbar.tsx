@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import { ChevronRight, Github } from "lucide-react";
 
+import { GITHUB_URL } from "@/consts";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import {
@@ -122,7 +123,7 @@ export const Navbar = () => {
             </Button>
           </a>
           <a
-            href="https://github.com/shadcnblocks/mainline-nextjs-template"
+            href={GITHUB_URL}
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <Github className="size-4" />

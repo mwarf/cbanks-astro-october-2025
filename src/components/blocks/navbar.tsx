@@ -78,21 +78,19 @@ export const Navbar = () => {
                     <ul className="w-[400px] space-y-2 p-4">
                       {link.dropdownItems.map((item) => (
                         <li key={item.title}>
-                          <NavigationMenuLink asChild>
-                            <a
-                              href={item.href}
-                              className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground outline-hidden group flex select-none items-center gap-4 rounded-md p-3 leading-none no-underline transition-colors"
-                            >
-                              <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
-                                <div className="text-sm font-medium leading-none">
-                                  {item.title}
-                                </div>
-                                <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-                                  {item.description}
-                                </p>
+                          <a
+                            href={item.href}
+                            className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none"
+                          >
+                            <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
+                              <div className="text-sm leading-none font-medium">
+                                {item.title}
                               </div>
-                            </a>
-                          </NavigationMenuLink>
+                              <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+                                {item.description}
+                              </p>
+                            </div>
+                          </a>
                         </li>
                       ))}
                     </ul>

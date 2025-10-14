@@ -3,7 +3,7 @@
 @import "tw-animate-css";
 @plugin '@tailwindcss/typography';
 
-@variant dark (&:is(.dark *));
+@custom-variant dark (&:is(.dark *));
 
 @font-face {
   font-family: "DM Sans";
@@ -238,22 +238,6 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
-
 @layer utilities {
   body,
   .font-text {
@@ -302,4 +286,20 @@ body {
 }
 body {
   position: relative;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }

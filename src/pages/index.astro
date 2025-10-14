@@ -1,18 +1,18 @@
 ---
-import DefaultLayout from '@/layouts/DefaultLayout.astro';
-
-import { Hero } from '@/components/blocks/hero';
-
-import { Features } from '@/components/blocks/features';
-import { ResourceAllocation } from '@/components/blocks/resource-allocation';
-import { Testimonials } from '@/components/blocks/testimonials';
-import { Pricing } from '@/components/blocks/pricing';
-import { FAQ } from '@/components/blocks/faq';
-import { Logos } from '@/components/blocks/logos';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import { Background } from '@/components/background';
+import { FAQ } from '@/components/blocks/faq';
+import { Features } from '@/components/blocks/features';
+import { Hero } from '@/components/blocks/hero';
+import { Logos } from '@/components/blocks/logos';
+import { Pricing } from '@/components/blocks/pricing';
+import { ResourceAllocation } from '@/components/blocks/resource-allocation';
+import { Testimonials } from '@/components/blocks/testimonials';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >

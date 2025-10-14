@@ -1,10 +1,11 @@
 ---
-import DefaultLayout from '@/layouts/DefaultLayout.astro';
-import { Background } from '@/components/background';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { DashedLine } from '@/components/dashed-line';
-import { Testimonials } from '@/components/blocks/testimonials';
+
+import { Background } from '@/components/background';
 import { FAQ } from '@/components/blocks/faq';
+import { Testimonials } from '@/components/blocks/testimonials';
+import { DashedLine } from '@/components/dashed-line';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
 ---
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <Background>

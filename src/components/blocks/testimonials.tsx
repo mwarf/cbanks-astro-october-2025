@@ -97,7 +97,7 @@ export const Testimonials = ({
             </Button>
           </div>
 
-          <div className="relative -mr-[max(3rem,calc((100vw-80rem)/2+3rem))] mt-8 md:mt-12 lg:mt-20">
+          <div className="relative mt-8 -mr-[max(3rem,calc((100vw-80rem)/2+3rem))] md:mt-12 lg:mt-20">
             <Carousel
               opts={{
                 align: "start",
@@ -121,7 +121,7 @@ export const Testimonials = ({
                           />
                         </div>
                         <div className="flex flex-1 flex-col justify-between gap-10 p-6">
-                          <blockquote className="font-display leading-none! text-lg font-medium md:text-xl lg:text-2xl">
+                          <blockquote className="font-display text-lg leading-none! font-medium md:text-xl lg:text-2xl">
                             {testimonial.quote}
                           </blockquote>
                           <div className="space-y-0.5">
@@ -139,8 +139,8 @@ export const Testimonials = ({
                 ))}
               </CarouselContent>
               <div className="mt-8 flex gap-3">
-                <CarouselPrevious className="bg-muted hover:bg-muted/80 size-14.5 static translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8" />
-                <CarouselNext className="bg-muted hover:bg-muted/80 size-14.5 static translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8" />
+                <CarouselPrevious className="bg-muted hover:bg-muted/80 static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8" />
+                <CarouselNext className="bg-muted hover:bg-muted/80 static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8" />
               </div>
             </Carousel>
           </div>

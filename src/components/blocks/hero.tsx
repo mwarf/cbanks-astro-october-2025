@@ -55,7 +55,7 @@ export const Hero = () => {
             </Button>
             <Button
               variant="outline"
-              className="from-background bg-linear-to-r h-auto gap-2 to-transparent shadow-md"
+              className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
               asChild
             >
               <a
@@ -73,7 +73,7 @@ export const Hero = () => {
         <div className="relative flex flex-1 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
           <DashedLine
             orientation="vertical"
-            className="absolute left-0 top-0 max-lg:hidden"
+            className="absolute top-0 left-0 max-lg:hidden"
           />
           <DashedLine
             orientation="horizontal"
@@ -98,7 +98,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-12 lg:container max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:mt-24">
+      <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
         <div className="relative h-[793px] w-full">
           <img
             src="/hero.webp"

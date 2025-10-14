@@ -30,7 +30,7 @@ const BlogPost = ({
           <img
             src={image}
             alt="placeholder"
-            className="mb-8 mt-0 aspect-video w-full rounded-lg border object-cover"
+            className="mt-0 mb-8 aspect-video w-full rounded-lg border object-cover"
           />
         </div>
       </div>

@@ -13,7 +13,7 @@ const BlogPosts = ({ posts }: { posts: any[] }) => {
             Blog
           </h1>
 
-          <p className="text-muted-foreground max-w-md font-medium leading-snug lg:mx-auto">
+          <p className="text-muted-foreground max-w-md leading-snug font-medium lg:mx-auto">
             Explore our blog for insightful articles, personal reflections and
             more.
           </p>
@@ -35,7 +35,7 @@ const BlogPosts = ({ posts }: { posts: any[] }) => {
                     className="aspect-video w-full rounded-lg object-cover"
                   />
                 </div>
-                <div className="px-3 pb-4 pt-2">
+                <div className="px-3 pt-2 pb-4">
                   <h2 className="mb-1 font-semibold">{post.data.title}</h2>
                   <p className="text-muted-foreground line-clamp-2 text-sm">
                     {post.data.description}

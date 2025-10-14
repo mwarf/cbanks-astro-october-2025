@@ -6,7 +6,7 @@ import { Hero } from '@/components/blocks/hero';
 import { Features } from '@/components/blocks/features';
 import { ResourceAllocation } from '@/components/blocks/resource-allocation';
 import { Testimonials } from '@/components/blocks/testimonials';
-import { Pricing1 } from '@/components/blocks/pricing';
+import { Pricing } from '@/components/blocks/pricing';
 import { FAQ } from '@/components/blocks/faq';
 import { Logos } from '@/components/blocks/logos';
 
@@ -24,7 +24,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   </Background>
   <Testimonials client:only='react'/>
   <Background variant="bottom">
-    <Pricing1 client:only='react'/>
+    <Pricing client:only='react'/>
     <FAQ client:only='react'/>
   </Background>
 </DefaultLayout>

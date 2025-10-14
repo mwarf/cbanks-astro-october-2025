@@ -7,7 +7,7 @@ import { Checkbox } from "../ui/checkbox";
 
 const LoginSection = () => {
   return (
-    <section className="py-28 lg:pb-32 lg:pt-44">
+    <section className="py-28 lg:pt-44 lg:pb-32">
       <div className="container">
         <div className="flex flex-col gap-4">
           <Card className="mx-auto w-full max-w-sm">
@@ -42,7 +42,7 @@ const LoginSection = () => {
                     />
                     <label
                       htmlFor="remember"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     >
                       Remember me
                     </label>

@@ -116,7 +116,7 @@ export const ResourceAllocation = () => {
       className="overflow-hidden pb-28 lg:pb-32"
     >
       <div className="">
-        <h2 className="container text-balance text-center text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
           Mainline your resource allocation and execution
         </h2>
 
@@ -127,7 +127,7 @@ export const ResourceAllocation = () => {
           />
 
           {/* Top Features Grid - 2 items */}
-          <div className="container relative flex max-md:flex-col">
+          <div className="relative container flex max-md:flex-col">
             {topItems.map((item, i) => (
               <Item key={i} item={item} isLast={i === topItems.length - 1} />
             ))}
@@ -138,7 +138,7 @@ export const ResourceAllocation = () => {
           />
 
           {/* Bottom Features Grid - 3 items */}
-          <div className="container relative grid max-w-7xl md:grid-cols-3">
+          <div className="relative container grid max-w-7xl md:grid-cols-3">
             {bottomItems.map((item, i) => (
               <Item
                 key={i}
@@ -179,7 +179,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
       </div>
 
       {item.fade.includes("bottom") && (
-        <div className="from-muted/80 bg-linear-to-t absolute inset-0 z-10 via-transparent to-transparent md:hidden" />
+        <div className="from-muted/80 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent md:hidden" />
       )}
       {item.images.length > 4 ? (
         <div className="relative overflow-hidden">
@@ -198,7 +198,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     height={image.height}
                     className="object-contain object-left-top"
                   />
-                  <div className="from-muted/80 bg-linear-to-l absolute inset-y-0 right-0 z-10 w-16 to-transparent" />
+                  <div className="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
                 </div>
               ))}
             </div>
@@ -216,7 +216,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     height={image.height}
                     className="object-contain object-left-top"
                   />
-                  <div className="from-muted bg-linear-to-r absolute inset-y-0 bottom-0 left-0 z-10 w-14 to-transparent" />
+                  <div className="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
                 </div>
               ))}
             </div>
@@ -241,7 +241,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
         <>
           <DashedLine
             orientation="vertical"
-            className="absolute right-0 top-0 max-md:hidden"
+            className="absolute top-0 right-0 max-md:hidden"
           />
           <DashedLine
             orientation="horizontal"

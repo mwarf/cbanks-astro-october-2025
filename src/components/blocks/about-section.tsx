@@ -48,7 +48,6 @@ export const AboutSection = () => {
   );
 };
 
-
 interface ImageSectionProps {
   images: { src: string; alt: string }[];
   className?: string;
@@ -62,7 +61,11 @@ export function ImageSection({ images, className }: ImageSectionProps) {
           key={index}
           className="relative aspect-[2/1.5] overflow-hidden rounded-2xl"
         >
-          <img src={image.src} alt={image.alt} className="object-cover size-full" />
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="size-full object-cover"
+          />
         </div>
       ))}
     </div>

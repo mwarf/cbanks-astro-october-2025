@@ -1,9 +1,10 @@
 ---
-import DefaultLayout from '@/layouts/DefaultLayout.astro';
-import { Background } from '@/components/background';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { PricingTable } from '@/components/blocks/pricing-table';
+
+import { Background } from '@/components/background';
 import { Pricing } from '@/components/blocks/pricing';
+import { PricingTable } from '@/components/blocks/pricing-table';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
 ---
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <Background>

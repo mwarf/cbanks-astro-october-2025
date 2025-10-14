@@ -1,5 +1,6 @@
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { format } from "date-fns";
+
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 const BlogPost = ({
   post,
   children,

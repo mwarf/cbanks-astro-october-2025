@@ -6,9 +6,9 @@ import {
   Diamond,
 } from "lucide-react";
 
-import { GITHUB_URL } from "@/consts";
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
+import { GITHUB_URL } from "@/consts";
 
 const features = [
   {

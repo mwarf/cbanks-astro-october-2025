@@ -1,9 +1,11 @@
 import React from "react";
-import { Card, CardContent, CardHeader } from "../ui/card";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
+
 import { FcGoogle } from "react-icons/fc";
+
+import { Button } from "../ui/button";
+import { Card, CardContent, CardHeader } from "../ui/card";
 import { Checkbox } from "../ui/checkbox";
+import { Input } from "../ui/input";
 
 const LoginSection = () => {
   return (

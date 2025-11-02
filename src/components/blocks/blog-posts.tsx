@@ -24,7 +24,7 @@ const BlogPosts = ({ posts }: { posts: any[] }) => {
               <a
                 key={post.id}
                 className="rounded-xl border"
-                href={`/blog/${post.id}/`}
+                href={`/blog/${post.data.slug || post.id}/`}
               >
                 <div className="p-2">
                   <img

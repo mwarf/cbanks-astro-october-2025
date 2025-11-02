@@ -12,8 +12,10 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     image: z.string().optional(),
+    heroImage: z.string().optional(), // Add this field that's being used in the component
     authorImage: z.string().optional(),
     authorName: z.string().optional(),
+    slug: z.string().optional(), // Add this to support custom slugs
   }),
 });
 

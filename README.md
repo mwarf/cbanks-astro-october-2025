@@ -41,6 +41,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **Styleglide Integration**: For component previews/development
 - **Responsive Design**: Mobile-friendly layout
 - **SEO Ready**: Proper metadata and OG images included
+- **Blog System**: Includes a complete blog system with SEO-friendly URLs and content guidelines
+
+### Blog Content Guidelines
+
+Blog posts are stored in `src/content/blog/` and follow specific guidelines for optimal SEO and user experience. See [docs/blog-guidelines.md](./docs/blog-guidelines.md) for detailed information on creating and formatting blog posts with proper slugs and frontmatter.
 
 ### Pre-built Pages
 

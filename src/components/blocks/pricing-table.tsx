@@ -15,31 +15,31 @@ interface FeatureSection {
   category: string;
   features: {
     name: string;
-    free: true | false | null | string;
-    startup: true | false | null | string;
-    enterprise: true | false | null | string;
+    "Brand Documentary": true | false | null | string;
+    "Story Package": true | false | null | string;
+    "Custom Project": true | false | null | string;
   }[];
 }
 
 const pricingPlans = [
   {
-    name: "Free",
+    name: "Brand Documentary",
     button: {
-      text: "Get started",
+      text: "Start a Project",
       variant: "outline" as const,
     },
   },
   {
-    name: "Startup",
+    name: "Story Package",
     button: {
-      text: "Get started",
+      text: "Start a Project",
       variant: "outline" as const,
     },
   },
   {
-    name: "Enterprise",
+    name: "Custom Project",
     button: {
-      text: "Get a demo",
+      text: "Get Custom Quote",
       variant: "outline" as const,
     },
   },
@@ -47,95 +47,89 @@ const pricingPlans = [
 
 const comparisonFeatures: FeatureSection[] = [
   {
-    category: "Usage",
+    category: "Scope",
     features: [
       {
-        name: "Members",
-        free: "Unlimited",
-        startup: "Unlimited",
-        enterprise: "Unlimited",
+        name: "Film Length",
+        "Brand Documentary": "8-15 min",
+        "Story Package": "3-5 min",
+        "Custom Project": "Custom",
       },
       {
-        name: "Transactions",
-        free: "250",
-        startup: "Unlimited",
-        enterprise: "Unlimited",
+        name: "Production Days",
+        "Brand Documentary": "2-3 days",
+        "Story Package": "1-2 days",
+        "Custom Project": "Custom",
       },
       {
-        name: "Teams",
-        free: "2",
-        startup: "Unlimited",
-        enterprise: "Unlimited",
+        name: "Discovery Phase",
+        "Brand Documentary": "1-2 weeks",
+        "Story Package": "1 week",
+        "Custom Project": "Custom",
       },
     ],
   },
   {
-    category: "Features",
+    category: "Production",
     features: [
       {
-        name: "Reporting",
-        free: true,
-        startup: true,
-        enterprise: true,
+        name: "Cinema Equipment",
+        "Brand Documentary": true,
+        "Story Package": true,
+        "Custom Project": true,
       },
       {
-        name: "Analytics",
-        free: true,
-        startup: true,
-        enterprise: true,
+        name: "Color Grading",
+        "Brand Documentary": true,
+        "Story Package": true,
+        "Custom Project": true,
       },
       {
-        name: "Import and export",
-        free: true,
-        startup: true,
-        enterprise: true,
+        name: "Sound Design",
+        "Brand Documentary": true,
+        "Story Package": true,
+        "Custom Project": true,
       },
       {
-        name: "Integrations",
-        free: true,
-        startup: true,
-        enterprise: true,
+        name: "Multiple Cuts",
+        "Brand Documentary": "For different platforms",
+        "Story Package": "For different platforms",
+        "Custom Project": "Custom",
       },
       {
-        name: "Mainline AI",
-        free: null,
-        startup: true,
-        enterprise: true,
+        name: "Extended Interviews",
+        "Brand Documentary": true,
+        "Story Package": null,
+        "Custom Project": "Custom",
       },
       {
-        name: "Admin roles",
-        free: null,
-        startup: null,
-        enterprise: true,
-      },
-      {
-        name: "Audit log",
-        free: null,
-        startup: null,
-        enterprise: true,
+        name: "Behind-the-Scenes Content",
+        "Brand Documentary": null,
+        "Story Package": true,
+        "Custom Project": "Custom",
       },
     ],
   },
   {
-    category: "Support",
+    category: "Delivery",
     features: [
       {
-        name: "Priority Support",
-        free: true,
-        startup: true,
-        enterprise: true,
+        name: "Revisions",
+        "Brand Documentary": "2 rounds",
+        "Story Package": "1 round",
+        "Custom Project": "Custom",
       },
       {
-        name: "Account Manager",
-        free: null,
-        startup: null,
-        enterprise: true,
+        name: "Raw Footage",
+        "Brand Documentary": null,
+        "Story Package": null,
+        "Custom Project": "Available",
       },
       {
-        name: "Uptime SLA",
-        free: null,
-        startup: null,
-        enterprise: true,
+        name: "Social Cuts",
+        "Brand Documentary": null,
+        "Story Package": true,
+        "Custom Project": "Custom",
       },
     ],
   },
@@ -263,24 +257,25 @@ const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
             <div className="md:hidden">
               <div className="flex items-center gap-1 py-4 md:border-b">
                 {renderFeatureValue(
-                  [feature.free, feature.startup, feature.enterprise][
-                    selectedPlan
-                  ],
+                  [
+                    feature["Brand Documentary"],
+                    feature["Story Package"],
+                    feature["Custom Project"],
+                  ][selectedPlan],
                 )}
               </div>
             </div>
             {/* Desktop View - All Plans */}
             <div className="hidden md:col-span-3 md:grid md:grid-cols-3 md:gap-4">
-              {[feature.free, feature.startup, feature.enterprise].map(
-                (value, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-1 border-b py-4"
-                  >
-                    {renderFeatureValue(value)}
-                  </div>
-                ),
-              )}
+              {[
+                feature["Brand Documentary"],
+                feature["Story Package"],
+                feature["Custom Project"],
+              ].map((value, i) => (
+                <div key={i} className="flex items-center gap-1 border-b py-4">
+                  {renderFeatureValue(value)}
+                </div>
+              ))}
             </div>
           </div>
         ))}

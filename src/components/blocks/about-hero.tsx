@@ -2,20 +2,20 @@ import { DashedLine } from "@/components/dashed-line";
 
 const stats = [
   {
-    value: "$150M",
-    label: "Raised",
+    value: "65+",
+    label: "Films Delivered",
   },
   {
-    value: "20K",
-    label: "Companies",
+    value: "73%",
+    label: "Avg. View Rate",
   },
   {
-    value: "1.3B",
-    label: "Monthly transactions",
+    value: "2019",
+    label: "Founded",
   },
   {
-    value: "1.5K",
-    label: "Connections per minute",
+    value: "4-6 wks",
+    label: "Timeline",
   },
 ];
 
@@ -24,28 +24,23 @@ export function AboutHero() {
     <section className="">
       <div className="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24">
         <div className="flex-[1.5]">
-          <h1 className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            Democratising quality software
+          <h1 className="font-display font-bold text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+            Your Employees Have Better Stories Than Your Marketing Department
           </h1>
 
           <p className="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
-            Mainline is bringing modern software to life with AI magic.
+            The best brand stories are found, not created.
           </p>
 
           <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
-            At Mainline, we are dedicated to transforming the way teams plan,
-            execute, and deliver projects. Our mission is to provide our
-            customers with an unbeatable edge over delays, inefficiencies, and
-            disorganisation through actionable insights and seamless
-            collaboration. We’ll stop at nothing to give you the tools you need
-            to get every project across the finish line.
-            <br />
-            <br />
-            We’re customer-obsessed — investing the time to understand every
-            aspect of your workflow so that we can help you operate better than
-            ever before. We’re all in this together because your success is our
-            success. In our history as a company, we’ve never lost a customer,
-            because when your projects succeed, so do we.
+            We're Coalbanks—documentary-style filmmakers who dig into Southern
+            Alberta businesses until we uncover the real human truth that makes
+            people stop scrolling. Not because they have to watch. Because the
+            story actually matters. Since 2019, we've delivered 65+ films with
+            an average 73% completion rate. That's nearly double the 37%
+            industry average. The difference? We stopped making videos that
+            sound like marketing and started making films that feel like stories
+            people actually care about.
           </p>
         </div>
 

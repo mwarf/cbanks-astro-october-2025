@@ -15,15 +15,15 @@ export const AboutSection = () => {
         />
 
         <TextSection
-          title="The team"
+          title="The approach"
           paragraphs={[
-            "We started building Mainline in 2019 and launched in 2022. Every endpoint has been designed from the ground up — with no technical debt or legacy systems. We are purpose-built to power project management innovation for the next hundred years.",
-            "We are 100% founder and team-owned, profitable, and we keep our team lean. Over time, this page will become more polished, but for now, we're focused on delivering for developers.",
-            "If you're interested in building the future of PM, check out our open roles below.",
+            "We started Coalbanks in 2019 with a simple belief: the best brand stories are found, not created. Every film we produce begins with deep discovery to uncover the real human truth behind your business. We are purpose-built to power authentic storytelling for the next decade.",
+            "We are 100% founder and team-owned, profitable, and we keep our team lean. We're focused on what matters: finding your story and crafting it with cinema-quality production.",
+            "If you're interested in authentic storytelling that breaks through the scroll, let's talk about your project.",
           ]}
           ctaButton={{
-            href: "/careers",
-            text: "View open roles",
+            href: "/contact",
+            text: "Start a Project",
           }}
         />
       </div>
@@ -32,8 +32,8 @@ export const AboutSection = () => {
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <TextSection
           paragraphs={[
-            "At Mainline, we are dedicated to transforming the way teams plan, execute, and deliver projects. Our mission is to provide our customers with an unbeatable edge over delays, inefficiencies, and disorganisation through actionable insights and seamless collaboration. We'll stop at nothing to give you the tools you need to get every project across the finish line.",
-            "We're customer-obsessed — investing the time to understand every aspect of your workflow so that we can help you operate better than ever before. We're all in this together because your success is our success. In our history as a company, we've never lost a customer, because when your projects succeed, so do we.",
+            "At Coalbanks, we're dedicated to transforming corporate messaging into authentic stories using documentary filmmaking techniques. Our mission is to help companies tell stories that people actually want to watch—because they don't sound like marketing. We'll stop at nothing to find the real human truth in your brand.",
+            "We're story-obsessed — investing 1-2 weeks in discovery to understand your business before we ever pick up a camera. We're all in this together because your authentic story is our best showcase. Since 2019, we've delivered 65+ films with an average 73% completion rate—3x the industry standard—because when your story succeeds, so do we.",
           ]}
         />
         <ImageSection

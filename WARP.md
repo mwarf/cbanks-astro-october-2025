@@ -81,8 +81,8 @@ npm run format       # Format code with Prettier
 - CSS custom properties defined in `global.css`
 
 **Animations:**
-- Motion library (Framer Motion) for interactive animations
-- `tw-animate-css` integration for Tailwind-based animations
+- `tailwindcss-animate` for Tailwind-based animations
+- `tw-animate-css` integration for additional animations
 
 **Icons:**
 - Lucide React for primary icon set

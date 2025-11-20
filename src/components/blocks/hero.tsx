@@ -35,7 +35,7 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1 max-lg:max-w-[600px]">
-          <h1 className="text-foreground max-w-[90%] text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-normal">
+          <h1 className="text-foreground font-display font-bold max-w-[90%] text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-normal">
             Films That Make Your Customers Actually Give a Damn
           </h1>
 

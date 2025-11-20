@@ -17,23 +17,32 @@ import { cn } from "@/lib/utils";
 
 const ITEMS = [
   {
-    label: "Features",
-    href: "#features",
+    label: "Services",
+    href: "#services",
     dropdownItems: [
       {
-        title: "Modern product teams",
-        href: "/#feature-modern-teams",
+        title: "Brand Documentaries",
+        href: "/#brand-documentaries",
         description:
-          "Mainline is built on the habits that make the best product teams successful",
+          "8-15 minute films that explain who you are, what you've built, and why it matters",
       },
       {
-        title: "Resource Allocation",
-        href: "/#resource-allocation",
-        description: "Mainline your resource allocation and execution",
+        title: "Recruitment Films",
+        href: "/#recruitment-films",
+        description:
+          "Compelling videos that attract the right talent to your organization",
+      },
+      {
+        title: "Investor Pitches",
+        href: "/#investor-pitches",
+        description:
+          "Films that explain your value proposition better than any pitch deck",
       },
     ],
   },
-  { label: "About Us", href: "/about" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },

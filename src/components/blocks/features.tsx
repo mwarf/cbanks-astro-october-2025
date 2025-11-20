@@ -6,15 +6,15 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
-    title: "Purpose-built for product development",
+    title: "Find the real human story behind your brand",
     image: "/features/triage-card.svg",
   },
   {
-    title: "Manage projects end-to-end",
+    title: "Cinema cameras, documentary craft, professional finish",
     image: "/features/cycle-card.svg",
   },
   {
-    title: "Build momentum and healthy habits",
+    title: "Films that drive recruitment, sales, fundraising, engagement",
     image: "/features/overview-card.svg",
   },
 ];
@@ -27,19 +27,19 @@ export const Features = () => {
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
           <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
-            MEASURE TWICE. CUT ONCE.
+            DOCUMENTARY STORYTELLING. CINEMA CAMERAS. STORIES THAT LAND.
           </span>
         </div>
 
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Made for modern product teams
+            Transform corporate messaging into authentic stories
           </h2>
           <p className="text-muted-foreground leading-snug">
-            Mainline is built on the habits that make the best product teams
-            successful: staying focused, moving quickly, and always aiming for
-            high-quality work.
+            We use documentary filmmaking techniques to find the human truth in
+            your brand—then craft it with cinema-quality production. Unlike
+            traditional corporate video, we dig deep to find what matters.
           </p>
         </div>
 

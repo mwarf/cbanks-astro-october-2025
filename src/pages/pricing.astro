@@ -1,0 +1,23 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import { Background } from '@/components/background';
+import PageHeader from '@/components/PageHeader.astro';
+import { FAQ } from '@/components/blocks/faq';
+import { Pricing as PricingBlock } from '@/components/blocks/pricing';
+import { PricingTable } from '@/components/blocks/pricing-table';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title={`Pricing - ${SITE_TITLE}`} description="Transparent pricing for documentary-style brand films.">
+  <Background>
+    <PageHeader
+      title="Investment in Authentic Storytelling"
+      description="Professional documentary-style films that get watched, shared, and remembered—because they don't sound like marketing."
+      align="center"
+    />
+    <PricingBlock client:load />
+    <PricingTable client:visible />
+    <FAQ client:visible />
+  </Background>
+</DefaultLayout>

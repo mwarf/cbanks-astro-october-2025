@@ -13,70 +13,70 @@ type Company = {
 export const Logos = () => {
   const topRowCompanies = [
     {
-      name: "Mercury",
-      logo: "/logos/mercury.svg",
+      name: "Government of Alberta",
+      logo: "/logos/government-of-alberta-logo-dark.svg",
       width: 143,
-      height: 26,
-      href: "https://mercury.com",
+      height: 40,
+      href: "https://www.alberta.ca",
     },
     {
-      name: "Watershed",
-      logo: "/logos/watershed.svg",
+      name: "City of Lethbridge",
+      logo: "/logos/city-of-lethbridge-horizontal-dark.svg",
       width: 154,
-      height: 31,
-      href: "https://watershed.com",
+      height: 40,
+      href: "https://www.lethbridge.ca",
     },
     {
-      name: "Retool",
-      logo: "/logos/retool.svg",
+      name: "Stantec Consulting",
+      logo: "/logos/stantec-consulting-logo-dark.svg",
       width: 113,
-      height: 22,
-      href: "https://retool.com",
+      height: 30,
+      href: "https://www.stantec.com",
     },
     {
-      name: "Descript",
-      logo: "/logos/descript.svg",
+      name: "Sumus",
+      logo: "/logos/sumus-horizontal-dark.svg",
       width: 112,
-      height: 27,
-      href: "https://descript.com",
+      height: 40,
+      href: "https://sumus.io",
     },
   ];
 
   const bottomRowCompanies = [
     {
-      name: "Perplexity",
-      logo: "/logos/perplexity.svg",
+      name: "MD Taber",
+      logo: "/logos/md-taber-logo-dark.svg",
       width: 141,
-      height: 32,
-      href: "https://perplexity.com",
+      height: 60,
+      href: "https://www.mdtaber.com",
     },
     {
-      name: "Monzo",
-      logo: "/logos/monzo.svg",
+      name: "Castle Mountain Resort",
+      logo: "/logos/castle-mountain-logo-dark.svg",
       width: 104,
-      height: 18,
-      href: "https://monzo.com",
+      height: 45,
+      href: "https://www.castlemountain.ca",
     },
     {
-      name: "Ramp",
-      logo: "/logos/ramp.svg",
+      name: "Galt Museum",
+      logo: "/logos/galt-horizontal-dark.svg",
       width: 105,
-      height: 28,
-      href: "https://ramp.com",
+      height: 40,
+      href: "https://galtmuseum.com",
     },
     {
-      name: "Raycast",
-      logo: "/logos/raycast.svg",
+      name: "Storyhive",
+      logo: "/logos/storyhive-logo-dark.svg",
       width: 128,
-      height: 33,
-      href: "https://raycast.com",
+      height: 40,
+      href: "https://www.storyhive.com",
     },
     {
-      name: "Arc",
-      logo: "/logos/arc.svg",
+      name: "Snapshot Studios",
+      logo: "/logos/snapshot-studios-logo-dark.svg",
       width: 90,
-      height: 28,
-      href: "https://arc.com",
+      height: 40,
+      href: "https://www.snapshotstudios.com",
     },
   ];
 
@@ -85,10 +85,10 @@ export const Logos = () => {
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
-            Powering the world's best product teams.
+            Trusted by Southern Alberta organizations and government entities.
             <br className="max-md:hidden" />
             <span className="text-muted-foreground">
-              From next-gen startups to established enterprises.
+              From municipalities to regional businesses.
             </span>
           </h2>
         </div>

@@ -8,52 +8,52 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    title: "Support",
+    title: "Process",
     questions: [
       {
-        question: "How do I update my account without breaking my laptop?",
+        question: "What's the typical timeline for a project?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Our brand documentaries typically take 4-6 weeks from start to finish. This includes 1-2 weeks of discovery to find the real story, 2-3 days of production, and 2-3 weeks of post-production.",
       },
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "How do you find the story worth telling?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "We spend time understanding your business, your values, and what makes you unique. We interview key team members and look for the authentic moments that resonate with your audience.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "What's included in the production process?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Every project includes discovery sessions, professional filming with cinema equipment, color grading, sound design, and multiple revisions to ensure we capture your story perfectly.",
       },
     ],
   },
   {
-    title: "Your account",
+    title: "Investment",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "What's the investment for a brand documentary?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Our brand documentaries start at $15K and include everything from discovery to final delivery. Story packages start at $8K for shorter-form content.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "Do you offer custom packages?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Yes, we create custom packages based on your specific needs. Whether you need multiple videos, extended timelines, or specialized equipment, we can tailor our approach.",
       },
     ],
   },
   {
-    title: "Other questions",
+    title: "Results",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "What kind of results can I expect?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Our films average a 73% completion rate (vs. 37% industry average) because they don't sound like marketing. Clients see increased engagement, better recruitment results, and stronger investor interest.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "How do I measure the success of my film?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "We track metrics like view completion, shares, and most importantly, business outcomes like inquiries, applications, or sales that result from the film.",
       },
     ],
   },
@@ -63,33 +63,37 @@ export const FAQ = ({
   headerTag = "h2",
   className,
   className2,
+  hideHeader = false,
 }: {
   headerTag?: "h1" | "h2";
   className?: string;
   className2?: string;
+  hideHeader?: boolean;
 }) => {
   return (
     <section className={cn("py-28 lg:py-32", className)}>
       <div className="container max-w-5xl">
         <div className={cn("mx-auto grid gap-16 lg:grid-cols-2", className2)}>
-          <div className="space-y-4">
-            {headerTag === "h1" ? (
-              <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                Got Questions?
-              </h1>
-            ) : (
-              <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                Got Questions?
-              </h2>
-            )}
-            <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">
-              If you can't find what you're looking for,{" "}
-              <a href="/contact" className="underline underline-offset-4">
-                get in touch
-              </a>
-              .
-            </p>
-          </div>
+          {!hideHeader && (
+            <div className="space-y-4">
+              {headerTag === "h1" ? (
+                <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+                  Got Questions?
+                </h1>
+              ) : (
+                <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+                  Got Questions?
+                </h2>
+              )}
+              <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">
+                If you can't find what you're looking for,{" "}
+                <a href="/contact" className="underline underline-offset-4">
+                  get in touch
+                </a>
+                .
+              </p>
+            </div>
+          )}
 
           <div className="grid gap-6 text-start">
             {categories.map((category, categoryIndex) => (

@@ -21,8 +21,8 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
     <Features />
     <ResourceAllocation />
   </Background>
-  <Testimonials client:only='react'/>
+  <Testimonials client:visible/>
   <Background variant="bottom">
-    <FAQ client:only='react'/>
+    <FAQ client:visible/>
   </Background>
 </DefaultLayout>

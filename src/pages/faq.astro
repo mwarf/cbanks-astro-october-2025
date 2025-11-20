@@ -2,6 +2,7 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import { Background } from '@/components/background';
+import PageHeader from '@/components/PageHeader.astro';
 import { FAQ } from '@/components/blocks/faq';
 import { Testimonials } from '@/components/blocks/testimonials';
 import { DashedLine } from '@/components/dashed-line';
@@ -9,14 +10,17 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 ---
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <Background>
+    <PageHeader
+      title="Frequently Asked Questions"
+      description="If you can't find what you're looking for, get in touch."
+      align="center"
+    />
     <FAQ
       client:only='react'
-      className="py-28 text-center lg:pt-44 lg:pb-32"
+      className="pb-28 text-center lg:pb-32"
       className2="max-w-xl lg:grid-cols-1"
-      headerTag="h1"
+      hideHeader={true}
     />
     <DashedLine className="mx-auto max-w-xl" />
-    <Testimonials dashedLineClassName="hidden" client:only='react'
-    />
   </Background>
 </DefaultLayout>

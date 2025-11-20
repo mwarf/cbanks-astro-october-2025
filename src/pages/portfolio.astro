@@ -1,0 +1,32 @@
+---
+import { SITE_TITLE } from '../consts';
+import { Play, ArrowRight } from 'lucide-react';
+
+import { Background } from '@/components/background';
+import PageHeader from '@/components/PageHeader.astro';
+import { PortfolioGrid } from '@/components/blocks/portfolio-grid';
+import { Button } from '@/components/ui/button';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+
+import { projects } from '@/lib/portfolio-data';
+import { FeaturedProject } from '@/components/blocks/featured-project';
+
+const featuredProject = projects.find(p => p.featured) || projects[0];
+---
+
+<DefaultLayout title={`Portfolio - ${SITE_TITLE}`} description="Our latest documentary-style films for brands in Southern Alberta.">
+  <Background>
+    <PageHeader 
+      title="Selected Work" 
+      description="We don't just make videos. We uncover stories. Here are some of our favorite films that have helped our clients connect with their audience."
+    />
+
+    <div class="container pb-20 lg:pb-32 space-y-20">
+      <FeaturedProject client:load project={featuredProject} />
+      <PortfolioGrid client:load projects={projects.filter(p => p.id !== featuredProject.id)} />
+    </div>
+
+
+
+  </Background>
+</DefaultLayout>

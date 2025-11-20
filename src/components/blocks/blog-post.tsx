@@ -15,7 +15,7 @@ const BlogPost = ({
     <section>
       <div className="container">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
-          <h1 className="max-w-3xl text-4xl font-bold md:text-5xl">{title}</h1>
+          <h1 className="font-display max-w-3xl text-4xl font-bold md:text-5xl">{title}</h1>
           <h3 className="text-muted-foreground max-w-4xl">{description}</h3>
           <div className="flex items-center gap-3 text-sm md:text-base">
             <Avatar className="h-8 w-8 border">

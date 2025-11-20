@@ -93,14 +93,14 @@ export const Testimonials = ({
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Films that get watched, shared, and remembered
+              Films That Make Your Customers Actually Give a Damn
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
-              Because they don't sound like marketing. Our clients see real
-              business results from authentic storytelling.
+              Documentary-style brand films that drive real business
+              results—recruitment, fundraising, brand awareness, sales.
             </p>
             <Button variant="outline" className="shadow-md">
-              See Our Work <ArrowRight className="size-4" />
+              Watch Our Demo Reel <ArrowRight className="size-4" />
             </Button>
           </div>
 

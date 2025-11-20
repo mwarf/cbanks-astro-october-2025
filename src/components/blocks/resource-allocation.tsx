@@ -4,13 +4,13 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Reusable issue templates.",
+    title: "Real conversations, authentic moments.",
     description:
-      "Draft lightning-fast documents with our Smart Instructions and Templates.",
+      "We capture genuine interactions that resonate with your audience.",
     images: [
       {
         src: "/resource-allocation/templates.webp",
-        alt: "Issue template interface",
+        alt: "Documentary filming setup",
         width: 495,
         height: 186,
       },
@@ -20,37 +20,57 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Simplify your stack.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
+    title: "Thoughtful discovery process.",
+    description: "We spend 1-2 weeks finding the story worth telling.",
     images: [
-      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
-      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
       {
-        src: "/logos/notion.svg",
-        alt: "Notion logo",
-        width: 48,
-        height: 48,
-      },
-      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
-      {
-        src: "/logos/monday.svg",
-        alt: "Monday logo",
+        src: "/logos/sumus-horizontal-dark.svg",
+        alt: "Discovery session",
         width: 48,
         height: 48,
       },
       {
-        src: "/logos/drive.svg",
-        alt: "Google Drive logo",
+        src: "/logos/government-of-alberta-logo-dark.svg",
+        alt: "Story outline",
         width: 48,
         height: 48,
       },
       {
-        src: "/logos/jira.svg",
-        alt: "Jira logo",
+        src: "/logos/city-of-lethbridge-horizontal-dark.svg",
+        alt: "Research materials",
         width: 48,
         height: 48,
       },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
+      {
+        src: "/logos/stantec-consulting-logo-dark.svg",
+        alt: "Script development",
+        width: 48,
+        height: 48,
+      },
+      {
+        src: "/logos/castle-mountain-logo-dark.svg",
+        alt: "Timeline planning",
+        width: 48,
+        height: 48,
+      },
+      {
+        src: "/logos/galt-horizontal-dark.svg",
+        alt: "Asset management",
+        width: 48,
+        height: 48,
+      },
+      {
+        src: "/logos/sumus-horizontal-dark.svg",
+        alt: "Project tracking",
+        width: 48,
+        height: 48,
+      },
+      {
+        src: "/logos/storyhive-logo-dark.svg",
+        alt: "Workflow planning",
+        width: 48,
+        height: 48,
+      },
     ],
     className:
       "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
@@ -60,13 +80,13 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "Graveyard it.",
+    title: "65+ films delivered since 2019.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
+      "A proven track record of authentic storytelling for businesses.",
     images: [
       {
         src: "/resource-allocation/graveyard.webp",
-        alt: "Graveyard interface",
+        alt: "Film reel collection",
         width: 305,
         height: 280,
       },
@@ -76,13 +96,12 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Task discussions.",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+    title: "Average view completion rate: 73%.",
+    description: "Industry average is 37% - our films actually get watched.",
     images: [
       {
         src: "/resource-allocation/discussions.webp",
-        alt: "Task discussions interface",
+        alt: "Analytics dashboard",
         width: 320,
         height: 103,
       },
@@ -92,13 +111,13 @@ const bottomItems = [
     fade: [""],
   },
   {
-    title: "Notifications.",
+    title: "Based in Lethbridge, serving Southern Alberta.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Deep understanding of the local business landscape and culture.",
     images: [
       {
         src: "/resource-allocation/notifications.webp",
-        alt: "Notifications interface",
+        alt: "Map of Southern Alberta",
         width: 305,
         height: 280,
       },
@@ -117,7 +136,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainline your resource allocation and execution
+          Tell your story without sounding like marketing
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">

@@ -2,11 +2,17 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import { Background } from '@/components/background';
+import PageHeader from '@/components/PageHeader.astro';
 import { Contact as ContactBlock } from '@/components/blocks/contact';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 ---
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <Background>
+    <PageHeader
+      title="Let's Tell Your Story"
+      description="Have a story worth telling? Let's discuss how we can bring it to life."
+      align="center"
+    />
     <ContactBlock />
   </Background>
 </DefaultLayout>

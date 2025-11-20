@@ -5,18 +5,7 @@ import { Separator } from "@/components/ui/separator";
 const BlogPosts = ({ posts }: { posts: any[] }) => {
   return (
     <>
-      <section>
-        <div className="container max-w-5xl space-y-4 text-center">
-          <h1 className="text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-            Blog
-          </h1>
 
-          <p className="text-muted-foreground max-w-md leading-snug font-medium lg:mx-auto">
-            Explore our blog for insightful articles, personal reflections and
-            more.
-          </p>
-        </div>
-      </section>
       <section className="container flex max-w-5xl flex-col-reverse gap-8 md:gap-14 lg:flex-row lg:items-end">
         <div className="container">
           <div className="mt-20 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

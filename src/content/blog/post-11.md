@@ -2,7 +2,7 @@
 title: "The 67.6% Problem: Why Southern Alberta Manufacturers Can't Find Workers (And How Video Changes Everything)"
 description: "Learn how Southern Alberta manufacturers use authentic video content to solve the skills gap and attract quality candidates."
 pubDate: "Nov 01 2025"
-image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+image: "/images/blog-placeholder-2.png"
 authorImage: "/avatar/avatar1.png"
 authorName: "Coalbanks Team"
 ---

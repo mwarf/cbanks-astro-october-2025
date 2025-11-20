@@ -3,7 +3,7 @@ title: "Nonprofit Storytelling That Drives Donations: Video Strategies for South
 description: "Discover how Southern Alberta nonprofits drive 497% ROI with video storytelling. Complete guide includes smartphone production framework, ethical storytelling practices, and proven donor conversion strategies."
 pubDate: "Nov 02 2025"
 slug: "nonprofit-storytelling-video-strategies-southern-alberta"
-image: "https://images.unsplash.com/photo-1586232745083-437d3f326e9d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+image: "/images/blog-placeholder-2.png"
 authorImage: "/avatar/avatar1.png"
 authorName: "Coalbanks Team"
 ---

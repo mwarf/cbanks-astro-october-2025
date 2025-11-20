@@ -11,6 +11,7 @@ tags:
     "community engagement",
     "Southern Alberta",
   ]
+image: "/images/blog-placeholder.png"
 ---
 
 # Beyond Council Chambers: How Southern Alberta Municipalities Use Documentary Video to Build Community and Attract Investment

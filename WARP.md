@@ -27,16 +27,16 @@ npm run format       # Format code with Prettier
 ### Directory Structure
 
 - **`src/components/`**
-  - `blocks/` - Page section components (hero, navbar, footer, pricing, etc.)
+  - `blocks/` - Page section components (hero, navbar, footer, pricing, portfolio-grid, featured-project, etc.)
   - `ui/` - shadcn/ui base components (excluded from linting)
-  - Shared utility components (theme-toggle, background, etc.)
+  - Shared utility components (theme-toggle, background, PageHeader, etc.)
 
 - **`src/layouts/`**
   - `DefaultLayout.astro` - Standard page layout with navbar and footer
   - `BasicLayout.astro` - Content-focused layout with centered prose container
 
 - **`src/pages/`** - File-based routing (Astro convention)
-  - Routes: index, about, pricing, faq, contact, login, signup, blog, privacy
+  - Routes: index, about, pricing, faq, contact, login, signup, blog, privacy, portfolio/[slug]
   - RSS feed generated at `/rss.xml`
 
 - **`src/content/`** - Content collections (MDX blog posts)
@@ -44,6 +44,7 @@ npm run format       # Format code with Prettier
 
 - **`src/lib/`** - Utilities
   - `utils.ts` - Contains `cn()` function for className merging
+  - `portfolio-data.ts` - Centralized portfolio project data
 
 - **`src/styles/global.css`** - Global styles with Tailwind 4, custom CSS variables, and DM Sans font
 

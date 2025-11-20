@@ -19,4 +19,5 @@ const blog = defineCollection({
   }),
 });
 
+// Force rebuild of content collection
 export const collections = { blog };

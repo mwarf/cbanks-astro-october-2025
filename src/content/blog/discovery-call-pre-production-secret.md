@@ -3,7 +3,7 @@ title: "The Discovery Call That Changes Everything: Our Pre-Production Secret"
 description: "How a thorough discovery process prevents video project failures and delivers authentic stories. Learn why 79% of agencies skip this critical step—and why we never do."
 pubDate: "Nov 02 2025"
 slug: "discovery-call-pre-production-secret"
-image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+image: "/images/blog-placeholder-2.png"
 authorImage: "/avatar/avatar1.png"
 authorName: "Coalbanks Team"
 ---

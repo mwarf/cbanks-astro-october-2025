@@ -55,6 +55,7 @@ Blog posts are stored in `src/content/blog/` and follow specific guidelines for 
 - FAQ page
 - Contact page with form
 - Login/Signup pages
+- Portfolio page with filtering and case studies
 
 ### Blocks
 
@@ -67,6 +68,8 @@ Blog posts are stored in `src/content/blog/` and follow specific guidelines for 
 - FAQ with accordion
 - Footer
 - Navigation bar
+- Featured Project section
+- Portfolio Grid with filtering
 
 ## Deployment
 

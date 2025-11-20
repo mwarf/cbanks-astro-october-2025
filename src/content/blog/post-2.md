@@ -3,7 +3,7 @@ title: "How We Captured a Brewery's Story in One Day"
 description: "Filming a craft brewery might seem straightforward, but it's one of the most nuanced storytelling challenges we've discovered."
 pubDate: "Oct 30 2025"
 slug: "capturing-brewery-story-in-one-day"
-image: "https://images.unsplash.com/photo-1529310399831-ed471e610e6e?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+image: "/images/blog-placeholder-3.png"
 authorImage: "/avatar/avatar1.png"
 authorName: "Coalbanks Team"
 ---
@@ -23,7 +23,7 @@ Documentary filming at a brewery doesn't require much. Here's what we brought:
 
 During our visit, we captured the brewmaster's reaction when the latest batch was sampled. The feeling of capturing a genuine moment of pride and accomplishment is indescribable - a perfect blend of authentic emotion, craft passion, and pure storytelling that corporate videos simply can't match.
 
-![Brewmaster checking the beer](https://images.unsplash.com/photo-1529310399831-ed471e610e6e?q=80&w=1586&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+![Brewmaster checking the beer](/images/blog-placeholder-3.png)
 
 ## Unexpected Discoveries
 

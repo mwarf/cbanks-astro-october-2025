@@ -3,7 +3,7 @@ title: "The Art of Authentic Storytelling in Business"
 description: "Discover how documentary-style filmmaking is revolutionizing corporate communication with its unique approach to telling authentic, compelling stories that people actually want to watch."
 pubDate: "Oct 31 2025"
 slug: "authentic-storytelling-in-business"
-image: "https://images.unsplash.com/photo-1574717024456-7b1b8aeb0c8a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+image: "/images/blog-placeholder-4.png"
 authorImage: "/avatar/avatar1.png"
 authorName: "Coalbanks Team"
 ---

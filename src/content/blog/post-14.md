@@ -2,7 +2,7 @@
 title: "The Bottom Line of Believability: How to Measure the ROI of Your Video Content"
 description: "Learn how to measure the actual ROI of your video content with proven frameworks and real examples."
 pubDate: "Nov 02 2025"
-image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+image: "/images/blog-placeholder.png"
 authorImage: "/avatar/avatar1.png"
 authorName: "Coalbanks Team"
 ---

@@ -26,7 +26,7 @@ const pricingPlans = [
     name: "Brand Documentary",
     button: {
       text: "Start a Project",
-      variant: "outline" as const,
+      variant: "default" as const,
     },
   },
   {
@@ -194,10 +194,13 @@ const PlanHeaders = ({
               />
             </CollapsibleTrigger>
             <Button
+              asChild
               variant={pricingPlans[selectedPlan].button.variant}
               className="w-fit"
             >
-              {pricingPlans[selectedPlan].button.text}
+              <a href="/contact">
+                {pricingPlans[selectedPlan].button.text}
+              </a>
             </Button>
           </div>
           <CollapsibleContent className="flex flex-col space-y-2 p-2">
@@ -228,8 +231,10 @@ const PlanHeaders = ({
         {pricingPlans.map((plan, index) => (
           <div key={index} className="">
             <h3 className="mb-3 text-2xl font-semibold">{plan.name}</h3>
-            <Button variant={plan.button.variant} className="">
-              {plan.button.text}
+            <Button asChild variant={plan.button.variant} className="">
+              <a href="/contact">
+                {plan.button.text}
+              </a>
             </Button>
           </div>
         ))}

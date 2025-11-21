@@ -55,24 +55,26 @@ const plans = [
 ];
 
 export const Pricing = ({ className }: { className?: string }) => {
-  const [isAnnual, setIsAnnual] = useState(true);
-
   return (
     <section className={cn("pb-28 lg:pb-32", className)}>
       <div className="container max-w-5xl">
-
-
         <div className="mt-8 grid items-start gap-5 text-start md:mt-12 md:grid-cols-3 lg:mt-20">
           {plans.map((plan) => (
             <Card
               key={plan.name}
-              className={`${
+              className={cn(
+                "relative flex flex-col",
                 plan.name === "Brand Documentary"
-                  ? "outline-primary origin-top outline-4"
-                  : ""
-              }`}
+                  ? "border-primary shadow-lg scale-105 z-10"
+                  : "border-border"
+              )}
             >
-              <CardContent className="flex flex-col gap-7 px-6 py-5">
+              {plan.name === "Brand Documentary" && (
+                <div className="absolute -top-4 left-0 right-0 mx-auto w-fit rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                  Most Popular
+                </div>
+              )}
+              <CardContent className="flex flex-1 flex-col gap-7 px-6 py-5">
                 <div className="space-y-2">
                   <h3 className="text-foreground font-semibold">{plan.name}</h3>
                   <div className="space-y-1">
@@ -86,7 +88,7 @@ export const Pricing = ({ className }: { className?: string }) => {
                   {plan.description}
                 </span>
 
-                <div className="space-y-3">
+                <div className="space-y-3 flex-1">
                   {plan.features.map((feature) => (
                     <div
                       key={feature}
@@ -99,14 +101,17 @@ export const Pricing = ({ className }: { className?: string }) => {
                 </div>
 
                 <Button
-                  className="w-fit"
+                  asChild
+                  className="w-full"
                   variant={
-                    plan.name === "Story Package" ? "default" : "outline"
+                    plan.name === "Brand Documentary" ? "default" : "outline"
                   }
                 >
-                  {plan.name === "Custom Project"
-                    ? "Get Custom Quote"
-                    : "Start a Project"}
+                  <a href="/contact">
+                    {plan.name === "Custom Project"
+                      ? "Get Custom Quote"
+                      : "Start a Project"}
+                  </a>
                 </Button>
               </CardContent>
             </Card>

@@ -94,11 +94,11 @@ export const Hero = () => {
       </div>
 
       <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
-        <div className="relative h-[793px] w-full">
+        <div className="relative aspect-video w-full">
           <img
             src="/images/hero-main/hero-main.webp"
             alt="hero"
-            className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
+            className="h-full w-full rounded-2xl object-cover object-center shadow-lg max-lg:rounded-tr-none"
           />
         </div>
       </div>

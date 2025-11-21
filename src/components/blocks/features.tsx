@@ -7,15 +7,15 @@ import { Card, CardContent } from "@/components/ui/card";
 const items = [
   {
     title: "Find the real human story behind your brand",
-    image: "/features/triage-card.svg",
+    image: "/features/human-story.webp",
   },
   {
     title: "Cinema cameras, documentary craft, professional finish",
-    image: "/features/cycle-card.svg",
+    image: "/features/cinema-production.webp",
   },
   {
     title: "Films that drive recruitment, sales, fundraising, engagement",
-    image: "/features/overview-card.svg",
+    image: "/features/business-outcomes.webp",
   },
 ];
 

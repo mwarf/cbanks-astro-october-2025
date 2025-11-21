@@ -21,7 +21,7 @@ const { Content } = await render(post);
 ---
 <DefaultLayout>
 	<div class="py-28 lg:pt-44 lg:pb-32">
-		<BlogPost post={post} client:only='react' >
+		<BlogPost post={post} >
 			<Content />
 		</BlogPost>
 	</div>

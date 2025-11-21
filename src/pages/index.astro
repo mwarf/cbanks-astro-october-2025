@@ -6,7 +6,7 @@ import { FAQ } from '@/components/blocks/faq';
 import { Features } from '@/components/blocks/features';
 import { Hero } from '@/components/blocks/hero';
 import { Logos } from '@/components/blocks/logos';
-import { ResourceAllocation } from '@/components/blocks/resource-allocation';
+import { ProcessSection } from '@/components/blocks/process-section';
 import { Testimonials } from '@/components/blocks/testimonials';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
@@ -19,7 +19,8 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
     <Hero />
     <Logos client:only="react"/> 
     <Features />
-    <ResourceAllocation />
+    <Features />
+    <ProcessSection />
   </Background>
   <Testimonials client:visible/>
   <Background variant="bottom">

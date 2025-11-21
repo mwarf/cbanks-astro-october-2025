@@ -25,23 +25,28 @@ export function AboutHero() {
       <div className="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24">
         <div className="flex-[1.5]">
           <h1 className="font-display font-bold text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            Your Employees Have Better Stories Than Your Marketing Department
+            We Don't Write Scripts. <br /> We Find Truth.
           </h1>
 
           <p className="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
-            The best brand stories are found, not created.
+            Documentary filmmaking for brands that have nothing to hide.
           </p>
 
-          <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
-            We're Coalbanks—documentary-style filmmakers who dig into Southern
-            Alberta businesses until we uncover the real human truth that makes
-            people stop scrolling. Not because they have to watch. Because the
-            story actually matters. Since 2019, we've delivered 65+ films with
-            an average 73% completion rate. That's nearly double the 37%
-            industry average. The difference? We stopped making videos that
-            sound like marketing and started making films that feel like stories
-            people actually care about.
-          </p>
+          <div className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
+            <p>
+              In a world of polished marketing fluff, authenticity is the only
+              currency that matters. We believe that your best stories aren't
+              invented in a boardroom—they're already happening in your
+              hallways, on your job sites, and in the lives of your customers.
+            </p>
+            <p>
+              Our "documentary-style" approach isn't just an aesthetic; it's a
+              philosophy. We trade teleprompters for conversation and actors for
+              real people. We dig deep to uncover the human element that makes
+              your business unique. The result? Films that don't just get
+              watched, but felt.
+            </p>
+          </div>
         </div>
 
         <div

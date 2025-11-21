@@ -20,7 +20,7 @@ const posts = (await getCollection('blog')).sort(
 			align="center"
 		/>
 		<div class="pb-28 lg:pb-32">
-			<BlogPosts posts={posts} client:only='react' />
+			<BlogPosts posts={posts} />
 		</div>
 	</Background>
 </DefaultLayout>

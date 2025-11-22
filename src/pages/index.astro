@@ -6,21 +6,31 @@ import { FAQ } from '@/components/blocks/faq';
 import { Features } from '@/components/blocks/features';
 import { Hero } from '@/components/blocks/hero';
 import { Logos } from '@/components/blocks/logos';
+import { ResourceAllocation } from '@/components/blocks/resource-allocation';
 import { ProcessSection } from '@/components/blocks/process-section';
 import { Testimonials } from '@/components/blocks/testimonials';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
+import heroImage from '@/assets/images/home/hero-main.png';
+import feature1 from '@/assets/images/home/feature-1.png';
+import feature2 from '@/assets/images/home/feature-2.png';
+import feature3 from '@/assets/images/home/feature-3.png';
+import resource1 from '@/assets/images/home/resource-1.png';
+import resource2 from '@/assets/images/home/resource-2.png';
+import resource3 from '@/assets/images/home/resource-3.png';
+import resource4 from '@/assets/images/home/resource-4.png';
 
-
+const featureImages = [feature1, feature2, feature3];
+const resourceImages = [resource1, resource2, resource3, resource4];
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <Background className="via-muted to-muted/80">
-    <Hero />
+    <Hero image={heroImage} client:load />
     <Logos client:only="react"/> 
-    <Features />
-    <Features />
-    <ProcessSection />
+    <Features images={featureImages} client:load />
+    <ResourceAllocation images={resourceImages} client:load />
+    <ProcessSection client:load />
   </Background>
   <Testimonials client:visible/>
   <Background variant="bottom">

@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
+import buildingPlaceholder from "@/assets/images/building-placeholder.jpg";
+
 export const Contact = () => {
   return (
     <section className="pb-28 lg:pb-32">
@@ -15,7 +17,7 @@ export const Contact = () => {
             {/* Building Image */}
             <div className="overflow-hidden rounded-2xl shadow-lg">
               <img
-                src="/images/building-placeholder.jpg"
+                src={buildingPlaceholder.src}
                 alt="Coalbanks Building"
                 className="h-64 w-full object-cover lg:h-80"
               />

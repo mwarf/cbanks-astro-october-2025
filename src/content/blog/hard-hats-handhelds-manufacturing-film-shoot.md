@@ -5,7 +5,7 @@ pubDate: "Nov 02 2025"
 slug: "hard-hats-handhelds-manufacturing-film-shoot"
 image: "/images/blog-placeholder-3.png"
 authorImage: "/avatar/avatar1.png"
-authorName: "Coalbanks Team"
+author: "Coalbanks Creative Inc."
 ---
 
 ## 5:30 AM at a Lethbridge Manufacturing Facility

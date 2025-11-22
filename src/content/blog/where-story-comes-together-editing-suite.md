@@ -5,7 +5,7 @@ pubDate: "Nov 02 2025"
 slug: "where-story-comes-together-editing-suite"
 image: "/images/blog-placeholder-3.png"
 authorImage: "/avatar/avatar1.png"
-authorName: "Coalbanks Team"
+author: "Coalbanks Creative Inc."
 ---
 
 ## The Raw Truth About Raw Footage

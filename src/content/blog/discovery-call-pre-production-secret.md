@@ -5,7 +5,7 @@ pubDate: "Nov 02 2025"
 slug: "discovery-call-pre-production-secret"
 image: "/images/blog-placeholder-2.png"
 authorImage: "/avatar/avatar1.png"
-authorName: "Coalbanks Team"
+author: "Coalbanks Creative Inc."
 ---
 
 ## The $50,000 Conversation Most Video Companies Skip

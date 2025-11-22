@@ -9,7 +9,7 @@ const topItems = [
       "We capture genuine interactions that resonate with your audience.",
     images: [
       {
-        src: "/resource-allocation/templates.webp",
+        src: "/images/home/resource-1.png",
         alt: "Documentary filming setup",
         width: 495,
         height: 186,
@@ -85,7 +85,7 @@ const bottomItems = [
       "A proven track record of authentic storytelling for businesses.",
     images: [
       {
-        src: "/resource-allocation/graveyard.webp",
+        src: "/images/home/resource-2.png",
         alt: "Film reel collection",
         width: 305,
         height: 280,
@@ -100,7 +100,7 @@ const bottomItems = [
     description: "Industry average is 37% - our films actually get watched.",
     images: [
       {
-        src: "/resource-allocation/discussions.webp",
+        src: "/images/home/resource-3.png",
         alt: "Analytics dashboard",
         width: 320,
         height: 103,
@@ -116,7 +116,7 @@ const bottomItems = [
       "Deep understanding of the local business landscape and culture.",
     images: [
       {
-        src: "/resource-allocation/notifications.webp",
+        src: "/images/home/resource-4.png",
         alt: "Map of Southern Alberta",
         width: 305,
         height: 280,
@@ -128,7 +128,7 @@ const bottomItems = [
   },
 ];
 
-export const ResourceAllocation = () => {
+export const ResourceAllocation = ({ images }: { images?: any[] }) => {
   return (
     <section
       id="resource-allocation"
@@ -148,7 +148,12 @@ export const ResourceAllocation = () => {
           {/* Top Features Grid - 2 items */}
           <div className="relative container flex max-md:flex-col">
             {topItems.map((item, i) => (
-              <Item key={i} item={item} isLast={i === topItems.length - 1} />
+              <Item 
+                key={i} 
+                item={item} 
+                isLast={i === topItems.length - 1} 
+                image={i === 0 && images ? images[0] : undefined}
+              />
             ))}
           </div>
           <DashedLine
@@ -164,6 +169,7 @@ export const ResourceAllocation = () => {
                 item={item}
                 isLast={i === bottomItems.length - 1}
                 className="md:pb-0"
+                image={images ? images[i + 1] : undefined}
               />
             ))}
           </div>
@@ -181,9 +187,10 @@ interface ItemProps {
   item: (typeof topItems)[number] | (typeof bottomItems)[number];
   isLast?: boolean;
   className?: string;
+  image?: any;
 }
 
-const Item = ({ item, isLast, className }: ItemProps) => {
+const Item = ({ item, isLast, className, image }: ItemProps) => {
   return (
     <div
       className={cn(
@@ -205,16 +212,16 @@ const Item = ({ item, isLast, className }: ItemProps) => {
           <div className="flex flex-col gap-5">
             {/* First row - right aligned */}
             <div className="flex translate-x-4 justify-end gap-5">
-              {item.images.slice(0, 4).map((image, j) => (
+              {item.images.slice(0, 4).map((img, j) => (
                 <div
                   key={j}
                   className="bg-background grid aspect-square size-16 place-items-center rounded-2xl p-2 lg:size-20"
                 >
                   <img
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width}
-                    height={image.height}
+                    src={img.src}
+                    alt={img.alt}
+                    width={img.width}
+                    height={img.height}
                     className="object-contain object-left-top"
                   />
                   <div className="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
@@ -223,16 +230,16 @@ const Item = ({ item, isLast, className }: ItemProps) => {
             </div>
             {/* Second row - left aligned */}
             <div className="flex -translate-x-4 gap-5">
-              {item.images.slice(4).map((image, j) => (
+              {item.images.slice(4).map((img, j) => (
                 <div
                   key={j}
                   className="bg-background grid aspect-square size-16 place-items-center rounded-2xl lg:size-20"
                 >
                   <img
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width}
-                    height={image.height}
+                    src={img.src}
+                    alt={img.alt}
+                    width={img.width}
+                    height={img.height}
                     className="object-contain object-left-top"
                   />
                   <div className="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
@@ -243,14 +250,14 @@ const Item = ({ item, isLast, className }: ItemProps) => {
         </div>
       ) : (
         <div className="image-container grid grid-cols-1 gap-4">
-          {item.images.map((image, j) => (
+          {item.images.map((img, j) => (
             <img
               key={j}
-              src={image.src}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
-              className="object-contain object-left-top"
+              src={image?.src || img.src}
+              alt={img.alt}
+              className="object-cover object-center w-full h-auto rounded-xl shadow-sm"
+              width={image?.width}
+              height={image?.height}
             />
           ))}
         </div>

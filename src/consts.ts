@@ -5,8 +5,7 @@ export const SITE_TITLE = "Coalbanks - Documentary-Style Films for Brands";
 export const SITE_DESCRIPTION =
   "Transform corporate messaging into authentic stories using documentary filmmaking techniques and cinema-quality production.";
 
-export const GITHUB_URL =
-  "https://github.com/shadcnblocks/mainline-astro-template";
+export const GITHUB_URL = "https://coalbanks.ca";
 
 export const SITE_METADATA = {
   title: {

@@ -29,7 +29,7 @@ const features = [
   },
 ];
 
-export const Hero = () => {
+export const Hero = ({ image }: { image?: any }) => {
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
@@ -40,8 +40,8 @@ export const Hero = () => {
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 max-w-[90%] md:text-3xl">
-            Documentary-style brand films for companies with stories worth
-            telling
+            Documentary-style films for Southern Alberta municipalities,
+            industry, and agriculture.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
@@ -93,12 +93,14 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
+      <div className="mt-12 max-lg:ml-6 md:mt-20 lg:container lg:mt-24">
         <div className="relative aspect-video w-full">
           <img
-            src="/images/hero-main/hero-main.webp"
-            alt="hero"
+            src={image?.src || "/images/home/hero-main.png"}
+            alt="Documentary film crew filming an interview"
             className="h-full w-full rounded-2xl object-cover object-center shadow-lg max-lg:rounded-tr-none"
+            width={image?.width}
+            height={image?.height}
           />
         </div>
       </div>

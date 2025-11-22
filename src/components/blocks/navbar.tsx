@@ -41,7 +41,6 @@ const ITEMS = [
     ],
   },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },

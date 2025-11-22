@@ -6,20 +6,20 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
-    title: "Find the real human story behind your brand",
-    image: "/features/human-story.webp",
+    title: "Find the human story in complex operations",
+    image: "/images/home/feature-1.png",
   },
   {
     title: "Cinema cameras, documentary craft, professional finish",
-    image: "/features/cinema-production.webp",
+    image: "/images/home/feature-2.png",
   },
   {
-    title: "Films that drive recruitment, sales, fundraising, engagement",
-    image: "/features/business-outcomes.webp",
+    title: "Films that build trust, attract investment, and recruit skilled labor",
+    image: "/images/home/feature-3.png",
   },
 ];
 
-export const Features = () => {
+export const Features = ({ images }: { images?: any[] }) => {
   return (
     <section id="feature-modern-teams" className="pb-28 lg:pb-32">
       <div className="container">
@@ -51,9 +51,11 @@ export const Features = () => {
                 <div className="flex-1 p-4 pe-0! md:p-6">
                   <div className="relative aspect-[1.28/1] overflow-hidden">
                     <img
-                      src={item.image}
+                      src={images?.[i]?.src || item.image}
                       alt={`${item.title} interface`}
                       className="object-cover object-left-top ps-4 pt-2"
+                      width={images?.[i]?.width}
+                      height={images?.[i]?.height}
                     />
                     <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
                   </div>

@@ -32,8 +32,8 @@ export const AboutSection = () => {
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <TextSection
           paragraphs={[
-            "At Coalbanks, we're dedicated to transforming corporate messaging into authentic stories using documentary filmmaking techniques. Our mission is to help companies tell stories that people actually want to watch—because they don't sound like marketing. We'll stop at nothing to find the real human truth in your brand.",
-            "We're story-obsessed — investing 1-2 weeks in discovery to understand your business before we ever pick up a camera. We're all in this together because your authentic story is our best showcase. Since 2019, we've delivered 65+ films with an average 73% completion rate—3x the industry standard—because when your story succeeds, so do we.",
+            "At Coalbanks, we're dedicated to transforming corporate messaging into authentic stories using documentary filmmaking techniques. Our mission is to help municipalities, industrial leaders, and agricultural producers tell stories that build trust with taxpayers, stakeholders, and skilled workers.",
+            "We're story-obsessed — investing 1-2 weeks in discovery to understand your operations before we ever pick up a camera. We're all in this together because your authentic story is our best showcase. Since 2019, we've delivered 65+ films with an average 73% completion rate—3x the industry standard—because when your story succeeds, so do we.",
           ]}
         />
         <ImageSection

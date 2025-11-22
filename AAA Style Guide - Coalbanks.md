@@ -423,44 +423,34 @@ Examples:
 
 #### **Primary Colors**
 
-text
-
 ```
-CHARCOAL
-#2B2B2B
-RGB: 43, 43, 43
-Use: Primary text, dark backgrounds
-
 WARM WHITE
-#F8F6F3
-RGB: 248, 246, 243
-Use: Light backgrounds, contrast
+oklch(0.9582 0.0152 90.2357)
+Use: Backgrounds, cards, popovers
 
-PRAIRIE GOLD
-#D4A574
-RGB: 212, 165, 116
-Use: Accents, hover states, highlights
+CHARCOAL
+oklch(0.3760 0.0225 64.3434)
+Use: Foreground text, card foreground
+
+RUST (MUTED RED)
+oklch(0.6180 0.0778 65.5444)
+Use: Primary elements, rings, charts
 ```
 
 #### **Secondary Colors**
 
-text
-
 ```
-RUST
-#B85C3E
-RGB: 184, 92, 62
-Use: Primary CTAs, important highlights
-
 SAGE
-#8C9788
-RGB: 140, 151, 136
-Use: Secondary elements, subtle accents
+oklch(0.8846 0.0302 85.5655)
+Use: Secondary elements
 
 SLATE
-#5A5A5A
-RGB: 90, 90, 90
-Use: Secondary text, borders
+oklch(0.5391 0.0387 71.1655)
+Use: Muted foreground
+
+PRAIRIE GOLD
+oklch(0.8348 0.0426 88.8064)
+Use: Accents
 ```
 
 #### **Color Usage Rules**
@@ -480,31 +470,23 @@ Use: Secondary text, borders
 
 **Headlines:**
 
-text
-
 ```
-Primary: Freight Text Pro (Serif)
-Fallback: Merriweather, Georgia, serif
-Weights: Bold (700), Medium (500)
+Primary: Lora (Serif)
+Weights: Regular (400), Medium (500), Semibold (600), Bold (700)
 ```
 
 **Body Copy:**
 
-text
+```
+Primary: Libre Baskerville (Serif)
+Weights: Regular (400), Bold (700)
+```
+
+**Monospace:**
 
 ```
-Primary: Inter (Sans-serif)
-Fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
+Primary: IBM Plex Mono
 Weights: Regular (400), Medium (500), Semibold (600)
-```
-
-**Special Use (Quotes/Stats):**
-
-text
-
-```
-Primary: Freight Text Pro Italic
-Use: Pull quotes, testimonials, standout stats
 ```
 
 ---

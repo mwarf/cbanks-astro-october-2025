@@ -21,7 +21,7 @@ const featuredProject = projects.find(p => p.featured) || projects[0];
       description="We don't just make videos. We uncover stories. Here are some of our favorite films that have helped our clients connect with their audience."
     />
 
-    <div class="container pb-20 lg:pb-32 space-y-20">
+    <div class="container pb-20 lg:pb-32 flex flex-col gap-24">
       <FeaturedProject client:load project={featuredProject} />
       <PortfolioGrid client:load projects={projects.filter(p => p.id !== featuredProject.id)} />
     </div>

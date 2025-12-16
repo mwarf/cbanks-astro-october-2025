@@ -66,7 +66,7 @@ export const Navbar = ({ pathname: initialPathname = "" }: { pathname?: string }
       <div className="flex items-center justify-between px-6 py-3">
         <a href="/" className="flex shrink-0 items-center gap-2">
           <img
-            src="/logo.svg"
+            src="/logo-coalbanks.svg"
             alt="logo"
             width={94}
             height={18}

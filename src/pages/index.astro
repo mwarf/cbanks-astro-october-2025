@@ -26,11 +26,11 @@ const resourceImages = [resource1, resource2, resource3, resource4];
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <Background className="via-muted to-muted/80">
-    <Hero image={heroImage} client:load />
+    <Hero image={heroImage} />
     <Logos client:only="react"/> 
-    <Features images={featureImages} client:load />
-    <ResourceAllocation images={resourceImages} client:load />
-    <ProcessSection client:load />
+    <Features images={featureImages} />
+    <ResourceAllocation images={resourceImages} />
+    <ProcessSection />
   </Background>
   <Testimonials client:visible/>
   <Background variant="bottom">

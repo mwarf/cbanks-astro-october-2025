@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { ChevronRight, Github } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { GITHUB_URL } from "@/consts";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
@@ -47,12 +46,13 @@ const ITEMS = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ pathname: initialPathname = "" }: { pathname?: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [pathname, setPathname] = useState("");
+  const [pathname, setPathname] = useState(initialPathname);
 
   useEffect(() => {
+    // Sync with client-side navigation if needed, though prop usually handles it
     setPathname(window.location.pathname);
   }, []);
 
@@ -130,14 +130,6 @@ export const Navbar = () => {
               <span className="relative z-10">Login</span>
             </Button>
           </a>
-          <a
-            href={GITHUB_URL}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Github className="size-4" />
-            <span className="sr-only">GitHub</span>
-          </a>
-
           {/* Hamburger Menu Button (Mobile Only) */}
           <button
             className="text-muted-foreground relative flex size-8 lg:hidden"

@@ -3,7 +3,7 @@ import { SITE_TITLE } from '../consts';
 import { Play, ArrowRight } from 'lucide-react';
 
 import { Background } from '@/components/background';
-import PageHeader from '@/components/PageHeader.astro';
+
 import { PortfolioGrid } from '@/components/blocks/portfolio-grid';
 import { Button } from '@/components/ui/button';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
@@ -16,10 +16,17 @@ const featuredProject = projects.find(p => p.featured) || projects[0];
 
 <DefaultLayout title={`Portfolio - ${SITE_TITLE}`} description="Our latest documentary-style films for brands in Southern Alberta.">
   <Background>
-    <PageHeader 
-      title="Selected Work" 
-      description="We don't just make videos. We uncover stories. Here are some of our favorite films that have helped our clients connect with their audience."
-    />
+    <div class="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24 pt-28 lg:pt-44 lg:pb-16">
+      <div class="flex-[1.5]">
+        <h1 class="font-display font-bold text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+          Selected Work
+        </h1>
+
+        <p class="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
+          We don't just make videos. We uncover stories. Here are some of our favorite films that have helped our clients connect with their audience.
+        </p>
+      </div>
+    </div>
 
     <div class="container pb-20 lg:pb-32 flex flex-col gap-24">
       <FeaturedProject client:load project={featuredProject} />

@@ -2,7 +2,7 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import { Background } from '@/components/background';
-import PageHeader from '@/components/PageHeader.astro';
+
 import { FAQ } from '@/components/blocks/faq';
 import { Testimonials } from '@/components/blocks/testimonials';
 import { DashedLine } from '@/components/dashed-line';
@@ -10,11 +10,17 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 ---
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <Background>
-    <PageHeader
-      title="Frequently Asked Questions"
-      description="If you can't find what you're looking for, get in touch."
-      align="center"
-    />
+    <div class="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24 pt-28 lg:pt-44 lg:pb-16">
+      <div class="flex-[1.5]">
+        <h1 class="font-display font-bold text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+          Frequently Asked Questions
+        </h1>
+
+        <p class="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
+          If you can't find what you're looking for, get in touch.
+        </p>
+      </div>
+    </div>
     <FAQ
       client:only='react'
       className="pb-28 text-center lg:pb-32"

@@ -1,6 +1,6 @@
 ---
 title: "Beyond Council Chambers: How Southern Alberta Municipalities Use Documentary Video to Build Community and Attract Investment"
-description: "An industry analysis of how documentary-style video transforms municipal communication, builds trust, and drives economic development in Southern Alberta"
+description: "How documentary-style video builds trust for Southern Alberta municipalities. A strategic guide to economic development and citizen engagement."
 pubDate: "Jan 02 2025"
 author: "Coalbanks Creative Inc."
 tags:

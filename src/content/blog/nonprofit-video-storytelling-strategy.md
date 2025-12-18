@@ -1,6 +1,6 @@
 ---
 title: "Nonprofit Storytelling That Drives Donations: Video Strategies for Southern Alberta Charities"
-description: "Discover how Southern Alberta nonprofits drive 497% ROI with video storytelling. Complete guide includes smartphone production framework, ethical storytelling practices, and proven donor conversion strategies."
+description: "Discover how Southern Alberta nonprofits drive 497% ROI with video. A guide to smartphone production, ethical storytelling, and donor conversion."
 pubDate: "Nov 02 2025"
 slug: "nonprofit-storytelling-video-strategies-southern-alberta"
 image: "/images/blog-placeholder-2.png"

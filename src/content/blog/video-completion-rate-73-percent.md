@@ -1,6 +1,6 @@
 ---
 title: "The Unskippable Stat: How We Achieve a 73% Video Completion Rate"
-description: "How we achieve 73% video completion rate vs 37% industry average through documentary-style storytelling. See our process for creating videos people actually watch."
+description: "We achieve a 73% completion rate (vs 37% industry avg). Learn the documentary-style secrets to creating brand videos people actually watch."
 pubDate: "Nov 01 2025"
 image: "/images/blog-placeholder-3.png"
 authorImage: "/avatar/avatar1.png"

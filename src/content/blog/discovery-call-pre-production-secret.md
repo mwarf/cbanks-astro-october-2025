@@ -1,6 +1,6 @@
 ---
 title: "The Discovery Call That Changes Everything: Our Pre-Production Secret"
-description: "How a thorough discovery process prevents video project failures and delivers authentic stories. Learn why 79% of agencies skip this critical step—and why we never do."
+description: "Why do most video projects fail? They skip discovery. Learn how our pre-production process guarantees authentic stories that actually drive results."
 pubDate: "Nov 02 2025"
 slug: "discovery-call-pre-production-secret"
 image: "/images/blog-placeholder-2.png"

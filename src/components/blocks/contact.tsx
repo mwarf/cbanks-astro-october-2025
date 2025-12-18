@@ -72,20 +72,21 @@ export const Contact = () => {
               </div>
 
               {/* Socials */}
-              <div className="space-y-3">
+              {/* Socials - Hidden until we have real links */}
+              {/* <div className="space-y-3">
                 <h3 className="font-semibold">Follow Us</h3>
                 <div className="flex gap-4">
-                  <a href="https://facebook.com/coalbanks" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                     <Facebook className="size-5" />
                   </a>
-                  <a href="https://twitter.com/coalbanks" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                     <Twitter className="size-5" />
                   </a>
-                  <a href="https://linkedin.com/company/coalbanks" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                     <Linkedin className="size-5" />
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

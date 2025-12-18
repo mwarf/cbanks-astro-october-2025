@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# The $12 Billion Opportunity: How Southern Alberta Agriculture Is Winning with Video Marketing
+
 
 ## From Fields to Followers: Why Agriculture's Oldest Industry Needs Its Newest Marketing Strategy
 

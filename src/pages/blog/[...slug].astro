@@ -18,10 +18,17 @@ const post = Astro.props;
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
 const { Content } = await render(post);
 
+// Fetch related posts (3 latest posts excluding the current one)
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+  .filter((p) => p.id !== post.id)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
 ---
 <DefaultLayout>
 	<div class="py-28 lg:pt-44 lg:pb-32">
-		<BlogPost post={post} >
+		<BlogPost post={post} relatedPosts={relatedPosts}>
 			<Content />
 		</BlogPost>
 	</div>

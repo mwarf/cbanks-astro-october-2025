@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# The Unskippable Stat: How We Achieve a 73% Video Completion Rate
+
 
 _Documentary-style brand films that people actually watch — not because they have to, but because the story matters._
 

@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# From Complexity to Clarity: How Energy Companies Use Video to Win Stakeholder Buy-In
+
 
 ## The $400 Million Project That Needed a 3-Minute Story
 

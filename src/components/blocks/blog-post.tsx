@@ -1,12 +1,24 @@
 import type { CollectionEntry } from "astro:content";
 import { format } from "date-fns";
-
+import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
+// Helper for reading time (duplicated, could be shared util)
+const calculateReadingTime = (content: string) => {
+  if (!content) return "1 Min Read";
+  const wordsPerMinute = 200;
+  const words = content.trim().split(/\s+/).length;
+  const minutes = Math.ceil(words / wordsPerMinute);
+  return `${minutes} Min Read`;
+};
+
 const BlogPost = ({
   post,
+  relatedPosts = [],
   children,
 }: {
   post: CollectionEntry<"blog">;
+  relatedPosts?: CollectionEntry<"blog">[];
   children: React.ReactNode;
 }) => {
   const { title, authorName, image, pubDate, description, authorImage } =
@@ -28,6 +40,10 @@ const BlogPost = ({
               </a>
               <span className="ml-1">on {format(pubDate, "MMMM d, yyyy")}</span>
             </span>
+            <span className="text-muted-foreground">•</span>
+            <span className="text-muted-foreground">
+              {calculateReadingTime(post.body || "")}
+            </span>
           </div>
           <img
             src={image}
@@ -41,6 +57,45 @@ const BlogPost = ({
           {children}
         </div>
       </div>
+
+      {/* Related Posts Section */}
+      {relatedPosts.length > 0 && (
+        <div className="container mt-24">
+          <div className="mx-auto max-w-5xl">
+            <h3 className="mb-8 text-2xl font-bold">Read Next</h3>
+            <div className="grid gap-8 md:grid-cols-3">
+              {relatedPosts.map((relatedPost) => (
+                <a
+                  key={relatedPost.id}
+                  href={`/blog/${relatedPost.data.slug || relatedPost.id}/`}
+                  className="group flex flex-col overflow-hidden rounded-xl border bg-card transition-all hover:shadow-md"
+                >
+                  <div className="overflow-hidden aspect-video">
+                     <img
+                      src={relatedPost.data.image}
+                      alt={relatedPost.data.title}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-4">
+                    <h4 className="mb-2 text-lg font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                      {relatedPost.data.title}
+                    </h4>
+                    <div className="mt-auto flex items-center justify-between gap-4 pt-4">
+                        <span className="text-xs text-muted-foreground">
+                            {format(relatedPost.data.pubDate, "MMM d, yyyy")}
+                        </span>
+                         <Badge variant="secondary" className="text-[10px] h-fit px-1.5 py-0.5 font-normal">
+                          {calculateReadingTime(relatedPost.body || "")}
+                        </Badge>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

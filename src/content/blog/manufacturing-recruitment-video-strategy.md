@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# The 67.6% Problem: Why Southern Alberta Manufacturers Can't Find Workers (And How Video Changes Everything)
+
 
 ## The Hiring Crisis That's Crippling Growth
 

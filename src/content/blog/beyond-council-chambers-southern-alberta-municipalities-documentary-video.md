@@ -14,7 +14,7 @@ tags:
 image: "/images/blog-placeholder.png"
 ---
 
-# Beyond Council Chambers: How Southern Alberta Municipalities Use Documentary Video to Build Community and Attract Investment
+
 
 _Coalbanks Creative Inc. Industry Sector Analysis_
 

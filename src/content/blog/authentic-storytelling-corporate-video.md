@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# Is Your Corporate Video Boring? Here's Why Authentic Storytelling is the Answer
+
 
 _Published by Coalbanks Creative Inc. | November 2, 2025_
 

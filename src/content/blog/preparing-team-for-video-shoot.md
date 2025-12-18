@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# How to Prepare Your Team for the Camera (A Guide for Non-Actors)
+
 
 _Forget the script. Ignore the lens. Just be you._
 

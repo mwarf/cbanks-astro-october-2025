@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# AI in Our Workflow: What We Actually Use It For (And What We Don't)
+
 
 _An honest conversation about AI tools in documentary-style video production._
 

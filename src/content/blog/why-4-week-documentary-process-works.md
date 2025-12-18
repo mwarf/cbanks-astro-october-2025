@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# Why Our 4-6 Week Documentary Process Delivers Better Results
+
 
 _Documentary-style brand films that deliver faster without cutting corners._
 

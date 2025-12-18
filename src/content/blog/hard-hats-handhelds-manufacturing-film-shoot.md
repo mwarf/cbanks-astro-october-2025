@@ -8,7 +8,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# Hard Hats and Handhelds: A Behind the Scenes Look at a Manufacturing Film Shoot
+
 
 _Documentary-style filming in industrial environments—where safety meets storytelling._
 

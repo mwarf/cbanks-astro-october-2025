@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# Anatomy of an $8,000 Film: A Transparent Pricing Breakdown
+
 
 _Documentary-style brand films that don't hide behind vague packages or "call for pricing."_
 

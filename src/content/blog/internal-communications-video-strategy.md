@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# Safety, Culture, and Training: Why Internal Video Matters
+
 
 _Your most important audience isn't your customer. It's your team._
 

@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# From Idea to Impact in 4 Weeks: Our Documentary Film Process
+
 
 _Documentary-style brand films that deliver faster without cutting corners._
 

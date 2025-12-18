@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# Production & Post: Capturing Your Story
+
 
 _Documentary-style filming and story-driven editing._
 

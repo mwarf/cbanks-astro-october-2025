@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# Speaking Albertan: How to Connect with Your Local Audience Through Video
+
 
 _Documentary-style brand films that understand the land, the values, and the stories that matter here._
 

@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# Discovery & Pre-Production: Where Great Films Begin
+
 
 _Documentary-style films start with deep discovery—not cameras._
 

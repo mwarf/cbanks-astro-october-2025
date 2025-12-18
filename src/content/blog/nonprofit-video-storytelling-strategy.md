@@ -8,7 +8,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# Nonprofit Storytelling That Drives Donations: Video Strategies for Southern Alberta Charities
+
 
 _Coalbanks Creative Inc. | November 2, 2025_
 

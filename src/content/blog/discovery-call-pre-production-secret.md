@@ -8,7 +8,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# The Discovery Call That Changes Everything
+
 
 _The most important work happens before we pick up a camera._
 

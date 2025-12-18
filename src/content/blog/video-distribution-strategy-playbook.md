@@ -7,7 +7,7 @@ authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 
-# You Have a Great Video... Now What? The Distribution Playbook
+
 
 _Production is only 50% of the work. Distribution is the other 50%._
 

@@ -23,7 +23,7 @@ const steps = [
   },
   {
     title: "4. Delivery & Strategy",
-    description: "We don't just hand over a file. We help you ensure your film gets watched by the right people.",
+    description: "We help you distribute your film to ensure it reaches the right audience and drives ROI.",
     icon: BarChart3,
     className: "flex-1",
   },
@@ -34,7 +34,7 @@ export const ProcessSection = () => {
     <section id="process" className="overflow-hidden pb-28 lg:pb-32">
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          The Coalbanks Method
+          The Coalbanks Method: 4-6 Weeks from Discovery to Delivery
         </h2>
         <p className="container mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">
           A proven four-step process to transform corporate messaging into authentic stories.

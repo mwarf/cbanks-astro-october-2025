@@ -15,15 +15,13 @@ _Documentary-style brand films that people actually watch — not because they h
 
 Here's a number that'll change how you think about video marketing:
 
-**73%**
-
-That's our average video completion rate across 65+ brand films since 2019.
-
-The industry average? **37%**.
+> **73%**  
+> That's our average video completion rate across 65+ brand films since 2019.  
+> **Industry average: 37%**
 
 Nearly double.
 
-That gap isn't luck. It's not expensive equipment or fancy editing. It's because we stopped making videos that sound like marketing and started making films that feel like stories people actually care about.
+That gap isn't luck. It's not expensive equipment or fancy editing. **It's because we stopped making videos that sound like marketing and started making films that feel like stories people actually care about.**
 
 ## The Problem with Corporate Video
 
@@ -53,6 +51,8 @@ Documentary-style filmmaking changed everything for us. Here's how it works:
 Before we touch a camera, we spend 1-2 weeks discovering the real human story behind your brand.
 
 **What this means:** We dig into your organization until we find the actual human moments that make people care.
+
+**Read more:** [The Discovery Call That Changes Everything →](/blog/discovery-call-pre-production-secret)
 
 **What this looks like:** We don't ask "What do you want to communicate?" We ask "What's the real reason someone would choose you over the competition?"
 
@@ -92,9 +92,11 @@ We grab attention in the first 15 seconds. We maintain tension throughout. We bu
 - **More shares** on social media
 - **Qualified leads** who actually watched your story
 
-**Real example:** An energy company hired us for a project video. Their previous attempt got 200 views. Our documentary-style film hit 47,000 views and generated 12 qualified applications in 3 weeks.
+**Real example:** An energy company hired us for a project video. Their previous attempt got 200 views. Our documentary-style film hit **47,000 views** and generated **12 qualified applications in 3 weeks.**
 
-**The difference?** We told the story of four generations of field workers instead of explaining the technical specifications.
+**The difference?** We told the story of four generations of field workers instead of explaining technical specifications.
+
+---
 
 ## Why Documentary Style Works
 
@@ -225,6 +227,15 @@ Your customers already have stories. We help you tell them in a way that makes p
 
 ---
 
+## Related Posts
+
+**Want to learn more about our process?**
+- [The Discovery Call That Changes Everything →](/blog/discovery-call-pre-production-secret)
+- [Why Our 4-6 Week Process Works →](/blog/why-4-week-documentary-process-works)
+- [Authentic Storytelling for Corporate Video →](/blog/authentic-storytelling-corporate-video)
+
+---
+
 **Ready to tell a story people actually want to watch?**
 
 [Start Your Discovery Call →](/contact)
@@ -232,5 +243,3 @@ Your customers already have stories. We help you tell them in a way that makes p
 ---
 
 _Coalbanks Creative: Documentary-style films for brands in Southern Alberta. 65+ films delivered since 2019. 73% average completion rate. 4-6 week timeline._
-
----

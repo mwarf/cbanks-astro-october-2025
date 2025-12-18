@@ -6,15 +6,15 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
-    title: "Find the human story in complex operations",
+    title: "Transform complex operations into compelling stories",
     image: "/images/home/feature-1.png",
   },
   {
-    title: "Cinema cameras, documentary craft, professional finish",
+    title: "Cinema equipment meets documentary craft",
     image: "/images/home/feature-2.png",
   },
   {
-    title: "Films that build trust, attract investment, and recruit skilled labor",
+    title: "Drive recruitment, investment, and engagement",
     image: "/images/home/feature-3.png",
   },
 ];
@@ -37,9 +37,10 @@ export const Features = ({ images }: { images?: any[] }) => {
             Transform corporate messaging into authentic stories
           </h2>
           <p className="text-muted-foreground leading-snug">
-            We use documentary filmmaking techniques to find the human truth in
-            your brand—then craft it with cinema-quality production. Unlike
-            traditional corporate video, we dig deep to find what matters.
+            We use documentary filmmaking techniques to uncover the human truth
+            in your brand—then craft it with cinema-quality production. Unlike
+            traditional corporate video that gets ignored, we create films people
+            choose to watch.
           </p>
         </div>
 

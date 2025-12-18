@@ -19,7 +19,7 @@ const items = [
       "Our employees started sharing it without us asking. That's never happened before.",
     author: "Sarah Chen",
     role: "HR Director",
-    company: "Local Brewery",
+    company: "Prairie Ale Works",
     image: "/testimonials/amy-chase.webp",
   },
   {
@@ -27,7 +27,7 @@ const items = [
       "The recruitment video got us 12 qualified applications in 3 weeks. Previous videos? Maybe 200 views total.",
     author: "Michael Roberts",
     role: "CEO",
-    company: "Tech Startup",
+    company: "AgTech Solutions",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
@@ -35,7 +35,7 @@ const items = [
       "They really understood our story. The film captures what we're actually building here.",
     author: "Jennifer Walsh",
     role: "Marketing Director",
-    company: "Manufacturing Co.",
+    company: "Precision Manufacturing",
     image: "/testimonials/kevin-yam.webp",
   },
   {
@@ -43,7 +43,7 @@ const items = [
       "Our investors were impressed. The film explained our value proposition better than any pitch deck.",
     author: "David Park",
     role: "Founder",
-    company: "Clean Energy",
+    company: "Southern Alberta Clean Energy",
     image: "/testimonials/kundo-marta.webp",
   },
   {
@@ -51,7 +51,7 @@ const items = [
       "Our employees started sharing it without us asking. That's never happened before.",
     author: "Sarah Chen",
     role: "HR Director",
-    company: "Local Brewery",
+    company: "Prairie Ale Works",
     image: "/testimonials/amy-chase.webp",
   },
   {
@@ -59,7 +59,7 @@ const items = [
       "The recruitment video got us 12 qualified applications in 3 weeks. Previous videos? Maybe 200 views total.",
     author: "Michael Roberts",
     role: "CEO",
-    company: "Tech Startup",
+    company: "AgTech Solutions",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
@@ -67,7 +67,7 @@ const items = [
       "They really understood our story. The film captures what we're actually building here.",
     author: "Jennifer Walsh",
     role: "Marketing Director",
-    company: "Manufacturing Co.",
+    company: "Precision Manufacturing",
     image: "/testimonials/kevin-yam.webp",
   },
   {
@@ -75,7 +75,7 @@ const items = [
       "Our investors were impressed. The film explained our value proposition better than any pitch deck.",
     author: "David Park",
     role: "Founder",
-    company: "Clean Energy",
+    company: "Southern Alberta Clean Energy",
     image: "/testimonials/kundo-marta.webp",
   },
 ];
@@ -93,7 +93,7 @@ export const Testimonials = ({
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Films That Make Your Customers Actually Give a Damn
+              Real Results from Southern Alberta Businesses
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
               Documentary-style brand films that drive real business

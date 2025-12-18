@@ -29,7 +29,7 @@ export function AboutHero() {
           </h1>
 
           <p className="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
-            Documentary filmmaking for organizations that build the real world.
+            Documentary filmmaking for Southern Alberta's builders, makers, and leaders.
           </p>
 
           <div className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">

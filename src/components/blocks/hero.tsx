@@ -24,7 +24,7 @@ const features = [
   },
   {
     title: "Local expertise",
-    description: "Deep understanding of Southern Alberta business landscape.",
+    description: "Based in Lethbridge since 2019—we understand your audience.",
     icon: MapPin,
   },
 ];
@@ -36,12 +36,11 @@ export const Hero = ({ image }: { image?: any }) => {
         {/* Left side - Main content */}
         <div className="flex-1 max-lg:max-w-[600px]">
           <h1 className="text-foreground font-display font-bold max-w-[90%] text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-normal">
-            Films That Make Your Customers Actually Give a Damn
+            Films That Make People Actually Give a Damn
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 max-w-[90%] md:text-3xl">
-            Documentary-style films for Southern Alberta municipalities,
-            industry, and agriculture.
+            Documentary-style films that drive recruitment, investment, and engagement for Southern Alberta businesses.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">

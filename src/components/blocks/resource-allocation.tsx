@@ -6,13 +6,13 @@ const topItems = [
   {
     title: "Real conversations, authentic moments.",
     description:
-      "We capture genuine interactions that resonate with your audience.",
+      "We capture genuine interactions—not rehearsed scripts.",
     images: [
       {
         src: "/images/home/resource-1.png",
         alt: "Documentary filming setup",
-        width: 495,
-        height: 186,
+        width: 1024,
+        height: 576,
       },
     ],
     className:
@@ -21,7 +21,7 @@ const topItems = [
   },
   {
     title: "Thoughtful discovery process.",
-    description: "We spend 1-2 weeks finding the story worth telling.",
+    description: "1-2 weeks of discovery (not a 30-minute intake call).",
     images: [
       {
         src: "/logos/sumus-horizontal-dark.svg",
@@ -87,8 +87,8 @@ const bottomItems = [
       {
         src: "/images/home/resource-2.png",
         alt: "Film reel collection",
-        width: 305,
-        height: 280,
+        width: 800,
+        height: 800,
       },
     ],
     className:
@@ -96,14 +96,14 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Average view completion rate: 73%.",
-    description: "Industry average is 37% - our films actually get watched.",
+    title: "Average view completion rate: 73%—double the industry average.",
+    description: "Our films actually get watched start to finish.",
     images: [
       {
         src: "/images/home/resource-3.png",
         alt: "Analytics dashboard",
-        width: 320,
-        height: 103,
+        width: 1024,
+        height: 576,
       },
     ],
     className:
@@ -113,13 +113,13 @@ const bottomItems = [
   {
     title: "Based in Lethbridge, serving Southern Alberta.",
     description:
-      "Deep understanding of the local business landscape and culture.",
+      "Deep roots in Southern Alberta—we understand your audience.",
     images: [
       {
         src: "/images/home/resource-4.png",
         alt: "Map of Southern Alberta",
-        width: 305,
-        height: 280,
+        width: 800,
+        height: 800,
       },
     ],
     className:
@@ -255,7 +255,7 @@ const Item = ({ item, isLast, className, image }: ItemProps) => {
               key={j}
               src={image?.src || img.src}
               alt={img.alt}
-              className="object-cover object-center w-full h-auto rounded-xl shadow-sm"
+              className="object-cover object-center w-full aspect-video rounded-xl shadow-sm"
               width={image?.width}
               height={image?.height}
             />

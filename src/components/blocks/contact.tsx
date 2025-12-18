@@ -93,7 +93,7 @@ export const Contact = () => {
           <div className="rounded-2xl border bg-card p-8 shadow-sm lg:p-10">
             <h2 className="text-2xl font-semibold tracking-tight">Start a Project</h2>
             <p className="text-muted-foreground mt-2">
-              Tell us about your story and we'll help you tell it to the world.
+              Tell us about your story—we'll respond within 24 hours.
             </p>
             
             <form className="mt-8 space-y-6">

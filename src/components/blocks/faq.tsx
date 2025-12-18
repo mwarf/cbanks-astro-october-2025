@@ -38,7 +38,7 @@ const categories = [
       {
         question: "Do you offer custom packages?",
         answer:
-          "Yes, we create custom packages based on your specific needs. Whether you need multiple videos, extended timelines, or specialized equipment, we can tailor our approach.",
+          "Yes, we create custom packages based on your specific needs. We typically take on 12-15 projects per year to ensure quality, and usually book 2-3 months out.",
       },
     ],
   },

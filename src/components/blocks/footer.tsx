@@ -28,10 +28,10 @@ export function Footer() {
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
           Ready to tell your story?
         </h2>
-        <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-          Documentary-style brand films that get watched, shared, and
-          remembered—because they don't sound like marketing.
-        </p>
+          <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
+            Documentary-style brand films that drive real results—because they
+            don't sound like marketing.
+          </p>
         <div>
           <Button size="lg" className="mt-4" asChild>
             <a href={GITHUB_URL}>Start a Project</a>

@@ -17,8 +17,8 @@ export const AboutSection = () => {
         <TextSection
           title="The approach"
           paragraphs={[
-            "We started Coalbanks in 2019 with a simple belief: the best brand stories are found, not created. Every film we produce begins with deep discovery to uncover the real human truth behind your business. We are purpose-built to power authentic storytelling for the next decade.",
-            "We are 100% founder and team-owned, profitable, and we keep our team lean. We're focused on what matters: finding your story and crafting it with cinema-quality production.",
+            "We started Coalbanks in 2019 with a simple belief: the best brand stories are found, not created. Every film begins with deep discovery to uncover the real human truth behind your business.",
+            "We're 100% founder and team-owned, profitable, and we keep our team lean. We're built to create authentic stories that drive results for years to come.",
             "If you're interested in authentic storytelling that breaks through the scroll, let's talk about your project.",
           ]}
           ctaButton={{
@@ -32,8 +32,8 @@ export const AboutSection = () => {
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <TextSection
           paragraphs={[
-            "At Coalbanks, we're dedicated to transforming corporate messaging into authentic stories using documentary filmmaking techniques. Our mission is to help municipalities, industrial leaders, and agricultural producers tell stories that build trust with taxpayers, stakeholders, and skilled workers.",
-            "We're story-obsessed — investing 1-2 weeks in discovery to understand your operations before we ever pick up a camera. We're all in this together because your authentic story is our best showcase. Since 2019, we've delivered 65+ films with an average 73% completion rate—3x the industry standard—because when your story succeeds, so do we.",
+            "Since 2019, we've helped municipalities, industrial leaders, and agricultural producers tell stories that build trust with taxpayers, stakeholders, and skilled workers.",
+            "We invest 1-2 weeks in discovery to understand your operations before we ever pick up a camera. Your authentic story is our best showcase.",
           ]}
         />
         <ImageSection

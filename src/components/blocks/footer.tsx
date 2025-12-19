@@ -57,7 +57,7 @@ export function Footer() {
                 href={item.href}
                 className="flex items-center gap-0.5 font-medium transition-opacity hover:opacity-75"
               >
-                {item.name} <ArrowUpRight className="size-4" />
+                {item.name} <ArrowUpRight className="size-4" aria-hidden="true" />
               </a>
             </li>
           ))}

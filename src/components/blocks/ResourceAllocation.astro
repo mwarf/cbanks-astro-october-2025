@@ -1,0 +1,229 @@
+---
+import { Image } from "astro:assets";
+import { DashedLine } from "../dashed-line";
+import { cn } from "@/lib/utils";
+
+interface Props {
+  images?: any[];
+}
+
+const { images } = Astro.props;
+
+const topItems = [
+  {
+    title: "Real conversations, authentic moments.",
+    description:
+      "We capture genuine interactions—not rehearsed scripts.",
+    images: [
+      {
+        src: "/images/home/resource-1.png",
+        alt: "Documentary filming setup",
+        width: 1024,
+        height: 576,
+      },
+    ],
+    className:
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: [""],
+  },
+  {
+    title: "Thoughtful discovery process.",
+    description: "1-2 weeks of discovery (not a 30-minute intake call).",
+    images: [
+      { src: "/logos/sumus-horizontal-dark.svg", alt: "Discovery session" },
+      { src: "/logos/government-of-alberta-logo-dark.svg", alt: "Story outline" },
+      { src: "/logos/city-of-lethbridge-horizontal-dark.svg", alt: "Research materials" },
+      { src: "/logos/stantec-consulting-logo-dark.svg", alt: "Script development" },
+      { src: "/logos/castle-mountain-logo-dark.svg", alt: "Timeline planning" },
+      { src: "/logos/galt-horizontal-dark.svg", alt: "Asset management" },
+      { src: "/logos/sumus-horizontal-dark.svg", alt: "Project tracking" },
+      { src: "/logos/storyhive-logo-dark.svg", alt: "Workflow planning" },
+    ],
+    className:
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
+    fade: [],
+  },
+];
+
+const bottomItems = [
+  {
+    title: "65+ films delivered since 2019.",
+    description:
+      "A proven track record of authentic storytelling for businesses.",
+    images: [
+      {
+        src: "/images/home/resource-2.png",
+        alt: "Film reel collection",
+        width: 800,
+        height: 800,
+      },
+    ],
+    className:
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: ["bottom"],
+  },
+  {
+    title: "Average view completion rate: 73%—double the industry average.",
+    description: "Our films actually get watched start to finish.",
+    images: [
+      {
+        src: "/images/home/resource-3.png",
+        alt: "Analytics dashboard",
+        width: 1024,
+        height: 576,
+      },
+    ],
+    className:
+      "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3",
+    fade: [""],
+  },
+  {
+    title: "Based in Lethbridge, serving Southern Alberta.",
+    description:
+      "Deep roots in Southern Alberta—we understand your audience.",
+    images: [
+      {
+        src: "/images/home/resource-4.png",
+        alt: "Map of Southern Alberta",
+        width: 800,
+        height: 800,
+      },
+    ],
+    className:
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: ["bottom"],
+  },
+];
+---
+
+<section
+  id="resource-allocation"
+  class="overflow-hidden pb-28 lg:pb-32"
+>
+  <div class="">
+    <h2 class="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
+      Tell your story without sounding like marketing
+    </h2>
+
+    <div class="mt-8 md:mt-12 lg:mt-20">
+      <DashedLine
+        orientation="horizontal"
+        className="container scale-x-105"
+      />
+
+      {/* Top Features Grid - 2 items */}
+      <div class="relative container flex max-md:flex-col">
+        {topItems.map((item, i) => (
+          <div
+            class={cn(
+              "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8",
+              item.className,
+            )}
+          >
+            <div class="title-container text-balance">
+              <h3 class="inline font-semibold">{item.title} </h3>
+              <span class="text-muted-foreground"> {item.description}</span>
+            </div>
+
+            {(item.fade as string[]).includes("bottom") && (
+              <div class="from-muted/80 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent md:hidden" />
+            )}
+            
+            {item.images.length > 4 ? (
+              <div class="relative overflow-hidden">
+                <div class="flex flex-col gap-5">
+                  <div class="flex translate-x-4 justify-end gap-5">
+                    {item.images.slice(0, 4).map((img) => (
+                      <div class="bg-background grid aspect-square size-16 place-items-center rounded-2xl p-2 lg:size-20">
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          width={48}
+                          height={48}
+                          class="object-contain"
+                        />
+                        <div class="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
+                      </div>
+                    ))}
+                  </div>
+                  <div class="flex -translate-x-4 gap-5">
+                    {item.images.slice(4).map((img) => (
+                      <div class="bg-background grid aspect-square size-16 place-items-center rounded-2xl lg:size-20">
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          width={48}
+                          height={48}
+                          class="object-contain"
+                        />
+                        <div class="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div class="image-container grid grid-cols-1 gap-4">
+                <Image
+                  src={images?.[0] || item.images[0].src}
+                  alt={item.images[0].alt}
+                  width={1024}
+                  height={576}
+                  class="object-cover object-center w-full aspect-video rounded-xl shadow-sm"
+                />
+              </div>
+            )}
+
+            {i === 0 && (
+              <>
+                <DashedLine orientation="vertical" className="absolute top-0 right-0 max-md:hidden" />
+                <DashedLine orientation="horizontal" className="absolute inset-x-0 bottom-0 md:hidden" />
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+      
+      <DashedLine orientation="horizontal" className="container max-w-7xl scale-x-110" />
+
+      {/* Bottom Features Grid - 3 items */}
+      <div class="relative container grid max-w-7xl md:grid-cols-3">
+        {bottomItems.map((item, i) => (
+          <div
+            class={cn(
+              "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8 md:pb-0",
+              item.className,
+            )}
+          >
+            <div class="title-container text-balance">
+              <h3 class="inline font-semibold">{item.title} </h3>
+              <span class="text-muted-foreground"> {item.description}</span>
+            </div>
+
+            {(item.fade as string[]).includes("bottom") && (
+              <div class="from-muted/80 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent md:hidden" />
+            )}
+
+            <div class="image-container grid grid-cols-1 gap-4">
+              <Image
+                src={images?.[i + 1] || item.images[0].src}
+                alt={item.images[0].alt}
+                width={800}
+                height={600}
+                class="object-cover object-center w-full aspect-video rounded-xl shadow-sm"
+              />
+            </div>
+
+            {i < 2 && (
+              <>
+                <DashedLine orientation="vertical" className="absolute top-0 right-0 max-md:hidden" />
+                <DashedLine orientation="horizontal" className="absolute inset-x-0 bottom-0 md:hidden" />
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+    <DashedLine orientation="horizontal" className="container max-w-7xl scale-x-110" />
+  </div>
+</section>

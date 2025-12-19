@@ -181,6 +181,7 @@ export const Navbar = ({ pathname: initialPathname = "" }: { pathname?: string }
                       "size-4 transition-transform duration-200",
                       openDropdown === link.label ? "rotate-90" : "",
                     )}
+                    aria-hidden="true"
                   />
                 </button>
                 <div

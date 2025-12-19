@@ -1,0 +1,96 @@
+---
+import { ChevronRight } from "lucide-react";
+import { Image } from "astro:assets";
+import { DashedLine } from "../dashed-line";
+import { Card, CardContent } from "@/components/ui/card";
+
+interface Props {
+  images?: any[];
+}
+
+const { images } = Astro.props;
+
+const items = [
+  {
+    title: "Transform complex operations into compelling stories",
+    image: "/images/home/feature-1.png",
+  },
+  {
+    title: "Cinema equipment meets documentary craft",
+    image: "/images/home/feature-2.png",
+  },
+  {
+    title: "Drive recruitment, investment, and engagement",
+    image: "/images/home/feature-3.png",
+  },
+];
+---
+
+<section id="feature-modern-teams" class="pb-28 lg:pb-32">
+  <div class="container">
+    {/* Top dashed line with text */}
+    <div class="relative flex items-center justify-center">
+      <DashedLine className="text-muted-foreground" />
+      <span class="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
+        DOCUMENTARY STORYTELLING. CINEMA CAMERAS. STORIES THAT LAND.
+      </span>
+    </div>
+
+    {/* Content */}
+    <div class="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
+      <h2 class="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+        Transform corporate messaging into authentic stories
+      </h2>
+      <p class="text-muted-foreground leading-snug">
+        We use documentary filmmaking techniques to uncover the human truth
+        in your brand—then craft it with cinema-quality production. Unlike
+        traditional corporate video that gets ignored, we create films people
+        choose to watch.
+      </p>
+    </div>
+
+    {/* Features Card */}
+    <Card className="mt-8 rounded-3xl md:mt-12 lg:mt-20">
+      <CardContent className="flex p-0 max-md:flex-col">
+        {items.map((item, i) => (
+          <div class="flex flex-1 max-md:flex-col">
+            <div class="flex-1 p-4 pe-0! md:p-6">
+              <div class="relative aspect-[1.28/1] overflow-hidden">
+                <Image
+                  src={images?.[i] || item.image}
+                  alt={`${item.title} interface`}
+                  width={600}
+                  height={468}
+                  class="object-cover object-left-top ps-4 pt-2"
+                />
+                <div class="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
+              </div>
+
+              <a
+                href="#"
+                class="group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
+              >
+                <h3 class="font-display max-w-60 text-2xl leading-tight font-bold tracking-tight">
+                  {item.title}
+                </h3>
+                <div class="rounded-full border p-2">
+                  <ChevronRight className="size-6 transition-transform group-hover:translate-x-1 lg:size-9" aria-hidden="true" />
+                </div>
+              </a>
+            </div>
+            {i < items.length - 1 && (
+              <div class="relative hidden md:block">
+                <DashedLine orientation="vertical" />
+              </div>
+            )}
+            {i < items.length - 1 && (
+              <div class="relative block md:hidden">
+                <DashedLine orientation="horizontal" />
+              </div>
+            )}
+          </div>
+        ))}
+      </CardContent>
+    </Card>
+  </div>
+</section>

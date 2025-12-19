@@ -17,6 +17,34 @@ const finalTitle = title || SITE_METADATA.title.default;
 const finalDescription = description || SITE_METADATA.description;
 const finalImage = image || SITE_METADATA.openGraph.images[0].url;
 const imageURL = new URL(finalImage, Astro.url);
+
+// Global JSON-LD (Organization & WebSite)
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Coalbanks Creative Inc.",
+  "url": Astro.site?.toString() || "https://coalbanks.ca",
+  "logo": new URL("/logo-coalbanks.svg", Astro.url).toString(),
+  "sameAs": [
+    "https://twitter.com/coalbanks",
+    "https://linkedin.com/company/coalbanks"
+  ]
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Coalbanks",
+  "url": Astro.site?.toString() || "https://coalbanks.ca",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://coalbanks.ca/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
 
 <!-- Global Metadata -->
@@ -25,6 +53,9 @@ const imageURL = new URL(finalImage, Astro.url);
 <!-- Preconnect to Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload critical fonts -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" />
 
 <!-- Load Google Fonts -->
 <!-- Load Google Fonts -->
@@ -106,3 +137,7 @@ const imageURL = new URL(finalImage, Astro.url);
 <meta property="twitter:description" content={finalDescription} />
 <meta property="twitter:image" content={imageURL} />
 <meta property="twitter:creator" content={SITE_METADATA.twitter.creator} />
+
+<!-- JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />

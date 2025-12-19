@@ -42,6 +42,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **Responsive Design**: Mobile-friendly layout
 - **SEO Ready**: Proper metadata and OG images included
 - **Blog System**: Includes a complete blog system with SEO-friendly URLs and content guidelines
+- **Performance Optimized**: Key components (Hero, Features, ResourceAllocation, Background) refactored to native Astro for minimal hydration and optimized image delivery. Achieving high Lighthouse scores.
 
 ### Blog Content Guidelines
 

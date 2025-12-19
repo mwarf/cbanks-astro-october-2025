@@ -1,0 +1,112 @@
+---
+import { ArrowRight, Video, Camera, Target, MapPin } from "lucide-react";
+import { Image } from "astro:assets";
+import { DashedLine } from "@/components/dashed-line";
+import { Button } from "@/components/ui/button";
+
+interface Props {
+  image?: any;
+}
+
+const { image } = Astro.props;
+
+const features = [
+  {
+    title: "Documentary storytelling",
+    description:
+      "Transform corporate messages into authentic stories worth telling.",
+    icon: Video,
+  },
+  {
+    title: "Cinema-quality production",
+    description: "Professional equipment and techniques for premium results.",
+    icon: Camera,
+  },
+  {
+    title: "Business outcomes",
+    description:
+      "Films that drive recruitment, sales, fundraising, engagement.",
+    icon: Target,
+  },
+  {
+    title: "Local expertise",
+    description: "Based in Lethbridge since 2019—we understand your audience.",
+    icon: MapPin,
+  },
+];
+---
+
+<section class="py-28 lg:py-32 lg:pt-44">
+  <div class="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
+    {/* Left side - Main content */}
+    <div class="flex-1 max-lg:max-w-[600px]">
+      <h1 class="text-foreground font-display font-bold max-w-[90%] text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-normal">
+        Films That Make People Actually Give a Damn
+      </h1>
+
+      <p class="text-muted-foreground text-1xl mt-5 max-w-[90%] md:text-3xl">
+        Documentary-style films that drive recruitment, investment, and engagement for Southern Alberta businesses.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
+        <Button asChild>
+          <a href="/contact">Start a Project</a>
+        </Button>
+        <Button
+          variant="outline"
+          className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
+        >
+          <a
+            href="/portfolio"
+            class="flex items-center gap-2 max-w-56 truncate text-start md:max-w-none"
+          >
+            Watch Our Work
+            <ArrowRight className="stroke-3" aria-hidden="true" />
+          </a>
+        </Button>
+      </div>
+    </div>
+
+    {/* Right side - Features */}
+    <div class="relative flex flex-1 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
+      <DashedLine
+        orientation="vertical"
+        className="absolute top-0 left-0 max-lg:hidden"
+      />
+      <DashedLine
+        orientation="horizontal"
+        className="absolute top-0 lg:hidden"
+      />
+      {features.map((feature) => {
+        const Icon = feature.icon;
+        return (
+          <div class="flex gap-2.5 lg:gap-5">
+            <Icon className="text-foreground mt-1 size-4 shrink-0 lg:size-5" aria-hidden="true" />
+            <div>
+              <h2 class="font-text text-foreground font-semibold">
+                {feature.title}
+              </h2>
+              <p class="text-muted-foreground max-w-76 text-sm">
+                {feature.description}
+              </p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+
+  <div class="mt-12 max-lg:ml-6 md:mt-20 lg:container lg:mt-24">
+    <div class="relative aspect-video w-full">
+      <Image
+        src={image || "/images/home/hero-main.png"}
+        alt="Documentary film crew filming an interview"
+        width={1920}
+        height={1080}
+        loading="eager"
+        fetchpriority="high"
+        class="h-full w-full rounded-2xl object-cover object-center shadow-lg max-lg:rounded-tr-none"
+      />
+    </div>
+  </div>
+</section>

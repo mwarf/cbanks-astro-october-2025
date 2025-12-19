@@ -1,0 +1,142 @@
+---
+import { format } from "date-fns";
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import { Badge } from "@/components/ui/badge";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+  relatedPosts?: CollectionEntry<"blog">[];
+}
+
+const { post, relatedPosts = [] } = Astro.props;
+const { title, authorName, image, pubDate, updatedDate, description, authorImage } = post.data;
+
+// Article JSON-LD
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "image": new URL(image || "/og-image.jpg", Astro.url).toString(),
+  "datePublished": pubDate.toISOString(),
+  ...(updatedDate && { "dateModified": updatedDate.toISOString() }),
+  "author": {
+    "@type": "Person",
+    "name": authorName || "Coalbanks",
+    ...(authorImage && { "image": new URL(authorImage, Astro.url).toString() })
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Coalbanks Creative Inc.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": new URL("/logo-coalbanks.svg", Astro.url).toString()
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": Astro.url.toString()
+  }
+};
+
+// Helper for reading time
+const calculateReadingTime = (content: string) => {
+  if (!content) return "1 Min Read";
+  const wordsPerMinute = 200;
+  const words = content.trim().split(/\s+/).length;
+  const minutes = Math.ceil(words / wordsPerMinute);
+  return `${minutes} Min Read`;
+};
+---
+
+<section>
+  <div class="container">
+    <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
+      <h1 class="font-display max-w-3xl text-4xl font-bold md:text-5xl">{title}</h1>
+      <h3 class="text-muted-foreground max-w-4xl">{description}</h3>
+      <div class="flex items-center gap-3 text-sm md:text-base">
+        <div class="h-8 w-8 overflow-hidden rounded-full border">
+          {authorImage ? (
+            <Image 
+              src={authorImage} 
+              alt={authorName || "Author"} 
+              width={32} 
+              height={32} 
+              class="h-full w-full object-cover"
+            />
+          ) : (
+            <div class="bg-muted flex h-full w-full items-center justify-center text-xs font-medium">
+              {authorName?.charAt(0) || "A"}
+            </div>
+          )}
+        </div>
+        <span>
+          <a href="#" class="font-semibold">
+            {authorName}
+          </a>
+          <span class="ml-1">on {format(pubDate, "MMMM d, yyyy")}</span>
+        </span>
+        <span class="text-muted-foreground">•</span>
+        <span class="text-muted-foreground">
+          {calculateReadingTime(post.body || "")}
+        </span>
+      </div>
+      
+      <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+
+      <Image
+        src={image || "/images/blog-placeholder-1.png"}
+        alt={title || ""}
+        width={1200}
+        height={675}
+        class="mt-0 mb-8 aspect-video w-full rounded-lg border object-cover"
+      />
+    </div>
+  </div>
+  <div class="container">
+    <div class="prose prose-lg dark:prose-invert mx-auto max-w-3xl">
+      <slot />
+    </div>
+  </div>
+
+  {/* Related Posts Section */}
+  {relatedPosts.length > 0 && (
+    <div class="container mt-24">
+      <div class="mx-auto max-w-5xl">
+        <h3 class="mb-8 text-2xl font-bold">Read Next</h3>
+        <div class="grid gap-8 md:grid-cols-3">
+          {relatedPosts.map((relatedPost) => (
+            <a
+              href={`/blog/${relatedPost.data.slug || relatedPost.id}/`}
+              class="group flex flex-col overflow-hidden rounded-xl border bg-card transition-all hover:shadow-md"
+            >
+              <div class="overflow-hidden aspect-video">
+                 <Image
+                  src={relatedPost.data.image || "/images/blog-placeholder-1.png"}
+                  alt={relatedPost.data.title || ""}
+                  width={400}
+                  height={225}
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-4">
+                <h4 class="mb-2 text-lg font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                  {relatedPost.data.title}
+                </h4>
+                <div class="mt-auto flex items-center justify-between gap-4 pt-4">
+                    <span class="text-xs text-muted-foreground">
+                        {format(relatedPost.data.pubDate, "MMM d, yyyy")}
+                    </span>
+                     <Badge variant="secondary" className="text-[10px] h-fit px-1.5 py-0.5 font-normal">
+                      {calculateReadingTime(relatedPost.body || "")}
+                    </Badge>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+</section>

@@ -1,14 +1,14 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-import { Background } from '@/components/background';
+import Background from '@/components/Background.astro';
 import { FAQ } from '@/components/blocks/faq';
-import { Features } from '@/components/blocks/features';
-import { Hero } from '@/components/blocks/hero';
-import { Logos } from '@/components/blocks/logos';
-import { ResourceAllocation } from '@/components/blocks/resource-allocation';
+import Hero from '@/components/blocks/Hero.astro';
+import Logos from '@/components/blocks/Logos.astro';
+import ResourceAllocation from '@/components/blocks/ResourceAllocation.astro';
 import { ProcessSection } from '@/components/blocks/process-section';
 import { Testimonials } from '@/components/blocks/testimonials';
+import Features from '@/components/blocks/Features.astro';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
 import heroImage from '@/assets/images/home/hero-main.png';
@@ -27,7 +27,7 @@ const resourceImages = [resource1, resource2, resource3, resource4];
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <Background className="via-muted to-muted/80">
     <Hero image={heroImage} />
-    <Logos client:only="react"/> 
+    <Logos />
     <Features images={featureImages} />
     <ResourceAllocation />
     <ProcessSection />

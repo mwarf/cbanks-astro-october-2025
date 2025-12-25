@@ -3,7 +3,7 @@ import BaseHead from '@/components/BaseHead.astro';
 import { Footer } from '@/components/blocks/footer';
 import Navbar from '@/components/blocks/Navbar.astro';
 
-import Breadcrumbs from '@/components/Breadcrumbs.astro';
+
 
 const { title, description } = Astro.props;
 ---
@@ -17,9 +17,9 @@ const { title, description } = Astro.props;
         <main>
 
 {
-  Astro.url.pathname.split('/').filter(Boolean).length > 1 && !Astro.url.pathname.startsWith('/blog') && (
+  Astro.url.pathname.split('/').filter(Boolean).length > 1 && !Astro.url.pathname.startsWith('/blog') && !Astro.url.pathname.startsWith('/portfolio') && (
     <div class="container mx-auto max-w-5xl px-4 pt-28 lg:pt-36 pb-4">
-      <Breadcrumbs />
+      {/* Breadcrumbs removed */}
     </div>
   )
 }

@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import { SITE_TITLE } from '../consts';
 import { Play, ArrowRight } from 'lucide-react';
 
@@ -7,11 +8,16 @@ import Background from "@/components/Background.astro";
 import { PortfolioGrid } from '@/components/blocks/portfolio-grid';
 import { Button } from '@/components/ui/button';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
-
-import { projects } from '@/lib/portfolio-data';
+import { projectFromEntry } from '@/lib/portfolio-utils';
 import { FeaturedProject } from '@/components/blocks/featured-project';
 
-const featuredProject = projects.find(p => p.featured) || projects[0];
+const entries = await getCollection('portfolio');
+const allProjects = entries
+  .map(projectFromEntry)
+  .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
+
+const featuredProject = allProjects.find(p => p.featured) || allProjects[0];
+const remainingProjects = allProjects.filter(p => p.id !== featuredProject.id);
 ---
 
 <DefaultLayout title={`Portfolio - ${SITE_TITLE}`} description="Our latest documentary-style films for brands in Southern Alberta.">
@@ -29,8 +35,8 @@ const featuredProject = projects.find(p => p.featured) || projects[0];
     </div>
 
     <div class="container pb-20 lg:pb-32 flex flex-col gap-24">
-      <FeaturedProject client:load project={featuredProject} />
-      <PortfolioGrid client:load projects={projects.filter(p => p.id !== featuredProject.id)} />
+      <FeaturedProject client:visible project={featuredProject} />
+      <PortfolioGrid client:visible projects={remainingProjects} />
     </div>
 
 

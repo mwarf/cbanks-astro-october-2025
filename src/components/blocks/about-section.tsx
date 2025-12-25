@@ -17,9 +17,9 @@ export const AboutSection = () => {
         <TextSection
           title="The approach"
           paragraphs={[
-            "We started Coalbanks in 2019 with a simple belief: the best brand stories are found, not created. Every film begins with deep discovery to uncover the real human truth behind your business.",
-            "We're 100% founder and team-owned, profitable, and we keep our team lean. We're built to create authentic stories that drive results for years to come.",
-            "If you're interested in authentic storytelling that breaks through the scroll, let's talk about your project.",
+            "The best brand stories are found, not created. Every film begins with deep discovery to uncover the human truth behind your business.",
+            "We're founder-owned and lean. We're built to create authentic stories that drive results for years to come.",
+            "If you're ready for storytelling that breaks through the scroll, let's talk about your project.",
           ]}
           ctaButton={{
             href: "/contact",
@@ -32,8 +32,8 @@ export const AboutSection = () => {
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <TextSection
           paragraphs={[
-            "Since 2019, we've helped municipalities, industrial leaders, and agricultural producers tell stories that build trust with taxpayers, stakeholders, and skilled workers.",
-            "We invest 1-2 weeks in discovery to understand your operations before we ever pick up a camera. Your authentic story is our best showcase.",
+            "We help municipalities, industrial leaders, and agricultural producers build trust with taxpayers, stakeholders, and skilled workers.",
+            "We invest 1-2 weeks in discovery before picking up a camera. Your authentic story is our best showcase.",
           ]}
         />
         <ImageSection

@@ -4,6 +4,7 @@ import { render } from 'astro:content';
 
 import BlogPost from '@/components/blocks/BlogPost.astro';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import { extractHeadings } from '@/lib/extract-headings';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -18,6 +19,8 @@ const post = Astro.props;
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
 const { Content } = await render(post);
 
+const headings = extractHeadings(post.body || "");
+
 // Fetch related posts (3 latest posts excluding the current one)
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
@@ -28,7 +31,7 @@ const relatedPosts = allPosts
 ---
 <DefaultLayout>
 	<div class="py-28 lg:pt-44 lg:pb-32">
-		<BlogPost post={post} relatedPosts={relatedPosts}>
+		<BlogPost post={post} relatedPosts={relatedPosts} headings={headings}>
 			<Content />
 		</BlogPost>
 	</div>

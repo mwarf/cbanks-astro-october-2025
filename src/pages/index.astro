@@ -8,27 +8,17 @@ import Logos from '@/components/blocks/Logos.astro';
 import ResourceAllocation from '@/components/blocks/ResourceAllocation.astro';
 import { ProcessSection } from '@/components/blocks/process-section';
 import { Testimonials } from '@/components/blocks/testimonials';
-import Features from '@/components/blocks/Features.astro';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
 import heroImage from '@/assets/images/home/hero-main.png';
-import feature1 from '@/assets/images/home/feature-1.png';
-import feature2 from '@/assets/images/home/feature-2.png';
-import feature3 from '@/assets/images/home/feature-3.png';
-import resource1 from '@/assets/images/home/resource-1.png';
-import resource2 from '@/assets/images/home/resource-2.png';
-import resource3 from '@/assets/images/home/resource-3.png';
-import resource4 from '@/assets/images/home/resource-4.png';
 
-const featureImages = [feature1, feature2, feature3];
-const resourceImages = [resource1, resource2, resource3, resource4];
+
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <Background className="via-muted to-muted/80">
     <Hero image={heroImage} />
     <Logos />
-    <Features images={featureImages} />
     <ResourceAllocation />
     <ProcessSection />
   </Background>

@@ -29,22 +29,19 @@ export function AboutHero() {
           </h1>
 
           <p className="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
-            Documentary filmmaking for Southern Alberta's builders, makers, and leaders.
+            Cinema-quality brand films. Real stories. Business results.
           </p>
 
           <div className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
             <p>
               In a world of polished marketing fluff, authenticity is the only
-              currency that matters. We believe that your best stories aren't
-              invented in a boardroom—they're already happening in your
-              hallways, on your job sites, and in the lives of your customers.
+              currency that matters. Your best stories aren't invented in a boardroom. 
+              They're already happening on your job sites and in the lives of your customers.
             </p>
             <p>
-              Our "documentary-style" approach isn't just an aesthetic; it's a
-              philosophy. We trade teleprompters for conversation and actors for
-              real people. We dig deep to uncover the human element that makes
-              your business unique. The result? Films that don't just get
-              watched, but felt.
+              We trade teleprompters for conversation and actors for real people. 
+              We dig deep to uncover the human element that makes your business unique. 
+              The result? Films that don't just get watched, but felt.
             </p>
           </div>
         </div>

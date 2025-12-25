@@ -19,5 +19,20 @@ const blog = defineCollection({
   }),
 });
 
+const portfolio = defineCollection({
+  loader: glob({ base: "./src/content/portfolio", pattern: "**/*.{md,mdx}" }),
+  schema: z.object({
+    title: z.string(),
+    client: z.string(),
+    category: z.string(),
+    description: z.string(),
+    image: z.string(),
+    videoUrl: z.string().optional(),
+    tags: z.array(z.string()),
+    featured: z.boolean().default(false),
+    pubDate: z.coerce.date(),
+  }),
+});
+
 // Force rebuild of content collection
-export const collections = { blog };
+export const collections = { blog, portfolio };

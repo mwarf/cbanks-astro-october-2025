@@ -128,9 +128,14 @@ export const Contact = () => {
                 />
               </div>
 
-              <Button size="lg" type="submit" className="w-full sm:w-auto">
-                Send Message
-              </Button>
+              <div className="space-y-4">
+                <Button size="lg" type="submit" className="w-full sm:w-auto">
+                  Start a Project
+                </Button>
+                <p className="text-xs text-muted-foreground">
+                  No teleprompters. No stock footage. Just your story.
+                </p>
+              </div>
             </form>
           </div>
         </div>

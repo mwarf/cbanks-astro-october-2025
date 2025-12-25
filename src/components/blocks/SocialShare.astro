@@ -1,0 +1,62 @@
+---
+import { Twitter, Linkedin, Facebook, Link as LinkIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { getShareUrls } from "@/lib/share-urls";
+
+interface Props {
+  url: string;
+  title: string;
+  className?: string;
+}
+
+const { url, title, className } = Astro.props;
+const shareUrls = getShareUrls(url, title);
+---
+
+<div class:list={["flex items-center gap-2", className]}>
+  <span class="text-xs font-medium text-muted-foreground mr-2">Share</span>
+  
+  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full" asChild>
+    <a href={shareUrls.twitter} target="_blank" rel="noopener noreferrer" title="Share on X">
+      <Twitter className="h-4 w-4" />
+    </a>
+  </Button>
+
+  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full" asChild>
+    <a href={shareUrls.linkedin} target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">
+      <Linkedin className="h-4 w-4" />
+    </a>
+  </Button>
+
+  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full" asChild>
+    <a href={shareUrls.facebook} target="_blank" rel="noopener noreferrer" title="Share on Facebook">
+      <Facebook className="h-4 w-4" />
+    </a>
+  </Button>
+
+  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full copy-link-btn" title="Copy Link" data-url={url}>
+    <LinkIcon className="h-4 w-4" />
+  </Button>
+</div>
+
+<script>
+  const copyBtns = document.querySelectorAll('.copy-link-btn');
+  
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const url = btn.getAttribute('data-url');
+      if (url) {
+        try {
+          await navigator.clipboard.writeText(url);
+          const originalContent = btn.innerHTML;
+          btn.innerHTML = '<span class="text-[10px] font-bold">Done</span>';
+          setTimeout(() => {
+            btn.innerHTML = originalContent;
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      }
+    });
+  });
+</script>

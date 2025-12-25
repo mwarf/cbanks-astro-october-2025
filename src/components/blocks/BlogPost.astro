@@ -3,14 +3,19 @@ import { format } from "date-fns";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { Badge } from "@/components/ui/badge";
+import TableOfContents from "./TableOfContents.astro";
+import SocialShare from "./SocialShare.astro";
 
 interface Props {
   post: CollectionEntry<"blog">;
   relatedPosts?: CollectionEntry<"blog">[];
+  headings?: { id: string; text: string; level: number }[];
 }
 
-const { post, relatedPosts = [] } = Astro.props;
+const { post, relatedPosts = [], headings = [] } = Astro.props;
 const { title, authorName, image, pubDate, updatedDate, description, authorImage } = post.data;
+
+const postUrl = new URL(Astro.url.pathname, Astro.site || Astro.url.origin).toString();
 
 // Article JSON-LD
 const articleJsonLd = {
@@ -83,6 +88,8 @@ const calculateReadingTime = (content: string) => {
         </span>
       </div>
       
+      <SocialShare url={postUrl} title={title} className="mt-4" />
+      
       <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
 
       <Image
@@ -90,13 +97,22 @@ const calculateReadingTime = (content: string) => {
         alt={title || ""}
         width={1200}
         height={675}
-        class="mt-0 mb-8 aspect-video w-full rounded-lg border object-cover"
+        class="mt-8 mb-8 aspect-video w-full rounded-lg border object-cover"
       />
     </div>
   </div>
-  <div class="container">
-    <div class="prose prose-lg dark:prose-invert mx-auto max-w-3xl">
-      <slot />
+  <div class="container pb-12">
+    <div class="mx-auto max-w-5xl flex flex-col lg:flex-row gap-12 relative">
+      <div class="prose prose-lg dark:prose-invert flex-1 max-w-none">
+        <slot />
+        <div class="mt-16 pt-8 border-t">
+          <h4 class="text-base font-bold mb-4">Enjoyed this article? Share it with your network:</h4>
+          <SocialShare url={postUrl} title={title} />
+        </div>
+      </div>
+      <aside class="hidden lg:block lg:w-64">
+        <TableOfContents headings={headings} />
+      </aside>
     </div>
   </div>
 

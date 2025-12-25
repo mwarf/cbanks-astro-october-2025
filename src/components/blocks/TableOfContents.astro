@@ -1,0 +1,62 @@
+---
+interface Props {
+  headings: { id: string; text: string; level: number }[];
+}
+
+const { headings } = Astro.props;
+
+if (headings.length === 0) return null;
+---
+
+<nav class="toc hidden lg:block sticky top-32 h-fit max-w-[240px] pl-8 border-l">
+  <h2 class="text-sm font-bold uppercase tracking-wider mb-4">On this page</h2>
+  <ul class="space-y-3 text-sm">
+    {headings.map((heading) => (
+      <li class:list={[
+        "toc-item transition-all",
+        heading.level === 3 ? "pl-4" : ""
+      ]}>
+        <a
+          href={`#${heading.id}`}
+          class="text-muted-foreground hover:text-primary transition-colors block leading-tight toc-link"
+          data-id={heading.id}
+        >
+          {heading.text}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  @reference "../../styles/global.css";
+  
+  .toc-link.active {
+    @apply text-primary font-medium;
+  }
+</style>
+
+<script>
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -80% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute('id');
+      const tocLink = document.querySelector(`.toc a[data-id="${id}"]`);
+      
+      if (entry.isIntersecting) {
+        document.querySelectorAll('.toc a').forEach((link) => link.classList.remove('active'));
+        tocLink?.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all headings that have IDs
+  document.querySelectorAll('h2[id], h3[id]').forEach((section) => {
+    observer.observe(section);
+  });
+</script>

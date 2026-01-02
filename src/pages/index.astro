@@ -10,14 +10,16 @@ import { ProcessSection } from '@/components/blocks/process-section';
 import { Testimonials } from '@/components/blocks/testimonials';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
-import heroImage from '@/assets/images/home/hero-main.png';
+import heroMain from '@/assets/images/home/hero-main.png';
+import heroSecondary1 from '@/assets/images/home/feature-1.png';
+import heroSecondary2 from '@/assets/images/home/feature-2.png';
 
 
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <Background className="via-muted to-muted/80">
-    <Hero image={heroImage} />
+    <Hero images={[heroMain, heroSecondary1, heroSecondary2]} />
     <Logos />
     <ResourceAllocation />
     <ProcessSection />

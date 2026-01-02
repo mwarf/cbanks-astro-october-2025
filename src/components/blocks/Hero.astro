@@ -5,10 +5,12 @@ import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
 
 interface Props {
-  image?: any;
+  images?: any[];
 }
 
-const { image } = Astro.props;
+const { images = [] } = Astro.props;
+const mainImage = images[0];
+const secondaryImages = images.slice(1, 3);
 
 const features = [
   {
@@ -97,16 +99,32 @@ const features = [
   </div>
 
   <div class="mt-12 max-lg:ml-6 md:mt-20 lg:container lg:mt-24">
-    <div class="relative aspect-video w-full">
-      <Image
-        src={image || "/images/home/hero-main.png"}
-        alt="Documentary film crew filming an interview"
-        width={1920}
-        height={1080}
-        loading="eager"
-        fetchpriority="high"
-        class="h-full w-full rounded-2xl object-cover object-center shadow-lg max-lg:rounded-tr-none"
-      />
+    <div class="grid grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-3 lg:gap-4">
+      {/* Main featured image - spans 2 columns + 2 rows on desktop, stretches to match secondary heights */}
+      <div class="col-span-2 lg:row-span-2 relative max-lg:aspect-video overflow-hidden rounded-2xl max-lg:rounded-tr-none shadow-lg">
+        <Image
+          src={mainImage || "/images/home/hero-main.png"}
+          alt="Documentary film crew filming an interview"
+          width={1920}
+          height={1080}
+          loading="eager"
+          fetchpriority="high"
+          class="h-full w-full object-cover object-center lg:absolute lg:inset-0"
+        />
+      </div>
+      {/* Secondary images - these define the row heights with 4:3 aspect ratio */}
+      {secondaryImages.map((img, i) => (
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+          <Image
+            src={img}
+            alt={`Featured work ${i + 1}`}
+            width={800}
+            height={600}
+            loading="lazy"
+            class="h-full w-full object-cover object-center"
+          />
+        </div>
+      ))}
     </div>
   </div>
 </section>

@@ -23,7 +23,7 @@ const topItems = [
       },
     ],
     className:
-      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
     fade: [""],
   },
   {
@@ -40,7 +40,7 @@ const topItems = [
       { src: "/logos/storyhive-logo-dark.svg", alt: "Workflow planning" },
     ],
     className:
-      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
     fade: [],
   },
 ];
@@ -59,7 +59,7 @@ const bottomItems = [
       },
     ],
     className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
     fade: ["bottom"],
   },
   {
@@ -74,7 +74,7 @@ const bottomItems = [
       },
     ],
     className:
-      "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3",
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
     fade: [""],
   },
   {
@@ -90,7 +90,7 @@ const bottomItems = [
       },
     ],
     className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
     fade: ["bottom"],
   },
 ];
@@ -116,7 +116,7 @@ const bottomItems = [
         {topItems.map((item, i) => (
           <div
             class={cn(
-              "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8",
+              "relative flex flex-col justify-between py-6 md:px-8 md:py-8",
               item.className,
             )}
           >
@@ -191,7 +191,7 @@ const bottomItems = [
         {bottomItems.map((item, i) => (
           <div
             class={cn(
-              "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8 md:pb-0",
+              "relative flex flex-col justify-between py-6 md:px-8 md:py-8",
               item.className,
             )}
           >

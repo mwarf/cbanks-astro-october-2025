@@ -89,13 +89,13 @@ const bottomRowCompanies = [
       <div class="hidden md:block w-full">
         <div class="grid grid-cols-4 items-center justify-items-center gap-x-20 lg:gap-x-28">
           {topRowCompanies.map((company) => (
-            <a href={company.href} target="_blank" class="transition-opacity hover:opacity-70">
+            <a href={company.href} target="_blank" class="block transition-all duration-300 hover:scale-110 hover:opacity-100 opacity-50">
               <img
                 src={company.logo}
                 alt={`${company.name} logo`}
                 width={company.width}
                 height={company.height}
-                class="dark:opacity/100 object-contain opacity-50 dark:invert"
+                class="dark:opacity/100 object-contain opacity-100 dark:invert"
               />
             </a>
           ))}
@@ -106,13 +106,13 @@ const bottomRowCompanies = [
       <div class="hidden md:block w-full">
         <div class="grid grid-cols-5 items-center justify-items-center gap-x-20 lg:gap-x-28">
           {bottomRowCompanies.map((company) => (
-            <a href={company.href} target="_blank" class="transition-opacity hover:opacity-70">
+            <a href={company.href} target="_blank" class="block transition-all duration-300 hover:scale-110 hover:opacity-100 opacity-50">
               <img
                 src={company.logo}
                 alt={`${company.name} logo`}
                 width={company.width}
                 height={company.height}
-                class="dark:opacity/100 object-contain opacity-50 dark:invert"
+                class="dark:opacity/100 object-contain opacity-100 dark:invert"
               />
             </a>
           ))}

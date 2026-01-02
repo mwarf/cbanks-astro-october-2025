@@ -20,7 +20,7 @@ const items = [
     author: "Sarah Chen",
     role: "HR Director",
     company: "Prairie Ale Works",
-    image: "/testimonials/amy-chase.webp",
+    image: "/testimonials/headshot-sarah-chen.webp",
   },
   {
     quote:
@@ -28,7 +28,7 @@ const items = [
     author: "Michael Roberts",
     role: "CEO",
     company: "AgTech Solutions",
-    image: "/testimonials/jonas-kotara.webp",
+    image: "/testimonials/headshot-michael-roberts.webp",
   },
   {
     quote:
@@ -36,7 +36,7 @@ const items = [
     author: "Jennifer Walsh",
     role: "Marketing Director",
     company: "Precision Manufacturing",
-    image: "/testimonials/kevin-yam.webp",
+    image: "/testimonials/headshot-jennifer-walsh.webp",
   },
   {
     quote:
@@ -44,7 +44,7 @@ const items = [
     author: "David Park",
     role: "Founder",
     company: "Southern Alberta Clean Energy",
-    image: "/testimonials/kundo-marta.webp",
+    image: "/testimonials/headshot-david-park.webp",
   },
   {
     quote:
@@ -52,7 +52,7 @@ const items = [
     author: "Sarah Chen",
     role: "HR Director",
     company: "Prairie Ale Works",
-    image: "/testimonials/amy-chase.webp",
+    image: "/testimonials/headshot-sarah-chen.webp",
   },
   {
     quote:
@@ -60,7 +60,7 @@ const items = [
     author: "Michael Roberts",
     role: "CEO",
     company: "AgTech Solutions",
-    image: "/testimonials/jonas-kotara.webp",
+    image: "/testimonials/headshot-michael-roberts.webp",
   },
   {
     quote:
@@ -68,7 +68,7 @@ const items = [
     author: "Jennifer Walsh",
     role: "Marketing Director",
     company: "Precision Manufacturing",
-    image: "/testimonials/kevin-yam.webp",
+    image: "/testimonials/headshot-jennifer-walsh.webp",
   },
   {
     quote:
@@ -76,7 +76,7 @@ const items = [
     author: "David Park",
     role: "Founder",
     company: "Southern Alberta Clean Energy",
-    image: "/testimonials/kundo-marta.webp",
+    image: "/testimonials/headshot-david-park.webp",
   },
 ];
 
@@ -118,7 +118,7 @@ export const Testimonials = ({
                     key={index}
                     className="xl:basis-1/3.5 grow basis-4/5 sm:basis-3/5 md:basis-2/5 lg:basis-[28%] 2xl:basis-[24%]"
                   >
-                    <Card className="bg-muted h-full overflow-hidden border-none p-0">
+                    <Card className="bg-muted h-full overflow-hidden border-none p-0 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
                       <CardContent className="flex h-full flex-col p-0">
                         <div className="relative h-[288px] overflow-hidden lg:h-[328px]">
                           <img

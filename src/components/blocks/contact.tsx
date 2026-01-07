@@ -1,13 +1,55 @@
-import { Facebook, Linkedin, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, Linkedin, Twitter, MapPin, Phone, Mail, Loader2, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 
 import buildingPlaceholder from "@/assets/images/building-placeholder.jpg";
 
 export const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      company: formData.get("company"),
+      projectType: formData.get("project-type"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setIsSuccess(true);
+      toast.success("Message sent successfully!");
+      e.currentTarget.reset();
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section className="pb-28 lg:pb-32">
       <div className="container">
@@ -97,49 +139,79 @@ export const Contact = () => {
               Tell us about your story—we'll respond within 24 hours.
             </p>
             
-            <form className="mt-8 space-y-6">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" placeholder="Your name" />
+            {isSuccess ? (
+              <div className="mt-8 flex flex-col items-center justify-center space-y-4 rounded-lg bg-green-50/50 py-12 text-center">
+                <div className="rounded-full bg-green-100 p-3 text-green-600">
+                  <CheckCircle2 className="size-8" />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" placeholder="your@email.com" type="email" />
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="company">Company</Label>
-                <Input id="company" placeholder="Company name" />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="project-type">Project Type</Label>
-                <Input id="project-type" placeholder="e.g. Brand documentary, Recruitment video" />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="message">Tell us about your story</Label>
-                <Textarea
-                  id="message"
-                  placeholder="What story are you looking to tell? What's the purpose of the film?"
-                  className="min-h-[150px] resize-none"
-                />
-              </div>
-
-              <div className="space-y-4">
-                <Button size="lg" type="submit" className="w-full sm:w-auto">
-                  Start a Project
-                </Button>
-                <p className="text-xs text-muted-foreground">
-                  No teleprompters. No stock footage. Just your story.
+                <h3 className="text-xl font-semibold text-green-900">Message Sent!</h3>
+                <p className="text-green-700 max-w-xs">
+                  Thanks for reaching out. We've received your message and will get back to you shortly.
                 </p>
+                <Button 
+                  variant="outline" 
+                  onClick={() => setIsSuccess(false)}
+                  className="mt-4"
+                >
+                  Send another message
+                </Button>
               </div>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name</Label>
+                    <Input id="name" name="name" placeholder="Your name" required disabled={isSubmitting} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" name="email" placeholder="your@email.com" type="email" required disabled={isSubmitting} />
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="company">Company</Label>
+                  <Input id="company" name="company" placeholder="Company name" disabled={isSubmitting} />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="project-type">Project Type</Label>
+                  <Input id="project-type" name="project-type" placeholder="e.g. Brand documentary, Recruitment video" disabled={isSubmitting} />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="message">Tell us about your story</Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="What story are you looking to tell? What's the purpose of the film?"
+                    className="min-h-[150px] resize-none"
+                    required
+                    disabled={isSubmitting}
+                  />
+                </div>
+
+                <div className="space-y-4">
+                  <Button size="lg" type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 size-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      "Start a Project"
+                    )}
+                  </Button>
+                  <p className="text-xs text-muted-foreground">
+                    No teleprompters. No stock footage. Just your story.
+                  </p>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </div>
     </section>
   );
 };
+

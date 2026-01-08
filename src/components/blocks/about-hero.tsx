@@ -1,21 +1,29 @@
 import { DashedLine } from "@/components/dashed-line";
 
+import CountUp from "@/components/ui/count-up";
+
 const stats = [
   {
-    value: "65+",
+    value: 65,
+    suffix: "+",
     label: "Films Delivered",
+    type: "number",
   },
   {
-    value: "73%",
+    value: 73,
+    suffix: "%",
     label: "Avg. View Rate",
+    type: "number",
   },
   {
-    value: "2019",
+    value: 2019,
     label: "Founded",
+    type: "number",
   },
   {
     value: "4-6 wks",
     label: "Timeline",
+    type: "text",
   },
 ];
 
@@ -60,7 +68,16 @@ export function AboutHero() {
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col gap-1">
               <div className="font-display text-4xl tracking-wide md:text-5xl">
-                {stat.value}
+                {stat.type === 'number' ? (
+                  <CountUp
+                    to={stat.value as number}
+                    suffix={stat.suffix}
+                    duration={2.5}
+                    className="tabular-nums"
+                  />
+                ) : (
+                  <span>{stat.value}</span>
+                )}
               </div>
               <div className="text-muted-foreground">{stat.label}</div>
             </div>

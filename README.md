@@ -19,6 +19,19 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Configuration
+
+This project requires environment variables to be set for full functionality, particularly for the contact form.
+
+1. Create a `.env` file in the root directory (you can use copies of `.env.local` or `.env.example` if available, or just create a new file).
+2. Add the following variables:
+
+```env
+RESEND_API_KEY=re_123456789
+```
+
+> **Note**: The contact form uses [Resend](https://resend.com) for sending emails. You will need a valid API key.
+
 ## Features
 
 ### Core Technology Stack
@@ -43,6 +56,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **SEO Ready**: Proper metadata and OG images included
 - **Blog System**: Includes a complete blog system with SEO-friendly URLs and content guidelines
 - **Performance Optimized**: Key components (Hero, Features, ResourceAllocation, Background) refactored to native Astro for minimal hydration and optimized image delivery. Achieving high Lighthouse scores.
+- **Server-side API Endpoints**: Includes server-side API routes (e.g., for email sending) using Astro's hybrid rendering capabilities.
 
 ### Blog Content Guidelines
 
@@ -54,7 +68,7 @@ Blog posts are stored in `src/content/blog/` and follow specific guidelines for 
 - About page
 - Pricing page
 - FAQ page
-- Contact page with form
+- Contact page with functional contact form (sending via Resend)
 - Login/Signup pages
 - Portfolio page with filtering and case studies
 
@@ -82,3 +96,30 @@ Production-ready and tested for deployment on [Vercel](https://vercel.com)
 - Design by [Callum Flack](https://x.com/callumflack)
 - Dev by [Yassine Zaanouni](https://x.com/YassineZaanouni)
 - Produced by [Rob Austin](https://x.com/ausrobdev)
+
+## ⚡️ Hydration & Interactive Components
+
+### Using React Components
+
+This project uses Astro as the main framework with React for interactive components. By default, Astro renders React components as static HTML.
+
+**Important:** If you need a React component to be interactive (e.g., using `useState`, `useEffect`, or animation libraries like `framer-motion`), you **MUST** add a client directive when using the component in an `.astro` file.
+
+Example:
+
+```astro
+<!-- Static (default) - No JS sent to client -->
+<MyComponent />
+
+<!-- Interactive - Hydrates immediately on load -->
+<MyComponent client:load />
+
+<!-- Interactive - Hydrates when visible in viewport -->
+<MyComponent client:visible />
+```
+
+Common issues if client directive is missing:
+
+- `onClick` handlers won't fire
+- `useEffect` hooks won't run
+- `framer-motion` animations won't play

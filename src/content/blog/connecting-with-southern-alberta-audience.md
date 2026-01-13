@@ -2,7 +2,7 @@
 title: "Speaking Albertan: How to Connect with Your Local Audience Through Video"
 description: "Learn how to create video content that resonates with Southern Alberta audiences. Authentic storytelling that respects local values and connects with real people."
 pubDate: "Nov 01 2025"
-image: "/images/blog-placeholder.png"
+image: "/images/blog-audience-engaged.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

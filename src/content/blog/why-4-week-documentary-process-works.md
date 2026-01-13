@@ -2,7 +2,7 @@
 title: "Why Our 4-6 Week Documentary Process Delivers Better Results"
 description: "Most video companies take 4-5 months. We deliver professional documentary-style films in 4-6 weeks without compromising quality. Here's why faster is better."
 pubDate: "Nov 01 2025"
-image: "/images/blog-placeholder-2.png"
+image: "/images/blog-coffee-shop-setup.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

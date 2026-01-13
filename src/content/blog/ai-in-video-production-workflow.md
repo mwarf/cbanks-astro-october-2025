@@ -2,7 +2,7 @@
 title: "AI in Our Workflow: What We Actually Use It For (And What We Don't)"
 description: "The honest truth about how a documentary video production company uses AI tools—and why authentic human storytelling can't be automated."
 pubDate: "Dec 17 2025"
-image: "/images/blog-placeholder-4.png"
+image: "/images/blog-colour-grading.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

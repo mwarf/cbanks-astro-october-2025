@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Play } from "lucide-react";
 import { ProjectActions } from "@/components/blocks/project-actions";
+import { EpisodesSidebar } from "@/components/blocks/episodes-sidebar";
 import { projectFromEntry } from "@/lib/portfolio-utils";
 import { SITE_TITLE } from "@/consts";
 
@@ -105,6 +106,14 @@ const { Content } = await render(entry);
                 <ProjectActions client:visible project={project} />
               </div>
            </div>
+
+           {entry.data.episodes && entry.data.episodes.length > 0 && (
+             <EpisodesSidebar 
+               client:visible 
+               episodes={entry.data.episodes} 
+               projectTitle={project.title} 
+             />
+           )}
         </div>
       </div>
     </div>

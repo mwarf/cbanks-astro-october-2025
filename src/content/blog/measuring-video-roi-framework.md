@@ -2,7 +2,7 @@
 title: "The Bottom Line of Believability: How to Measure the ROI of Your Video Content"
 description: "Stop guessing. Use this 3-tier framework to measure actual video ROI, from engagement metrics to revenue attribution. Real examples included."
 pubDate: "Nov 02 2025"
-image: "/images/blog-placeholder.png"
+image: "/images/blog-top-down-creator-desk.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

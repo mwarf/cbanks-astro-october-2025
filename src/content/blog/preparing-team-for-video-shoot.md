@@ -2,7 +2,7 @@
 title: "How to Prepare Your Team for the Camera (A Guide for Non-Actors)"
 description: "Nervous about being filmed? You're not alone. Here's a practical guide to help your team feel comfortable, look natural, and sound authentic on shoot day."
 pubDate: "Dec 18 2025"
-image: "/images/blog-placeholder-2.png"
+image: "/images/blog-documentary-interview.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

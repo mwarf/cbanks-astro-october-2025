@@ -3,7 +3,7 @@ title: "Where the Story Comes Together: A Glimpse into Our Editing Suite"
 description: "Discover what happens in post-production after filming ends. Learn how professional video editing transforms raw footage into compelling stories that drive business results."
 pubDate: "Nov 02 2025"
 slug: "where-story-comes-together-editing-suite"
-image: "/images/blog-placeholder-3.png"
+image: "/images/blog-edit-suite.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

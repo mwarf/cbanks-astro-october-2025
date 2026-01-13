@@ -2,7 +2,7 @@
 title: "Is Your Corporate Video Boring? Here's Why Authentic Storytelling is the Answer"
 description: "Learn how authentic storytelling transforms corporate videos from forgettable to memorable, with real examples and strategies."
 pubDate: "Nov 02 2025"
-image: "/images/blog-placeholder-4.png"
+image: "/images/blog-corporate-interview.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

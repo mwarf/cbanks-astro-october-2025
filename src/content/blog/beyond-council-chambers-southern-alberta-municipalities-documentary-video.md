@@ -11,7 +11,7 @@ tags:
     "community engagement",
     "Southern Alberta",
   ]
-image: "/images/blog-placeholder.png"
+image: "/images/blog-sample-council-chamber.webp"
 ---
 
 

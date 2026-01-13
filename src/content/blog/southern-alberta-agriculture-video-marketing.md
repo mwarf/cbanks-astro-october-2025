@@ -2,7 +2,7 @@
 title: "The $12 Billion Opportunity: How Southern Alberta Agriculture Is Winning with Video Marketing"
 description: "Learn how Southern Alberta farms use video marketing to build trust, reach customers, and grow revenue in the agricultural sector."
 pubDate: "Nov 01 2025"
-image: "/images/blog-placeholder-3.png"
+image: "/images/blog-sugar-beet.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

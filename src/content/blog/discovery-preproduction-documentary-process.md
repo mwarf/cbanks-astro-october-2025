@@ -2,7 +2,7 @@
 title: "Discovery & Pre-Production: Where Great Films Begin"
 description: "A detailed look at how we spend Weeks 1-2 finding your story and preparing for efficient production. The foundation of our 4-6 week documentary process."
 pubDate: "Nov 01 2025"
-image: "/images/blog-placeholder-2.png"
+image: "/images/blog-field-interview.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

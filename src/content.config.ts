@@ -31,6 +31,10 @@ const portfolio = defineCollection({
     tags: z.array(z.string()),
     featured: z.boolean().default(false),
     pubDate: z.coerce.date(),
+    episodes: z.array(z.object({
+      title: z.string(),
+      url: z.string().url(),
+    })).optional(),
   }),
 });
 

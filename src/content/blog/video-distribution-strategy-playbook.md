@@ -2,7 +2,7 @@
 title: "You Have a Great Video... Now What? The Distribution Playbook"
 description: "Don't let your investment die on a hard drive. Here is a clear strategy for distributing, activating, and repurposing your video content for maximum impact."
 pubDate: "Dec 19 2025"
-image: "/images/blog-placeholder-5.png"
+image: "/images/blog-distribution-strategy-video.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

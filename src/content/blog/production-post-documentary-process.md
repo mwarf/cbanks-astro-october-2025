@@ -2,7 +2,7 @@
 title: "Production & Post: Capturing Your Story"
 description: "A behind-the-scenes look at Weeks 3-6 of our documentary process. How we capture authentic footage and craft it into films people actually watch."
 pubDate: "Nov 01 2025"
-image: "/images/blog-placeholder-2.png"
+image: "/images/blog-gear-table.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

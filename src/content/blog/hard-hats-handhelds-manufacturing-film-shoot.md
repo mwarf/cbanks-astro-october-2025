@@ -3,7 +3,7 @@ title: "Hard Hats and Handhelds: A Behind-the-Scenes Look at a Manufacturing Fil
 description: "Go behind the scenes of an actual manufacturing video shoot. Learn how professional crews film in loud, dangerous industrial environments while capturing authentic stories."
 pubDate: "Nov 02 2025"
 slug: "hard-hats-handhelds-manufacturing-film-shoot"
-image: "/images/blog-placeholder-3.png"
+image: "/images/blog-trucking-setup.webp"
 authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---

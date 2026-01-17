@@ -1,25 +1,27 @@
 ---
 interface Props {
-  headings: { id: string; text: string; level: number }[];
+  headings: { depth: number; slug: string; text: string }[];
 }
 
 const { headings } = Astro.props;
 
-if (headings.length === 0) return null;
+const filteredHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+
+if (filteredHeadings.length === 0) return null;
 ---
 
-<nav class="toc hidden lg:block sticky top-32 h-fit max-w-[240px] pl-8 border-l">
+<nav class="toc sticky top-32 max-h-[calc(100vh-8rem)] overflow-y-auto max-w-[240px] pl-8 border-l">
   <h2 class="text-sm font-bold uppercase tracking-wider mb-4">On this page</h2>
   <ul class="space-y-3 text-sm">
-    {headings.map((heading) => (
+    {filteredHeadings.map((heading) => (
       <li class:list={[
         "toc-item transition-all",
-        heading.level === 3 ? "pl-4" : ""
+        heading.depth === 3 ? "pl-4" : ""
       ]}>
         <a
-          href={`#${heading.id}`}
+          href={`#${heading.slug}`}
           class="text-muted-foreground hover:text-primary transition-colors block leading-tight toc-link"
-          data-id={heading.id}
+          data-id={heading.slug}
         >
           {heading.text}
         </a>

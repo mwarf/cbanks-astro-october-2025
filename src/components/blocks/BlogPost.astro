@@ -9,7 +9,7 @@ import SocialShare from "./SocialShare.astro";
 interface Props {
   post: CollectionEntry<"blog">;
   relatedPosts?: CollectionEntry<"blog">[];
-  headings?: { id: string; text: string; level: number }[];
+  headings?: { depth: number; slug: string; text: string }[];
 }
 
 const { post, relatedPosts = [], headings = [] } = Astro.props;
@@ -110,7 +110,7 @@ const calculateReadingTime = (content: string) => {
           <SocialShare url={postUrl} title={title} />
         </div>
       </div>
-      <aside class="hidden lg:block lg:w-64">
+      <aside class="lg:w-64 block">
         <TableOfContents headings={headings} />
       </aside>
     </div>

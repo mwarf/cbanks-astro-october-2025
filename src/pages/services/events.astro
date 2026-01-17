@@ -1,0 +1,212 @@
+---
+import { Video, Calendar, Zap, Users } from "lucide-react";
+
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import Background from "@/components/Background.astro";
+import ServiceHero from "@/components/blocks/ServiceHero.astro";
+import ServiceGrid from "@/components/blocks/ServiceGrid.astro";
+import ServiceTiers from "@/components/blocks/ServiceTiers.astro";
+import ProcessTimeline from "@/components/blocks/ProcessTimeline.astro";
+import { ServiceFAQ } from "@/components/blocks/service-faq";
+import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
+
+// Hero Data
+const heroData = {
+  title: "Capture Every Moment That Matters",
+  subtitle: "Event Coverage Services",
+  description: "Multi-camera event filming for conferences, galas, groundbreakings, and community gatherings. From highlight reels to full documentary-style coverage across Southern Alberta.",
+  imageSrc: "/services/events/hero-event-coverage.jpg",
+  imageAlt: "Professional event filming setup",
+  ctaText: "Discuss Your Event",
+  ctaHref: "/contact",
+};
+
+// Event Types
+const eventTypes = [
+  {
+    title: "Corporate Conferences & Summits",
+    description: "Capture keynotes, panel discussions, networking moments, and sponsor activations. Multi-cam coverage with professional audio.",
+    icon: Users,
+  },
+  {
+    title: "Community Events & Galas",
+    description: "Fundraisers, award ceremonies, and nonprofit events. Document the impact and celebration for donor engagement and future promotion.",
+    icon: Calendar,
+  },
+  {
+    title: "Groundbreakings & Ribbon Cuttings",
+    description: "Capture milestone moments for municipal projects, commercial developments, and infrastructure launches. Perfect for PR and stakeholder updates.",
+    icon: Zap,
+  },
+  {
+    title: "Agricultural Shows & Trade Events",
+    description: "Showcase your presence at industry events, trade shows, and agricultural fairs. Booth coverage, product demonstrations, and attendee testimonials.",
+    icon: Video,
+  },
+];
+
+// Service Packages
+const packages = [
+  {
+    name: "Highlights Package",
+    price: "$1,500",
+    description: "Single-camera coverage with a 2-3 minute highlight reel delivered within 48 hours.",
+    features: [
+      "Single-camera operator (4-6 hours)",
+      "Wireless audio for speeches",
+      "2-3 minute highlight reel",
+      "Social media cutdowns (30-60 sec)",
+      "48-hour turnaround",
+      "Web-optimized delivery",
+      "Perfect for galas and community events",
+    ],
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "Full Coverage",
+    price: "$3,500",
+    description: "Multi-camera event coverage with comprehensive documentation and fast turnaround.",
+    features: [
+      "2-camera multi-cam setup",
+      "Professional wireless audio system",
+      "Full event capture (up to 8 hours)",
+      "5-7 minute documentary-style edit",
+      "Highlight reel + social cutdowns",
+      "1-week turnaround",
+      "RAW footage archive included",
+      "Ideal for conferences and major events",
+    ],
+    highlighted: true,
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "Documentary Event Film",
+    price: "Custom",
+    description: "Comprehensive storytelling approach treating your event as a documentary subject. Perfect for annual conferences or milestone celebrations.",
+    features: [
+      "3-camera setup with roaming operators",
+      "Pre-event interviews and b-roll",
+      "Attendee testimonials and reactions",
+      "10-15 minute documentary film",
+      "Same-day highlights option",
+      "Custom editing and narrative structure",
+      "Distribution strategy consultation",
+      "Multi-day events supported",
+    ],
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+];
+
+// Process Timeline
+const processSteps = [
+  {
+    title: "Pre-Event Planning",
+    duration: "1-2 weeks before",
+    description: "Review event schedule, scout venue, identify key moments to capture, plan camera positions and audio setup.",
+  },
+  {
+    title: "On-Site Setup",
+    duration: "2-3 hours before",
+    description: "Multi-camera setup, audio testing, coordinate with event organizers and AV team, establish backup power and storage.",
+  },
+  {
+    title: "Event Coverage",
+    duration: "Event duration",
+    description: "Professional filming of keynotes, panels, networking, and key moments. Real-time monitoring and backup recording.",
+  },
+  {
+    title: "Post-Production",
+    duration: "48 hours to 2 weeks",
+    description: "Editing, color grading, audio mixing, and delivery in multiple formats (highlight reel, full coverage, social cutdowns).",
+  },
+];
+
+// FAQ
+const faqQuestions = [
+  {
+    question: "Can you provide same-day highlights?",
+    answer: "Yes! For an additional fee, we can deliver a 60-90 second highlight reel on-site at the end of your event. This requires advance planning and typically works best for conferences or galas where we can set up a dedicated editing station. Full highlight reels (2-3 minutes) are typically delivered within 48 hours."
+  },
+  {
+    question: "How many cameras do you recommend?",
+    answer: "It depends on the event. Single-camera works well for small gatherings or simple stage coverage. Two cameras are ideal for conferences (one wide, one close-up). Three cameras provide comprehensive coverage for large events with multiple speakers, panel discussions, or audience reactions. We'll recommend the right setup during planning."
+  },
+  {
+    question: "Do you handle live streaming?",
+    answer: "We partner with specialized live streaming providers for events requiring real-time broadcast. We can coordinate the integration of our filming with live streaming services, or we can refer you to trusted partners for streaming-only coverage."
+  },
+  {
+    question: "What happens if our event runs longer than expected?",
+    answer: "We build buffer time into our scheduling. If your event runs significantly longer (more than 1 hour over), additional coverage time is billed hourly. We'll communicate proactively if we're approaching scheduled end time."
+  },
+  {
+    question: "Can you capture attendee testimonials?",
+    answer: "Absolutely! This works great for conferences and community events. We can set up a dedicated interview station during breaks or roam through networking sessions for casual testimonials. These add authentic perspective to the final edit."
+  },
+  {
+    question: "How far in advance should we book?",
+    answer: "For major annual events (conferences, galas), book 2-3 months in advance to ensure availability. Smaller events can often be accommodated with 2-4 weeks notice. Peak seasons (spring and fall) fill up faster."
+  },
+  {
+    question: "Do you travel for events outside Lethbridge?",
+    answer: "Yes! We regularly cover events throughout Southern Alberta (Calgary, Medicine Hat, Cranbrook area). Travel fees apply for events outside our standard service area. Multi-day events may include accommodation costs."
+  },
+  {
+    question: "What's included in the final deliverables?",
+    answer: "Depending on the package: highlight reel (2-7 minutes), social media cutdowns (30-60 seconds for Instagram/LinkedIn), and optional full session recordings. All files are delivered in web-optimized MP4 format, with RAW footage available in Full Coverage and Documentary packages."
+  },
+];
+---
+
+<DefaultLayout
+  title="Event Coverage Services - Professional Event Filming | Coalbanks"
+  description="Multi-camera event coverage for conferences, galas, groundbreakings, and community gatherings. Same-day highlights and documentary-style event films."
+>
+  <Background className="via-muted to-muted/80">
+    <!-- Hero -->
+    <ServiceHero {...heroData} />
+
+    <!-- Event Types -->
+    <ServiceGrid
+      title="Events We Cover"
+      description="From intimate ribbon-cuttings to large conferences, we capture the moments that matter for your organization."
+      items={eventTypes}
+      columns={4}
+    />
+  </Background>
+
+    <!-- Service Packages -->
+    <ServiceTiers
+      title="Event Coverage Packages"
+      description="Choose the level of coverage that matches your event's scope and timeline. All packages include professional multi-camera filming and fast turnaround."
+      tiers={packages}
+    />
+
+    <!-- Process Timeline -->
+    <ProcessTimeline
+      title="Event Coverage Process"
+      description="From pre-event planning to final delivery, here's how we ensure comprehensive coverage of your event."
+      steps={processSteps}
+    />
+
+  <Background variant="bottom">
+    <!-- FAQ -->
+    <ServiceFAQ
+      client:visible
+      questions={faqQuestions}
+      title="Common Questions About Event Coverage"
+    />
+
+    <!-- CTA -->
+    <ServiceCTA
+      title="Planning an event worth documenting?"
+      description="Let's discuss your event timeline, key moments to capture, and delivery requirements. Early booking ensures we're available for your date."
+      buttonText="Discuss Your Event"
+      buttonHref="/contact"
+      variant="centered"
+    />
+  </Background>
+</DefaultLayout>

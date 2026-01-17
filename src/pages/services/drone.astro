@@ -1,0 +1,302 @@
+---
+import { Camera, Shield, Plane, MapPin } from "lucide-react";
+
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import Background from "@/components/Background.astro";
+import ServiceHero from "@/components/blocks/ServiceHero.astro";
+import ServiceGrid from "@/components/blocks/ServiceGrid.astro";
+import TechnicalSpecs from "@/components/blocks/TechnicalSpecs.astro";
+import ServiceTiers from "@/components/blocks/ServiceTiers.astro";
+import ProcessTimeline from "@/components/blocks/ProcessTimeline.astro";
+import { ServiceGallery } from "@/components/blocks/service-gallery";
+import { VideoModal } from "@/components/blocks/video-modal";
+import { ServiceFAQ } from "@/components/blocks/service-faq";
+import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
+
+// Hero Data
+const heroData = {
+  title: "See Your Story From Above",
+  subtitle: "Professional Drone Services",
+  description: "Licensed pilots delivering cinema-quality aerial footage for facility tours, construction documentation, agricultural monitoring, and real estate showcases across Southern Alberta.",
+  imageSrc: "/services/drone/hero-aerial-filming.jpg",
+  imageAlt: "Professional drone aerial filming",
+  ctaText: "Schedule a Site Survey",
+  ctaHref: "/contact",
+  features: [
+    { icon: Shield, text: "Transport Canada certified pilots with $5M liability coverage" },
+    { icon: Camera, text: "4K-8K RAW footage with cinema-grade color grading" },
+    { icon: MapPin, text: "Serving Southern Alberta within 300km radius from Lethbridge" },
+  ],
+};
+
+// Capabilities Grid
+const capabilities = [
+  {
+    title: "Facility Tours",
+    description: "Make 120,000 square feet feel real with sweeping aerials. Perfect for showcasing scale, inventory, and operations (like our Tradesman Manufacturing project).",
+    icon: Camera,
+    image: "/services/drone/capability-facility-tour.jpg",
+  },
+  {
+    title: "Construction Documentation",
+    description: "Track progress from groundbreaking to ribbon-cutting. Time-lapse capabilities and regular progress updates for stakeholders.",
+    icon: Plane,
+    image: "/services/drone/capability-construction.jpg",
+  },
+  {
+    title: "Agricultural Monitoring",
+    description: "Showcase crop health, land surveys, irrigation systems, and property boundaries. Ideal for marketing and operations planning.",
+    icon: MapPin,
+    image: "/services/drone/capability-agriculture.jpg",
+  },
+  {
+    title: "Real Estate Showcases",
+    description: "Highlight property scale, location context, and surrounding amenities. Stand out in commercial real estate listings.",
+    icon: Shield,
+    image: "/services/drone/capability-realestate.jpg",
+  },
+];
+
+// Technical Specifications
+const technicalSpecs = [
+  {
+    label: "Licensing & Certification",
+    value: "Transport Canada Advanced Operations",
+    icon: Shield,
+  },
+  {
+    label: "Insurance Coverage",
+    value: "$5M Commercial Liability",
+    icon: Shield,
+  },
+  {
+    label: "Equipment",
+    value: "DJI Inspire 3, Mavic 3 Cine, FPV Systems",
+    icon: Camera,
+  },
+  {
+    label: "Video Resolution",
+    value: "4K-8K RAW Footage, ProRes 422 HQ",
+    icon: Camera,
+  },
+  {
+    label: "Operations",
+    value: "Indoor/Outdoor, Day/Night, Up to 400ft AGL",
+    icon: Plane,
+  },
+  {
+    label: "Service Radius",
+    value: "300km from Lethbridge Base",
+    icon: MapPin,
+  },
+];
+
+// Service Packages
+const packages = [
+  {
+    name: "Basic Aerial Package",
+    price: "$1,500",
+    description: "Perfect for single-location exterior shots and simple facility overviews.",
+    features: [
+      "Half-day aerial shoot (up to 3 hours)",
+      "Single location coverage",
+      "Basic color correction",
+      "3-5 edited clips (30-60 seconds each)",
+      "Web-optimized MP4 delivery",
+      "Standard turnaround (2 weeks)",
+    ],
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "Comprehensive Coverage",
+    price: "$3,500",
+    description: "Full-day coverage with multiple angles and locations. Most popular for facility tours.",
+    features: [
+      "Full-day aerial shoot (up to 8 hours)",
+      "Multiple locations and angles",
+      "Cinema-grade color grading",
+      "8-12 edited sequences",
+      "RAW footage + edited versions",
+      "Weather contingency day included",
+      "Expedited turnaround (1 week)",
+    ],
+    highlighted: true,
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "Cinematic Production",
+    price: "Custom",
+    description: "Multi-day aerial coverage integrated with ground production for documentary-style films.",
+    features: [
+      "Multi-day aerial coverage",
+      "Integrated with ground production team",
+      "Advanced flight planning & shot design",
+      "Unlimited revisions",
+      "Custom licensing and usage rights",
+      "Dedicated project manager",
+      "Same-day preview options",
+    ],
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+];
+
+// Process Timeline
+const processSteps = [
+  {
+    title: "Initial Consultation",
+    duration: "1-2 days",
+    description: "We discuss your project goals, scout locations, review airspace restrictions, and plan shot list.",
+  },
+  {
+    title: "Site Survey & Planning",
+    duration: "2-3 days",
+    description: "On-site inspection, flight path planning, safety assessment, and weather monitoring setup.",
+  },
+  {
+    title: "Aerial Production",
+    duration: "Half-day to 3 days",
+    description: "Professional drone filming with real-time monitoring and backup contingency for weather delays.",
+  },
+  {
+    title: "Post-Production & Delivery",
+    duration: "1-2 weeks",
+    description: "Color grading, editing, sound design, and delivery in your preferred formats (web, broadcast, RAW).",
+  },
+];
+
+// Gallery Images
+const galleryImages = [
+  { src: "/services/drone/gallery-01-placeholder.jpg", alt: "Warehouse aerial interior shot", caption: "Indoor warehouse facility tour - Tradesman Manufacturing style" },
+  { src: "/services/drone/gallery-02-placeholder.jpg", alt: "Rooftop aerial view", caption: "Commercial building rooftop solar installation" },
+  { src: "/services/drone/gallery-03-placeholder.jpg", alt: "Agricultural landscape", caption: "Agricultural land survey and crop monitoring" },
+  { src: "/services/drone/gallery-04-placeholder.jpg", alt: "Construction site progress", caption: "Construction site progress documentation" },
+  { src: "/services/drone/gallery-05-placeholder.jpg", alt: "Farm aerial view", caption: "Southern Alberta farm and irrigation systems" },
+  { src: "/services/drone/gallery-06-placeholder.jpg", alt: "Urban cityscape aerial", caption: "Commercial real estate context shots" },
+];
+
+// FAQ Questions
+const faqQuestions = [
+  {
+    question: "Do I need permits for drone filming on my property?",
+    answer: "Generally no for private property under 400 feet altitude, but we handle all Transport Canada notifications and airspace authorizations if required. We check for restricted airspace (airports, helipads) and obtain necessary permissions before every shoot."
+  },
+  {
+    question: "What's your travel radius from Lethbridge?",
+    answer: "We regularly serve clients within 300km of Lethbridge, including Calgary, Medicine Hat, Cranbrook, and surrounding areas. Extended travel is available with additional travel fees. For projects in Edmonton or further, we can provide referrals to trusted partners."
+  },
+  {
+    question: "Can you fly indoors?",
+    answer: "Yes! We use specialized FPV (First Person View) drones for indoor facility tours, warehouses, and confined spaces—like we did for Tradesman Manufacturing's 120,000 sq ft warehouse. Indoor flights don't require Transport Canada permissions but do require careful safety planning."
+  },
+  {
+    question: "How do you handle weather delays?",
+    answer: "We monitor conditions closely leading up to the shoot and include a weather contingency day in our Comprehensive Coverage package. Wind speeds over 40 km/h, heavy rain, or snow typically require rescheduling. Rescheduled shoots due to weather are at no additional cost."
+  },
+  {
+    question: "What's included in the footage deliverables?",
+    answer: "Basic packages include edited clips in web-optimized MP4 format. Comprehensive and Cinematic packages also include RAW footage and ProRes masters. All deliverables are provided via secure download link with lifetime cloud storage backup."
+  },
+  {
+    question: "Do you carry insurance and proper licensing?",
+    answer: "Yes, we carry $5 million commercial liability insurance and all pilots hold Transport Canada Advanced RPAS (drone) certificates. We're fully compliant with Canadian aviation regulations and provide certificates of insurance upon request."
+  },
+  {
+    question: "How long does editing take after the shoot?",
+    answer: "Standard turnaround is 1-2 weeks for edited clips depending on the package. Rush delivery (3-5 business days) is available for an additional fee. RAW footage can be delivered within 48 hours if needed for your own editing."
+  },
+  {
+    question: "Can you integrate drone footage into a larger video production?",
+    answer: "Absolutely! We often combine aerial footage with our ground production services for comprehensive documentary-style films. This works especially well for brand documentaries, recruitment videos, and facility tours that need both aerial context and ground-level storytelling."
+  },
+];
+---
+
+<DefaultLayout
+  title="Drone Services - Professional Aerial Filming | Coalbanks"
+  description="Licensed drone pilots providing cinema-quality aerial footage for facilities, construction, agriculture, and real estate across Southern Alberta. 4K-8K capabilities."
+>
+  <Background className="via-muted to-muted/80">
+    <!-- Hero Section -->
+    <ServiceHero {...heroData} />
+
+    <!-- Capabilities Grid -->
+    <ServiceGrid
+      title="What We Capture"
+      description="From sweeping facility tours to agricultural surveys, our drones tell your story from a perspective that commands attention."
+      items={capabilities}
+      columns={4}
+    />
+
+    <!-- Technical Specifications -->
+    <TechnicalSpecs
+      title="Technical Capabilities"
+      description="Professional equipment, licensing, and insurance for commercial drone operations."
+      specs={technicalSpecs}
+    />
+  </Background>
+
+    <!-- Sample Work Gallery -->
+    <section class="container py-28 lg:py-32">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
+          Sample Aerial Work
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          Explore our portfolio of aerial cinematography across facilities, construction, agriculture, and urban environments.
+        </p>
+      </div>
+      <ServiceGallery client:visible images={galleryImages} columns={3} />
+    </section>
+
+    <!-- Featured Drone Reel Video -->
+    <section class="container py-28 lg:py-32">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl mb-8">
+          Drone Showreel
+        </h2>
+        <VideoModal
+          client:idle
+          videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          thumbnail="/services/drone/video-reel-thumbnail.jpg"
+          title="Coalbanks Drone Services Showreel"
+          description="Watch our latest aerial cinematography work"
+          triggerVariant="thumbnail"
+        />
+      </div>
+    </section>
+
+    <!-- Service Packages -->
+    <ServiceTiers
+      title="Service Packages"
+      description="Choose the package that fits your project scope. All packages include licensed pilots, insurance, and professional post-production."
+      tiers={packages}
+    />
+
+    <!-- Process Timeline -->
+    <ProcessTimeline
+      title="How It Works"
+      description="From initial consultation to final delivery, here's our proven 4-step process."
+      steps={processSteps}
+    />
+
+  <Background variant="bottom">
+    <!-- FAQ -->
+    <ServiceFAQ
+      client:visible
+      questions={faqQuestions}
+      title="Common Questions About Drone Services"
+    />
+
+    <!-- CTA -->
+    <ServiceCTA
+      title="Ready to see your story from above?"
+      description="Schedule a free consultation to discuss your aerial filming needs. We'll scout your location, plan the perfect shots, and deliver cinema-quality footage."
+      buttonText="Schedule a Site Survey"
+      buttonHref="/contact"
+      variant="centered"
+    />
+  </Background>
+</DefaultLayout>

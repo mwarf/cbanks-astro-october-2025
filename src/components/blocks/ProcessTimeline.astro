@@ -1,0 +1,105 @@
+---
+import { cn } from "@/lib/utils";
+
+interface Step {
+  title: string;
+  duration: string;
+  description: string;
+  icon?: any;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  steps: Step[];
+  className?: string;
+}
+
+const {
+  title = "Our Process",
+  description,
+  steps,
+  className,
+} = Astro.props;
+---
+
+<section class={cn("py-28 lg:py-32 bg-muted/30", className)}>
+  <div class="container">
+    <div class="text-center">
+      <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
+        {title}
+      </h2>
+      {description && (
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          {description}
+        </p>
+      )}
+    </div>
+
+    {/* Desktop - Horizontal Timeline */}
+    <div class="mt-16 hidden lg:block">
+      <div class="relative">
+        {/* Connecting line */}
+        <div class="absolute top-12 left-0 right-0 h-0.5 bg-border" />
+        
+        <div class="relative grid grid-cols-4 gap-8">
+          {steps.map((step, i) => (
+            <div class="relative flex flex-col items-center text-center">
+              {/* Icon/Number Circle */}
+              <div class="relative z-10 flex h-24 w-24 items-center justify-center rounded-full border-4 border-background bg-primary text-primary-foreground shadow-lg">
+                {step.icon ? (
+                  <step.icon className="h-10 w-10" />
+                ) : (
+                  <span class="text-3xl font-bold">{i + 1}</span>
+                )}
+              </div>
+
+              {/* Content */}
+              <div class="mt-6">
+                <h3 class="text-xl font-semibold">{step.title}</h3>
+                <p class="text-primary mt-1 text-sm font-medium">
+                  {step.duration}
+                </p>
+                <p class="text-muted-foreground mt-3 text-sm">
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Mobile - Vertical Timeline */}
+    <div class="mt-12 lg:hidden">
+      <div class="relative space-y-8">
+        {/* Connecting line */}
+        <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-border" />
+        
+        {steps.map((step, i) => (
+          <div class="relative flex gap-6">
+            {/* Icon/Number Circle */}
+            <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-4 border-background bg-primary text-primary-foreground shadow-lg">
+              {step.icon ? (
+                <step.icon className="h-6 w-6" />
+              ) : (
+                <span class="text-lg font-bold">{i + 1}</span>
+              )}
+            </div>
+
+            {/* Content */}
+            <div class="flex-1 pb-8">
+              <h3 class="text-lg font-semibold">{step.title}</h3>
+              <p class="text-primary mt-1 text-sm font-medium">
+                {step.duration}
+              </p>
+              <p class="text-muted-foreground mt-2 text-sm">
+                {step.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

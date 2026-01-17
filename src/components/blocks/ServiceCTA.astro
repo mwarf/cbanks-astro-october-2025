@@ -1,0 +1,75 @@
+---
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+interface Props {
+  title: string;
+  description?: string;
+  buttonText?: string;
+  buttonHref?: string;
+  variant?: "default" | "bordered" | "centered";
+  className?: string;
+}
+
+const {
+  title,
+  description,
+  buttonText = "Get Started",
+  buttonHref = "/contact",
+  variant = "default",
+  className,
+} = Astro.props;
+---
+
+<section
+  class={cn(
+    "py-28 lg:py-32",
+    variant === "bordered" && "border-t",
+    className
+  )}
+>
+  <div
+    class={cn(
+      "container",
+      variant === "centered" && "text-center"
+    )}
+  >
+    <div
+      class={cn(
+        "mx-auto max-w-3xl rounded-2xl border bg-gradient-to-br from-muted/50 to-muted/30 p-8 md:p-12",
+        variant === "centered" && "text-center"
+      )}
+    >
+      <h2
+        class={cn(
+          "text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl",
+          variant === "centered" && "mx-auto"
+        )}
+      >
+        {title}
+      </h2>
+      
+      {description && (
+        <p
+          class={cn(
+            "text-muted-foreground mt-4 text-lg",
+            variant === "centered" && "mx-auto max-w-2xl"
+          )}
+        >
+          {description}
+        </p>
+      )}
+
+      <div
+        class={cn(
+          "mt-8 flex flex-wrap gap-4",
+          variant === "centered" && "justify-center"
+        )}
+      >
+        <Button asChild size="lg">
+          <a href={buttonHref}>{buttonText}</a>
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>

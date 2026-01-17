@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import { DashedLine } from "@/components/dashed-line";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+interface Feature {
+  icon?: any;
+  text: string;
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  ctaText?: string;
+  ctaHref?: string;
+  features?: Feature[];
+  className?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  imageSrc,
+  imageAlt,
+  ctaText = "Request a Quote",
+  ctaHref = "/contact",
+  features = [],
+  className,
+} = Astro.props;
+---
+
+<section class={cn("py-28 lg:py-32 lg:pt-44", className)}>
+  <div class="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
+    {/* Left side - Main content */}
+    <div class="flex-1 max-lg:max-w-[600px]">
+      {subtitle && (
+        <p class="text-primary text-sm font-semibold uppercase tracking-wider mb-4">
+          {subtitle}
+        </p>
+      )}
+      
+      <h1 class="text-foreground font-display font-bold max-w-[90%] text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-normal">
+        {title}
+      </h1>
+
+      <p class="text-muted-foreground text-lg mt-5 max-w-[90%] md:text-xl">
+        {description}
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <Button asChild>
+          <a href={ctaHref}>{ctaText}</a>
+        </Button>
+      </div>
+
+      {/* Optional Features List */}
+      {features.length > 0 && (
+        <div class="relative mt-10 space-y-4 max-lg:hidden">
+          <DashedLine
+            orientation="horizontal"
+            className="mb-6"
+          />
+          {features.map((feature) => (
+            <div class="flex gap-3 items-start">
+              {feature.icon && (
+                <feature.icon className="text-primary mt-0.5 size-5 shrink-0" aria-hidden="true" />
+              )}
+              <p class="text-muted-foreground text-sm">
+                {feature.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+
+    {/* Right side - Image */}
+    <div class="relative flex flex-1 flex-col justify-center max-lg:pt-10">
+      <div class="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          class="size-full object-cover object-center"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </div>
+</section>

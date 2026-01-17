@@ -1,0 +1,93 @@
+---
+import { DashedLine } from "@/components/dashed-line";
+import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+interface Tier {
+  name: string;
+  price?: string;
+  description: string;
+  features: string[];
+  highlighted?: boolean;
+  ctaText: string;
+  ctaHref: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  tiers: Tier[];
+  className?: string;
+}
+
+const {
+  title = "Service Packages",
+  description,
+  tiers,
+  className,
+} = Astro.props;
+---
+
+<section class={cn("py-28 lg:py-32", className)}>
+  <div class="container">
+    <div class="text-center">
+      <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
+        {title}
+      </h2>
+      {description && (
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          {description}
+        </p>
+      )}
+    </div>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-3 lg:mt-16">
+      {tiers.map((tier) => (
+        <div
+          class={cn(
+            "relative flex flex-col rounded-2xl border bg-card p-8 shadow-sm transition-all hover:shadow-lg",
+            tier.highlighted && "border-primary shadow-md ring-2 ring-primary/10"
+          )}
+        >
+          {tier.highlighted && (
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+              <span class="bg-primary text-primary-foreground rounded-full px-4 py-1 text-sm font-semibold">
+                Most Popular
+              </span>
+            </div>
+          )}
+
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold">{tier.name}</h3>
+            {tier.price && (
+              <div class="mt-2">
+                <span class="text-4xl font-bold">{tier.price}</span>
+              </div>
+            )}
+            <p class="text-muted-foreground mt-3 text-sm">
+              {tier.description}
+            </p>
+          </div>
+
+          <ul class="mb-8 flex-1 space-y-3">
+            {tier.features.map((feature) => (
+              <li class="flex items-start gap-3">
+                <Check className="text-primary mt-0.5 h-5 w-5 shrink-0" />
+                <span class="text-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <Button
+            asChild
+            variant={tier.highlighted ? "default" : "outline"}
+            className="w-full"
+          >
+            <a href={tier.ctaHref}>{tier.ctaText}</a>
+          </Button>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

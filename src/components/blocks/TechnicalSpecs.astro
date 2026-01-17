@@ -1,0 +1,65 @@
+---
+import { cn } from "@/lib/utils";
+
+interface Spec {
+  label: string;
+  value: string;
+  icon?: any;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  specs: Spec[];
+  columns?: 1 | 2;
+  className?: string;
+}
+
+const {
+  title = "Technical Specifications",
+  description,
+  specs,
+  columns = 2,
+  className,
+} = Astro.props;
+---
+
+<section class={cn("py-28 lg:py-32 bg-muted/30", className)}>
+  <div class="container">
+    <div class="text-center">
+      <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
+        {title}
+      </h2>
+      {description && (
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          {description}
+        </p>
+      )}
+    </div>
+
+    <div
+      class={cn(
+        "mx-auto mt-12 max-w-4xl grid gap-6",
+        columns === 2 ? "md:grid-cols-2" : "grid-cols-1"
+      )}
+    >
+      {specs.map((spec) => (
+        <div class="flex items-start gap-4 rounded-xl border bg-card p-6 shadow-sm">
+          {spec.icon && (
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-muted text-primary">
+              <spec.icon className="h-6 w-6" />
+            </div>
+          )}
+          <div class="flex-1">
+            <dt class="text-muted-foreground text-sm font-medium">
+              {spec.label}
+            </dt>
+            <dd class="mt-1 text-lg font-semibold">
+              {spec.value}
+            </dd>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

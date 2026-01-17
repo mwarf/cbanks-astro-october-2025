@@ -20,22 +20,26 @@ const ITEMS = [
     href: "#services",
     dropdownItems: [
       {
-        title: "Brand Documentaries",
-        href: "/#brand-documentaries",
+        title: "Drone Services",
+        href: "/services/drone",
         description:
-          "8-15 minute films that explain who you are, what you've built, and why it matters",
+          "Professional aerial filming for facilities, construction, and agriculture",
       },
       {
-        title: "Recruitment Films",
-        href: "/#recruitment-films",
-        description:
-          "Compelling videos that attract the right talent to your organization",
+        title: "Production Services",
+        href: "/services/production",
+        description: "Documentary-style films from discovery to final delivery",
       },
       {
-        title: "Investor Pitches",
-        href: "/#investor-pitches",
+        title: "Photography",
+        href: "/services/photography",
         description:
-          "Films that explain your value proposition better than any pitch deck",
+          "Corporate headshots, environmental portraits, and product photography",
+      },
+      {
+        title: "Event Coverage",
+        href: "/services/events",
+        description: "Multi-camera event filming with same-day highlights",
       },
     ],
   },
@@ -46,7 +50,11 @@ const ITEMS = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const Navbar = ({ pathname: initialPathname = "" }: { pathname?: string }) => {
+export const Navbar = ({
+  pathname: initialPathname = "",
+}: {
+  pathname?: string;
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [pathname, setPathname] = useState(initialPathname);

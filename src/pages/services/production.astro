@@ -1,0 +1,246 @@
+---
+import { Search, Clapperboard, Film, BarChart3 } from "lucide-react";
+
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import Background from "@/components/Background.astro";
+import ServiceHero from "@/components/blocks/ServiceHero.astro";
+import ServiceGrid from "@/components/blocks/ServiceGrid.astro";
+import ServiceTiers from "@/components/blocks/ServiceTiers.astro";
+import ProcessTimeline from "@/components/blocks/ProcessTimeline.astro";
+import ServicePortfolio from "@/components/blocks/ServicePortfolio.astro";
+import { ServiceFAQ } from "@/components/blocks/service-faq";
+import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
+
+// Hero Data
+const heroData = {
+  title: "Documentary Storytelling for Business",
+  subtitle: "Production Services",
+  description: "Transform corporate messaging into authentic stories using documentary filmmaking techniques. From discovery to final delivery, we craft films that drive recruitment, investment, and engagement.",
+  imageSrc: "/services/production/hero-production.jpg",
+  imageAlt: "Professional film production setup",
+  ctaText: "Start a Discovery Call",
+  ctaHref: "/contact",
+};
+
+// Service Types Grid
+const serviceTypes = [
+  {
+    title: "Brand Documentaries",
+    description: "8-15 minute films that explain who you are, what you've built, and why it matters. Perfect for homepage, investor presentations, and recruitment.",
+    icon: Film,
+  },
+  {
+    title: "Recruitment Films",
+    description: "Compelling videos that attract the right talent by showcasing your culture, values, and the real people who make your organization thrive.",
+    icon: Search,
+  },
+  {
+    title: "Investor & Stakeholder Films",
+    description: "Films that explain your value proposition better than any pitch deck. Build trust with investors, partners, and community stakeholders.",
+    icon: BarChart3,
+  },
+  {
+    title: "Internal Communications",
+    description: "Keep your distributed teams connected with authentic video updates from leadership that actually get watched start to finish.",
+    icon: Clapperboard,
+  },
+];
+
+// Service Packages
+const packages = [
+  {
+    name: "Story Package",
+    price: "$8,000",
+    description: "Perfect for shorter-form content and focused storytelling projects.",
+    features: [
+      "1 week discovery process",
+      "Single-day production shoot",
+      "3-5 minute finished film",
+      "Basic color grading and sound design",
+      "2 rounds of revisions",
+      "Web-optimized delivery formats",
+      "Suitable for single-story narratives",
+    ],
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "Brand Documentary",
+    price: "$15,000",
+    description: "Our signature offering—comprehensive documentary-style films that drive real business outcomes.",
+    features: [
+      "1-2 weeks in-depth discovery",
+      "2-3 days of production filming",
+      "8-15 minute documentary film",
+      "Cinema-quality color grading",
+      "Professional sound design and mix",
+      "Unlimited revisions",
+      "Multiple format deliveries (web, social, broadcast)",
+      "RAW footage archive included",
+    ],
+    highlighted: true,
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "Custom Production",
+    price: "Custom",
+    description: "Multi-film packages, series production, or specialized storytelling projects.",
+    features: [
+      "Custom discovery and planning timeline",
+      "Multi-day or multi-location production",
+      "Multiple deliverables (series, cutdowns, etc.)",
+      "Advanced post-production workflow",
+      "Dedicated project manager",
+      "Strategic distribution planning",
+      "Content licensing consultation",
+      "Priority booking and scheduling",
+    ],
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+];
+
+// 4-Week Process
+const processSteps = [
+  {
+    title: "Discovery",
+    duration: "1-2 weeks",
+    description: "We find the human story worth telling through interviews, research, and genuine curiosity—not scripts.",
+    icon: Search,
+  },
+  {
+    title: "Pre-Production",
+    duration: "3-5 days",
+    description: "Shot planning, location scouting, subject preparation, and equipment logistics. You'll know exactly what to expect.",
+    icon: Clapperboard,
+  },
+  {
+    title: "Production",
+    duration: "2-3 days",
+    description: "Cinema-quality filming with a small, agile crew. We capture authentic moments without overwhelming your team.",
+    icon: Film,
+  },
+  {
+    title: "Post & Delivery",
+    duration: "2-3 weeks",
+    description: "Expert editing, color grading, sound design, and multiple revisions to craft a compelling narrative arc.",
+    icon: BarChart3,
+  },
+];
+
+// Portfolio Projects
+const featuredProjects = [
+  {
+    title: "Tradesman Manufacturing",
+    client: "Tradesman Manufacturing",
+    image: "/services/production/portfolio-tradesman.jpg",
+    slug: "/portfolio/tradesman-manufacturing",
+  },
+  {
+    title: "MD of Taber 70th Anniversary",
+    client: "Municipal District of Taber",
+    image: "/services/production/portfolio-md-taber.jpg",
+    slug: "/portfolio/md-taber-70th-anniversary",
+  },
+  {
+    title: "Team Lethbridge Mission",
+    client: "Economic Development Lethbridge",
+    image: "/services/production/portfolio-team-lethbridge.jpg",
+    slug: "/portfolio/team-lethbridge-mission-edl",
+  },
+];
+
+// FAQ
+const faqQuestions = [
+  {
+    question: "What's the typical timeline for a brand documentary?",
+    answer: "Our brand documentaries typically take 4-6 weeks from start to finish. This includes 1-2 weeks of discovery to find the real story, 2-3 days of production filming, and 2-3 weeks of post-production. Rush delivery is available for an additional fee if you have a hard deadline."
+  },
+  {
+    question: "How do you find the story worth telling?",
+    answer: "We spend time understanding your business, your values, and what makes you unique through interviews with key team members, research, and observation. We're looking for the authentic moments that resonate with your audience—not corporate talking points. The discovery phase is what sets our films apart from typical corporate videos."
+  },
+  {
+    question: "What's included in the production process?",
+    answer: "Every project includes comprehensive discovery sessions, professional filming with cinema cameras (RED, Sony FX series), multi-cam setups where appropriate, cinema-quality color grading, professional sound design and mix, and multiple rounds of revisions. You'll receive the finished film in multiple formats optimized for web, social media, and presentations."
+  },
+  {
+    question: "Do you provide scripts or do we need to write them?",
+    answer: "We don't use scripts in the traditional sense. Our documentary-style approach relies on authentic interviews and real moments. We develop a story outline and shot list during discovery, but the actual dialogue comes from genuine conversations with your team, not rehearsed scripts. This is what makes the films feel authentic."
+  },
+  {
+    question: "Can you work with our existing brand guidelines?",
+    answer: "Absolutely. We'll review your brand guidelines during discovery and ensure the final film aligns with your visual identity, messaging, and tone. However, we'll also challenge you if we find opportunities to tell a more compelling story that might stretch beyond typical corporate constraints."
+  },
+  {
+    question: "What kind of results can I expect?",
+    answer: "Our films average a 73% completion rate (versus 37% industry average) because they don't sound like marketing. Clients report increased recruitment applications, stronger investor interest, improved employee engagement, and better brand recognition. We can discuss specific KPIs and measurement strategies during the discovery call."
+  },
+  {
+    question: "Do you offer ongoing video production services?",
+    answer: "Yes! Many clients start with a brand documentary and then engage us for ongoing content like quarterly updates, event coverage, or recruitment series. We offer retainer packages for clients who need regular video production throughout the year."
+  },
+  {
+    question: "How many projects do you take on at once?",
+    answer: "We limit ourselves to 12-15 projects per year to ensure quality. This means we typically book 2-3 months out during busy seasons (spring and fall). If you have a specific timeline, reach out early so we can plan accordingly."
+  },
+];
+---
+
+<DefaultLayout
+  title="Production Services - Documentary-Style Films | Coalbanks"
+  description="Documentary-style film production for businesses. Brand documentaries, recruitment films, and stakeholder videos that drive real results."
+>
+  <Background className="via-muted to-muted/80">
+    <!-- Hero -->
+    <ServiceHero {...heroData} />
+
+    <!-- Service Types -->
+    <ServiceGrid
+      title="What We Produce"
+      description="From brand documentaries to recruitment films, we specialize in authentic storytelling that drives business outcomes."
+      items={serviceTypes}
+      columns={4}
+    />
+  </Background>
+
+    <!-- Featured Work -->
+    <ServicePortfolio
+      title="Featured Productions"
+      description="Explore our portfolio of documentary-style films across municipalities, industrial sectors, and nonprofits."
+      projects={featuredProjects}
+    />
+
+    <!-- Service Packages -->
+    <ServiceTiers
+      title="Production Packages"
+      description="All packages include discovery, professional filming, and cinema-quality post-production. Choose the scope that fits your storytelling needs."
+      tiers={packages}
+    />
+
+    <!-- The Coalbanks Method -->
+    <ProcessTimeline
+      title="The Coalbanks Method: 4-6 Weeks from Discovery to Delivery"
+      description="Our proven four-step process transforms corporate messaging into authentic stories."
+      steps={processSteps}
+    />
+
+  <Background variant="bottom">
+    <!-- FAQ -->
+    <ServiceFAQ
+      client:visible
+      questions={faqQuestions}
+      title="Common Questions About Production Services"
+    />
+
+    <!-- CTA -->
+    <ServiceCTA
+      title="Ready to tell your story?"
+      description="Let's start with a free discovery call to discuss your project goals and explore how documentary storytelling can serve your business."
+      buttonText="Start a Discovery Call"
+      buttonHref="/contact"
+      variant="centered"
+    />
+  </Background>
+</DefaultLayout>

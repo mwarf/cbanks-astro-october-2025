@@ -1,0 +1,235 @@
+---
+import { Camera, Users, Package, Building } from "lucide-react";
+
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import Background from "@/components/Background.astro";
+import ServiceHero from "@/components/blocks/ServiceHero.astro";
+import ServiceGrid from "@/components/blocks/ServiceGrid.astro";
+import TechnicalSpecs from "@/components/blocks/TechnicalSpecs.astro";
+import ServiceTiers from "@/components/blocks/ServiceTiers.astro";
+import { ServiceGallery } from "@/components/blocks/service-gallery";
+import { ServiceFAQ } from "@/components/blocks/service-faq";
+import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
+
+// Hero Data
+const heroData = {
+  title: "Still Moments That Tell Stories",
+  subtitle: "Professional Photography",
+  description: "Documentary-style photography for corporate headshots, environmental portraits, product photography, and architectural spaces. Authentic imagery that serves your brand across all channels.",
+  imageSrc: "/services/photography/hero-photography.jpg",
+  imageAlt: "Professional photography session",
+  ctaText: "Book a Session",
+  ctaHref: "/contact",
+};
+
+// Photography Services
+const photographyServices = [
+  {
+    title: "Corporate Headshots",
+    description: "Professional headshots for team pages, LinkedIn profiles, and press materials. Natural, approachable portraits that reflect your company culture.",
+    icon: Users,
+  },
+  {
+    title: "Environmental Portraits",
+    description: "On-location photography capturing your team in their actual work environment. Perfect for recruitment marketing and authentic brand storytelling.",
+    icon: Camera,
+  },
+  {
+    title: "Product Photography",
+    description: "Manufacturing, agriculture, and industrial product photography with proper lighting and context. Showcase craftsmanship and scale.",
+    icon: Package,
+  },
+  {
+    title: "Architectural & Facility",
+    description: "Interior and exterior photography of facilities, offices, and commercial spaces. Document your operations and infrastructure.",
+    icon: Building,
+  },
+];
+
+// Technical Specs
+const technicalSpecs = [
+  {
+    label: "Camera System",
+    value: "Sony A7R series (61MP)",
+    icon: Camera,
+  },
+  {
+    label: "Lenses",
+    value: "Prime & Zoom (16-200mm range)",
+    icon: Camera,
+  },
+  {
+    label: "Lighting",
+    value: "Professional studio & portable lighting",
+    icon: Camera,
+  },
+  {
+    label: "Deliverables",
+    value: "High-res, web-optimized, RAW files",
+    icon: Package,
+  },
+];
+
+// Service Packages
+const packages = [
+  {
+    name: "Headshot Session",
+    price: "$150/person",
+    description: "Professional headshots for your team. Perfect for company websites, LinkedIn, and press kits.",
+    features: [
+      "On-location or studio setup",
+      "Multiple pose and background options",
+      "Professional retouching",
+      "High-resolution and web-optimized files",
+      "2-3 final images per person",
+      "24-48 hour turnaround",
+      "Volume discounts for teams of 10+",
+    ],
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "Half-Day Session",
+    price: "$1,200",
+    description: "4 hours of on-location photography. Ideal for team portraits, facility documentation, or product shoots.",
+    features: [
+      "4 hours on-location",
+      "Environmental portraits or products",
+      "Professional lighting setup",
+      "50-75 edited images",
+      "High-res + web-optimized delivery",
+      "1 week turnaround",
+      "Usage rights for commercial use",
+    ],
+    highlighted: true,
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+  {
+    name: "Full-Day Production",
+    price: "$2,500",
+    description: "8 hours of comprehensive photography coverage for facilities, products, team portraits, and operations.",
+    features: [
+      "8 hours on-location",
+      "Multiple setups and locations",
+      "Advanced lighting and composition",
+      "150-200 edited images",
+      "RAW files included",
+      "Priority editing (3-5 days)",
+      "Unlimited commercial usage rights",
+      "Can integrate with video production",
+    ],
+    ctaText: "Request Quote",
+    ctaHref: "/contact",
+  },
+];
+
+// Gallery Images
+const galleryImages = [
+  { src: "/services/photography/gallery-01-placeholder.jpg", alt: "Professional corporate headshot", caption: "Corporate headshot with natural lighting" },
+  { src: "/services/photography/gallery-02-placeholder.jpg", alt: "Environmental team portrait", caption: "Team member in their work environment" },
+  { src: "/services/photography/gallery-03-placeholder.jpg", alt: "Industrial product photography", caption: "Manufacturing product detail shot" },
+  { src: "/services/photography/gallery-04-placeholder.jpg", alt: "Facility interior", caption: "Commercial facility interior" },
+  { src: "/services/photography/gallery-05-placeholder.jpg", alt: "Team group photo", caption: "Company team environmental portrait" },
+  { src: "/services/photography/gallery-06-placeholder.jpg", alt: "Product detail shot", caption: "Close-up product craftsmanship" },
+];
+
+// FAQ
+const faqQuestions = [
+  {
+    question: "What should our team wear for headshots?",
+    answer: "Wear what you'd typically wear to an important meeting or client presentation. Solid colors photograph well, avoid busy patterns or logos. We recommend bringing a couple of outfit options if you're unsure. We'll provide guidance on-site for best results."
+  },
+  {
+    question: "How long does a headshot session take?",
+    answer: "Individual headshots typically take 5-10 minutes per person. For a team of 20, plan for about 2-3 hours total including setup. We work efficiently while ensuring everyone feels comfortable and looks their best."
+  },
+  {
+    question: "Can you photograph our facility during working hours?",
+    answer: "Yes! We're experienced working around active operations. We can capture your team in action without disrupting workflow. For manufacturing or industrial environments, we coordinate with your safety protocols and may schedule during slower production periods if needed."
+  },
+  {
+    question: "What's your turnaround time?",
+    answer: "Headshots are typically delivered within 24-48 hours. Half-day sessions within 1 week. Full-day productions within 1-2 weeks. Rush delivery is available for an additional fee if you have a specific deadline."
+  },
+  {
+    question: "What usage rights do we get with the images?",
+    answer: "All packages include full commercial usage rights for your organization. You can use the images on your website, social media, print materials, advertising, and internal communications without additional licensing fees."
+  },
+  {
+    question: "Can photography be combined with video production?",
+    answer: "Absolutely! We often integrate photography with our video production services. This is especially efficient for facility tours, product launches, or comprehensive brand content projects. We can shoot both photo and video on the same production day."
+  },
+  {
+    question: "Do you provide hair and makeup services?",
+    answer: "We don't provide hair and makeup directly, but we can arrange professional services for an additional fee if you're doing executive portraits or large team sessions where a consistent look is important."
+  },
+  {
+    question: "What happens if we need to reschedule?",
+    answer: "We understand things come up. Reschedule at least 48 hours before the session at no charge. Last-minute cancellations (less than 48 hours) may incur a rescheduling fee depending on the package."
+  },
+];
+---
+
+<DefaultLayout
+  title="Photography Services - Professional Corporate Photography | Coalbanks"
+  description="Professional photography for headshots, environmental portraits, products, and facilities. Documentary-style imagery for authentic brand storytelling."
+>
+  <Background className="via-muted to-muted/80">
+    <!-- Hero -->
+    <ServiceHero {...heroData} />
+
+    <!-- Photography Services -->
+    <ServiceGrid
+      title="Photography Services"
+      description="From professional headshots to comprehensive facility documentation, we capture authentic imagery that serves your brand."
+      items={photographyServices}
+      columns={4}
+    />
+
+    <!-- Technical Specs -->
+    <TechnicalSpecs
+      title="Equipment & Approach"
+      description="Cinema-quality photography equipment with a documentary-style approach that captures authentic moments."
+      specs={technicalSpecs}
+    />
+  </Background>
+
+    <!-- Gallery -->
+    <section class="container py-28 lg:py-32">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
+          Photography Portfolio
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          Explore our diverse portfolio of corporate, product, and environmental photography.
+        </p>
+      </div>
+      <ServiceGallery client:visible images={galleryImages} columns={3} />
+    </section>
+
+    <!-- Service Packages -->
+    <ServiceTiers
+      title="Photography Packages"
+      description="Flexible packages for headshots, team portraits, product photography, and facility documentation."
+      tiers={packages}
+    />
+
+  <Background variant="bottom">
+    <!-- FAQ -->
+    <ServiceFAQ
+      client:visible
+      questions={faqQuestions}
+      title="Common Questions About Photography Services"
+    />
+
+    <!-- CTA -->
+    <ServiceCTA
+      title="Ready to capture your brand's authentic imagery?"
+      description="Let's discuss your photography needs and schedule a session that works with your team's availability."
+      buttonText="Book a Session"
+      buttonHref="/contact"
+      variant="centered"
+    />
+  </Background>
+</DefaultLayout>

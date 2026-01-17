@@ -188,9 +188,31 @@ These images are currently well-sized and optimized.
 
 **Content:** Exterior photo of the Coalbanks Creative office building or studio space.
 
+### 10. Service Page Images
+
+Images used on the individual service pages (Drone, Events, Photography, Production).
+
+| Property | Value |
+|----------|-------|
+| **Path** | `public/services/{service_name}/*.jpg` |
+| **Recommended Dimensions** | Hero: 1920 × 1080 px; Gallery/Portfolio: 800 × 600 px (4:3) |
+| **File Size Target** | Hero: < 200 KB; Gallery: < 100 KB |
+| **Format** | `.jpg` or `.webp` |
+
+**Directory Structure:**
+- `public/services/drone/`
+- `public/services/events/`
+- `public/services/photography/`
+- `public/services/production/`
+
+**Content:**
+- **Hero Images**: Cinematic wide shots representing the service (e.g., drone aerial, film set).
+- **Gallery/Capability Images**: Specific examples of work or capabilities.
+- **Portfolio Thumbnails**: Featured project thumbnails for the Production page.
+
 ---
 
-### 10. Client Logos
+### 11. Client Logos
 
 | Property | Value |
 |----------|-------|

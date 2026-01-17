@@ -65,6 +65,11 @@ Blog posts are stored in `src/content/blog/` and follow specific guidelines for 
 ### Pre-built Pages
 
 - Home/Landing page
+- Services pages:
+  - Drone Services
+  - Event Coverage
+  - Photography
+  - Video Production
 - About page
 - Pricing page
 - FAQ page

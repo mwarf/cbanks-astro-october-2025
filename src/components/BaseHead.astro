@@ -50,15 +50,8 @@ const websiteJsonLd = {
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 
-<!-- Preconnect to Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Preload critical fonts -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Outfit:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
-
-<!-- Load Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Outfit:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Load Google Fonts (Locally via Fontsource) -->
+<!-- Previously loaded via CDN, now handled in global.css -->
 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="robots" content={`${SITE_METADATA.robots.index ? 'index' : 'noindex'}, ${SITE_METADATA.robots.follow ? 'follow' : 'nofollow'}`} />

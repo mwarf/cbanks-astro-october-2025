@@ -28,10 +28,14 @@ export function Footer() {
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
           Ready to tell your story?
         </h2>
-          <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-            Documentary-style brand films that drive real results—because they
-            don't sound like marketing.
-          </p>
+        <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
+          Documentary-style brand films that drive real results—because they
+          don't sound like marketing.
+        </p>
+        <div className="text-muted-foreground mt-2 text-sm">
+          <p>1401 28 St N, Lethbridge, AB T1H 6H9</p>
+          <p>(587) 813-5950</p>
+        </div>
         <div>
           <Button size="lg" className="mt-4" asChild>
             <a href={GITHUB_URL}>Start a Project</a>
@@ -57,7 +61,8 @@ export function Footer() {
                 href={item.href}
                 className="flex items-center gap-0.5 font-medium transition-opacity hover:opacity-75"
               >
-                {item.name} <ArrowUpRight className="size-4" aria-hidden="true" />
+                {item.name}{" "}
+                <ArrowUpRight className="size-4" aria-hidden="true" />
               </a>
             </li>
           ))}

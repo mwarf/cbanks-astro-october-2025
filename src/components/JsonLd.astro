@@ -1,0 +1,75 @@
+---
+interface Props {
+  type?: 'LocalBusiness' | 'Organization' | 'Article';
+  data?: Record<string, any>;
+}
+
+const { type = 'LocalBusiness', data = {} } = Astro.props;
+
+// Base data for LocalBusiness (Lethbridge specific)
+const localBusinessData = {
+  "@context": "https://schema.org",
+  "@type": "VideoProductionService",
+  "name": "Coalbanks Creative Inc.",
+  "image": new URL("/og-image.jpg", Astro.site || "https://coalbanks.ca").toString(),
+  "@id": new URL(Astro.site || "https://coalbanks.ca").toString(),
+  "url": new URL(Astro.site || "https://coalbanks.ca").toString(),
+  "telephone": "+15878135950",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1401 28 St N",
+    "addressLocality": "Lethbridge",
+    "addressRegion": "AB",
+    "postalCode": "T1H 6H9",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 49.7197,
+    "longitude": -112.8080
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Lethbridge"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Southern Alberta"
+    }
+  ],
+  "priceRange": "$$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "sameAs": [
+    "https://twitter.com/coalbanks",
+    "https://linkedin.com/company/coalbanks"
+  ]
+};
+
+// Logic to determine final schema based on type
+let finalSchema = {};
+
+if (type === 'LocalBusiness') {
+  finalSchema = { ...localBusinessData, ...data };
+} else {
+  // Fallback for other types if needed in future
+  finalSchema = { 
+    "@context": "https://schema.org", 
+    "@type": type, 
+    ...data 
+  };
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />

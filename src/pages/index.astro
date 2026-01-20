@@ -2,6 +2,7 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import Background from '@/components/Background.astro';
+import JsonLd from '@/components/JsonLd.astro';
 import { FAQ } from '@/components/blocks/faq';
 import Hero from '@/components/blocks/Hero.astro';
 import Logos from '@/components/blocks/Logos.astro';
@@ -17,7 +18,8 @@ import heroSecondary2 from '@/assets/images/home/feature-2.png';
 
 ---
 
-<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
+<DefaultLayout title="Lethbridge Videographer & Documentary Production | Coalbanks" description={SITE_DESCRIPTION} >
+  <JsonLd type="LocalBusiness" />
   <Background className="via-muted to-muted/80">
     <Hero images={[heroMain, heroSecondary1, heroSecondary2]} />
     <Logos />

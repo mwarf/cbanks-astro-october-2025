@@ -5,8 +5,10 @@ import Background from "@/components/Background.astro";
 
 import { Contact as ContactBlock } from '@/components/blocks/contact';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
 ---
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <JsonLd type="LocalBusiness" />
   <Background>
     <div class="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24 pt-28 lg:pt-44 lg:pb-16">
       <div class="flex-[1.5]">

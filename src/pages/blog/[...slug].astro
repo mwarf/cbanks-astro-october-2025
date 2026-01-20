@@ -4,6 +4,7 @@ import { render } from 'astro:content';
 
 import BlogPost from '@/components/blocks/BlogPost.astro';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -15,18 +16,45 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { title, description, pubDate, updatedDate, heroImage } = post.data;
+const { title, description, pubDate, updatedDate, heroImage, tags } = post.data;
 const { Content, headings } = await render(post);
 
-// Fetch related posts (3 latest posts excluding the current one)
+// Fetch related posts (prioritize matching tags)
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
   .filter((p) => p.id !== post.id)
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .sort((a, b) => {
+    // Calculate tag overlap score
+    const aTags = a.data.tags || []; // Assuming tags exist in schema, falling back if undefined
+    const bTags = b.data.tags || [];
+    const currentTags = tags || [];
+    
+    // Safety check: if no tags, strictly use date
+    if (currentTags.length === 0) return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+
+    const aScore = aTags.filter(t => currentTags.includes(t)).length;
+    const bScore = bTags.filter(t => currentTags.includes(t)).length;
+
+    if (bScore !== aScore) return bScore - aScore; // Sort by relevance first
+    return b.data.pubDate.valueOf() - a.data.pubDate.valueOf(); // Then by date
+  })
   .slice(0, 3);
 
+// Article Schema Data
+const articleSchema = {
+  "headline": title,
+  "description": description,
+  "datePublished": pubDate.toISOString(),
+  "dateModified": updatedDate?.toISOString() || pubDate.toISOString(),
+  "image": heroImage ? new URL(heroImage, Astro.site).toString() : undefined,
+  "author": {
+    "@type": "Organization", // Or Person if you add author data to frontmatter
+    "name": "Coalbanks Creative Inc."
+  }
+};
 ---
-<DefaultLayout>
+<DefaultLayout title={title} description={description} image={heroImage}>
+	<JsonLd type="Article" data={articleSchema} />
 	<div class="py-28 lg:pt-44 lg:pb-32">
 		<BlogPost post={post} relatedPosts={relatedPosts} headings={headings}>
 			<Content />

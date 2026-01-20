@@ -62,13 +62,20 @@ const websiteJsonLd = {
 
 <!-- Theme Script -->
 <script is:inline>
-  // Get theme from localStorage or system preference
-  const savedTheme = localStorage.getItem('theme');
-  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  const initialTheme = savedTheme || systemTheme;
-  
-  // Apply theme immediately to prevent flashing
-  document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+  function applyTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const initialTheme = savedTheme || systemTheme;
+    
+    // Apply theme
+    document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+  }
+
+  // Apply immediately
+  applyTheme();
+
+  // Re-apply after view transitions
+  document.addEventListener('astro:after-swap', applyTheme);
 </script>
 
 <!-- Favicon -->

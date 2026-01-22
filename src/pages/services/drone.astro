@@ -3,13 +3,13 @@ import { Camera, Shield, Plane, MapPin } from "lucide-react";
 
 import DefaultLayout from "@/layouts/DefaultLayout.astro";
 import Background from "@/components/Background.astro";
-import ServiceHero from "@/components/blocks/ServiceHero.astro";
+import ServiceHeroBento from "@/components/blocks/ServiceHeroBento.astro";
 import ServiceGrid from "@/components/blocks/ServiceGrid.astro";
 import TechnicalSpecs from "@/components/blocks/TechnicalSpecs.astro";
 import ServiceTiers from "@/components/blocks/ServiceTiers.astro";
 import ProcessTimeline from "@/components/blocks/ProcessTimeline.astro";
-import { ServiceGallery } from "@/components/blocks/service-gallery";
-import { VideoModal } from "@/components/blocks/video-modal";
+
+import { InlineVideoPlayer } from "@/components/blocks/inline-video-player";
 import { ServiceFAQ } from "@/components/blocks/service-faq";
 import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
 
@@ -18,8 +18,20 @@ const heroData = {
   title: "See Your Story From Above",
   subtitle: "Professional Drone Services",
   description: "Licensed pilots delivering cinema-quality aerial footage for facility tours, construction documentation, agricultural monitoring, and real estate showcases across Southern Alberta.",
-  imageSrc: "/services/drone/hero-aerial-filming.jpg",
-  imageAlt: "Professional drone aerial filming",
+  images: [
+      {
+          src: "/services/drone/drone-tall-biofuel.webp",
+          alt: "Professional drone aerial filming - Main Shot"
+      },
+      {
+          src: "/services/drone/drone-controller-small-image.webp", // Using secondary image 1
+          alt: "Drone operator controlling flight"
+      },
+      {
+          src: "/services/drone/drone-small-university-campus.webp", // Using secondary image 2
+          alt: "Drone equipment close-up"
+      }
+  ],
   ctaText: "Schedule a Site Survey",
   ctaHref: "/contact",
   features: [
@@ -35,25 +47,25 @@ const capabilities = [
     title: "Facility Tours",
     description: "Make 120,000 square feet feel real with sweeping aerials. Perfect for showcasing scale, inventory, and operations (like our Tradesman Manufacturing project).",
     icon: Camera,
-    image: "/services/drone/capability-facility-tour.jpg",
+    image: "/services/drone/drone-small-university-campus.webp",
   },
   {
     title: "Construction Documentation",
     description: "Track progress from groundbreaking to ribbon-cutting. Time-lapse capabilities and regular progress updates for stakeholders.",
     icon: Plane,
-    image: "/services/drone/capability-construction.jpg",
+    image: "/services/drone/drone-SMRID-inspection.webp",
   },
   {
     title: "Agricultural Monitoring",
     description: "Showcase crop health, land surveys, irrigation systems, and property boundaries. Ideal for marketing and operations planning.",
     icon: MapPin,
-    image: "/services/drone/capability-agriculture.jpg",
+    image: "/services/drone/drone-ag-potato-harvest.webp",
   },
   {
     title: "Real Estate Showcases",
     description: "Highlight property scale, location context, and surrounding amenities. Stand out in commercial real estate listings.",
     icon: Shield,
-    image: "/services/drone/capability-realestate.jpg",
+    image: "/services/drone/drone-neighbourhood-west.webp",
   },
 ];
 
@@ -167,15 +179,7 @@ const processSteps = [
   },
 ];
 
-// Gallery Images
-const galleryImages = [
-  { src: "/services/drone/gallery-01-placeholder.jpg", alt: "Warehouse aerial interior shot", caption: "Indoor warehouse facility tour - Tradesman Manufacturing style" },
-  { src: "/services/drone/gallery-02-placeholder.jpg", alt: "Rooftop aerial view", caption: "Commercial building rooftop solar installation" },
-  { src: "/services/drone/gallery-03-placeholder.jpg", alt: "Agricultural landscape", caption: "Agricultural land survey and crop monitoring" },
-  { src: "/services/drone/gallery-04-placeholder.jpg", alt: "Construction site progress", caption: "Construction site progress documentation" },
-  { src: "/services/drone/gallery-05-placeholder.jpg", alt: "Farm aerial view", caption: "Southern Alberta farm and irrigation systems" },
-  { src: "/services/drone/gallery-06-placeholder.jpg", alt: "Urban cityscape aerial", caption: "Commercial real estate context shots" },
-];
+
 
 // FAQ Questions
 const faqQuestions = [
@@ -220,7 +224,7 @@ const faqQuestions = [
 >
   <Background className="via-muted to-muted/80">
     <!-- Hero Section -->
-    <ServiceHero {...heroData} />
+    <ServiceHeroBento {...heroData} />
 
     <!-- Capabilities Grid -->
     <ServiceGrid
@@ -238,32 +242,18 @@ const faqQuestions = [
     />
   </Background>
 
-    <!-- Sample Work Gallery -->
-    <section class="container py-28 lg:py-32">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
-          Sample Aerial Work
-        </h2>
-        <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-          Explore our portfolio of aerial cinematography across facilities, construction, agriculture, and urban environments.
-        </p>
-      </div>
-      <ServiceGallery client:visible images={galleryImages} columns={3} />
-    </section>
+
 
     <!-- Featured Drone Reel Video -->
-    <section class="container py-28 lg:py-32">
-      <div class="mx-auto max-w-4xl text-center">
-        <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl mb-8">
-          Drone Showreel
-        </h2>
-        <VideoModal
-          client:idle
-          videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          thumbnail="/services/drone/video-reel-thumbnail.jpg"
-          title="Coalbanks Drone Services Showreel"
-          description="Watch our latest aerial cinematography work"
-          triggerVariant="thumbnail"
+    <section class="py-20">
+      <div class="container">
+        <InlineVideoPlayer
+          client:visible
+          videoUrl="https://www.youtube.com/embed/iWtTd6MZfwg"
+          poster="/services/drone/hero-aerial-filming.jpg"
+          title="The Generic Reel"
+          subtitle="Cinematography"
+          description="Watch our latest compilation of industrial, agricultural, and commercial projects across Southern Alberta."
         />
       </div>
     </section>

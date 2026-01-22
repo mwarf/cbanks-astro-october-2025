@@ -11,12 +11,13 @@ import { cn } from "@/lib/utils";
 
 interface VideoModalProps {
   videoUrl: string;
-  thumbnail: string;
+  thumbnail?: string;
   title: string;
   description?: string;
   triggerText?: string;
-  triggerVariant?: "button" | "thumbnail";
+  triggerVariant?: "button" | "thumbnail" | "custom";
   className?: string;
+  children?: React.ReactNode;
 }
 
 export const VideoModal = ({
@@ -27,6 +28,7 @@ export const VideoModal = ({
   triggerText = "Watch Video",
   triggerVariant = "thumbnail",
   className,
+  children,
 }: VideoModalProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -57,7 +59,11 @@ export const VideoModal = ({
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       {/* Trigger */}
-      {triggerVariant === "button" ? (
+      {triggerVariant === "custom" ? (
+         <DialogTrigger className={className}>
+           {children}
+         </DialogTrigger>
+      ) : triggerVariant === "button" ? (
         <DialogTrigger asChild>
           <Button size="lg" className={className}>
             <Play className="mr-2 h-5 w-5" />
@@ -73,11 +79,13 @@ export const VideoModal = ({
             )}
           >
             <div className="relative aspect-video">
-              <img
-                src={thumbnail}
-                alt={title}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+              {thumbnail && (
+                <img
+                    src={thumbnail}
+                    alt={title}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              )}
               <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors group-hover:bg-black/40">
                 <div className="bg-primary text-primary-foreground flex h-20 w-20 items-center justify-center rounded-full shadow-2xl transition-transform group-hover:scale-110">
                   <Play className="h-10 w-10 fill-current" />
@@ -97,11 +105,11 @@ export const VideoModal = ({
       )}
 
       {/* Modal Content */}
-      <DialogContent className="max-w-6xl p-0">
+      <DialogContent className="max-w-[90vw] p-0 border-none bg-black">
         <div className="relative">
           {/* Close Button */}
-          <DialogClose className="absolute top-0 -right-12 z-50 rounded-full bg-black/50 p-2 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus:ring-2 focus:ring-white focus:outline-none">
-            <X className="h-6 w-6" />
+          <DialogClose className="absolute top-4 right-4 z-50 rounded-full bg-black/50 p-2 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus:ring-2 focus:ring-white focus:outline-none">
+            <X className="h-5 w-5" />
             <span className="sr-only">Close</span>
           </DialogClose>
 
@@ -109,7 +117,7 @@ export const VideoModal = ({
           <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-black">
             {isOpen && (
               <iframe
-                src={embedUrl}
+                src={`${embedUrl}${embedUrl.includes("?") ? "&" : "?"}autoplay=1`}
                 title={title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -122,3 +130,4 @@ export const VideoModal = ({
     </Dialog>
   );
 };
+

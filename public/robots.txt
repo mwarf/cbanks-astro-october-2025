@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /login
+Disallow: /signup
+Disallow: /api/
 
-Sitemap: https://coalbanks.ca/sitemap-index.xml
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+Sitemap: https://coalbanks.com/sitemap-index.xml

@@ -20,7 +20,10 @@ const featuredProject = allProjects.find(p => p.featured) || allProjects[0];
 const remainingProjects = allProjects.filter(p => p.id !== featuredProject.id);
 ---
 
-<DefaultLayout title={`Portfolio - ${SITE_TITLE}`} description="Our latest documentary-style films for brands in Southern Alberta.">
+<DefaultLayout
+  title="Video Production Portfolio | Lethbridge Documentary Work | Coalbanks"
+  description="Watch our documentary-style films for Southern Alberta businesses. Brand documentaries, recruitment videos, and corporate storytelling examples."
+>
   <Background>
     <div class="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24 pt-28 lg:pt-44 lg:pb-16">
       <div class="flex-[1.5]">

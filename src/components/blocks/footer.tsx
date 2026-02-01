@@ -1,7 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { GITHUB_URL } from "@/consts";
 
 export function Footer() {
   const navigation = [
@@ -13,8 +12,9 @@ export function Footer() {
   ];
 
   const social = [
-    { name: "Xwitter", href: "https://x.com/ausrobdev" },
-    { name: "LinkedIn", href: "#" },
+    { name: "Instagram", href: "https://www.instagram.com/coalbanksco" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/coalbanksco" },
+    { name: "YouTube", href: "https://www.youtube.com/@coalbanksco" },
   ];
 
   const legal = [
@@ -38,7 +38,7 @@ export function Footer() {
         </div>
         <div>
           <Button size="lg" className="mt-4" asChild>
-            <a href={GITHUB_URL}>Start a Project</a>
+            <a href="/contact">Start a Project</a>
           </Button>
         </div>
       </div>

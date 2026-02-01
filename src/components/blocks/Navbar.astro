@@ -37,7 +37,6 @@ const ITEMS = [
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const { pathname = "" } = Astro.props;
@@ -123,8 +122,13 @@ const { pathname = "" } = Astro.props;
     <div class="flex items-center gap-2.5">
       <ThemeToggle />
       <a href="/login" class="hidden lg:block">
-        <button class="h-9 px-4 py-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+        <button class="h-9 px-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
           Login
+        </button>
+      </a>
+      <a href="/contact" class="hidden lg:block">
+        <button class="h-9 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md text-sm font-medium transition-colors shadow-sm">
+          Start a Project
         </button>
       </a>
       <!-- Mobile Toggle -->

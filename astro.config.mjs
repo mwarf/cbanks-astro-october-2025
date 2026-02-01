@@ -9,7 +9,7 @@ import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://coalbanks.ca",
+  site: "https://coalbanks.com",
   integrations: [mdx(), sitemap(), react()],
   output: "static",
   adapter: vercel(),

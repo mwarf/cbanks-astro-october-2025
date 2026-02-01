@@ -166,43 +166,44 @@ Smart move: When we ask "anything else you want to add?"—this is your chance. 
 
 If you're asking your team to be on camera, set them up for success.
 
-1.  **Tell them WHY.** \"We're filming you because you led the XYZ project, and nobody knows it better.\" Make them feel valued, not conscripted.
+1.  **Tell them WHY.** "We're filming you because you led the XYZ project, and nobody knows it better." Make them feel valued, not conscripted.
 2.  **Give them notice.** Don't spring it on them the morning of.
 3.  **Make it optional.** A reluctant interviewee always looks uncomfortable. Find the people who are willing (or at least gently persuadable).
 
 **The Pre-Shoot Email Template (Send 3-5 Days Before)**
 
-```
-Subject: Quick heads up about video shoot on [Date]
-
-Hi [Name],
-
-Looking forward to filming with you on [Date] at [Time]. Should take about 45-60 minutes total.
-
-A few things to make your life easier:
-
-WHAT TO WEAR:
-- Whatever you'd normally wear to work
-- Solid colors work best (avoid tiny patterns)
-- If you wear PPE/uniform daily, wear that
-
-WHAT WE'LL TALK ABOUT:
-- Your role and what you actually do
-- [Specific project/achievement]
-- What you'd tell someone considering working here
-
-NO NEED TO:
-- Memorize anything
-- Prepare formal answers
-- Stress
-
-We're just having a conversation. If you mess up, we stop and try again. The editor makes everyone sound smarter than they are.
-
-Questions? Call me: [Phone]
-
-See you [Date],
-[Name]
-```
+> Subject: Quick heads up about video shoot on [Date]
+>
+> Hi [Name],
+>
+> Looking forward to filming with you on [Date] at [Time]. Should take about 45-60 minutes total.
+>
+> A few things to make your life easier:
+>
+> **WHAT TO WEAR:**
+>
+> - Whatever you'd normally wear to work
+> - Solid colors work best (avoid tiny patterns)
+> - If you wear PPE/uniform daily, wear that
+>
+> **WHAT WE'LL TALK ABOUT:**
+>
+> - Your role and what you actually do
+> - [Specific project/achievement]
+> - What you'd tell someone considering working here
+>
+> **NO NEED TO:**
+>
+> - Memorize anything
+> - Prepare formal answers
+> - Stress
+>
+> We're just having a conversation. If you mess up, we stop and try again. The editor makes everyone sound smarter than they are.
+>
+> Questions? Call me: [Phone]
+>
+> See you [Date],
+> [Name]
 
 **Day-Of Prep:**
 

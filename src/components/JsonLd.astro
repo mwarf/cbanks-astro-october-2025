@@ -11,10 +11,11 @@ const localBusinessData = {
   "@context": "https://schema.org",
   "@type": "VideoProductionService",
   "name": "Coalbanks Creative Inc.",
-  "image": new URL("/og-image.jpg", Astro.site || "https://coalbanks.ca").toString(),
-  "@id": new URL(Astro.site || "https://coalbanks.ca").toString(),
-  "url": new URL(Astro.site || "https://coalbanks.ca").toString(),
+  "image": "https://coalbanks.com/og-image.jpg",
+  "@id": "https://coalbanks.com",
+  "url": "https://coalbanks.com",
   "telephone": "+15878135950",
+  "email": "hello@coalbanks.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "1401 28 St N",
@@ -25,13 +26,22 @@ const localBusinessData = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 49.7197,
-    "longitude": -112.8080
+    "latitude": 49.6956,
+    "longitude": -112.8335
   },
   "areaServed": [
     {
       "@type": "City",
-      "name": "Lethbridge"
+      "name": "Lethbridge",
+      "sameAs": "https://en.wikipedia.org/wiki/Lethbridge"
+    },
+    {
+      "@type": "City",
+      "name": "Medicine Hat"
+    },
+    {
+      "@type": "City",
+      "name": "Calgary"
     },
     {
       "@type": "AdministrativeArea",
@@ -52,8 +62,9 @@ const localBusinessData = {
     "closes": "17:00"
   },
   "sameAs": [
-    "https://twitter.com/coalbanks",
-    "https://linkedin.com/company/coalbanks"
+    "https://www.instagram.com/coalbanksco",
+    "https://www.linkedin.com/company/coalbanksco",
+    "https://www.youtube.com/@coalbanksco"
   ]
 };
 

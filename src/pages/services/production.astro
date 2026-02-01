@@ -11,6 +11,45 @@ import ServicePortfolio from "@/components/blocks/ServicePortfolio.astro";
 import { ServiceFAQ } from "@/components/blocks/service-faq";
 import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
 
+// Service Page JSON-LD
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Video Production",
+  "name": "Corporate Video Production Services",
+  "description": "Documentary-style film production for businesses including brand documentaries, recruitment films, and stakeholder videos.",
+  "provider": {
+    "@type": "VideoProductionService",
+    "name": "Coalbanks Creative Inc.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lethbridge",
+      "addressRegion": "AB",
+      "addressCountry": "CA"
+    }
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Southern Alberta"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Story Package",
+      "price": "8000",
+      "priceCurrency": "CAD",
+      "description": "3-5 minute finished film, single-day production"
+    },
+    {
+      "@type": "Offer",
+      "name": "Brand Documentary",
+      "price": "15000",
+      "priceCurrency": "CAD",
+      "description": "8-15 minute documentary film, 2-3 days production"
+    }
+  ]
+};
+
 // Hero Data
 const heroData = {
   title: "Documentary Storytelling for Business",
@@ -189,9 +228,10 @@ const faqQuestions = [
 ---
 
 <DefaultLayout
-  title="Lethbridge Video Production Services | Coalbanks"
-  description="Documentary-style film production for businesses. Brand documentaries, recruitment films, and stakeholder videos that drive real results."
+  title="Corporate Video Production Lethbridge | Brand Documentaries | Coalbanks"
+  description="Documentary-style corporate video production in Lethbridge, AB. Brand films, recruitment videos, and stakeholder communications starting at $8,000. Free discovery call."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <Background className="via-muted to-muted/80">
     <!-- Hero -->
     <ServiceHero {...heroData} />

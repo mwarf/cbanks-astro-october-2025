@@ -96,7 +96,7 @@ Set environment variables in the Cloudflare Dashboard:
 Cloudflare Pages configuration:
 ```jsonc
 {
-  "name": "coalbanks",
+  "name": "cbanks-astro-october-2025",
   "compatibility_date": "2026-02-06",
   "pages_build_output_dir": "./dist"
 }

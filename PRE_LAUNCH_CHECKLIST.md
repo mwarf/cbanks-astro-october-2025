@@ -32,7 +32,7 @@ After connecting your repository to Cloudflare Pages, you MUST add environment v
 2. Go to **Settings** → **Environment Variables**
 3. Add the following variable:
    - **Name**: `RESEND_API_KEY`
-   - **Value**: `re_SrEuTgth_F63nsF1SCuSJKCZJR3NGNVRs` (or your current key)
+   - **Value**: `[YOUR_RESEND_API_KEY]` (found in .dev.vars or Resend Dashboard)
    - **Environment**: Both **Production** and **Preview**
 
 **⚠️ WARNING**: The contact form will NOT work until this is set!

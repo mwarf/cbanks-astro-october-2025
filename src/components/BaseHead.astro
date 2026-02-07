@@ -131,6 +131,16 @@ const websiteJsonLd = {
 <!-- Previously loaded via CDN, now handled in global.css -->
 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- Preload Critical Fonts (Latin subsets - most common) -->
+<link rel="preload" as="font" type="font/woff2" href="/_astro/outfit-latin-400-normal.BGsTXAXT.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="/_astro/playfair-display-latin-400-normal.CFtfchNt.woff2" crossorigin />
+
+<!-- Preload LCP Hero Image (homepage only) -->
+{Astro.url.pathname === "/" && (
+  <link rel="preload" as="image" type="image/avif" href="/_astro/hero-main.hTvxyeTY_ZeldiV.avif" fetchpriority="high" />
+)}
+
 <meta name="robots" content={`${SITE_METADATA.robots.index ? 'index' : 'noindex'}, ${SITE_METADATA.robots.follow ? 'follow' : 'nofollow'}`} />
 <meta name="keywords" content={SITE_METADATA.keywords.join(', ')} />
 <meta name="author" content={SITE_METADATA.authors[0].name} />

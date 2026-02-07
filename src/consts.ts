@@ -18,6 +18,7 @@ export const SITE_METADATA = {
     // Primary service keywords
     "video production Lethbridge",
     "Lethbridge videographer",
+    "lethbridge video services",
     "documentary filmmaker Alberta",
     "corporate video production Southern Alberta",
     
@@ -80,4 +81,34 @@ export const SITE_METADATA = {
     images: ["/og-image.jpg"],
     creator: "@coalbanksco",
   },
+};
+
+export const BUSINESS_INFO = {
+  name: "Coalbanks Creative Inc.",
+  alternateName: "Coalbanks",
+  url: "https://coalbanks.com",
+  logo: "https://coalbanks.com/logo-coalbanks.svg",
+  image: "https://coalbanks.com/og-image.jpg",
+  description: "Documentary-style video production for Southern Alberta businesses. Brand films, recruitment videos, and corporate documentaries.",
+  telephone: "+15878135950",
+  email: "hello@coalbanks.com",
+  priceRange: "$$$",
+  address: {
+    streetAddress: "1401 28 St N",
+    addressLocality: "Lethbridge",
+    addressRegion: "AB",
+    postalCode: "T1H 6H9",
+    addressCountry: "CA"
+  },
+  geo: {
+    latitude: 49.6956,
+    longitude: -112.8335
+  },
+  social: [
+    "https://www.instagram.com/coalbanksco",
+    "https://www.linkedin.com/company/coalbanksco",
+    "https://www.youtube.com/@coalbanksco",
+    "https://www.facebook.com/coalbanksco"
+  ],
+  googleBusinessProfile: "https://g.page/coalbanks"
 };

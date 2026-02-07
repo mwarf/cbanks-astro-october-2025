@@ -1,4 +1,6 @@
 ---
+import { BUSINESS_INFO } from '@/consts';
+
 interface Props {
   type?: 'LocalBusiness' | 'Organization' | 'Article';
   data?: Record<string, any>;
@@ -10,24 +12,20 @@ const { type = 'LocalBusiness', data = {} } = Astro.props;
 const localBusinessData = {
   "@context": "https://schema.org",
   "@type": "VideoProductionService",
-  "name": "Coalbanks Creative Inc.",
-  "image": "https://coalbanks.com/og-image.jpg",
-  "@id": "https://coalbanks.com",
-  "url": "https://coalbanks.com",
-  "telephone": "+15878135950",
-  "email": "hello@coalbanks.com",
+  "name": BUSINESS_INFO.name,
+  "alternateName": BUSINESS_INFO.alternateName,
+  "image": BUSINESS_INFO.image,
+  "@id": BUSINESS_INFO.url,
+  "url": BUSINESS_INFO.url,
+  "telephone": BUSINESS_INFO.telephone,
+  "email": BUSINESS_INFO.email,
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "1401 28 St N",
-    "addressLocality": "Lethbridge",
-    "addressRegion": "AB",
-    "postalCode": "T1H 6H9",
-    "addressCountry": "CA"
+    ...BUSINESS_INFO.address
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 49.6956,
-    "longitude": -112.8335
+    ...BUSINESS_INFO.geo
   },
   "areaServed": [
     {
@@ -48,7 +46,7 @@ const localBusinessData = {
       "name": "Southern Alberta"
     }
   ],
-  "priceRange": "$$$",
+  "priceRange": BUSINESS_INFO.priceRange,
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": [
@@ -62,9 +60,8 @@ const localBusinessData = {
     "closes": "17:00"
   },
   "sameAs": [
-    "https://www.instagram.com/coalbanksco",
-    "https://www.linkedin.com/company/coalbanksco",
-    "https://www.youtube.com/@coalbanksco"
+    ...BUSINESS_INFO.social,
+    BUSINESS_INFO.googleBusinessProfile
   ]
 };
 

@@ -110,5 +110,5 @@ export const BUSINESS_INFO = {
     "https://www.youtube.com/@coalbanksco",
     "https://www.facebook.com/coalbanksco"
   ],
-  googleBusinessProfile: "https://g.page/coalbanks"
+  googleBusinessProfile: "https://g.page/r/CXAmvXpLbBY4EBM"
 };

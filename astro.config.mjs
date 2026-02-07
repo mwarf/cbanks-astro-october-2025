@@ -13,6 +13,11 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), react()],
   output: "static",
   adapter: cloudflare(),
+  image: {
+    service: {
+      entrypoint: "astro/assets/services/sharp",
+    },
+  },
   compressHTML: true,
   prefetch: true,
 

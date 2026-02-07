@@ -649,5 +649,9 @@ credentials.json
 # Vercel
 .vercel
 
+# Cloudflare
+.dev.vars
+.wrangler/
+
 # Qodo
 .qodo

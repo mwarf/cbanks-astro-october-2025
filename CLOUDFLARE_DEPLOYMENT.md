@@ -98,7 +98,10 @@ Cloudflare Pages configuration:
 {
   "name": "cbanks-astro-october-2025",
   "compatibility_date": "2026-02-06",
-  "pages_build_output_dir": "./dist"
+  "main": "dist/_worker.js",
+  "assets": {
+    "directory": "dist"
+  }
 }
 ```
 

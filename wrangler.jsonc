@@ -1,6 +1,7 @@
 {
   "name": "cbanks-astro-october-2025",
   "compatibility_date": "2026-02-06",
+  "compatibility_flags": ["nodejs_compat"],
   "main": "./dist/_worker.js",
   "assets": {
     "directory": "./dist"

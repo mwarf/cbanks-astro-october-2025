@@ -12,12 +12,9 @@ export default defineConfig({
   site: "https://coalbanks.com",
   integrations: [mdx(), sitemap(), react()],
   output: "static",
-  adapter: cloudflare(),
-  image: {
-    service: {
-      entrypoint: "astro/assets/services/sharp",
-    },
-  },
+  adapter: cloudflare({
+    imageService: "compile",
+  }),
   compressHTML: true,
   prefetch: true,
 

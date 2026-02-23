@@ -33,10 +33,10 @@ export const ProcessSection = () => {
   return (
     <section id="process" className="overflow-hidden pb-28 lg:pb-32">
       <div className="">
-        <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="container h2 text-center text-balance">
           The Coalbanks Method: 4-6 Weeks from Discovery to Delivery
         </h2>
-        <p className="container mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">
+        <p className="container mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground leading-relaxed">
           A proven four-step process to transform corporate messaging into authentic stories.
         </p>
 
@@ -52,8 +52,8 @@ export const ProcessSection = () => {
                 <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-primary">
                   <step.icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-semibold">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
+                <h3 className="h3">{step.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 
                 {i < steps.length - 1 && (
                   <div className="absolute right-0 top-1/2 hidden h-12 w-[1px] -translate-y-1/2 bg-border lg:block" />

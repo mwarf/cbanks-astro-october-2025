@@ -92,12 +92,12 @@ export const Testimonials = ({
       <section className={cn("overflow-hidden py-28 lg:py-32", className)}>
         <div className="container">
           <div className="space-y-4">
-            <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+            <h2 className="h2">
               Real Results from Southern Alberta Businesses
             </h2>
-            <p className="text-muted-foreground max-w-md leading-snug">
-              Documentary-style brand films that drive real business
-              results—recruitment, fundraising, brand awareness, sales.
+            <p className="text-muted-foreground max-w-md leading-relaxed">
+              Documentary-style films that deliver measurable impact—from
+              recruitment and fundraising to brand awareness and sales.
             </p>
             <Button variant="outline" className="shadow-md">
               Watch Our Demo Reel <ArrowRight className="size-4" />
@@ -128,7 +128,7 @@ export const Testimonials = ({
                           />
                         </div>
                         <div className="flex flex-1 flex-col justify-between gap-10 p-6">
-                          <blockquote className="font-display text-lg leading-none! font-medium md:text-xl lg:text-2xl">
+                          <blockquote className="font-display text-lg leading-tight font-medium md:text-xl lg:text-2xl">
                             {testimonial.quote}
                           </blockquote>
                           <div className="space-y-0.5">

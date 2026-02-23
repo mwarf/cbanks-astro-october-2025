@@ -21,11 +21,7 @@
   --secondary: oklch(0.8846 0.0302 85.5655);
   --secondary-foreground: oklch(0.4313 0.03 64.9288);
   --muted: oklch(0.9239 0.019 83.0636);
-  --muted-foreground: oklch(0.5391 0.0387 71.1655);
-  --accent: oklch(0.8348 0.0426 88.8064);
-  --accent-foreground: oklch(0.376 0.0225 64.3434);
-  --destructive: oklch(0.5471 0.1438 32.9149);
-  --destructive-foreground: oklch(1 0 0);
+  --muted-foreground: oklch(0.5 0.02 70);
   --border: oklch(0.8606 0.0321 84.5881);
   --input: oklch(0.8606 0.0321 84.5881);
   --ring: oklch(0.618 0.0778 65.5444);
@@ -90,7 +86,7 @@
   --secondary: oklch(0.3795 0.0181 57.128);
   --secondary-foreground: oklch(0.9239 0.019 83.0636);
   --muted: oklch(0.2939 0.0125 62.1298);
-  --muted-foreground: oklch(0.7982 0.0243 82.1078);
+  --muted-foreground: oklch(0.65 0.02 80);
   --accent: oklch(0.4186 0.0281 56.3404);
   --accent-foreground: oklch(0.9239 0.019 83.0636);
   --destructive: oklch(0.5471 0.1438 32.9149);
@@ -211,18 +207,19 @@
   .font-text {
     font-family: var(--font-text);
     font-weight: var(--text-weight);
+    @apply leading-relaxed;
   }
 
   /* Explicit heading scale - responsive by default */
   h1, .h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
     @apply font-bold tracking-tight;
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
   
   h2, .h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl;
+    @apply text-3xl md:text-4xl lg:text-5xl;
     @apply font-bold tracking-tight;
     font-family: var(--font-display);
     letter-spacing: -0.02em;

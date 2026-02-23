@@ -15,7 +15,7 @@ export const AboutSection = () => {
         />
 
         <TextSection
-          title="The approach"
+          title="Our Process"
           paragraphs={[
             "The best brand stories are found, not created. Every film begins with deep discovery to uncover the human truth behind your business.",
             "We're founder-owned and lean. We're built to create authentic stories that drive results for years to come.",

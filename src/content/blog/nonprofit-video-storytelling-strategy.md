@@ -4,7 +4,6 @@ description: "Discover how Southern Alberta nonprofits drive 497% ROI with video
 pubDate: "Nov 02 2025"
 slug: "nonprofit-storytelling-video-strategies-southern-alberta"
 image: "/images/blog-nonprofit-donation.webp"
-authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 

@@ -15,36 +15,8 @@ import {
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
-  {
-    label: "Services",
-    href: "#services",
-    dropdownItems: [
-      {
-        title: "Drone Services",
-        href: "/services/drone",
-        description:
-          "Professional aerial filming for facilities, construction, and agriculture",
-      },
-      {
-        title: "Production Services",
-        href: "/services/production",
-        description: "Documentary-style films from discovery to final delivery",
-      },
-      {
-        title: "Photography",
-        href: "/services/photography",
-        description:
-          "Corporate headshots, environmental portraits, and product photography",
-      },
-      {
-        title: "Event Coverage",
-        href: "/services/events",
-        description: "Multi-camera event filming with same-day highlights",
-      },
-    ],
-  },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
@@ -85,35 +57,7 @@ export const Navbar = ({
         {/* Desktop Navigation */}
         <NavigationMenu className="max-lg:hidden">
           <NavigationMenuList>
-            {ITEMS.map((link) =>
-              link.dropdownItems ? (
-                <NavigationMenuItem key={link.label} className="">
-                  <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
-                    {link.label}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="w-[400px] space-y-2 p-4">
-                      {link.dropdownItems.map((item) => (
-                        <li key={item.title}>
-                          <a
-                            href={item.href}
-                            className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none"
-                          >
-                            <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
-                              <div className="text-sm leading-none font-medium">
-                                {item.title}
-                              </div>
-                              <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-                                {item.description}
-                              </p>
-                            </div>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              ) : (
+            {ITEMS.map((link) => (
                 <NavigationMenuItem key={link.label} className="">
                   <a
                     href={link.href}
@@ -133,9 +77,9 @@ export const Navbar = ({
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
-          <a href="/login" className="max-lg:hidden">
-            <Button variant="outline">
-              <span className="relative z-10">Login</span>
+          <a href="/contact" className="max-lg:hidden">
+            <Button variant="default">
+              <span className="relative z-10">Start a Project</span>
             </Button>
           </a>
           {/* Hamburger Menu Button (Mobile Only) */}
@@ -172,60 +116,7 @@ export const Navbar = ({
         )}
       >
         <nav className="divide-border flex flex-1 flex-col divide-y">
-          {ITEMS.map((link) =>
-            link.dropdownItems ? (
-              <div key={link.label} className="py-4 first:pt-0 last:pb-0">
-                <button
-                  onClick={() =>
-                    setOpenDropdown(
-                      openDropdown === link.label ? null : link.label,
-                    )
-                  }
-                  className="text-foreground flex w-full items-center justify-between text-base font-medium"
-                >
-                  {link.label}
-                  <ChevronRight
-                    className={cn(
-                      "size-4 transition-transform duration-200",
-                      openDropdown === link.label ? "rotate-90" : "",
-                    )}
-                    aria-hidden="true"
-                  />
-                </button>
-                <div
-                  className={cn(
-                    "overflow-hidden transition-all duration-300",
-                    openDropdown === link.label
-                      ? "mt-4 max-h-[1000px] opacity-100"
-                      : "max-h-0 opacity-0",
-                  )}
-                >
-                  <div className="bg-muted/50 space-y-3 rounded-lg p-4">
-                    {link.dropdownItems.map((item) => (
-                      <a
-                        key={item.title}
-                        href={item.href}
-                        className="hover:bg-accent group block rounded-md p-2 transition-colors"
-                        onClick={() => {
-                          setIsMenuOpen(false);
-                          setOpenDropdown(null);
-                        }}
-                      >
-                        <div className="transition-transform duration-200 group-hover:translate-x-1">
-                          <div className="text-primary font-medium">
-                            {item.title}
-                          </div>
-
-                          <p className="text-muted-foreground mt-1 text-sm">
-                            {item.description}
-                          </p>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ) : (
+          {ITEMS.map((link) => (
               <a
                 key={link.label}
                 href={link.href}

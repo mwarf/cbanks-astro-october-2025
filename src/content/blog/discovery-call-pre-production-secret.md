@@ -4,7 +4,6 @@ description: "Why do most video projects fail? They skip discovery. Learn how ou
 pubDate: "Nov 02 2025"
 slug: "discovery-call-pre-production-secret"
 image: "/images/blog-meeting-collaboration.webp"
-authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 

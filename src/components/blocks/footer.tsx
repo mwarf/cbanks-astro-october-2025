@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   const navigation = [
-    { name: "Product", href: "/#feature-modern-teams" },
-    { name: "About Us", href: "/about" },
+    { name: "About", href: "/about" },
+    { name: "Portfolio", href: "/portfolio" },
     { name: "Blog", href: "/blog" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
@@ -13,13 +13,8 @@ export function Footer() {
 
   const social = [
     { name: "Instagram", href: "https://www.instagram.com/coalbanksco" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/company/coalbanksco" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/coalbanks/" },
     { name: "YouTube", href: "https://www.youtube.com/@coalbanksco" },
-  ];
-
-  const legal = [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
   ];
 
   return (
@@ -67,19 +62,10 @@ export function Footer() {
             </li>
           ))}
         </ul>
-        <ul className="flex flex-wrap items-center justify-center gap-6">
-          {legal.map((item) => (
-            <li key={item.name}>
-              <a
-                href={item.href}
-                className="text-muted-foreground text-sm transition-opacity hover:opacity-75"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
       </nav>
+      <p className="container text-muted-foreground mx-auto max-w-3xl text-center text-sm italic opacity-70">
+        Coalbanks Creative Inc. is located on the traditional territory of the Blackfoot Confederacy — the Siksika, Piikani, and Kainai Nations — as well as the Métis Nation of Alberta, Region 3. We honour the land, the people, and the treaties that connect us.
+      </p>
 
       <div className="text-primary mt-10 w-full md:mt-14 lg:mt-20">
         <img

@@ -3,7 +3,6 @@ title: "Anatomy of an $8,000 Film: A Transparent Pricing Breakdown"
 description: "See exactly where $8,000 goes in professional video production. Transparent breakdown of discovery, production, and post-production costs."
 pubDate: "Nov 01 2025"
 image: "/images/blog-meeting-table.webp"
-authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 

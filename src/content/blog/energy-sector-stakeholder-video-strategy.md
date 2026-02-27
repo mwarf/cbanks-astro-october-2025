@@ -3,7 +3,6 @@ title: "From Complexity to Clarity: How Energy Companies Use Video to Win Stakeh
 description: "Learn how energy companies use video to communicate complex projects to multiple stakeholders and secure project approvals."
 pubDate: "Nov 01 2025"
 image: "/images/blog-solar-array-coulee.webp"
-authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 

@@ -4,7 +4,6 @@ description: "Go behind the scenes of an actual manufacturing video shoot. Learn
 pubDate: "Nov 02 2025"
 slug: "hard-hats-handhelds-manufacturing-film-shoot"
 image: "/images/blog-trucking-setup.webp"
-authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 

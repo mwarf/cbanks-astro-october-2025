@@ -50,29 +50,12 @@ const regularPosts = posts.slice(1);
         <p class="text-muted-foreground text-lg line-clamp-3 mb-6">
           {featuredPost.data.description}
         </p>
-        <div class="flex items-center gap-4 pt-4">
-          <div class="flex items-center gap-3">
-            <div class="h-10 w-10 overflow-hidden rounded-full border border-input">
-              {featuredPost.data.authorImage ? (
-                <Image 
-                  src={featuredPost.data.authorImage} 
-                  alt={featuredPost.data.authorName || ""} 
-                  width={40} 
-                  height={40} 
-                  class="h-full w-full object-cover"
-                />
-              ) : (
-                <div class="bg-muted flex h-full w-full items-center justify-center text-sm font-medium">
-                  {featuredPost.data.authorName?.charAt(0) || "A"}
-                </div>
-              )}
-            </div>
-            <div class="flex flex-col">
+        <div class="flex items-center gap-4 pt-4 text-left">
+          <div class="flex flex-col">
               <span class="text-sm font-semibold">{featuredPost.data.authorName}</span>
               <span class="text-xs text-muted-foreground">
                 {calculateReadingTime(featuredPost.body)}
               </span>
-            </div>
           </div>
         </div>
       </div>
@@ -106,22 +89,7 @@ const regularPosts = posts.slice(1);
           </p>
           
           <div class="mt-auto flex items-center justify-between gap-4">
-            <div class="flex items-center gap-2">
-              <div class="h-6 w-6 overflow-hidden rounded-full border border-input">
-                {post.data.authorImage ? (
-                  <Image 
-                    src={post.data.authorImage} 
-                    alt={post.data.authorName || ""} 
-                    width={24} 
-                    height={24} 
-                    class="h-full w-full object-cover"
-                  />
-                ) : (
-                  <div class="bg-muted flex h-full w-full items-center justify-center text-[10px] font-medium">
-                    {post.data.authorName?.charAt(0) || "A"}
-                  </div>
-                )}
-              </div>
+            <div class="flex flex-col">
               <span class="text-xs font-medium text-muted-foreground">
                 {post.data.authorName}
               </span>

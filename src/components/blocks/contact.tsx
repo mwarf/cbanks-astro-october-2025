@@ -104,11 +104,8 @@ export const Contact = () => {
                   <h3 className="font-semibold">Email Us</h3>
                 </div>
                 <div className="space-y-1">
-                  <a href="mailto:hello@coalbanks.ca" className="text-muted-foreground hover:text-foreground block">
-                    hello@coalbanks.ca
-                  </a>
-                  <a href="mailto:info@coalbanks.ca" className="text-muted-foreground hover:text-foreground block">
-                    info@coalbanks.ca
+                  <a href="mailto:hello@coalbanks.com" className="text-muted-foreground hover:text-foreground block">
+                    hello@coalbanks.com
                   </a>
                 </div>
               </div>

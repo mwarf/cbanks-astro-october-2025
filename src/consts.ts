@@ -106,7 +106,7 @@ export const BUSINESS_INFO = {
   },
   social: [
     "https://www.instagram.com/coalbanksco",
-    "https://www.linkedin.com/company/coalbanksco",
+    "https://www.linkedin.com/company/coalbanks/",
     "https://www.youtube.com/@coalbanksco",
     "https://www.facebook.com/coalbanksco"
   ],

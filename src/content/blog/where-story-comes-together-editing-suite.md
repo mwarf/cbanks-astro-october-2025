@@ -4,7 +4,6 @@ description: "Discover what happens in post-production after filming ends. Learn
 pubDate: "Nov 02 2025"
 slug: "where-story-comes-together-editing-suite"
 image: "/images/blog-edit-suite.webp"
-authorImage: "/avatar/avatar1.png"
 author: "Coalbanks Creative Inc."
 ---
 

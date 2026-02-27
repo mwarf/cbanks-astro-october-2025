@@ -13,7 +13,7 @@ interface Props {
 }
 
 const { post, relatedPosts = [], headings = [] } = Astro.props;
-const { title, authorName, image, pubDate, updatedDate, description, authorImage } = post.data;
+const { title, authorName, image, pubDate, updatedDate, description } = post.data;
 
 const postUrl = new URL(Astro.url.pathname, Astro.site || Astro.url.origin).toString();
 
@@ -28,8 +28,7 @@ const articleJsonLd = {
   ...(updatedDate && { "dateModified": updatedDate.toISOString() }),
   "author": {
     "@type": "Person",
-    "name": authorName || "Coalbanks",
-    ...(authorImage && { "image": new URL(authorImage, Astro.url).toString() })
+    "name": authorName || "Coalbanks"
   },
   "publisher": {
     "@type": "Organization",
@@ -60,22 +59,6 @@ const calculateReadingTime = (content: string) => {
     <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
       <h1 class="font-display max-w-3xl text-4xl font-bold md:text-5xl">{title}</h1>
       <h3 class="text-muted-foreground max-w-4xl">{description}</h3>
-      <div class="flex items-center gap-3 text-sm md:text-base">
-        <div class="h-8 w-8 overflow-hidden rounded-full border">
-          {authorImage ? (
-            <Image 
-              src={authorImage} 
-              alt={authorName || "Author"} 
-              width={32} 
-              height={32} 
-              class="h-full w-full object-cover"
-            />
-          ) : (
-            <div class="bg-muted flex h-full w-full items-center justify-center text-xs font-medium">
-              {authorName?.charAt(0) || "A"}
-            </div>
-          )}
-        </div>
         <span>
           <a href="#" class="font-semibold">
             {authorName}

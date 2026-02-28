@@ -1,0 +1,33 @@
+# SEO Redirects - WordPress to Astro Migration
+# Format: /old-url  /new-url  status-code
+
+# High priority - exact URL redirects
+/news  /blog/  301
+/contact-us  /contact/  301
+/about-coalbanks-creative  /about/  301
+/author/mwarf  /about/  301
+/category/featured  /portfolio/  301
+
+# Date archives → blog
+/2022  /blog/  301
+/2023  /blog/  301
+/2023/05  /blog/  301
+
+# Legal pages → homepage
+/privacy-policy  /  301
+/cookie-policy  /  301
+/terms-of-service  /  301
+
+# Featured posts → portfolio (old WordPress /Featured/ category)
+/Featured/spotlighting-mycitycares-cinderella-project  /portfolio/cinderella-project-mycitycare/  301
+/Featured/for-the-love-of-lethbridge-video  /portfolio/for-the-love-of-lethbridge/  301
+/Featured/lethbridge-video-production-team  /portfolio/team-lethbridge-mission-edl/  301
+/Featured/coalbanks-helps-cbc-make-a-strong-first-impression  /portfolio/  301
+
+# WordPress cruft - redirect to homepage
+/wp-admin  /  301
+/wp-login.php  /  301
+/wp-register.php  /  301
+/wp-content/*  /  301
+/wp-includes/*  /  301
+/xmlrpc.php  /  301

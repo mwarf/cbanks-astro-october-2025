@@ -1,5 +1,5 @@
 ---
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -66,9 +66,7 @@ const {
           variant === "centered" && "justify-center"
         )}
       >
-        <Button asChild size="lg">
-          <a href={buttonHref}>{buttonText}</a>
-        </Button>
+        <a href={buttonHref} class={buttonVariants({ size: "lg" })}>{buttonText}</a>
       </div>
     </div>
   </div>

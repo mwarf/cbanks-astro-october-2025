@@ -1,6 +1,7 @@
 ---
 import { Twitter, Linkedin, Facebook, Link as LinkIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { getShareUrls } from "@/lib/share-urls";
 
 interface Props {
@@ -16,27 +17,21 @@ const shareUrls = getShareUrls(url, title);
 <div class:list={["flex items-center gap-2", className]}>
   <span class="text-xs font-medium text-muted-foreground mr-2">Share</span>
   
-  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full" asChild>
-    <a href={shareUrls.twitter} target="_blank" rel="noopener noreferrer" title="Share on X">
-      <Twitter className="h-4 w-4" />
-    </a>
-  </Button>
+  <a href={shareUrls.twitter} target="_blank" rel="noopener noreferrer" title="Share on X" class={cn(buttonVariants({ variant: "outline", size: "icon" }), "h-8 w-8 rounded-full")}>
+    <Twitter className="h-4 w-4" />
+  </a>
 
-  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full" asChild>
-    <a href={shareUrls.linkedin} target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">
-      <Linkedin className="h-4 w-4" />
-    </a>
-  </Button>
+  <a href={shareUrls.linkedin} target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" class={cn(buttonVariants({ variant: "outline", size: "icon" }), "h-8 w-8 rounded-full")}>
+    <Linkedin className="h-4 w-4" />
+  </a>
 
-  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full" asChild>
-    <a href={shareUrls.facebook} target="_blank" rel="noopener noreferrer" title="Share on Facebook">
-      <Facebook className="h-4 w-4" />
-    </a>
-  </Button>
+  <a href={shareUrls.facebook} target="_blank" rel="noopener noreferrer" title="Share on Facebook" class={cn(buttonVariants({ variant: "outline", size: "icon" }), "h-8 w-8 rounded-full")}>
+    <Facebook className="h-4 w-4" />
+  </a>
 
-  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full copy-link-btn" title="Copy Link" data-url={url}>
+  <button type="button" class={cn(buttonVariants({ variant: "outline", size: "icon" }), "h-8 w-8 rounded-full copy-link-btn")} title="Copy Link" data-url={url}>
     <LinkIcon className="h-4 w-4" />
-  </Button>
+  </button>
 </div>
 
 <script>

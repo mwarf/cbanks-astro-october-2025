@@ -2,7 +2,8 @@
 import { ArrowRight, Video, Camera, Target, MapPin } from "lucide-react";
 import { Image } from "astro:assets";
 import { DashedLine } from "@/components/dashed-line";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface Props {
   images?: any[];
@@ -51,22 +52,14 @@ const features = [
       </p>
 
       <div class="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-        <Button asChild size="lg">
-          <a href="/contact">Start a Project</a>
-        </Button>
-        <Button
-          variant="outline"
-          asChild
-          className="from-background gap-2 bg-linear-to-r to-transparent shadow-md min-h-12 min-w-12"
+        <a href="/contact" class={buttonVariants({ size: "lg" })}>Start a Project</a>
+        <a
+          href="/portfolio"
+          class={cn(buttonVariants({ variant: "outline", size: "lg" }), "from-background gap-2 bg-linear-to-r to-transparent shadow-md !h-12 min-w-12 flex items-center gap-2 text-start")}
         >
-          <a
-            href="/portfolio"
-            class="flex items-center gap-2 text-start"
-          >
-            Watch Our Work
-            <ArrowRight className="stroke-3" aria-hidden="true" />
-          </a>
-        </Button>
+          Watch Our Work
+          <ArrowRight className="stroke-3" aria-hidden="true" />
+        </a>
       </div>
     </div>
 

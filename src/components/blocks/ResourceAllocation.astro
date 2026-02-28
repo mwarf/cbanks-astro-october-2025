@@ -160,6 +160,8 @@ const bottomItems = [
                   alt={item.images[0].alt}
                   widths={[240, 540, 720, 1024]}
                   sizes={`(max-width: 768px) 100vw, 50vw`}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  fetchpriority={i === 0 ? "high" : undefined}
                   class="object-cover object-center w-full aspect-video rounded-xl shadow-sm"
                 />
               </div>

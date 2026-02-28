@@ -10,6 +10,7 @@ import ProcessTimeline from "@/components/blocks/ProcessTimeline.astro";
 import ServicePortfolio from "@/components/blocks/ServicePortfolio.astro";
 import { ServiceFAQ } from "@/components/blocks/service-faq";
 import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema.astro";
 
 // Service Page JSON-LD
 const serviceSchema = {
@@ -232,6 +233,11 @@ const faqQuestions = [
   description="Documentary-style corporate video production in Lethbridge, AB. Brand films, recruitment videos, and stakeholder communications starting at $8,000. Free discovery call."
 >
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services/production" },
+    { name: "Video Production", url: "/services/production" }
+  ]} />
   <Background className="via-muted to-muted/80">
     <!-- Hero -->
     <ServiceHero {...heroData} />

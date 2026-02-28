@@ -1,20 +1,22 @@
 ---
-
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-
 import Background from "@/components/Background.astro";
 import { AboutHero } from '@/components/blocks/about-hero';
 import { AboutSection } from '@/components/blocks/about-section';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
 ---
 
 <DefaultLayout
   title="About Coalbanks | Lethbridge Video Production Company"
   description="Meet the team behind Southern Alberta's documentary-style video production company. Based in Lethbridge, serving businesses across Alberta."
 >
+    <BreadcrumbSchema items={[
+      { name: "Home", url: "/" },
+      { name: "About", url: "/about" }
+    ]} />
     <Background>
       <div class="py-28 lg:py-32 lg:pt-44">
-        <AboutHero client:load />
+        <AboutHero client:visible />
         <AboutSection />
       </div>
     </Background>

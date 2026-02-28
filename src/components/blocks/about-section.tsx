@@ -64,6 +64,10 @@ export function ImageSection({ images, className }: ImageSectionProps) {
           <img
             src={image.src}
             alt={image.alt}
+            width={600}
+            height={450}
+            loading="lazy"
+            decoding="async"
             className="size-full object-cover"
           />
         </div>

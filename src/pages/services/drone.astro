@@ -12,6 +12,7 @@ import ProcessTimeline from "@/components/blocks/ProcessTimeline.astro";
 import { InlineVideoPlayer } from "@/components/blocks/inline-video-player";
 import { ServiceFAQ } from "@/components/blocks/service-faq";
 import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema.astro";
 
 // Hero Data
 const heroData = {
@@ -222,6 +223,11 @@ const faqQuestions = [
   title="Drone Videography Lethbridge | Aerial Filming Southern Alberta | Coalbanks"
   description="Licensed drone videography and aerial photography in Lethbridge and Southern Alberta. Real estate, construction, agriculture, and event aerial coverage."
 >
+  <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services/production" },
+    { name: "Drone", url: "/services/drone" }
+  ]} />
   <Background className="via-muted to-muted/80">
     <!-- Hero Section -->
     <ServiceHeroBento {...heroData} />

@@ -66,6 +66,10 @@ export function InlineVideoPlayer({
             <img
               src={poster}
               alt={title}
+              width={1280}
+              height={720}
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover brightness-[0.4]"
             />
           </div>

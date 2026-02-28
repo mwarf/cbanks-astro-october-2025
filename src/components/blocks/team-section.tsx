@@ -47,11 +47,12 @@ export function TeamSection() {
   return (
     <section className="container max-w-6xl py-24 lg:py-32">
       <div className="mb-16 text-center">
-        <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+        <h2 className="text-foreground mb-4 text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
           Meet Our Team
         </h2>
-        <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-          We are a diverse group of thinkers and makers, dedicated to crafting exceptional digital experiences.
+        <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+          We are a diverse group of thinkers and makers, dedicated to crafting
+          exceptional digital experiences.
         </p>
       </div>
 
@@ -59,36 +60,40 @@ export function TeamSection() {
         {team.map((member) => (
           <div
             key={member.name}
-            className="group relative overflow-hidden rounded-2xl bg-muted/30 p-4 transition-all hover:bg-muted/50"
+            className="group bg-muted/30 hover:bg-muted/50 relative overflow-hidden rounded-2xl p-4 transition-all"
           >
-            <div className="aspect-square overflow-hidden rounded-xl bg-muted">
+            <div className="bg-muted aspect-square overflow-hidden rounded-xl">
               <img
                 src={member.image}
                 alt={member.name}
+                width={400}
+                height={400}
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="pt-6">
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-foreground text-xl font-semibold">
                 {member.name}
               </h3>
-              <p className="text-sm font-medium text-primary mb-3">
+              <p className="text-primary mb-3 text-sm font-medium">
                 {member.title}
               </p>
-              <p className="mb-4 text-sm text-muted-foreground line-clamp-3">
+              <p className="text-muted-foreground mb-4 line-clamp-3 text-sm">
                 {member.bio}
               </p>
               <div className="flex gap-4">
                 <a
                   href={member.socials.twitter}
-                  className="text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Twitter className="h-4 w-4" />
                   <span className="sr-only">Twitter</span>
                 </a>
                 <a
                   href={member.socials.linkedin}
-                  className="text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Linkedin className="h-4 w-4" />
                   <span className="sr-only">LinkedIn</span>

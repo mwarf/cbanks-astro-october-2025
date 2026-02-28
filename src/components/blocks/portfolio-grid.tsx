@@ -12,11 +12,13 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
   const [isAnimating, setIsAnimating] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
+  const categories = [
+    "All",
+    ...Array.from(new Set(projects.map((p) => p.category))),
+  ];
 
-  const filteredProjects = filter === "All"
-    ? projects
-    : projects.filter((p) => p.category === filter);
+  const filteredProjects =
+    filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   const handleFilterChange = (category: string) => {
     if (category === filter) return;
@@ -36,7 +38,9 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
             onClick={() => handleFilterChange(category)}
             className={cn(
               "rounded-full transition-all duration-300",
-              filter === category ? "px-6" : "px-4 opacity-70 hover:opacity-100"
+              filter === category
+                ? "px-6"
+                : "px-4 opacity-70 hover:opacity-100",
             )}
           >
             {category}
@@ -45,69 +49,86 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
       </div>
 
       {/* Grid */}
-      <div className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-300",
-        isAnimating ? "opacity-50" : "opacity-100"
-      )}>
+      <div
+        className={cn(
+          "grid grid-cols-1 gap-8 transition-opacity duration-300 md:grid-cols-2 lg:grid-cols-3",
+          isAnimating ? "opacity-50" : "opacity-100",
+        )}
+      >
         {filteredProjects.map((project, index) => (
-            <Card 
-              key={project.id} 
-              className="overflow-hidden group border-none shadow-none bg-transparent animate-in fade-in zoom-in-95 duration-500 fill-mode-both"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
-              <CardContent className="p-0 space-y-4">
-                <div className="relative aspect-video overflow-hidden rounded-xl bg-muted">
-                  <a href={`/portfolio/${project.id}`} className="block h-full w-full">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-                  </a>
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <button 
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setSelectedProject(project);
-                      }}
-                      className="rounded-full bg-white/10 p-4 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-white/20 pointer-events-auto cursor-pointer"
+          <Card
+            key={project.id}
+            className="group animate-in fade-in zoom-in-95 fill-mode-both overflow-hidden border-none bg-transparent shadow-none duration-500"
+            style={{ animationDelay: `${index * 50}ms` }}
+          >
+            <CardContent className="space-y-4 p-0">
+              <div className="bg-muted relative aspect-video overflow-hidden rounded-xl">
+                <a
+                  href={`/portfolio/${project.id}`}
+                  className="block h-full w-full"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    width={640}
+                    height={360}
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/20 transition-colors duration-300 group-hover:bg-black/40" />
+                </a>
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSelectedProject(project);
+                    }}
+                    className="pointer-events-auto cursor-pointer rounded-full bg-white/10 p-4 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-white/20"
+                  >
+                    <Play className="h-8 w-8 fill-white text-white" />
+                  </button>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-primary text-sm font-medium">
+                    {project.client}
+                  </span>
+                  <span className="text-muted-foreground text-xs">
+                    {project.category}
+                  </span>
+                </div>
+                <a href={`/portfolio/${project.id}`} className="block">
+                  <h3 className="font-display group-hover:text-primary text-2xl font-bold transition-colors">
+                    {project.title}
+                  </h3>
+                </a>
+                <p className="text-muted-foreground line-clamp-2">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {project.tags.map((tag) => (
+                    <Badge
+                      key={tag}
+                      variant="secondary"
+                      className="text-xs font-normal"
                     >
-                      <Play className="w-8 h-8 text-white fill-white" />
-                    </button>
-                  </div>
+                      {tag}
+                    </Badge>
+                  ))}
                 </div>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-primary">{project.client}</span>
-                    <span className="text-xs text-muted-foreground">{project.category}</span>
-                  </div>
-                  <a href={`/portfolio/${project.id}`} className="block">
-                    <h3 className="text-2xl font-display font-bold group-hover:text-primary transition-colors">
-                        {project.title}
-                    </h3>
-                  </a>
-                  <p className="text-muted-foreground line-clamp-2">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.tags.map(tag => (
-                      <Badge key={tag} variant="secondary" className="text-xs font-normal">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </CardContent>
+          </Card>
         ))}
       </div>
 
-      <ProjectVideoModal 
-        project={selectedProject} 
-        isOpen={!!selectedProject} 
-        onClose={() => setSelectedProject(null)} 
+      <ProjectVideoModal
+        project={selectedProject}
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
       />
     </div>
   );

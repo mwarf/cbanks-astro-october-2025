@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import { SITE_TITLE } from '../consts';
 import { Play, ArrowRight } from 'lucide-react';
 
 import Background from "@/components/Background.astro";
@@ -10,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 import { projectFromEntry } from '@/lib/portfolio-utils';
 import { FeaturedProject } from '@/components/blocks/featured-project';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
 
 const entries = await getCollection('portfolio');
 const allProjects = entries
@@ -24,6 +24,10 @@ const remainingProjects = allProjects.filter(p => p.id !== featuredProject.id);
   title="Video Production Portfolio | Lethbridge Documentary Work | Coalbanks"
   description="Watch our documentary-style films for Southern Alberta businesses. Brand documentaries, recruitment videos, and corporate storytelling examples."
 >
+  <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Portfolio", url: "/portfolio" }
+  ]} />
   <Background>
     <div class="container flex max-w-5xl flex-col justify-between gap-8 md:gap-20 lg:flex-row lg:items-center lg:gap-24 xl:gap-24 pt-28 lg:pt-44 lg:pb-16">
       <div class="flex-[1.5]">

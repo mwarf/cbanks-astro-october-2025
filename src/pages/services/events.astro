@@ -9,6 +9,7 @@ import ServiceTiers from "@/components/blocks/ServiceTiers.astro";
 import ProcessTimeline from "@/components/blocks/ProcessTimeline.astro";
 import { ServiceFAQ } from "@/components/blocks/service-faq";
 import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema.astro";
 
 // Hero Data
 const heroData = {
@@ -165,6 +166,11 @@ const faqQuestions = [
   title="Event Videography Lethbridge | Conference & Corporate Event Filming | Coalbanks"
   description="Professional event videography in Lethbridge and Southern Alberta. Conferences, galas, corporate events, and live streaming services."
 >
+  <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services/production" },
+    { name: "Events", url: "/services/events" }
+  ]} />
   <Background className="via-muted to-muted/80">
     <!-- Hero -->
     <ServiceHero {...heroData} />

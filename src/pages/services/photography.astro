@@ -10,6 +10,7 @@ import ServiceTiers from "@/components/blocks/ServiceTiers.astro";
 import { ServiceGallery } from "@/components/blocks/service-gallery";
 import { ServiceFAQ } from "@/components/blocks/service-faq";
 import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema.astro";
 
 // Hero Data
 const heroData = {
@@ -175,6 +176,11 @@ const faqQuestions = [
   title="Commercial Photography Lethbridge | Business & Corporate Photos | Coalbanks"
   description="Professional commercial photography in Lethbridge. Corporate headshots, product photography, industrial, and brand imagery for Southern Alberta businesses."
 >
+  <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services/production" },
+    { name: "Photography", url: "/services/photography" }
+  ]} />
   <Background className="via-muted to-muted/80">
     <!-- Hero -->
     <ServiceHero {...heroData} />

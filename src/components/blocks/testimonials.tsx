@@ -124,6 +124,10 @@ export const Testimonials = ({
                           <img
                             src={testimonial.image}
                             alt={testimonial.author}
+                            width={400}
+                            height={328}
+                            loading="lazy"
+                            decoding="async"
                             className="size-full rounded-t-xl object-cover object-top"
                           />
                         </div>

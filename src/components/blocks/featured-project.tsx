@@ -16,6 +16,10 @@ export function FeaturedProject({ project }: { project: Project }) {
           <img
             src={project.image}
             alt={project.title}
+            width={1920}
+            height={1080}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover opacity-60 transition-transform duration-1000 hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
@@ -32,7 +36,7 @@ export function FeaturedProject({ project }: { project: Project }) {
             </span>
           </div>
 
-          <h2 className="font-display mb-6 text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+          <h2 className="font-display mb-6 text-4xl leading-tight font-bold tracking-tight md:text-6xl lg:text-7xl">
             {project.title}
           </h2>
 
@@ -41,7 +45,11 @@ export function FeaturedProject({ project }: { project: Project }) {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="gap-2 rounded-full text-base" onClick={() => setIsOpen(true)}>
+            <Button
+              size="lg"
+              className="gap-2 rounded-full text-base"
+              onClick={() => setIsOpen(true)}
+            >
               <Play className="h-4 w-4 fill-current" />
               Watch Film
             </Button>
@@ -57,10 +65,10 @@ export function FeaturedProject({ project }: { project: Project }) {
         </div>
       </div>
 
-      <ProjectVideoModal 
-        project={project} 
-        isOpen={isOpen} 
-        onClose={() => setIsOpen(false)} 
+      <ProjectVideoModal
+        project={project}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
       />
     </>
   );

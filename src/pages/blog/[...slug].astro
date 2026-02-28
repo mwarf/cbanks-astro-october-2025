@@ -4,7 +4,7 @@ import { render } from 'astro:content';
 
 import BlogPost from '@/components/blocks/BlogPost.astro';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
-import JsonLd from '@/components/JsonLd.astro';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -40,37 +40,14 @@ const relatedPosts = allPosts
   })
   .slice(0, 3);
 
-// Article Schema Data
-// Article Schema Data
-const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": title,
-  "description": description,
-  "image": heroImage ? new URL(heroImage, Astro.site).toString() : undefined,
-  "datePublished": pubDate.toISOString(),
-  "dateModified": updatedDate?.toISOString() || pubDate.toISOString(),
-  "author": {
-    "@type": "Organization",
-    "name": "Coalbanks Creative Inc.",
-    "url": Astro.site
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Coalbanks Creative Inc.",
-    "logo": {
-      "@type": "ImageObject",
-      "url": new URL("/logo-coalbanks.svg", Astro.site).toString()
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": Astro.url.toString()
-  }
-};
+
 ---
-<DefaultLayout title={title} description={description} image={heroImage}>
-	<JsonLd type="Article" data={articleSchema} />
+<DefaultLayout title={title} description={description} image={heroImage} ogType="article">
+	<BreadcrumbSchema items={[
+		{ name: "Home", url: "/" },
+		{ name: "Blog", url: "/blog" },
+		{ name: title, url: `/blog/${post.id}` }
+	]} />
 	<div class="py-28 lg:pt-44 lg:pb-32">
 		<BlogPost post={post} relatedPosts={relatedPosts} headings={headings}>
 			<Content />

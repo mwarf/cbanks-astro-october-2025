@@ -10,7 +10,13 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: "https://coalbanks.com",
-  integrations: [mdx(), sitemap(), react()],
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => !page.includes("/services/"),
+    }),
+    react(),
+  ],
   output: "static",
   adapter: cloudflare({
     imageService: "compile",

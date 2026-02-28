@@ -6,12 +6,12 @@ import { ClientRouter } from 'astro:transitions';
 
 
 
-const { title, description, image, ogType } = Astro.props;
+const { title, description, image, ogType, noindex } = Astro.props;
 ---
 
 <html lang="en">
     <head>		
-        <BaseHead title={title} description={description} image={image} ogType={ogType} />
+        <BaseHead title={title} description={description} image={image} ogType={ogType} noindex={noindex} />
         <ClientRouter />
     </head>
     <body>

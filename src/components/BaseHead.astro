@@ -9,15 +9,17 @@ interface Props {
 	description: string;
 	image?: string;
 	ogType?: 'website' | 'article';
+	noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image, ogType = 'website' } = Astro.props;
+const { title, description, image, ogType = 'website', noindex = false } = Astro.props;
 const finalTitle = title || SITE_METADATA.title.default;
 const finalDescription = description || SITE_METADATA.description;
 const finalImage = image || SITE_METADATA.openGraph.images[0].url;
 const imageURL = new URL(finalImage, Astro.url);
+const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow';
 
 ---
 
@@ -31,7 +33,7 @@ const imageURL = new URL(finalImage, Astro.url);
 
 <!-- Fonts are handled globally inside global.css via FontSource -->
 
-<meta name="robots" content={`${SITE_METADATA.robots.index ? 'index' : 'noindex'}, ${SITE_METADATA.robots.follow ? 'follow' : 'nofollow'}`} />
+<meta name="robots" content={robotsContent} />
 <meta name="keywords" content={SITE_METADATA.keywords.join(', ')} />
 <meta name="author" content={SITE_METADATA.authors[0].name} />
 <meta name="creator" content={SITE_METADATA.creator} />

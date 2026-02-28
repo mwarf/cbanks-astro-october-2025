@@ -3,6 +3,7 @@ Allow: /
 Disallow: /login
 Disallow: /signup
 Disallow: /api/
+Disallow: /services/
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1

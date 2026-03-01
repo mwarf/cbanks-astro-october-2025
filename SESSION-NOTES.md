@@ -1,6 +1,91 @@
-# Session Notes - Feb 28, 2026
+# Session Notes
 
-## Overview
+## March 1, 2026 - SEO Copy & FAQ Schema Implementation
+
+### Overview
+
+Homepage SEO improvements: keyword optimization, FAQ schema markup, and AI-generated text cleanup.
+
+### Changes Implemented
+
+#### 1. SEO Keyword Optimization (Hero Section)
+
+**Target keywords added:** "videographer", "videography"
+
+**Files modified:**
+
+- `src/components/blocks/Hero.astro`
+  - Feature 3: "Strategic videography that drives recruitment, sales, fundraising, engagement."
+  - Feature 4: "Your Southern Alberta videographer since 2019. We know this community inside and out."
+  - H1: "Films That Make People..." → "Video That Makes People..."
+  - Hero paragraph: "brand films" → "brand video"
+
+#### 2. FAQ Schema Markup Implementation
+
+**Created shared FAQ data system:**
+
+- `src/data/faq.ts` (new file)
+  - `homepageFAQ`: 4 SEO-focused questions
+  - `fullFAQ`: All 7 questions in 3 categories
+  - TypeScript interfaces: `FAQItem`, `FAQCategory`
+
+**Files modified:**
+
+- `src/components/blocks/faq.tsx`: Added optional `categories` prop
+- `src/pages/index.astro`: Added `<FAQSchema>` component, uses `fullFAQ`
+- `src/pages/faq.astro`: Updated to use shared data
+
+**Schema results:**
+
+- Homepage: 7 questions in FAQPage schema
+- /faq page: 7 questions in FAQPage schema
+- Both pages: LocalBusiness schema preserved
+
+#### 3. AI-Generated Text Cleanup
+
+**Replaced em dashes (11 instances):**
+
+- Used periods, commas, or parentheses instead
+- Made copy more conversational and human
+
+**Replaced overused AI words:**
+
+- "authentic" → "real", "honest", "unscripted"
+- "comprehensive" → "full", "complete"
+- "strategic" → simplified or removed
+- "that drives" → "that helps", "that works", "actually"
+
+**Files modified:**
+
+- `src/components/blocks/Hero.astro`
+- `src/components/blocks/ResourceAllocation.astro`
+- `src/components/blocks/process-section.tsx`
+- `src/components/blocks/Features.astro`
+- `src/components/blocks/footer.tsx`
+- `src/pages/faq.astro`
+- `src/pages/portfolio.astro`
+- `src/pages/services/production.astro`
+- `src/pages/services/drone.astro`
+
+### Visual Design Preserved
+
+Initially tried reducing FAQ to 4 questions (SEO-focused subset) but this changed the section height and broke the background gradient appearance. Reverted to showing all 7 questions to maintain original visual design.
+
+### Testing
+
+All changes verified in browser:
+
+- ✅ FAQ schema markup present (Google Structured Data compatible)
+- ✅ Keywords naturally integrated
+- ✅ Em dashes removed (except land acknowledgment)
+- ✅ Conversational tone maintained
+- ✅ No visual design changes
+
+---
+
+## Feb 28, 2026 - WordPress to Astro Migration
+
+### Overview
 
 WordPress to Astro migration SEO cleanup and Lighthouse optimization session.
 

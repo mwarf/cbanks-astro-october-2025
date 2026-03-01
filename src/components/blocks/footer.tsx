@@ -24,8 +24,8 @@ export function Footer() {
           Ready to tell your story?
         </h2>
         <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-          Documentary-style brand films that drive real results—because they
-          don't sound like marketing.
+          Documentary-style brand films that actually work because they don't
+          sound like marketing.
         </p>
         <div className="text-muted-foreground mt-2 text-sm">
           <p>1401 28 St N, Lethbridge, AB T1H 6H9</p>
@@ -63,8 +63,11 @@ export function Footer() {
           ))}
         </ul>
       </nav>
-      <p className="container text-muted-foreground mx-auto max-w-3xl text-center text-sm italic opacity-70">
-        Coalbanks Creative Inc. is located on the traditional territory of the Blackfoot Confederacy — the Siksika, Piikani, and Kainai Nations — as well as the Métis Nation of Alberta, Region 3. We honour the land, the people, and the treaties that connect us.
+      <p className="text-muted-foreground container mx-auto max-w-3xl text-center text-sm italic opacity-70">
+        Coalbanks Creative Inc. is located on the traditional territory of the
+        Blackfoot Confederacy — the Siksika, Piikani, and Kainai Nations — as
+        well as the Métis Nation of Alberta, Region 3. We honour the land, the
+        people, and the treaties that connect us.
       </p>
 
       <div className="text-primary mt-10 w-full md:mt-14 lg:mt-20">

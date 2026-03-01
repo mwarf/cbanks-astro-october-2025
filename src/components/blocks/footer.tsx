@@ -63,7 +63,7 @@ export function Footer() {
           ))}
         </ul>
       </nav>
-      <p className="text-muted-foreground container mx-auto max-w-3xl text-center text-sm italic opacity-70">
+      <p className="text-muted-foreground container mx-auto max-w-3xl text-center text-sm italic">
         Coalbanks Creative Inc. is located on the traditional territory of the
         Blackfoot Confederacy — the Siksika, Piikani, and Kainai Nations — as
         well as the Métis Nation of Alberta, Region 3. We honour the land, the

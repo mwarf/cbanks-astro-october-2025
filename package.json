@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint . --fix",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=cbanks-astro-october-2025"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.5",

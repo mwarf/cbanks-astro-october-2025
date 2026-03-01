@@ -204,11 +204,25 @@ Services pages are currently draft and excluded from search:
 ## Deploy Commands
 
 ```bash
+# Build and deploy to Cloudflare Pages (production)
+npm run deploy
+
+# Or manually:
 npm run build
+npx wrangler pages deploy dist --project-name=cbanks-astro-october-2025
+
+# Commit and push to GitHub
 git add -A && git commit -m "message"
 git push origin master
-npx wrangler deploy
 ```
+
+**Deployment Platform:** Cloudflare Pages
+
+- Production URL: https://coalbanks.com
+- Preview URL: https://cbanks-astro-october-2025-57w.pages.dev
+- Project: `cbanks-astro-october-2025`
+
+**Note:** Previous Workers deployment has been deprecated. All deployments now go to Cloudflare Pages where the production domain is configured.
 
 ---
 

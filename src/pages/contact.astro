@@ -3,14 +3,12 @@ import Background from "@/components/Background.astro";
 
 import { Contact as ContactBlock } from '@/components/blocks/contact';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
-import JsonLd from '@/components/JsonLd.astro';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
 ---
 <DefaultLayout
   title="Contact Coalbanks | Get a Video Production Quote | Lethbridge"
   description="Contact Coalbanks for video production services in Lethbridge and Southern Alberta. Free discovery call to discuss your project."
 >
-  <JsonLd type="LocalBusiness" />
   <BreadcrumbSchema items={[
     { name: "Home", url: "/" },
     { name: "Contact", url: "/contact" }

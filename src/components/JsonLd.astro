@@ -8,44 +8,37 @@ interface Props {
 
 const { type = 'LocalBusiness', data = {} } = Astro.props;
 
-// Base data for LocalBusiness (Lethbridge specific)
+// Base data for LocalBusiness (pulled from centralized BUSINESS_INFO)
 const localBusinessData = {
   "@context": "https://schema.org",
   "@type": "VideoProductionService",
+  "@id": `${BUSINESS_INFO.url}/#business`,
   "name": BUSINESS_INFO.name,
   "alternateName": BUSINESS_INFO.alternateName,
+  "description": BUSINESS_INFO.description,
   "image": BUSINESS_INFO.image,
-  "@id": BUSINESS_INFO.url,
+  "logo": {
+    "@type": "ImageObject",
+    "url": BUSINESS_INFO.logo,
+  },
   "url": BUSINESS_INFO.url,
   "telephone": BUSINESS_INFO.telephone,
   "email": BUSINESS_INFO.email,
+  "foundingDate": "2019",
   "address": {
     "@type": "PostalAddress",
-    ...BUSINESS_INFO.address
+    ...BUSINESS_INFO.address,
   },
   "geo": {
     "@type": "GeoCoordinates",
-    ...BUSINESS_INFO.geo
+    ...BUSINESS_INFO.geo,
   },
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Lethbridge",
-      "sameAs": "https://en.wikipedia.org/wiki/Lethbridge"
-    },
-    {
-      "@type": "City",
-      "name": "Medicine Hat"
-    },
-    {
-      "@type": "City",
-      "name": "Calgary"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Southern Alberta"
-    }
-  ],
+  "areaServed": BUSINESS_INFO.areaServed.map((area) => ({
+    "@type": area.type,
+    "name": area.name,
+    ...(area.sameAs ? { "sameAs": area.sameAs } : {}),
+  })),
+  "knowsAbout": BUSINESS_INFO.knowsAbout,
   "priceRange": BUSINESS_INFO.priceRange,
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -54,15 +47,15 @@ const localBusinessData = {
       "Tuesday",
       "Wednesday",
       "Thursday",
-      "Friday"
+      "Friday",
     ],
     "opens": "09:00",
-    "closes": "17:00"
+    "closes": "17:00",
   },
   "sameAs": [
     ...BUSINESS_INFO.social,
-    BUSINESS_INFO.googleBusinessProfile
-  ]
+    BUSINESS_INFO.googleBusinessProfile,
+  ],
 };
 
 // Logic to determine final schema based on type
@@ -72,10 +65,10 @@ if (type === 'LocalBusiness') {
   finalSchema = { ...localBusinessData, ...data };
 } else {
   // Fallback for other types if needed in future
-  finalSchema = { 
-    "@context": "https://schema.org", 
-    "@type": type, 
-    ...data 
+  finalSchema = {
+    "@context": "https://schema.org",
+    "@type": type,
+    ...data,
   };
 }
 ---

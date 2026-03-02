@@ -73,7 +73,7 @@ export function Footer() {
       <div className="text-primary mt-10 w-full md:mt-14 lg:mt-20">
         <img
           src="/logo-coalbanks.svg"
-          alt="Coalbanks Creative"
+          alt="Coalbanks Creative Lethbridge videography and video production"
           className="w-full opacity-15 dark:invert"
           width={1569}
           height={279}

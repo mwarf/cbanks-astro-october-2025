@@ -13,7 +13,7 @@ const steps = [
   {
     title: "2. Production",
     description:
-      "Cinema-quality filming with a small, easy-going crew. No stress, no fuss.",
+      "Cinema-quality filming with a small, easy-going crew on your site.",
     icon: Clapperboard,
     className: "flex-1",
   },
@@ -27,7 +27,7 @@ const steps = [
   {
     title: "4. Delivery & Strategy",
     description:
-      "We help you distribute your film to ensure it reaches the right audience and drives ROI.",
+      "We help you distribute your film so it reaches the people it was made for.",
     icon: BarChart3,
     className: "flex-1",
   },

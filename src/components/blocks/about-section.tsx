@@ -18,7 +18,7 @@ export const AboutSection = () => {
           title="Our Process"
           paragraphs={[
             "The best brand stories are found, not created. Every film begins with deep discovery to uncover the human truth behind your business.",
-            "We're founder-owned and lean. We're built to create authentic stories that drive results for years to come.",
+            "We're founder-owned and lean — the person you talk to is the person behind the camera.",
             "If you're ready for storytelling that breaks through the scroll, let's talk about your project.",
           ]}
           ctaButton={{

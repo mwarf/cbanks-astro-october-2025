@@ -135,9 +135,9 @@ export const Contact = () => {
 
           {/* Right Column: Form */}
           <div className="rounded-2xl border bg-card p-8 shadow-sm lg:p-10">
-            <h2 className="text-2xl font-semibold tracking-tight">Start a Project</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">Tell us about your project</h2>
             <p className="text-muted-foreground mt-2">
-              Tell us about your story—we'll respond within 24 hours.
+              We'll respond within 24 hours.
             </p>
             
             {isSuccess ? (
@@ -147,7 +147,7 @@ export const Contact = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-green-900 dark:text-green-200">Message Sent!</h3>
                 <p className="max-w-xs text-green-700 dark:text-green-300">
-                  Thanks for reaching out. We've received your message and will get back to you shortly.
+                  Thanks for reaching out. We've received your message and will get back to you within 24 hours.
                 </p>
                 <Button 
                   variant="outline" 
@@ -171,12 +171,16 @@ export const Contact = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="company">Company</Label>
+                  <Label htmlFor="company">
+                    Company <span className="text-muted-foreground font-normal">(optional)</span>
+                  </Label>
                   <Input id="company" name="company" placeholder="Company name" disabled={isSubmitting} />
                 </div>
-                
+
                 <div className="space-y-2">
-                  <Label htmlFor="project-type">Project Type</Label>
+                  <Label htmlFor="project-type">
+                    Project Type <span className="text-muted-foreground font-normal">(optional)</span>
+                  </Label>
                   <Input id="project-type" name="project-type" placeholder="e.g. Brand documentary, Recruitment video" disabled={isSubmitting} />
                 </div>
                 

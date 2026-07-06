@@ -12,7 +12,7 @@ const stats = [
   {
     value: 73,
     suffix: "%",
-    label: "Avg. View Rate",
+    label: "Avg. Completion Rate",
     type: "number",
   },
   {
@@ -42,9 +42,8 @@ export function AboutHero() {
 
           <div className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
             <p>
-              In a world of polished marketing fluff, authenticity is the only
-              currency that matters. Your best stories aren't invented in a boardroom. 
-              They're already happening on your job sites and in the lives of your customers.
+              Your best stories aren't invented in a boardroom. They're already
+              happening on your job sites and in the lives of your customers.
             </p>
             <p>
               We trade teleprompters for conversation and actors for real people. 

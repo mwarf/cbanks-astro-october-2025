@@ -24,8 +24,8 @@ export function Footer() {
           Ready to tell your story?
         </h2>
         <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-          Documentary-style brand films that actually work because they don't
-          sound like marketing.
+          Documentary-style brand films that work because they don't sound
+          like marketing.
         </p>
         <div className="text-muted-foreground mt-2 text-sm">
           <p>1401 28 St N, Lethbridge, AB T1H 6H9</p>

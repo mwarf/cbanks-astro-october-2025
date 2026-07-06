@@ -73,7 +73,7 @@ export const fullFAQ: FAQCategory[] = [
       {
         question: "What's included in the production process?",
         answer:
-          "Every project includes discovery sessions, professional filming with cinema equipment, color grading, sound design, and multiple revisions to ensure we capture your story perfectly.",
+          "Every project includes discovery sessions, filming with cinema equipment, color grading, sound design, and revisions until the film feels true.",
       },
     ],
   },

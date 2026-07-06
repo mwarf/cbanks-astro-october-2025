@@ -7,6 +7,7 @@ import { PortfolioGrid } from '@/components/blocks/portfolio-grid';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 import { projectFromEntry } from '@/lib/portfolio-utils';
 import { FeaturedProject } from '@/components/blocks/featured-project';
+import ServiceCTA from '@/components/blocks/ServiceCTA.astro';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
 
 const entries = await getCollection('portfolio');
@@ -36,17 +37,23 @@ const remainingProjects = featuredProject
         </h1>
 
         <p class="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
-          We don't just make videos. We uncover stories. Documentary filmmaking that connects brands with the people who matter.
+          65+ documentary-style films for Southern Alberta municipalities, manufacturers, and nonprofits. Watch a few — you'll see the difference.
         </p>
       </div>
     </div>
 
-    <div class="container pb-20 lg:pb-32 flex flex-col gap-24">
+    <div class="container flex flex-col gap-24">
       {featuredProject && <FeaturedProject client:visible project={featuredProject} />}
       <PortfolioGrid client:visible projects={remainingProjects} />
     </div>
 
-
-
+    <ServiceCTA
+      title="Seen enough?"
+      description="Every film here started with a discovery call. Book yours — no pitch, just questions."
+      buttonText="Start a Discovery Call"
+      buttonHref="/contact"
+      variant="centered"
+      className="py-20 lg:py-32"
+    />
   </Background>
 </DefaultLayout>

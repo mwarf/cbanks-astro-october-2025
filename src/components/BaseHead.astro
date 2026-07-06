@@ -6,8 +6,8 @@ import { SITE_TITLE, SITE_METADATA } from '../consts';
 import JsonLd from './JsonLd.astro';
 
 interface Props {
-	title: string;
-	description: string;
+	title?: string;
+	description?: string;
 	image?: string;
 	ogType?: 'website' | 'article';
 	noindex?: boolean;
@@ -16,10 +16,19 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image, ogType = 'website', noindex = false } = Astro.props;
-const finalTitle = title || SITE_METADATA.title.default;
+// Apply the "%s | Coalbanks" template unless the page already carries a
+// branded suffix (all hand-written page titles currently do).
+const finalTitle = title
+	? title.includes('|')
+		? title
+		: SITE_METADATA.title.template.replace('%s', title)
+	: SITE_METADATA.title.default;
 const finalDescription = description || SITE_METADATA.description;
 const finalImage = image || SITE_METADATA.openGraph.images[0].url;
-const imageURL = new URL(finalImage, Astro.url);
+// Resolve against the site root, not the current page, so relative
+// frontmatter paths can't produce /blog/<image> style URLs.
+const imageURL = new URL(finalImage, Astro.site || Astro.url.origin);
+const isDefaultImage = !image;
 const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow';
 
 ---
@@ -49,11 +58,15 @@ const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow';
 <!-- Theme Script -->
 <script is:inline>
   function applyTheme() {
-    const savedTheme = localStorage.getItem('theme');
+    let savedTheme = null;
+    try {
+      // localStorage can throw (sandboxed iframes, blocked storage); dark
+      // mode should degrade to the system preference, not crash.
+      savedTheme = localStorage.getItem('theme');
+    } catch {}
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     const initialTheme = savedTheme || systemTheme;
-    
-    // Apply theme
+
     document.documentElement.classList.toggle('dark', initialTheme === 'dark');
   }
 
@@ -80,13 +93,6 @@ const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow';
     href={icon.url}
   />
 ))}
-{SITE_METADATA.icons.shortcut.map((icon) => (
-  <link
-    rel="shortcut icon"
-    href={icon.url}
-  />
-))}
-
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link
 	rel="alternate"
@@ -112,18 +118,22 @@ const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow';
 <meta property="og:title" content={finalTitle} />
 <meta property="og:description" content={finalDescription} />
 <meta property="og:image" content={imageURL} />
-<meta property="og:image:width" content={SITE_METADATA.openGraph.images[0].width.toString()} />
-<meta property="og:image:height" content={SITE_METADATA.openGraph.images[0].height.toString()} />
-<meta property="og:image:alt" content={SITE_METADATA.openGraph.images[0].alt} />
+{isDefaultImage && (
+  <>
+    <meta property="og:image:width" content={SITE_METADATA.openGraph.images[0].width.toString()} />
+    <meta property="og:image:height" content={SITE_METADATA.openGraph.images[0].height.toString()} />
+    <meta property="og:image:alt" content={SITE_METADATA.openGraph.images[0].alt} />
+  </>
+)}
 <meta property="og:locale" content="en_CA" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content={SITE_METADATA.twitter.card} />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={finalTitle} />
-<meta property="twitter:description" content={finalDescription} />
-<meta property="twitter:image" content={imageURL} />
-<meta property="twitter:creator" content={SITE_METADATA.twitter.creator} />
+<!-- Twitter (X keys off name=, not property=) -->
+<meta name="twitter:card" content={SITE_METADATA.twitter.card} />
+<meta name="twitter:url" content={Astro.url} />
+<meta name="twitter:title" content={finalTitle} />
+<meta name="twitter:description" content={finalDescription} />
+<meta name="twitter:image" content={imageURL} />
+<meta name="twitter:creator" content={SITE_METADATA.twitter.creator} />
 
 <!-- JSON-LD Structured Data -->
 <JsonLd type="LocalBusiness" />

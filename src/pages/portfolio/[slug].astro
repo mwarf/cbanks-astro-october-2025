@@ -1,13 +1,11 @@
 ---
 import { getCollection, render } from "astro:content";
 import DefaultLayout from "@/layouts/DefaultLayout.astro";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Play } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { ProjectActions } from "@/components/blocks/project-actions";
 import { EpisodesSidebar } from "@/components/blocks/episodes-sidebar";
 import { projectFromEntry } from "@/lib/portfolio-utils";
-import { SITE_TITLE } from "@/consts";
 
 export async function getStaticPaths() {
   const entries = await getCollection('portfolio');
@@ -23,7 +21,7 @@ const { Content } = await render(entry);
 ---
 
 <DefaultLayout
-  title={`${project.title} - ${SITE_TITLE}`}
+  title={project.title}
   description={project.description}
 >
   <div class="relative min-h-screen">
@@ -98,7 +96,9 @@ const { Content } = await render(entry);
                 </div>
                 <div>
                   <dt class="text-sm text-muted-foreground">Date</dt>
-                  <dd class="font-medium">October 2023</dd>
+                  <dd class="font-medium">
+                    {project.pubDate.toLocaleDateString("en-CA", { year: "numeric", month: "long" })}
+                  </dd>
                 </div>
                 <div>
                   <dt class="text-sm text-muted-foreground">Director</dt>

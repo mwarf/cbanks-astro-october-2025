@@ -59,11 +59,8 @@ export const SITE_METADATA = {
         sizes: "96x96",
         type: "image/png",
       },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon.ico" },
     ],
     apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180" }],
-    shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
     title: "Lethbridge Video Production & Videography | Coalbanks",
@@ -100,6 +97,12 @@ export const BUSINESS_INFO = {
   telephone: "+15878135950",
   email: "hello@coalbanks.com",
   priceRange: "$$$",
+  foundingDate: "2019",
+  openingHours: {
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "17:00",
+  },
   address: {
     streetAddress: "1401 28 St N",
     addressLocality: "Lethbridge",

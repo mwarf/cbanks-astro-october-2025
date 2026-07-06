@@ -18,6 +18,9 @@ const breadcrumbSchema = {
     "item": new URL(item.url, Astro.site).toString()
   }))
 };
+
+// Escape "<" so content can never terminate the script tag early.
+const safeJson = JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c");
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<script type="application/ld+json" set:html={safeJson} />

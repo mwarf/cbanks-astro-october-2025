@@ -1,9 +1,10 @@
 {
+  // Cloudflare Pages configuration (deployed via `npm run deploy` →
+  // `wrangler pages deploy dist`). The Workers-style `main`/`assets` keys are
+  // not valid for Pages projects; `pages_build_output_dir` marks this as a
+  // Pages config so compatibility settings apply to the deployed Functions.
   "name": "cbanks-astro-october-2025",
+  "pages_build_output_dir": "./dist",
   "compatibility_date": "2026-02-06",
-  "compatibility_flags": ["nodejs_compat"],
-  "main": "./dist/_worker.js",
-  "assets": {
-    "directory": "./dist"
-  }
+  "compatibility_flags": ["nodejs_compat"]
 }

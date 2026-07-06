@@ -292,9 +292,6 @@
   button {
     cursor: pointer;
   }
-  [class*="border"] {
-    @apply border-border;
-  }
 
   /* Enhanced focus states for accessibility */
   button:focus-visible,
@@ -317,18 +314,16 @@ body {
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
     @apply bg-background text-foreground;
   }
+  /* Single source of truth for the default border color (theme token). */
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-border);
   }
 }
 

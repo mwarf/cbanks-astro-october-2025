@@ -2,8 +2,8 @@
 import { ArrowLeft } from "lucide-react";
 
 import Background from "@/components/Background.astro";
-import { Button } from "@/components/ui/button";
-import BasicLayout from "@/layouts/BasicLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import DefaultLayout from "@/layouts/DefaultLayout.astro";
 ---
 
@@ -21,21 +21,13 @@ import DefaultLayout from "@/layouts/DefaultLayout.astro";
         </p>
 
         <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <a href="/">
-          <Button size="lg" className="group min-w-[200px] gap-2">
-              <ArrowLeft className="size-5 transition-transform group-hover:-translate-x-1" />
-              Back to Home
-            </Button>
+          <a href="/" class={cn(buttonVariants({ size: "lg" }), "group min-w-[200px] gap-2")}>
+            <ArrowLeft className="size-5 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
+            Back to Home
           </a>
-          <a href="/contact">
-            <Button
-            variant="outline"
-            size="lg"
-            className="min-w-[200px]"
-            >
-              Contact Support
-            </Button>
-           </a>
+          <a href="/contact" class={cn(buttonVariants({ variant: "outline", size: "lg" }), "min-w-[200px]")}>
+            Contact Us
+          </a>
         </div>
       </div>
     </div>

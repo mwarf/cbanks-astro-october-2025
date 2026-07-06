@@ -20,6 +20,9 @@ const faqSchema = {
     }
   }))
 };
+
+// Escape "<" so content can never terminate the script tag early.
+const safeJson = JSON.stringify(faqSchema).replace(/</g, "\\u003c");
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={safeJson} />

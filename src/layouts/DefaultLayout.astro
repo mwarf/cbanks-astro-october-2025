@@ -4,27 +4,25 @@ import { Footer } from '@/components/blocks/footer';
 import Navbar from '@/components/blocks/Navbar.astro';
 import { ClientRouter } from 'astro:transitions';
 
-
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+}
 
 const { title, description, image, ogType, noindex } = Astro.props;
 ---
 
 <html lang="en">
-    <head>		
+    <head>
         <BaseHead title={title} description={description} image={image} ogType={ogType} noindex={noindex} />
         <ClientRouter />
     </head>
     <body>
         <Navbar pathname={Astro.url.pathname} />
         <main>
-
-{
-  Astro.url.pathname.split('/').filter(Boolean).length > 1 && !Astro.url.pathname.startsWith('/blog') && !Astro.url.pathname.startsWith('/portfolio') && !Astro.url.pathname.startsWith('/services') && (
-    <div class="container mx-auto max-w-5xl px-4 pt-28 lg:pt-36 pb-4">
-      {/* Breadcrumbs removed */}
-    </div>
-  )
-}
           <slot />
         </main>
         <Footer />

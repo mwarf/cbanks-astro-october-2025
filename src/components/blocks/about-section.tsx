@@ -100,9 +100,9 @@ export function TextSection({
       </div>
       {ctaButton && (
         <div className="mt-8">
-          <a href={ctaButton.href}>
-            <Button size="lg">{ctaButton.text}</Button>
-          </a>
+          <Button size="lg" asChild>
+            <a href={ctaButton.href}>{ctaButton.text}</a>
+          </Button>
         </div>
       )}
     </div>

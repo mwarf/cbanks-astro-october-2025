@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from "@/components/ThemeToggle.astro";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
@@ -11,20 +12,23 @@ const ITEMS = [
 ];
 
 const { pathname = "" } = Astro.props;
+const isActive = (href: string) =>
+  pathname === href || pathname.startsWith(`${href}/`);
 ---
 
 <nav
   id="main-nav"
+  aria-label="Main"
   class={cn(
-    "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+    "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border shadow-sm backdrop-blur-md",
     "top-5 lg:top-12",
   )}
 >
   <div class="flex items-center justify-between px-6 py-3">
-    <a href="/" class="flex shrink-0 items-center gap-2">
+    <a href="/" class="flex shrink-0 items-center gap-2" aria-label="Coalbanks — home">
       <img
         src="/logo-coalbanks.svg"
-        alt="logo"
+        alt="Coalbanks"
         width={94}
         height={18}
         class="dark:invert"
@@ -32,35 +36,39 @@ const { pathname = "" } = Astro.props;
     </a>
 
     <!-- Desktop Navigation -->
-    <div class="hidden lg:flex items-center gap-1.5">
+    <div class="hidden lg:flex items-center gap-1">
       {ITEMS.map((link) => (
-        <div class="relative group">
-            <a
-              href={link.href}
-              class={cn(
-                "px-1.5 py-1 text-sm font-medium transition-opacity hover:opacity-75",
-                pathname === link.href && "text-muted-foreground"
-              )}
-            >
-              {link.label}
-            </a>
-        </div>
+        <a
+          href={link.href}
+          aria-current={isActive(link.href) ? "page" : undefined}
+          class={cn(
+            "rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
+            isActive(link.href)
+              ? "bg-muted text-foreground"
+              : "text-muted-foreground hover:bg-muted/60 hover:text-foreground"
+          )}
+        >
+          {link.label}
+        </a>
       ))}
     </div>
 
-    <!-- Auth & Toggles -->
+    <!-- Theme Toggle & CTA -->
     <div class="flex items-center gap-2.5">
       <ThemeToggle />
-      <a href="/contact" class="hidden lg:block">
-        <button class="h-9 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md text-sm font-medium transition-colors shadow-sm">
-          Start a Project
-        </button>
+      <a
+        href="/contact"
+        class={cn(buttonVariants(), "hidden rounded-full lg:inline-flex")}
+      >
+        Start a Project
       </a>
       <!-- Mobile Toggle -->
       <button
         id="mobile-menu-toggle"
-        class="text-muted-foreground relative flex size-8 lg:hidden items-center justify-center focus:outline-none"
+        class="text-muted-foreground relative flex size-8 lg:hidden items-center justify-center"
         aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
       >
         <div class="relative w-[18px] h-[14px]">
           <span class="line absolute block h-0.5 w-full rounded-full bg-current transition-all duration-300 ease-in-out top-0"></span>
@@ -74,99 +82,98 @@ const { pathname = "" } = Astro.props;
   <!-- Mobile Menu Content -->
   <div
     id="mobile-menu"
-    class="bg-background invisible fixed inset-x-0 top-[calc(100%+1rem)] flex -translate-y-4 flex-col rounded-2xl border p-6 opacity-0 shadow-xl transition-all duration-300 ease-in-out lg:hidden"
+    class="bg-background invisible absolute inset-x-0 top-[calc(100%+0.75rem)] flex -translate-y-4 flex-col rounded-2xl border p-6 opacity-0 shadow-xl transition-all duration-300 ease-in-out lg:hidden"
   >
-    <nav class="divide-border flex flex-1 flex-col divide-y">
+    <nav aria-label="Mobile" class="divide-border flex flex-1 flex-col divide-y">
       {ITEMS.map((link) => (
-        <div class="mobile-item py-4 first:pt-0 last:pb-0">
-            <a
-              href={link.href}
-              class={cn(
-                "block text-base font-medium text-foreground transition-colors hover:text-foreground/80",
-                pathname === link.href && "text-muted-foreground"
-              )}
-            >
-              {link.label}
-            </a>
+        <div class="py-4 first:pt-0 last:pb-0">
+          <a
+            href={link.href}
+            aria-current={isActive(link.href) ? "page" : undefined}
+            class={cn(
+              "block text-base font-medium transition-colors",
+              isActive(link.href)
+                ? "text-foreground"
+                : "text-muted-foreground hover:text-foreground"
+            )}
+          >
+            {link.label}
+          </a>
         </div>
       ))}
+      <div class="pt-5">
+        <a href="/contact" class={cn(buttonVariants(), "w-full rounded-full")}>
+          Start a Project
+        </a>
+      </div>
     </nav>
   </div>
 </nav>
 
 <script>
+  // Re-initialized on every view transition; the AbortController tears down
+  // the previous page's document-level listeners so they don't accumulate.
+  let teardown: AbortController | undefined;
+
   function initNav() {
-    const toggle = document.getElementById('mobile-menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    const lines = toggle?.querySelectorAll('.line');
+    teardown?.abort();
 
-    if (!toggle || !menu || !lines) return;
+    const toggle = document.getElementById("mobile-menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    if (!toggle || !menu) return;
 
+    teardown = new AbortController();
+    const { signal } = teardown;
+    const lines = toggle.querySelectorAll(".line");
     let isOpen = false;
 
-    toggle.addEventListener('click', () => {
-      isOpen = !isOpen;
-      
-      // Update Menu Visibility
-      if (isOpen) {
-        menu.classList.remove('invisible', '-translate-y-4', 'opacity-0');
-        menu.classList.add('visible', 'translate-y-0', 'opacity-100');
-        
-        // Transform Hamburger to X
-        lines[0].classList.add('rotate-45', 'translate-y-[6px]');
-        lines[1].classList.add('opacity-0');
-        lines[2].classList.add('-rotate-45', '-translate-y-[6px]');
-      } else {
-        menu.classList.add('invisible', '-translate-y-4', 'opacity-0');
-        menu.classList.remove('visible', 'translate-y-0', 'opacity-100');
-        
-        // Reset X to Hamburger
-        lines[0].classList.remove('rotate-45', 'translate-y-[6px]');
-        lines[1].classList.remove('opacity-0');
-        lines[2].classList.remove('-rotate-45', '-translate-y-[6px]');
-      }
-    });
+    const setOpen = (open: boolean) => {
+      isOpen = open;
+      toggle.setAttribute("aria-expanded", String(open));
+      menu.classList.toggle("invisible", !open);
+      menu.classList.toggle("-translate-y-4", !open);
+      menu.classList.toggle("opacity-0", !open);
 
-    // Dropdown Logic for Mobile
-    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
-    dropdownTriggers.forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        const content = trigger.nextElementSibling as HTMLElement;
-        const chevron = trigger.querySelector('.chevron');
-        const isSelfOpen = content.classList.contains('max-h-[1000px]');
+      // Morph hamburger into an X
+      lines[0]?.classList.toggle("rotate-45", open);
+      lines[0]?.classList.toggle("translate-y-[6px]", open);
+      lines[1]?.classList.toggle("opacity-0", open);
+      lines[2]?.classList.toggle("-rotate-45", open);
+      lines[2]?.classList.toggle("-translate-y-[6px]", open);
+    };
 
-        // Close all other dropdowns
-        document.querySelectorAll('.dropdown-content').forEach(c => {
-           c.classList.remove('mt-4', 'max-h-[1000px]', 'opacity-100');
-           c.classList.add('max-h-0', 'opacity-0');
-        });
-        document.querySelectorAll('.chevron').forEach(cv => cv.classList.remove('rotate-90'));
+    toggle.addEventListener("click", () => setOpen(!isOpen), { signal });
 
-        if (!isSelfOpen) {
-          content.classList.remove('max-h-0', 'opacity-0');
-          content.classList.add('mt-4', 'max-h-[1000px]', 'opacity-100');
-          chevron?.classList.add('rotate-90');
+    // Close on outside click
+    document.addEventListener(
+      "click",
+      (event) => {
+        const target = event.target as Node;
+        if (isOpen && !menu.contains(target) && !toggle.contains(target)) {
+          setOpen(false);
         }
-      });
-    });
+      },
+      { signal },
+    );
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      if (isOpen && !menu.contains(target) && !toggle.contains(target)) {
-        toggle.click();
-      }
-    });
+    // Close on Escape
+    document.addEventListener(
+      "keydown",
+      (event) => {
+        if (isOpen && event.key === "Escape") {
+          setOpen(false);
+          (toggle as HTMLElement).focus();
+        }
+      },
+      { signal },
+    );
 
-    // Close menu on navigation
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (isOpen) toggle.click();
-      });
+    // Close when a menu link is chosen
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setOpen(false), { signal });
     });
   }
 
-  // Initialize on load and on view swaps (for View Transitions)
   initNav();
-  document.addEventListener('astro:after-swap', initNav);
+  document.addEventListener("astro:after-swap", initNav);
 </script>

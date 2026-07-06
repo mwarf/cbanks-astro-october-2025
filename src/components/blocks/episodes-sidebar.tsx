@@ -45,22 +45,21 @@ export function EpisodesSidebar({ episodes, projectTitle }: EpisodesSidebarProps
       </div>
 
       <Dialog open={!!selectedEpisode} onOpenChange={(open) => !open && setSelectedEpisode(null)}>
-        <DialogContent className="sm:max-w-4xl p-0 overflow-hidden bg-black border-none">
+        <DialogContent className="sm:max-w-4xl p-0 overflow-hidden bg-black text-white border-none">
           <div className="relative aspect-video w-full">
             {selectedEpisode && (
               <iframe
                 width="100%"
                 height="100%"
-                src={selectedEpisode.url + "?autoplay=1"}
+                src={`${selectedEpisode.url}${selectedEpisode.url.includes("?") ? "&" : "?"}autoplay=1`}
                 title={selectedEpisode.title}
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="absolute inset-0"
               />
             )}
           </div>
-          <div className="p-6 bg-background">
+          <div className="p-6 bg-background text-foreground">
             <DialogHeader>
               <DialogTitle className="text-2xl font-display">
                 {selectedEpisode?.title}

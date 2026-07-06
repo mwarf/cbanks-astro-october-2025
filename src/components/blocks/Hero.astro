@@ -55,10 +55,10 @@ const features = [
         <a href="/contact" class={buttonVariants({ size: "lg" })}>Start a Project</a>
         <a
           href="/portfolio"
-          class={cn(buttonVariants({ variant: "outline", size: "lg" }), "from-background gap-2 bg-linear-to-r to-transparent shadow-md !h-12 min-w-12 flex items-center gap-2 text-start")}
+          class={cn(buttonVariants({ variant: "outline", size: "lg" }), "group gap-2")}
         >
           Watch Our Work
-          <ArrowRight className="stroke-3" aria-hidden="true" />
+          <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
         </a>
       </div>
     </div>
@@ -77,12 +77,12 @@ const features = [
         const Icon = feature.icon;
         return (
           <div class="flex gap-2.5 lg:gap-5">
-            <Icon className="text-foreground mt-1 size-4 shrink-0 lg:size-5" aria-hidden="true" />
+            <Icon className="text-primary mt-1 size-4 shrink-0 lg:size-5" aria-hidden="true" />
             <div>
-              <h2 class="h3 text-foreground">
+              <h2 class="font-display text-foreground text-lg font-semibold tracking-tight lg:text-xl">
                 {feature.title}
               </h2>
-              <p class="text-muted-foreground max-w-76 text-sm">
+              <p class="text-muted-foreground mt-1 max-w-76 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -110,7 +110,7 @@ const features = [
       </div>
       {/* Secondary images - these define the row heights with 4:3 aspect ratio */}
       {secondaryImages.map((img, i) => (
-        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+        <div class="group aspect-[4/3] overflow-hidden rounded-xl shadow-md transition-shadow duration-300 hover:shadow-lg">
           <Image
             src={img}
             alt={`Featured work ${i + 1}`}
@@ -119,7 +119,7 @@ const features = [
             loading="lazy"
             format="avif"
             quality="mid"
-            class="h-full w-full object-cover object-center"
+            class="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
           />
         </div>
       ))}

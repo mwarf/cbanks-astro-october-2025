@@ -95,8 +95,8 @@ export function InlineVideoPlayer({
                   {/* Pulse Ring */}
                   <div className="absolute -inset-4 rounded-full bg-white/20 opacity-0 duration-1000 group-hover:animate-ping group-hover:opacity-100"></div>
                   {/* Main Button Visual */}
-                  <div className="bg-primary text-primary-foreground group-hover:bg-primary group-hover:text-primary-foreground relative flex h-24 w-24 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-all duration-300">
-                    <Play className="ml-1 h-10 w-10 fill-current" />
+                  <div className="bg-primary text-primary-foreground relative flex h-24 w-24 items-center justify-center rounded-full shadow-2xl transition-transform duration-300">
+                    <Play className="ml-1 h-10 w-10 fill-current" aria-hidden="true" />
                   </div>
                 </div>
               </button>

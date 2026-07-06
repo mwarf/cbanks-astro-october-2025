@@ -36,6 +36,7 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
             key={category}
             variant={filter === category ? "default" : "outline"}
             onClick={() => handleFilterChange(category)}
+            aria-pressed={filter === category}
             className={cn(
               "rounded-full transition-all duration-300",
               filter === category
@@ -78,17 +79,17 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
                   />
                   <div className="absolute inset-0 bg-black/20 transition-colors duration-300 group-hover:bg-black/40" />
                 </a>
-                <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setSelectedProject(project);
-                    }}
-                    className="pointer-events-auto cursor-pointer rounded-full bg-white/10 p-4 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-white/20"
-                  >
-                    <Play className="h-8 w-8 fill-white text-white" />
-                  </button>
-                </div>
+                {project.videoUrl && (
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <button
+                      onClick={() => setSelectedProject(project)}
+                      aria-label={`Play ${project.title}`}
+                      className="pointer-events-auto cursor-pointer rounded-full bg-white/10 p-4 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-white/20"
+                    >
+                      <Play className="h-8 w-8 fill-white text-white" aria-hidden="true" />
+                    </button>
+                  </div>
+                )}
               </div>
 
               <div className="space-y-2">

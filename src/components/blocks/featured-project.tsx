@@ -45,14 +45,16 @@ export function FeaturedProject({ project }: { project: Project }) {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button
-              size="lg"
-              className="gap-2 rounded-full text-base"
-              onClick={() => setIsOpen(true)}
-            >
-              <Play className="h-4 w-4 fill-current" />
-              Watch Film
-            </Button>
+            {project.videoUrl && (
+              <Button
+                size="lg"
+                className="gap-2 rounded-full text-base"
+                onClick={() => setIsOpen(true)}
+              >
+                <Play className="h-4 w-4 fill-current" aria-hidden="true" />
+                Watch Film
+              </Button>
+            )}
             <Button
               variant="outline"
               size="lg"

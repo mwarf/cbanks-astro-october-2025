@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { Badge } from "@/components/ui/badge";
+import { readingTime } from "@/lib/reading-time";
 import TableOfContents from "./TableOfContents.astro";
 import SocialShare from "./SocialShare.astro";
 
@@ -13,8 +14,9 @@ interface Props {
 }
 
 const { post, relatedPosts = [], headings = [] } = Astro.props;
-const { title, authorName, image, pubDate, updatedDate, description } = post.data;
+const { title, author, image, pubDate, updatedDate, description } = post.data;
 
+const authorName = author || "Coalbanks Creative";
 const postUrl = new URL(Astro.url.pathname, Astro.site || Astro.url.origin).toString();
 
 // Article JSON-LD
@@ -23,19 +25,19 @@ const articleJsonLd = {
   "@type": "BlogPosting",
   "headline": title,
   "description": description,
-  "image": new URL(image || "/og-image.jpg", Astro.url).toString(),
+  "image": new URL(image || "/og-image.jpg", Astro.site || Astro.url.origin).toString(),
   "datePublished": pubDate.toISOString(),
   ...(updatedDate && { "dateModified": updatedDate.toISOString() }),
   "author": {
     "@type": "Person",
-    "name": authorName || "Coalbanks"
+    "name": authorName
   },
   "publisher": {
     "@type": "Organization",
     "name": "Coalbanks Creative Inc.",
     "logo": {
       "@type": "ImageObject",
-      "url": new URL("/logo-coalbanks.svg", Astro.url).toString()
+      "url": new URL("/logo-coalbanks.svg", Astro.site || Astro.url.origin).toString()
     }
   },
   "mainEntityOfPage": {
@@ -43,44 +45,45 @@ const articleJsonLd = {
     "@id": Astro.url.toString()
   }
 };
+// JSON.stringify does not escape "</script>"; escape "<" so frontmatter
+// content can never terminate the script tag early.
+const articleJsonLdSafe = JSON.stringify(articleJsonLd).replace(/</g, "\\u003c");
 
-// Helper for reading time
-const calculateReadingTime = (content: string) => {
-  if (!content) return "1 Min Read";
-  const wordsPerMinute = 200;
-  const words = content.trim().split(/\s+/).length;
-  const minutes = Math.ceil(words / wordsPerMinute);
-  return `${minutes} Min Read`;
-};
+const showToc = headings.some((h) => h.depth === 2 || h.depth === 3);
 ---
 
 <section>
   <div class="container">
-    <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
-      <h1 class="font-display max-w-3xl text-4xl font-bold md:text-5xl">{title}</h1>
-      <h3 class="text-muted-foreground max-w-4xl">{description}</h3>
-        <span>
-          <a href="#" class="font-semibold">
-            {authorName}
-          </a>
-          <span class="ml-1">on {format(pubDate, "MMMM d, yyyy")}</span>
-        </span>
-        <span class="text-muted-foreground">•</span>
-        <span class="text-muted-foreground">
-          {calculateReadingTime(post.body || "")}
-        </span>
+    <div class="mx-auto flex max-w-5xl flex-col items-center gap-5 text-center">
+      <h1 class="font-display max-w-3xl text-4xl font-bold text-balance md:text-5xl">{title}</h1>
+      <p class="text-muted-foreground max-w-2xl text-lg text-pretty md:text-xl">{description}</p>
+
+      <div class="text-muted-foreground flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm">
+        <span class="text-foreground font-semibold">{authorName}</span>
+        <span aria-hidden="true">&middot;</span>
+        <time datetime={pubDate.toISOString()}>{format(pubDate, "MMMM d, yyyy")}</time>
+        {updatedDate && (
+          <>
+            <span aria-hidden="true">&middot;</span>
+            <span>Updated <time datetime={updatedDate.toISOString()}>{format(updatedDate, "MMMM d, yyyy")}</time></span>
+          </>
+        )}
+        <span aria-hidden="true">&middot;</span>
+        <span>{readingTime(post.body)}</span>
       </div>
-      
-      <SocialShare url={postUrl} title={title} className="mt-4" />
-      
-      <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+
+      <SocialShare url={postUrl} title={title} className="mt-2" />
+
+      <script type="application/ld+json" set:html={articleJsonLdSafe} />
 
       <Image
         src={image || "/images/blog-placeholder-1.png"}
-        alt={title || ""}
+        alt=""
         width={1200}
         height={675}
-        class="mt-8 mb-8 aspect-video w-full rounded-lg border object-cover"
+        loading="eager"
+        fetchpriority="high"
+        class="mt-8 mb-8 aspect-video w-full rounded-2xl border object-cover shadow-md"
       />
     </div>
   </div>
@@ -89,13 +92,15 @@ const calculateReadingTime = (content: string) => {
       <div class="prose prose-lg dark:prose-invert flex-1 max-w-none">
         <slot />
         <div class="mt-16 pt-8 border-t">
-          <h4 class="text-base font-bold mb-4">Enjoyed this article? Share it with your network:</h4>
+          <h2 class="text-base font-bold mb-4">Enjoyed this article? Share it with your network:</h2>
           <SocialShare url={postUrl} title={title} />
         </div>
       </div>
-      <aside class="lg:w-64 block">
-        <TableOfContents headings={headings} />
-      </aside>
+      {showToc && (
+        <aside class="hidden lg:block lg:w-64">
+          <TableOfContents headings={headings} />
+        </aside>
+      )}
     </div>
   </div>
 
@@ -103,32 +108,32 @@ const calculateReadingTime = (content: string) => {
   {relatedPosts.length > 0 && (
     <div class="container mt-24">
       <div class="mx-auto max-w-5xl">
-        <h3 class="mb-8 text-2xl font-bold">Read Next</h3>
+        <h2 class="mb-8 text-2xl font-bold">Read Next</h2>
         <div class="grid gap-8 md:grid-cols-3">
           {relatedPosts.map((relatedPost) => (
             <a
-              href={`/blog/${relatedPost.data.slug || relatedPost.id}/`}
-              class="group flex flex-col overflow-hidden rounded-xl border bg-card transition-all hover:shadow-md"
+              href={`/blog/${relatedPost.id}/`}
+              class="group flex flex-col overflow-hidden rounded-xl border bg-card transition-shadow duration-300 hover:shadow-md"
             >
               <div class="overflow-hidden aspect-video">
                  <Image
                   src={relatedPost.data.image || "/images/blog-placeholder-1.png"}
-                  alt={relatedPost.data.title || ""}
+                  alt=""
                   width={400}
                   height={225}
-                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
               </div>
               <div class="flex flex-1 flex-col p-4">
-                <h4 class="mb-2 text-lg font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                <h3 class="mb-2 text-lg font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2">
                   {relatedPost.data.title}
-                </h4>
+                </h3>
                 <div class="mt-auto flex items-center justify-between gap-4 pt-4">
-                    <span class="text-xs text-muted-foreground">
+                    <time class="text-xs text-muted-foreground" datetime={relatedPost.data.pubDate.toISOString()}>
                         {format(relatedPost.data.pubDate, "MMM d, yyyy")}
-                    </span>
+                    </time>
                      <Badge variant="secondary" className="text-[10px] h-fit px-1.5 py-0.5 font-normal">
-                      {calculateReadingTime(relatedPost.body || "")}
+                      {readingTime(relatedPost.body)}
                     </Badge>
                 </div>
               </div>

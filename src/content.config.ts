@@ -4,18 +4,22 @@ import { defineCollection, z } from "astro:content";
 const blog = defineCollection({
   // Load Markdown and MDX files in the `src/content/blog/` directory.
   loader: glob({ base: "./src/content/blog", pattern: "**/*.{md,mdx}" }),
-  // Type-check frontmatter using a schema
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    // Transform string to Date object
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    image: z.string().optional(),
-    heroImage: z.string().optional(), // Add this field that's being used in the component
-    authorName: z.string().optional(),
-    slug: z.string().optional(), // Add this to support custom slugs
-  }),
+  // Type-check frontmatter using a schema. `.strict()` turns any
+  // frontmatter/schema mismatch into a build error instead of silent data loss.
+  schema: z
+    .object({
+      title: z.string(),
+      description: z.string(),
+      pubDate: z.coerce.date(),
+      updatedDate: z.coerce.date().optional(),
+      image: z.string().optional(),
+      author: z.string().optional(),
+      tags: z.array(z.string()).default([]),
+      // NOTE: routing uses the filename (post.id); this field is accepted but
+      // intentionally ignored so existing URLs stay stable.
+      slug: z.string().optional(),
+    })
+    .strict(),
 });
 
 const portfolio = defineCollection({
@@ -37,5 +41,4 @@ const portfolio = defineCollection({
   }),
 });
 
-// Force rebuild of content collection
 export const collections = { blog, portfolio };

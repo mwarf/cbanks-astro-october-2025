@@ -56,44 +56,54 @@ const gridCols = {
       )}
 
       <div class={cn("grid gap-8 py-8", gridCols[columns])}>
-        {items.map((item, i) => (
-          <div
-            class={cn(
-              "relative flex flex-col gap-4 p-4",
-              variant === "bordered" && "rounded-xl border bg-card",
-            )}
-          >
-            {item.icon && (
-              <div class="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-primary">
-                <item.icon className="h-6 w-6" />
-              </div>
-            )}
-            
-            {item.image && (
-              <div class="mb-4 aspect-video overflow-hidden rounded-xl">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  class="h-full w-full object-cover"
-                  loading="lazy"
+        {items.map((item, i) => {
+          // Grids are 2 columns at md and `columns` wide at lg; hide the
+          // divider on the last item of each row (computed from the item
+          // index — :nth-child on the divider itself sees the wrong parent).
+          const lgCols = columns === 2 ? 2 : columns;
+          const showDividerMd = i % 2 === 0;
+          const showDividerLg = i % lgCols !== lgCols - 1;
+          return (
+            <div
+              class={cn(
+                "relative flex flex-col gap-4 p-4",
+                variant === "bordered" && "rounded-xl border bg-card",
+              )}
+            >
+              {item.icon && (
+                <div class="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-primary">
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                </div>
+              )}
+
+              {item.image && (
+                <div class="mb-4 aspect-video overflow-hidden rounded-xl">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    class="h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              )}
+
+              <h3 class="text-xl font-semibold">{item.title}</h3>
+              <p class="text-muted-foreground">{item.description}</p>
+
+              {/* Vertical divider between items (desktop only) */}
+              {variant !== "minimal" && columns > 1 && i < items.length - 1 && (
+                <div
+                  class={cn(
+                    "absolute right-0 top-1/2 hidden h-12 w-px -translate-y-1/2 bg-border",
+                    showDividerMd && "md:block",
+                    showDividerLg ? "lg:block" : "lg:hidden",
+                  )}
                 />
-              </div>
-            )}
-
-            <h3 class="text-xl font-semibold">{item.title}</h3>
-            <p class="text-muted-foreground">{item.description}</p>
-
-            {/* Vertical divider between items (desktop only) */}
-            {variant !== "minimal" && i < items.length - 1 && columns > 1 && (
-              <div class={cn(
-                "absolute right-0 top-1/2 hidden h-12 w-[1px] -translate-y-1/2 bg-border",
-                columns === 2 && "md:block odd:last:hidden",
-                columns === 3 && "lg:block lg:[&:nth-child(3n)]:hidden",
-                columns === 4 && "lg:block lg:[&:nth-child(4n)]:hidden"
-              )} />
-            )}
-          </div>
-        ))}
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {variant !== "minimal" && (

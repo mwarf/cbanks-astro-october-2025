@@ -16,33 +16,26 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { title, description, pubDate, updatedDate, heroImage, tags } = post.data;
+const { title, description, image, tags } = post.data;
 const { Content, headings } = await render(post);
 
-// Fetch related posts (prioritize matching tags)
+// Fetch related posts (prioritize matching tags, then recency)
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
   .filter((p) => p.id !== post.id)
   .sort((a, b) => {
-    // Calculate tag overlap score
-    const aTags = a.data.tags || []; // Assuming tags exist in schema, falling back if undefined
-    const bTags = b.data.tags || [];
-    const currentTags = tags || [];
-    
-    // Safety check: if no tags, strictly use date
-    if (currentTags.length === 0) return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
-
-    const aScore = aTags.filter(t => currentTags.includes(t)).length;
-    const bScore = bTags.filter(t => currentTags.includes(t)).length;
-
-    if (bScore !== aScore) return bScore - aScore; // Sort by relevance first
-    return b.data.pubDate.valueOf() - a.data.pubDate.valueOf(); // Then by date
+    if (tags.length > 0) {
+      const aScore = a.data.tags.filter((t) => tags.includes(t)).length;
+      const bScore = b.data.tags.filter((t) => tags.includes(t)).length;
+      if (bScore !== aScore) return bScore - aScore;
+    }
+    return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
   })
   .slice(0, 3);
 
 
 ---
-<DefaultLayout title={title} description={description} image={heroImage} ogType="article">
+<DefaultLayout title={title} description={description} image={image} ogType="article">
 	<BreadcrumbSchema items={[
 		{ name: "Home", url: "/" },
 		{ name: "Blog", url: "/blog" },

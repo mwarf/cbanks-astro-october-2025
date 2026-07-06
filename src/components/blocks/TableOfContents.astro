@@ -6,59 +6,67 @@ interface Props {
 const { headings } = Astro.props;
 
 const filteredHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
-
-if (filteredHeadings.length === 0) return null;
 ---
 
-<nav class="toc sticky top-32 max-h-[calc(100vh-8rem)] overflow-y-auto max-w-[240px] pl-8 border-l">
-  <h2 class="text-sm font-bold uppercase tracking-wider mb-4">On this page</h2>
-  <ul class="space-y-3 text-sm">
-    {filteredHeadings.map((heading) => (
-      <li class:list={[
-        "toc-item transition-all",
-        heading.depth === 3 ? "pl-4" : ""
-      ]}>
-        <a
-          href={`#${heading.slug}`}
-          class="text-muted-foreground hover:text-primary transition-colors block leading-tight toc-link"
-          data-id={heading.slug}
-        >
-          {heading.text}
-        </a>
-      </li>
-    ))}
-  </ul>
-</nav>
+{filteredHeadings.length > 0 && (
+  <nav aria-label="Table of contents" class="toc sticky top-32 max-h-[calc(100vh-8rem)] overflow-y-auto max-w-[240px] pl-8 border-l">
+    <p class="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">On this page</p>
+    <ul class="space-y-3 text-sm">
+      {filteredHeadings.map((heading) => (
+        <li class:list={[
+          "toc-item",
+          heading.depth === 3 ? "pl-4" : ""
+        ]}>
+          <a
+            href={`#${heading.slug}`}
+            class="text-muted-foreground hover:text-primary transition-colors block leading-tight toc-link"
+            data-id={heading.slug}
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
 
 <style>
   @reference "../../styles/global.css";
-  
+
   .toc-link.active {
     @apply text-primary font-medium;
   }
 </style>
 
 <script>
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px 0px -80% 0px',
-    threshold: 0
-  };
+  // Re-created on every view transition; the old observer is disconnected so
+  // it doesn't keep watching detached nodes.
+  let tocObserver: IntersectionObserver | undefined;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const id = entry.target.getAttribute('id');
-      const tocLink = document.querySelector(`.toc a[data-id="${id}"]`);
-      
-      if (entry.isIntersecting) {
-        document.querySelectorAll('.toc a').forEach((link) => link.classList.remove('active'));
-        tocLink?.classList.add('active');
-      }
+  function initToc() {
+    tocObserver?.disconnect();
+    tocObserver = undefined;
+
+    if (!document.querySelector(".toc")) return;
+
+    tocObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.getAttribute("id");
+          const tocLink = document.querySelector(`.toc a[data-id="${id}"]`);
+          document.querySelectorAll(".toc a").forEach((link) => link.classList.remove("active"));
+          tocLink?.classList.add("active");
+        });
+      },
+      { root: null, rootMargin: "0px 0px -80% 0px", threshold: 0 },
+    );
+
+    document.querySelectorAll("h2[id], h3[id]").forEach((section) => {
+      tocObserver!.observe(section);
     });
-  }, observerOptions);
+  }
 
-  // Observe all headings that have IDs
-  document.querySelectorAll('h2[id], h3[id]').forEach((section) => {
-    observer.observe(section);
-  });
+  initToc();
+  document.addEventListener("astro:after-swap", initToc);
 </script>

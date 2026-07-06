@@ -1,23 +1,26 @@
-import { Facebook, Linkedin, Twitter, MapPin, Phone, Mail, Loader2, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Mail, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
 
 import buildingPlaceholder from "@/assets/images/building-placeholder.jpg";
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    // React nulls e.currentTarget once the handler yields; capture it now.
+    const form = e.currentTarget;
     setIsSubmitting(true);
+    setErrorMessage(null);
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const data = {
       name: formData.get("name"),
       email: formData.get("email"),
@@ -39,12 +42,13 @@ export const Contact = () => {
         throw new Error("Failed to send message");
       }
 
+      form.reset();
       setIsSuccess(true);
-      toast.success("Message sent successfully!");
-      e.currentTarget.reset();
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong. Please try again or email us directly.");
+      setErrorMessage(
+        "Something went wrong sending your message. Please try again, or email us directly at hello@coalbanks.com.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -137,12 +141,12 @@ export const Contact = () => {
             </p>
             
             {isSuccess ? (
-              <div className="mt-8 flex flex-col items-center justify-center space-y-4 rounded-lg bg-green-50/50 py-12 text-center">
-                <div className="rounded-full bg-green-100 p-3 text-green-600">
-                  <CheckCircle2 className="size-8" />
+              <div className="mt-8 flex flex-col items-center justify-center space-y-4 rounded-lg bg-green-50/50 py-12 text-center dark:bg-green-950/30" role="status">
+                <div className="rounded-full bg-green-100 p-3 text-green-600 dark:bg-green-900/50 dark:text-green-400">
+                  <CheckCircle2 className="size-8" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-semibold text-green-900">Message Sent!</h3>
-                <p className="text-green-700 max-w-xs">
+                <h3 className="text-xl font-semibold text-green-900 dark:text-green-200">Message Sent!</h3>
+                <p className="max-w-xs text-green-700 dark:text-green-300">
                   Thanks for reaching out. We've received your message and will get back to you shortly.
                 </p>
                 <Button 
@@ -188,11 +192,21 @@ export const Contact = () => {
                   />
                 </div>
 
+                {errorMessage && (
+                  <div
+                    className="border-destructive/30 bg-destructive/10 text-destructive flex items-start gap-3 rounded-lg border p-4 text-sm"
+                    role="alert"
+                  >
+                    <AlertCircle className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                    <p>{errorMessage}</p>
+                  </div>
+                )}
+
                 <div className="space-y-4">
                   <Button size="lg" type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="mr-2 size-4 animate-spin" />
+                        <Loader2 className="mr-2 size-4 animate-spin" aria-hidden="true" />
                         Sending...
                       </>
                     ) : (

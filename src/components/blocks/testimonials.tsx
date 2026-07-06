@@ -99,8 +99,10 @@ export const Testimonials = ({
               Documentary-style films that deliver measurable impact—from
               recruitment and fundraising to brand awareness and sales.
             </p>
-            <Button variant="outline" className="shadow-md">
-              Watch Our Demo Reel <ArrowRight className="size-4" />
+            <Button variant="outline" className="shadow-md" asChild>
+              <a href="/portfolio">
+                Watch Our Work <ArrowRight className="size-4" aria-hidden="true" />
+              </a>
             </Button>
           </div>
 
@@ -116,7 +118,7 @@ export const Testimonials = ({
                 {items.map((testimonial, index) => (
                   <CarouselItem
                     key={index}
-                    className="xl:basis-1/3.5 grow basis-4/5 sm:basis-3/5 md:basis-2/5 lg:basis-[28%] 2xl:basis-[24%]"
+                    className="grow basis-4/5 sm:basis-3/5 md:basis-2/5 lg:basis-[28%] 2xl:basis-[24%]"
                   >
                     <Card className="bg-muted h-full overflow-hidden border-none p-0 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
                       <CardContent className="flex h-full flex-col p-0">

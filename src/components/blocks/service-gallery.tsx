@@ -24,6 +24,8 @@ export const ServiceGallery = ({
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  if (images.length === 0) return null;
+
   const gridCols = {
     2: "md:grid-cols-2",
     3: "md:grid-cols-2 lg:grid-cols-3",

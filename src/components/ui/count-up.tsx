@@ -59,12 +59,17 @@ export default function CountUp({
     }
   }, [isInView, startWhen, motionValue, direction, from, to, onStart, hasStarted]);
 
+  // Group digits only when a separator is requested; toLocaleString() with the
+  // visitor's locale would otherwise render e.g. 2019 as "2.019" in de-DE.
+  const formatNumber = (value: number) =>
+    separator
+      ? Math.round(value).toLocaleString("en-US").replace(/,/g, separator)
+      : String(Math.round(value));
+
   useEffect(() => {
     const unsubscribe = springValue.on("change", (latest) => {
       if (ref.current) {
-        // Format the number to remove decimals and add separator
-        const formattedNumber = Math.round(latest).toLocaleString().replace(/,/g, separator);
-        ref.current.textContent = `${prefix}${formattedNumber}${suffix}`;
+        ref.current.textContent = `${prefix}${formatNumber(latest)}${suffix}`;
       }
       
       if (latest === (direction === "down" ? from : to)) {
@@ -77,7 +82,7 @@ export default function CountUp({
 
   // Initial render value
   const initialValue = direction === "down" ? to : from;
-  const formattedInitial = Math.round(initialValue).toLocaleString().replace(/,/g, separator);
+  const formattedInitial = formatNumber(initialValue);
 
   return <span className={className} ref={ref}>{prefix}{formattedInitial}{suffix}</span>;
 }

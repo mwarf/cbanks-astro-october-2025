@@ -1,14 +1,15 @@
 ---
-import { Film, Search, Calendar, Plane } from "lucide-react";
+import { Film, Search, Calendar, Plane, ArrowUpRight, ArrowRight } from "lucide-react";
 
 import DefaultLayout from "@/layouts/DefaultLayout.astro";
 import Background from "@/components/Background.astro";
-import ServiceHero from "@/components/blocks/ServiceHero.astro";
 import ServiceGrid from "@/components/blocks/ServiceGrid.astro";
-import ServicePortfolio from "@/components/blocks/ServicePortfolio.astro";
 import { ServiceFAQ } from "@/components/blocks/service-faq";
 import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema.astro";
+import { DashedLine } from "@/components/dashed-line";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { BUSINESS_INFO } from "@/consts";
 
 // Service Page JSON-LD. Provider references the LocalBusiness node emitted by
@@ -40,17 +41,12 @@ const serviceSchema = {
   },
 };
 
-// Hero Data
-const heroData = {
-  title: "A Lethbridge Videographer Who Starts With the Story",
-  subtitle: "Lethbridge Videography",
-  description:
-    "We're Coalbanks — a documentary video production company based in Lethbridge. Since 2019 we've made 65+ films for the businesses, municipalities, and nonprofits of Southern Alberta.",
-  imageSrc: "/services/production/hero-production.jpg",
-  imageAlt: "Coalbanks film production setup on location in Southern Alberta",
-  ctaText: "Start a Discovery Call",
-  ctaHref: "/contact",
-};
+// Verified stats for the hero (interview-confirmed July 2026)
+const heroStats = [
+  { value: "65+", label: "films for Southern Alberta organizations since 2019" },
+  { value: "4–6 wks", label: "from discovery call to delivered film" },
+  { value: "300 km", label: "service radius from our Lethbridge studio" },
+];
 
 // What we film
 const serviceTypes = [
@@ -80,24 +76,25 @@ const serviceTypes = [
   },
 ];
 
-// Featured work — real projects with portfolio pages
+// Featured work — typographic index, no thumbnails (real images come later).
+// Categories mirror the portfolio entries' frontmatter.
 const featuredProjects = [
   {
     title: "Tradesman Manufacturing",
     client: "Tradesman Manufacturing",
-    image: "/services/production/portfolio-tradesman.jpg",
+    category: "Industrial & Commercial",
     slug: "/portfolio/tradesman-manufacturing",
   },
   {
     title: "MD of Taber 70th Anniversary",
     client: "Municipal District of Taber",
-    image: "/services/production/portfolio-md-taber.jpg",
+    category: "Community & Municipal",
     slug: "/portfolio/md-taber-70th-anniversary",
   },
   {
     title: "Team Lethbridge Mission",
     client: "Economic Development Lethbridge",
-    image: "/services/production/portfolio-team-lethbridge.jpg",
+    category: "Community & Municipal",
     slug: "/portfolio/team-lethbridge-mission-edl",
   },
 ];
@@ -147,8 +144,53 @@ const faqQuestions = [
     { name: "Videography", url: "/services/videography" }
   ]} />
   <Background className="via-muted to-muted/80">
-    <!-- Hero -->
-    <ServiceHero {...heroData} />
+    <!-- Hero: type-driven, no imagery -->
+    <section class="py-28 lg:pt-44 lg:pb-32">
+      <div class="container">
+        <p class="text-primary text-sm font-semibold uppercase tracking-wider">
+          Lethbridge Videography
+        </p>
+
+        <h1 class="h1 text-foreground mt-6 max-w-[18ch] text-balance">
+          A Lethbridge videographer who starts with the story
+        </h1>
+
+        <p class="text-muted-foreground mt-8 max-w-2xl text-lg leading-relaxed sm:text-xl lg:text-2xl">
+          We're Coalbanks — a documentary video production company based in
+          Lethbridge, making films for the businesses, municipalities, and
+          nonprofits of Southern Alberta.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="/contact" class={buttonVariants({ size: "lg" })}>
+            Start a Discovery Call
+          </a>
+          <a
+            href="/portfolio"
+            class={cn(buttonVariants({ variant: "outline", size: "lg" }), "group gap-2")}
+          >
+            Watch Our Work
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+          </a>
+        </div>
+
+        <DashedLine orientation="horizontal" className="mt-16" />
+
+        <dl class="mt-10 grid gap-10 sm:grid-cols-3">
+          {heroStats.map((stat) => (
+            <div>
+              <dt class="sr-only">{stat.label}</dt>
+              <dd class="font-display text-4xl font-bold tracking-tight lg:text-5xl">
+                {stat.value}
+              </dd>
+              <p class="text-muted-foreground mt-2 max-w-[28ch] text-sm leading-snug">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
 
     <!-- What We Film -->
     <ServiceGrid
@@ -159,15 +201,54 @@ const faqQuestions = [
     />
   </Background>
 
-    <!-- Featured Work -->
-    <ServicePortfolio
-      title="Recent Work"
-      description="Films for Lethbridge and Southern Alberta municipalities, manufacturers, and nonprofits."
-      projects={featuredProjects}
-    />
+    <!-- Featured Work: typographic index -->
+    <section class="container py-28 lg:py-32">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
+          Recent Work
+        </h2>
+        <p class="text-muted-foreground mt-4 text-lg">
+          Films for Lethbridge and Southern Alberta municipalities,
+          manufacturers, and nonprofits.
+        </p>
+
+        <div class="mt-12 border-t">
+          {featuredProjects.map((project, index) => (
+            <a
+              href={project.slug}
+              class="group flex items-baseline gap-6 border-b py-8 transition-colors hover:bg-muted/40 sm:gap-10"
+            >
+              <span class="text-muted-foreground/60 font-mono text-sm tabular-nums">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span class="flex-1">
+                <span class="h3 text-foreground group-hover:text-primary block transition-colors">
+                  {project.title}
+                </span>
+                <span class="text-muted-foreground mt-1 block text-sm">
+                  {project.client} &middot; {project.category}
+                </span>
+              </span>
+              <ArrowUpRight
+                className="text-muted-foreground group-hover:text-primary size-5 shrink-0 self-center transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                aria-hidden="true"
+              />
+            </a>
+          ))}
+        </div>
+
+        <a
+          href="/portfolio"
+          class="text-foreground group mt-8 inline-flex items-center gap-2 font-medium underline underline-offset-4 hover:no-underline"
+        >
+          See the full portfolio
+          <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+        </a>
+      </div>
+    </section>
 
     <!-- Local context: crawlable copy for "Lethbridge videographer" queries -->
-    <section class="container py-28 lg:py-32">
+    <section class="container pb-28 lg:pb-32">
       <div class="mx-auto max-w-3xl">
         <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
           Why hire a local videographer?

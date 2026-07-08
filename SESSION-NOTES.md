@@ -172,18 +172,22 @@ Full redirect list saved in: `cloudflare-redirects.csv`
 
 ## Draft Content (Noindex)
 
-Services pages are currently draft and excluded from search:
+`/services/production/` is **live and indexed** (July 2026 content pass: fact-checked
+claims, "starting at" pricing). `/services/videography/` is **live and indexed**
+(July 2026: general landing page targeting "Lethbridge videographer"; nav + footer
+"Services" links point here).
 
-- `/services/production/`
-- `/services/drone/`
-- `/services/events/`
-- `/services/photography/`
+Still draft and excluded from search:
 
-**To publish when ready:**
+- `/services/drone/` — content fact-checked and launch-ready; just needs the go-ahead
+- `/services/events/` — content fact-checked and launch-ready; just needs the go-ahead
+- `/services/photography/` — blocked on real gallery images (currently `gallery-0X-placeholder.jpg`)
 
-1. Remove `noindex={true}` from each services page
-2. Remove `Disallow: /services/` from `public/robots.txt`
-3. Remove filter from `astro.config.mjs` sitemap config
+**To publish each remaining page:**
+
+1. Remove `noindex={true}` from the page
+2. Remove its `Disallow: /services/<name>` line from `public/robots.txt`
+3. Remove it from the sitemap filter list in `astro.config.mjs`
 4. Rebuild, deploy, resubmit sitemap
 
 ---

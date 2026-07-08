@@ -1,0 +1,211 @@
+---
+import { Film, Search, Calendar, Plane } from "lucide-react";
+
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import Background from "@/components/Background.astro";
+import ServiceHero from "@/components/blocks/ServiceHero.astro";
+import ServiceGrid from "@/components/blocks/ServiceGrid.astro";
+import ServicePortfolio from "@/components/blocks/ServicePortfolio.astro";
+import { ServiceFAQ } from "@/components/blocks/service-faq";
+import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema.astro";
+import { BUSINESS_INFO } from "@/consts";
+
+// Service Page JSON-LD. Provider references the LocalBusiness node emitted by
+// BaseHead on every page, so business details live in one place.
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Videography",
+  "name": "Lethbridge Videography Services",
+  "description":
+    "Documentary-style videography for Southern Alberta businesses: brand films, recruitment videos, event coverage, and licensed drone cinematography.",
+  "provider": {
+    "@id": `${BUSINESS_INFO.url}/#business`,
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Southern Alberta",
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "CAD",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "minPrice": 1500,
+      "priceCurrency": "CAD",
+    },
+    "description":
+      "Event and aerial coverage from $1,500 CAD; documentary brand films from $8,000 CAD",
+  },
+};
+
+// Hero Data
+const heroData = {
+  title: "A Lethbridge Videographer Who Starts With the Story",
+  subtitle: "Lethbridge Videography",
+  description:
+    "We're Coalbanks — a documentary video production company based in Lethbridge. Since 2019 we've made 65+ films for the businesses, municipalities, and nonprofits of Southern Alberta.",
+  imageSrc: "/services/production/hero-production.jpg",
+  imageAlt: "Coalbanks film production setup on location in Southern Alberta",
+  ctaText: "Start a Discovery Call",
+  ctaHref: "/contact",
+};
+
+// What we film
+const serviceTypes = [
+  {
+    title: "Brand Documentaries",
+    description:
+      "8-15 minute films that explain who you are and why it matters. Built for your homepage, investor presentations, and recruitment.",
+    icon: Film,
+  },
+  {
+    title: "Recruitment Films",
+    description:
+      "Videos that attract the right talent by showing your culture and the real people who make your organization work.",
+    icon: Search,
+  },
+  {
+    title: "Event Coverage",
+    description:
+      "Multi-camera filming for conferences, galas, groundbreakings, and community gatherings across Southern Alberta.",
+    icon: Calendar,
+  },
+  {
+    title: "Aerial & Drone",
+    description:
+      "Transport Canada certified pilots with commercial insurance. Facility tours, agriculture, construction, and real estate from above.",
+    icon: Plane,
+  },
+];
+
+// Featured work — real projects with portfolio pages
+const featuredProjects = [
+  {
+    title: "Tradesman Manufacturing",
+    client: "Tradesman Manufacturing",
+    image: "/services/production/portfolio-tradesman.jpg",
+    slug: "/portfolio/tradesman-manufacturing",
+  },
+  {
+    title: "MD of Taber 70th Anniversary",
+    client: "Municipal District of Taber",
+    image: "/services/production/portfolio-md-taber.jpg",
+    slug: "/portfolio/md-taber-70th-anniversary",
+  },
+  {
+    title: "Team Lethbridge Mission",
+    client: "Economic Development Lethbridge",
+    image: "/services/production/portfolio-team-lethbridge.jpg",
+    slug: "/portfolio/team-lethbridge-mission-edl",
+  },
+];
+
+// FAQ — every claim verified with Michael, July 2026
+const faqQuestions = [
+  {
+    question: "What does hiring a videographer in Lethbridge cost?",
+    answer:
+      "It depends on what you're making. Event coverage and aerial work start at $1,500. Documentary-style story packages start at $8,000, and our signature brand documentaries start at $15,000. Headshot photography can be added to any shoot from $150 per person. Every project gets a custom quote after a free discovery call.",
+  },
+  {
+    question: "Where do you film?",
+    answer:
+      "We're based at 1401 28 St N in Lethbridge and work across Southern Alberta — Medicine Hat, Taber, Cardston, and everywhere in between. We regularly travel within 300km of Lethbridge, including Calgary and Cranbrook.",
+  },
+  {
+    question: "What kind of videography do you do?",
+    answer:
+      "Documentary-style storytelling is our specialty: brand documentaries, recruitment films, and investor or stakeholder videos. We also cover events (conferences, galas, groundbreakings), fly licensed drone missions, and shoot commercial photography alongside video productions.",
+  },
+  {
+    question: "How long does a video project take?",
+    answer:
+      "Brand documentaries take 4-6 weeks from discovery to delivery: 1-2 weeks finding the story, 2-3 days of filming, and 2-3 weeks of post-production. Event edits are delivered within 2-3 weeks of your event. Rush delivery is available for an additional fee.",
+  },
+  {
+    question: "What equipment do you use?",
+    answer:
+      "We film with cinema cameras (RED and Sony FX series) and professional audio. For aerial work, our pilots hold Transport Canada Advanced Operations certificates, carry $5M commercial liability insurance, and fly DJI Inspire 3, Mavic 3 Cine, and FPV systems.",
+  },
+  {
+    question: "How far in advance should I book?",
+    answer:
+      "We take on 12-15 projects per year to keep the quality high, which means we typically book 2-3 months out during busy seasons. If you have a date or deadline in mind, reach out early.",
+  },
+];
+---
+
+<DefaultLayout
+  title="Lethbridge Videographer | Documentary Films & Video | Coalbanks"
+  description="Looking for a videographer in Lethbridge? Coalbanks makes documentary-style films for Southern Alberta businesses — brand films, events, and drone coverage since 2019."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Videography", url: "/services/videography" }
+  ]} />
+  <Background className="via-muted to-muted/80">
+    <!-- Hero -->
+    <ServiceHero {...heroData} />
+
+    <!-- What We Film -->
+    <ServiceGrid
+      title="What We Film"
+      description="One team for the whole job — story-driven films, event coverage, and licensed aerial work."
+      items={serviceTypes}
+      columns={4}
+    />
+  </Background>
+
+    <!-- Featured Work -->
+    <ServicePortfolio
+      title="Recent Work"
+      description="Films for Lethbridge and Southern Alberta municipalities, manufacturers, and nonprofits."
+      projects={featuredProjects}
+    />
+
+    <!-- Local context: crawlable copy for "Lethbridge videographer" queries -->
+    <section class="container py-28 lg:py-32">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
+          Why hire a local videographer?
+        </h2>
+        <p class="text-muted-foreground mt-6 text-lg leading-relaxed">
+          Because the story is here. We know what a chinook does to an
+          afternoon of filming, which side of the coulees catches the good
+          light, and who to call when a shoot needs a location by Friday.
+          Being based in Lethbridge means shorter travel bills, faster
+          scheduling, and a crew that already understands who you're talking
+          to.
+        </p>
+        <p class="text-muted-foreground mt-4 text-lg leading-relaxed">
+          Our signature offering is the
+          <a href="/services/production" class="text-foreground underline underline-offset-4 hover:no-underline">documentary-style brand film</a>
+          — but every project starts the same way: a conversation about what
+          you're trying to do, not a package off a shelf.
+          <a href="/portfolio" class="text-foreground underline underline-offset-4 hover:no-underline">Watch the work</a>
+          and judge for yourself.
+        </p>
+      </div>
+    </section>
+
+  <Background variant="bottom">
+    <!-- FAQ -->
+    <ServiceFAQ
+      client:visible
+      questions={faqQuestions}
+      title="Questions People Ask Before Hiring Us"
+    />
+
+    <!-- CTA -->
+    <ServiceCTA
+      title="Tell us what you're trying to say"
+      description="Start with a free discovery call. No pitch — just questions about your business and what a film could do for it."
+      buttonText="Start a Discovery Call"
+      buttonHref="/contact"
+      variant="centered"
+    />
+  </Background>
+</DefaultLayout>

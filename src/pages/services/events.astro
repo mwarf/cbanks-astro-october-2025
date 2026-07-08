@@ -50,14 +50,13 @@ const eventTypes = [
 const packages = [
   {
     name: "Highlights Package",
-    price: "$1,500",
-    description: "Single-camera coverage with a 2-3 minute highlight reel delivered within 48 hours.",
+    description: "Single-camera coverage with a polished 2-3 minute highlight reel.",
     features: [
       "Single-camera operator (4-6 hours)",
       "Wireless audio for speeches",
       "2-3 minute highlight reel",
       "Social media cutdowns (30-60 sec)",
-      "48-hour turnaround",
+      "Delivered within 2-3 weeks",
       "Web-optimized delivery",
       "Suited to galas and community events",
     ],
@@ -66,15 +65,14 @@ const packages = [
   },
   {
     name: "Full Coverage",
-    price: "$3,500",
-    description: "Multi-camera event coverage with comprehensive documentation and fast turnaround.",
+    description: "Multi-camera event coverage with comprehensive documentation.",
     features: [
       "2-camera multi-cam setup",
       "Professional wireless audio system",
       "Full event capture (up to 8 hours)",
       "5-7 minute documentary-style edit",
       "Highlight reel + social cutdowns",
-      "1-week turnaround",
+      "Delivered within 2-3 weeks",
       "RAW footage archive included",
       "Ideal for conferences and major events",
     ],
@@ -84,14 +82,12 @@ const packages = [
   },
   {
     name: "Documentary Event Film",
-    price: "Custom",
     description: "Comprehensive storytelling approach treating your event as a documentary subject. The right fit for annual conferences and milestone celebrations.",
     features: [
       "3-camera setup with roaming operators",
       "Pre-event interviews and b-roll",
       "Attendee testimonials and reactions",
       "10-15 minute documentary film",
-      "Same-day highlights option",
       "Custom editing and narrative structure",
       "Distribution strategy consultation",
       "Multi-day events supported",
@@ -120,7 +116,7 @@ const processSteps = [
   },
   {
     title: "Post-Production",
-    duration: "48 hours to 2 weeks",
+    duration: "2-3 weeks",
     description: "Editing, color grading, audio mixing, and delivery in multiple formats (highlight reel, full coverage, social cutdowns).",
   },
 ];
@@ -128,16 +124,12 @@ const processSteps = [
 // FAQ
 const faqQuestions = [
   {
-    question: "Can you provide same-day highlights?",
-    answer: "Yes! For an additional fee, we can deliver a 60-90 second highlight reel on-site at the end of your event. This requires advance planning and typically works best for conferences or galas where we can set up a dedicated editing station. Full highlight reels (2-3 minutes) are typically delivered within 48 hours."
+    question: "How quickly will we get our video?",
+    answer: "Standard delivery is 2-3 weeks after your event for all packages. If you have a hard deadline — a follow-up campaign, a donor report, a board meeting — tell us during planning and we'll build the schedule around it."
   },
   {
     question: "How many cameras do you recommend?",
     answer: "It depends on the event. Single-camera works well for small gatherings or simple stage coverage. Two cameras are ideal for conferences (one wide, one close-up). Three cameras provide comprehensive coverage for large events with multiple speakers, panel discussions, or audience reactions. We'll recommend the right setup during planning."
-  },
-  {
-    question: "Do you handle live streaming?",
-    answer: "We partner with specialized live streaming providers for events requiring real-time broadcast. We can coordinate the integration of our filming with live streaming services, or we can refer you to trusted partners for streaming-only coverage."
   },
   {
     question: "What happens if our event runs longer than expected?",
@@ -165,7 +157,7 @@ const faqQuestions = [
 <DefaultLayout
   noindex={true}
   title="Event Videography Lethbridge | Conference & Corporate Event Filming | Coalbanks"
-  description="Professional event videography in Lethbridge and Southern Alberta. Conferences, galas, corporate events, and live streaming services."
+  description="Professional event videography in Lethbridge and Southern Alberta. Multi-camera coverage for conferences, galas, groundbreakings, and community events."
 >
   <BreadcrumbSchema items={[
     { name: "Home", url: "/" },
@@ -188,7 +180,7 @@ const faqQuestions = [
     <!-- Service Packages -->
     <ServiceTiers
       title="Event Coverage Packages"
-      description="Choose the level of coverage that matches your event's scope and timeline. All packages include professional multi-camera filming and fast turnaround."
+      description="Event coverage starts at $1,500. Choose the level of coverage that matches your event's scope — all packages include professional filming, audio, and edited deliverables."
       tiers={packages}
     />
 

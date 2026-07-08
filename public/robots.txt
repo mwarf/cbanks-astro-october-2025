@@ -3,9 +3,9 @@ Allow: /
 Disallow: /login
 Disallow: /signup
 Disallow: /api/
-Disallow: /services/
+# Draft service pages — remove as each page launches
+Disallow: /services/drone
+Disallow: /services/events
+Disallow: /services/photography
 
-# Crawl-delay for polite crawling
-Crawl-delay: 1
-
-Sitemap: https://www.coalbanks.com/sitemap-index.xml
+Sitemap: https://coalbanks.com/sitemap-index.xml

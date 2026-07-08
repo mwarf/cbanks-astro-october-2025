@@ -12,7 +12,10 @@ import { ServiceFAQ } from "@/components/blocks/service-faq";
 import ServiceCTA from "@/components/blocks/ServiceCTA.astro";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema.astro";
 
-// Service Page JSON-LD
+import { BUSINESS_INFO } from "@/consts";
+
+// Service Page JSON-LD. Provider references the LocalBusiness node emitted by
+// BaseHead on every page, so business details live in one place.
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -20,35 +23,22 @@ const serviceSchema = {
   "name": "Corporate Video Production Services",
   "description": "Documentary-style film production for businesses including brand documentaries, recruitment films, and stakeholder videos.",
   "provider": {
-    "@type": "VideoProductionService",
-    "name": "Coalbanks Creative Inc.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Lethbridge",
-      "addressRegion": "AB",
-      "addressCountry": "CA"
-    }
+    "@id": `${BUSINESS_INFO.url}/#business`,
   },
   "areaServed": {
     "@type": "AdministrativeArea",
     "name": "Southern Alberta"
   },
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Story Package",
-      "price": "8000",
-      "priceCurrency": "CAD",
-      "description": "3-5 minute finished film, single-day production"
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "CAD",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "minPrice": 8000,
+      "priceCurrency": "CAD"
     },
-    {
-      "@type": "Offer",
-      "name": "Brand Documentary",
-      "price": "15000",
-      "priceCurrency": "CAD",
-      "description": "8-15 minute documentary film, 2-3 days production"
-    }
-  ]
+    "description": "Documentary-style film production starting at $8,000 CAD"
+  }
 };
 
 // Hero Data
@@ -90,14 +80,13 @@ const serviceTypes = [
 const packages = [
   {
     name: "Story Package",
-    price: "$8,000",
     description: "For shorter-form content and focused, single-story projects.",
     features: [
       "1 week discovery process",
       "Single-day production shoot",
       "3-5 minute finished film",
-      "Basic color grading and sound design",
-      "2 rounds of revisions",
+      "Color grading and sound design",
+      "Revisions scoped during discovery",
       "Web-optimized delivery formats",
       "Suitable for single-story narratives",
     ],
@@ -106,7 +95,6 @@ const packages = [
   },
   {
     name: "Brand Documentary",
-    price: "$15,000",
     description: "Our signature offering. Documentary-style films that actually move the needle for your business.",
     features: [
       "1-2 weeks in-depth discovery",
@@ -114,7 +102,7 @@ const packages = [
       "8-15 minute documentary film",
       "Cinema-quality color grading",
       "Professional sound design and mix",
-      "Unlimited revisions",
+      "Revisions scoped during discovery",
       "Multiple format deliveries (web, social, broadcast)",
       "RAW footage archive included",
     ],
@@ -124,16 +112,13 @@ const packages = [
   },
   {
     name: "Custom Production",
-    price: "Custom",
     description: "Multi-film packages, series production, or specialized storytelling projects.",
     features: [
       "Custom discovery and planning timeline",
       "Multi-day or multi-location production",
       "Multiple deliverables (series, cutdowns, etc.)",
       "Advanced post-production workflow",
-      "Dedicated project manager",
       "Strategic distribution planning",
-      "Content licensing consultation",
       "Priority booking and scheduling",
     ],
     ctaText: "Get Custom Pricing",
@@ -203,7 +188,7 @@ const faqQuestions = [
   },
   {
     question: "What's included in the production process?",
-    answer: "Every project includes full discovery sessions, professional filming with cinema cameras (RED, Sony FX series), multi-cam setups where appropriate, cinema-quality color grading, professional sound design and mix, and multiple rounds of revisions. You'll receive the finished film in multiple formats optimized for web, social media, and presentations."
+    answer: "Every project includes full discovery sessions, professional filming with cinema cameras (RED, Sony FX series), multi-cam setups where appropriate, cinema-quality color grading, professional sound design and mix, and a revision process we scope together during discovery. You'll receive the finished film in multiple formats optimized for web, social media, and presentations."
   },
   {
     question: "Do you provide scripts or do we need to write them?",
@@ -215,11 +200,11 @@ const faqQuestions = [
   },
   {
     question: "What kind of results can I expect?",
-    answer: "Our films average a 73% completion rate (versus 37% industry average) because they don't sound like marketing. Clients report increased recruitment applications, stronger investor interest, improved employee engagement, and better brand recognition. We can discuss specific KPIs and measurement strategies during the discovery call."
+    answer: "People watch these films because they don't sound like marketing. Clients use them to attract the right hires, build trust with investors, and give their communities a reason to care. Every project starts by defining what success looks like for you, and we discuss how to measure it during the discovery call."
   },
   {
     question: "Do you offer ongoing video production services?",
-    answer: "Yes! Many clients start with a brand documentary and then engage us for ongoing content like quarterly updates, event coverage, or recruitment series. We offer retainer packages for clients who need regular video production throughout the year."
+    answer: "Many clients start with a brand documentary and come back for follow-up projects — event coverage, recruitment series, or annual updates. If you know you'll need video throughout the year, tell us during discovery and we'll plan the work (and the budget) around it."
   },
   {
     question: "How many projects do you take on at once?",
@@ -229,15 +214,13 @@ const faqQuestions = [
 ---
 
 <DefaultLayout
-  noindex={true}
   title="Corporate Video Production Lethbridge | Brand Documentaries | Coalbanks"
   description="Documentary-style corporate video production in Lethbridge, AB. Brand films, recruitment videos, and stakeholder communications starting at $8,000. Free discovery call."
 >
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <BreadcrumbSchema items={[
     { name: "Home", url: "/" },
-    { name: "Services", url: "/services/production" },
-    { name: "Video Production", url: "/services/production" }
+    { name: "Video Production Services", url: "/services/production" }
   ]} />
   <Background className="via-muted to-muted/80">
     <!-- Hero -->
@@ -262,7 +245,7 @@ const faqQuestions = [
     <!-- Service Packages -->
     <ServiceTiers
       title="Production Packages"
-      description="All packages include discovery, professional filming, and cinema-quality post-production. Choose the scope that fits your storytelling needs."
+      description="Projects start at $8,000. Every package includes discovery, professional filming, and cinema-quality post-production — final pricing depends on the scope we define together."
       tiers={packages}
     />
 

@@ -13,7 +13,11 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !page.includes("/services/"),
+      // Draft service pages stay out of the sitemap until they launch.
+      filter: (page) =>
+        !["/services/drone", "/services/events", "/services/photography"].some(
+          (draft) => page.includes(draft),
+        ),
     }),
     react(),
   ],

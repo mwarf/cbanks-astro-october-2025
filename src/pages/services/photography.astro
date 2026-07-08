@@ -51,12 +51,12 @@ const photographyServices = [
 const technicalSpecs = [
   {
     label: "Camera System",
-    value: "Sony A7R series (61MP)",
+    value: "Full-frame mirrorless, high-resolution",
     icon: Camera,
   },
   {
     label: "Lenses",
-    value: "Prime & Zoom (16-200mm range)",
+    value: "Professional prime & zoom glass",
     icon: Camera,
   },
   {
@@ -75,7 +75,6 @@ const technicalSpecs = [
 const packages = [
   {
     name: "Headshot Session",
-    price: "$150/person",
     description: "Professional headshots for your team. For company websites, LinkedIn, and press kits.",
     features: [
       "On-location or studio setup",
@@ -83,7 +82,6 @@ const packages = [
       "Professional retouching",
       "High-resolution and web-optimized files",
       "2-3 final images per person",
-      "24-48 hour turnaround",
       "Volume discounts for teams of 10+",
     ],
     ctaText: "Get Custom Pricing",
@@ -91,7 +89,6 @@ const packages = [
   },
   {
     name: "Half-Day Session",
-    price: "$1,200",
     description: "4 hours of on-location photography. Ideal for team portraits, facility documentation, or product shoots.",
     features: [
       "4 hours on-location",
@@ -99,7 +96,6 @@ const packages = [
       "Professional lighting setup",
       "50-75 edited images",
       "High-res + web-optimized delivery",
-      "1 week turnaround",
       "Usage rights for commercial use",
     ],
     highlighted: true,
@@ -108,7 +104,6 @@ const packages = [
   },
   {
     name: "Full-Day Production",
-    price: "$2,500",
     description: "8 hours of comprehensive photography coverage for facilities, products, team portraits, and operations.",
     features: [
       "8 hours on-location",
@@ -116,8 +111,7 @@ const packages = [
       "Advanced lighting and composition",
       "150-200 edited images",
       "RAW files included",
-      "Priority editing (3-5 days)",
-      "Unlimited commercial usage rights",
+      "Full commercial usage rights",
       "Can integrate with video production",
     ],
     ctaText: "Get Custom Pricing",
@@ -126,6 +120,8 @@ const packages = [
 ];
 
 // Gallery Images
+// TODO(launch blocker): replace placeholder files with real portfolio images
+// before removing noindex from this page.
 const galleryImages = [
   { src: "/services/photography/gallery-01-placeholder.jpg", alt: "Professional corporate headshot", caption: "Corporate headshot with natural lighting" },
   { src: "/services/photography/gallery-02-placeholder.jpg", alt: "Environmental team portrait", caption: "Team member in their work environment" },
@@ -151,7 +147,7 @@ const faqQuestions = [
   },
   {
     question: "What's your turnaround time?",
-    answer: "Headshots are typically delivered within 24-48 hours. Half-day sessions within 1 week. Full-day productions within 1-2 weeks. Rush delivery is available for an additional fee if you have a specific deadline."
+    answer: "Turnaround depends on the scope of the session, and we'll confirm a delivery date when we book. If you have a hard deadline — a website launch, a press release, a hiring push — tell us up front and we'll plan around it."
   },
   {
     question: "What usage rights do we get with the images?",
@@ -160,10 +156,6 @@ const faqQuestions = [
   {
     question: "Can photography be combined with video production?",
     answer: "Absolutely! We often integrate photography with our video production services. This is especially efficient for facility tours, product launches, or comprehensive brand content projects. We can shoot both photo and video on the same production day."
-  },
-  {
-    question: "Do you provide hair and makeup services?",
-    answer: "We don't provide hair and makeup directly, but we can arrange professional services for an additional fee if you're doing executive portraits or large team sessions where a consistent look is important."
   },
   {
     question: "What happens if we need to reschedule?",
@@ -218,7 +210,7 @@ const faqQuestions = [
     <!-- Service Packages -->
     <ServiceTiers
       title="Photography Packages"
-      description="Flexible packages for headshots, team portraits, product photography, and facility documentation."
+      description="Headshots start at $150 per person. Flexible packages for team portraits, product photography, and facility documentation — pricing scales with scope."
       tiers={packages}
     />
 

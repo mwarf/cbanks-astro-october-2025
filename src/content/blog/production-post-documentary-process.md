@@ -4,8 +4,8 @@ description: "A behind-the-scenes look at Weeks 3-6 of our documentary process. 
 pubDate: "Nov 01 2025"
 image: "/images/blog-gear-table.webp"
 author: "Coalbanks Creative Inc."
+tags: ["process", "production", "post-production"]
 ---
-
 
 
 _Documentary-style filming and story-driven editing._
@@ -284,7 +284,6 @@ We build flexibility into the schedule. If weather impacts outdoor shooting, we 
 
 ---
 
-## The Bottom Line
 
 **Production and post-production are where your story comes to life.**
 
@@ -299,7 +298,7 @@ But they only work because of the discovery and planning we did in Weeks 1-2. Th
 ---
 
 **Read the full series:**
-- [Part 1: Why Our 4-6 Week Process Works →](/blog/why-4-week-documentary-process-works)
+- [Part 1: Why Our 4-6 Week Process Works →](/blog/documentary-film-process-4-weeks)
 - [Part 2: Discovery & Pre-Production →](/blog/discovery-preproduction-documentary-process)
 - Part 3: Production & Post (you are here)
 
@@ -311,6 +310,3 @@ Our documentary process delivers professional films in 4-6 weeks. Book a discove
 
 **[Start Your Project](/contact)**
 
----
-
-_Coalbanks Creative: Documentary-style films delivered in 4-6 weeks. 65+ films since 2019. 73% average completion rate._

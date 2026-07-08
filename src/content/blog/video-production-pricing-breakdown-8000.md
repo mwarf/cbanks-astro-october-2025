@@ -4,8 +4,8 @@ description: "See exactly where $8,000 goes in professional video production. Tr
 pubDate: "Nov 01 2025"
 image: "/images/blog-meeting-table.webp"
 author: "Coalbanks Creative Inc."
+tags: ["pricing", "process", "transparency"]
 ---
-
 
 
 _Documentary-style brand films that don't hide behind vague packages or "call for pricing."_
@@ -489,7 +489,6 @@ During our consultation, we'll:
 
 **No pressure. No generic packages. Just honest conversation about whether we're the right fit for your story.**
 
-## The Bottom Line
 
 **$8,00 breaks down like this:**
 
@@ -513,8 +512,3 @@ During our consultation, we'll:
 
 [Get Your Custom Quote →](/contact)
 
----
-
-_Coalbanks Creative: Documentary-style films for brands in Southern Alberta. Starting at $8,000. 65+ films delivered since 2019. 73% average completion rate. Transparent pricing, no hidden costs._
-
----

@@ -4,8 +4,8 @@ description: "Learn how to create video content that resonates with Southern Alb
 pubDate: "Nov 01 2025"
 image: "/images/blog-audience-engaged.webp"
 author: "Coalbanks Creative Inc."
+tags: ["southern-alberta", "strategy", "storytelling"]
 ---
-
 
 
 _Documentary-style brand films that understand the land, the values, and the stories that matter here._
@@ -357,7 +357,6 @@ During this conversation, we'll:
 
 **No corporate speak. Just honest conversation about stories worth telling.**
 
-## The Bottom Line
 
 **Southern Alberta audiences aren't looking for perfect marketing.**
 **They're looking for authentic stories about people doing meaningful work.**
@@ -374,8 +373,3 @@ When you create video content that respects our values, acknowledges our connect
 
 [Start the Conversation →](/contact)
 
----
-
-_Coalbanks Creative: Documentary-style films that understand Southern Alberta. Based in Lethbridge, serving communities across the region. 65+ films delivered since 2019. 73% average completion rate._
-
----

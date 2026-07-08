@@ -4,8 +4,8 @@ description: "Learn how energy companies use video to communicate complex projec
 pubDate: "Nov 01 2025"
 image: "/images/blog-solar-array-coulee.webp"
 author: "Coalbanks Creative Inc."
+tags: ["energy", "strategy", "stakeholders"]
 ---
-
 
 
 ## The $400 Million Project That Needed a 3-Minute Story
@@ -30,44 +30,13 @@ Traditional approaches fail because they treat complex projects like simple prod
 
 ## What Actually Works: The Data Behind Energy Video Success
 
-While energy companies struggle with communications, some are winning. The numbers tell a clear story:
+While most energy companies struggle with communications, the ones getting traction share three habits:
 
-### Case Study 1: Boston Solar's Modular Approach
+**Modular production.** One well-made 90-second brand film, cut into a month of 20-30 second social clips. You pay for the shoot once and publish for weeks — scale without shooting more.
 
-**Challenge**: Building brand awareness for solar installations
-**Strategy**: One 90-second brand video, edited into 20-30 second clips for social
-**Results**:
+**Consistency over perfection.** A sustainable cadence — one video a month, a few posts a week — builds more authority than a single showpiece followed by silence. Audiences trust companies they hear from regularly.
 
-- 494,119 impressions
-- 216,140 views (4% view rate)
-- 186% increase in organic website traffic
-- 37% increase in branded search clicks
-
-**Key Insight**: Modular video production—a single high-quality source video that creates multiple assets—delivers scale without sacrificing impact.
-
-### Case Study 2: SEM Power's Consistency Strategy
-
-**Challenge**: Establishing thought leadership in competitive energy market
-**Strategy**: One video per month, four social posts per week, two blog posts per month
-**Results**:
-
-- LinkedIn impressions: 2 → 3,294 (1,647x growth)
-- LinkedIn clicks: 0 → 82
-- Instagram engagement: 87% increase in likes, 170% increase in comments
-
-**Key Insight**: Consistency beats perfection. A sustainable content cadence builds authority over time.
-
-### Case Study 3: ARC Services' Safety-First Narrative
-
-**Challenge**: Building trust in nuclear power services
-**Strategy**: Four posts per week focused on safety, capability, and craft
-**Results**:
-
-- 156x increase in LinkedIn impressions
-- 149x increase in engagement
-- 3,923 clicks to their website
-
-**Key Insight**: When your industry demands trust, showing your expertise and safety culture isn't optional—it's everything.
+**Safety-first storytelling.** In an industry where trust is the product, showing your safety culture and craft on camera isn't a nice-to-have. It's the whole argument.
 
 ## Why Video Breaks Through the Energy Communication Barrier
 
@@ -175,9 +144,7 @@ Let's talk about what energy companies actually care about: measurable business 
 
 ### Lead Generation
 
-- Video-enabled landing pages increase conversion rates by up to 80%
-- Email campaigns with video see 300% higher click-through rates
-- B2B buyers who watch video are 64% more likely to buy
+- Pages and emails that lead with video consistently out-click and out-convert their text-only versions — we see it in our clients' analytics, and you'll see it in yours
 
 ### Stakeholder Engagement
 
@@ -230,6 +197,3 @@ The energy transition needs great stories. Let's tell yours.
 
 **Ready to see how video can transform your stakeholder communications?** [Book a free consultation →](/contact)
 
----
-
-_Coalbanks Creative specializes in documentary-style video production for energy, agriculture, technology, healthcare, and manufacturing companies throughout Southern Alberta. Our clients achieve 73% average video completion rates—nearly double the industry average—because we understand that authentic storytelling drives real business results._

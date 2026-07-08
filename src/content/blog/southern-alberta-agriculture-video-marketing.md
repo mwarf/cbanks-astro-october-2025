@@ -4,8 +4,8 @@ description: "Learn how Southern Alberta farms use video marketing to build trus
 pubDate: "Nov 01 2025"
 image: "/images/blog-sugar-beet.webp"
 author: "Coalbanks Creative Inc."
+tags: ["agriculture", "southern-alberta", "strategy"]
 ---
-
 
 
 ## From Fields to Followers: Why Agriculture's Oldest Industry Needs Its Newest Marketing Strategy
@@ -375,6 +375,3 @@ We've helped Southern Alberta farms create video content that not only showcases
 
 **Ready to turn your farm story into marketing success?** [Book a free consultation →](/contact)
 
----
-
-_Coalbanks Creative specializes in authentic documentary-style video production for agricultural businesses throughout Southern Alberta. Our clients achieve measurable growth in sales and brand recognition because we understand that showing the real farm story trumps telling the perfect agricultural marketing message._

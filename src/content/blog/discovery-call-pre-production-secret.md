@@ -1,19 +1,19 @@
 ---
-title: "The Discovery Call That Changes Everything: Our Pre-Production Secret"
+title: "The 90-Minute Call That Decides Whether Your Film Works"
 description: "Why do most video projects fail? They skip discovery. Learn how our pre-production process guarantees authentic stories that actually drive results."
 pubDate: "Nov 02 2025"
 slug: "discovery-call-pre-production-secret"
 image: "/images/blog-meeting-collaboration.webp"
 author: "Coalbanks Creative Inc."
+tags: ["process", "discovery", "pre-production"]
 ---
-
 
 
 _The most important work happens before we pick up a camera._
 
 ---
 
-Here's an uncomfortable truth: **79% of video agencies end up doing free work** because they didn't ask the right questions upfront.
+Here's an uncomfortable truth: most video projects drift into scope creep and free revisions because nobody asked the right questions upfront.
 
 We learned this the hard way. A manufacturing client hired us for a "recruitment video." Three weeks into production, we discovered they actually needed to solve a retention problem, not an attraction problem. We had to start over.
 
@@ -144,7 +144,6 @@ We'll send:
 
 This isn't take-it-or-leave-it. It's the start of a refinement conversation.
 
-## The Bottom Line
 
 Discovery isn't glamorous. It doesn't win awards. It's not the part that shows up in portfolio reels.
 
@@ -158,15 +157,6 @@ The discovery call is where that understanding gets built. It's the conversation
 
 ---
 
-## Related Posts
-
-**Dive deeper into our process:**
-- [Why Our 4-6 Week Process Works →](/blog/why-4-week-documentary-process-works)
-- [Discovery & Pre-Production Breakdown →](/blog/discovery-preproduction-documentary-process)
-- [How We Achieve a 73% Completion Rate →](/blog/video-completion-rate-73-percent)
-
----
-
 ## Ready to Start With Discovery?
 
 If you're a Southern Alberta business considering video content and want a partner who will understand your business before pitching concepts, let's talk.
@@ -175,8 +165,5 @@ Our discovery process is complimentary for qualified projects. You'll walk away 
 
 No pressure, no sales pitch. Just strategic conversation.
 
-**[Schedule a Discovery Call](/contact)** | **[Learn About Our Process](/about)**
+**[Schedule a Discovery Call](/contact)** | **[See the Full 4-6 Week Process](/blog/documentary-film-process-4-weeks)**
 
----
-
-_Coalbanks Creative Inc. is a video production company based in Lethbridge, Alberta, specializing in authentic storytelling for energy, manufacturing, agriculture, and nonprofit sectors. We believe the best videos start with the best questions._

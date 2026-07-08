@@ -1,11 +1,11 @@
 ---
-title: "From Idea to Impact in 4 Weeks: Our Documentary Film Process"
+title: "From Idea to Impact: Our 4-6 Week Documentary Film Process"
 description: "See how we deliver professional documentary-style films in 4-6 weeks. Our streamlined process from discovery to delivery."
 pubDate: "Nov 01 2025"
 image: "/images/blog-documentary-interview.webp"
 author: "Coalbanks Creative Inc."
+tags: ["process", "behind-the-scenes"]
 ---
-
 
 
 _Documentary-style brand films that deliver faster without cutting corners._
@@ -672,7 +672,7 @@ At every phase, you know:
 
 ### "Can you do it faster?"
 
-**4 weeks is our minimum timeline for quality results.**
+**Four weeks is our minimum; most films take 4-6.**
 
 Why:
 
@@ -757,7 +757,6 @@ During this conversation, we'll:
 
 **No pressure. Just honest conversation about whether our approach fits your needs.**
 
-## The Bottom Line
 
 **Traditional video companies take 4-5 months.**
 
@@ -793,8 +792,3 @@ During this conversation, we'll:
 
 [Start Your Project →](/contact)
 
----
-
-_Coalbanks Creative: Documentary-style films delivered in 4-6 weeks. Starting at $8,00. 65+ films delivered since 2019. 73% average completion rate._
-
----

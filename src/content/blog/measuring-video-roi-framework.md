@@ -4,13 +4,14 @@ description: "Stop guessing. Use this 3-tier framework to measure actual video R
 pubDate: "Nov 02 2025"
 image: "/images/blog-top-down-creator-desk.webp"
 author: "Coalbanks Creative Inc."
+tags: ["roi", "measurement", "strategy"]
 ---
 
 "The video's great, but how do we know it's actually working?"
 
 We hear this on every discovery call. Business owners want proof—not just "it looks good."
 
-Here's the reality: **93% of video marketers report positive ROI** with an average 5:1 return. But knowing video _can_ work and proving _yours_ works are different things.
+Here's the reality: video can produce serious, measurable returns. But knowing video _can_ work and proving _yours_ works are different things.
 
 The difference? A proper measurement framework.
 
@@ -67,7 +68,7 @@ Here's how proper measurement works in practice:
 
 | Metric              | Result   | Benchmark          |
 | ------------------- | -------- | ------------------ |
-| Completion rate     | 89%      | 23% industry avg   |
+| Completion rate     | 89%      | 37% industry avg   |
 | Qualified inquiries | 47       | Mentioning video   |
 | Sales meetings      | 23       | From video viewers |
 | Closed revenue      | $127,000 | Direct attribution |
@@ -212,7 +213,7 @@ ROI = (Revenue Generated - Video Investment) / Video Investment × 100
 
 **Results (60 days):**
 
-- 89% completion rate (vs 23% industry average)
+- 89% completion rate (vs 37% industry average)
 - 47 qualified inquiries mentioning video
 - 23 sales meetings booked
 - $127,000 in closed deals directly attributed
@@ -404,7 +405,6 @@ Sometimes video legitimately doesn't deliver. Here's when:
 - Measuring brand awareness video with direct response metrics
 - Not giving video enough time to compound (most ROI happens months 3-12, not month 1)
 
-## The Bottom Line
 
 Video ROI is measurable. But measurement requires:
 
@@ -419,10 +419,3 @@ The companies seeing 300-700% ROI aren't lucky. They're systematic about measure
 
 [Book a discovery call](/contact) and we'll help you set up a measurement framework that proves ROI—or shows you what needs to change.
 
----
-
-**Related Resources:**
-
-- [Video Distribution Strategy Playbook](/blog/video-distribution-strategy-playbook)
-- [73% Completion Rate: How We Do It](/blog/video-completion-rate-73-percent)
-- [Documentary Film Process (4-6 Weeks)](/blog/documentary-film-process-4-weeks)

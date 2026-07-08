@@ -4,6 +4,7 @@ description: "Nervous about being filmed? You're not alone. Here's a practical g
 pubDate: "Dec 18 2025"
 image: "/images/blog-documentary-interview.webp"
 author: "Coalbanks Creative Inc."
+tags: ["production", "behind-the-scenes", "process"]
 ---
 
 _Forget the script. Ignore the lens. Just be you._
@@ -223,7 +224,6 @@ If you're asking your team to be on camera, set them up for success.
 - "We're going to start with some easy questions to warm up"
 - First question is always softball: "Tell me about your role here"
 
-## The Bottom Line
 
 The best moments in our documentaries aren't the polished, perfect sentences. They're the moments of real passion. The laugh after a joke. The thoughtful pause before a deep answer.
 

@@ -5,8 +5,8 @@ pubDate: "Nov 02 2025"
 slug: "hard-hats-handhelds-manufacturing-film-shoot"
 image: "/images/blog-trucking-setup.webp"
 author: "Coalbanks Creative Inc."
+tags: ["manufacturing", "behind-the-scenes", "production"]
 ---
-
 
 
 _Documentary-style filming in industrial environments—where safety meets storytelling._
@@ -279,8 +279,5 @@ If you're a Southern Alberta manufacturer and want to showcase your operations w
 
 We've filmed in factories, farms, refineries, and construction sites. We know how to navigate complexities, capture authenticity, and create content that makes your team proud.
 
-**[Schedule a Discovery Call](/contact)** | **[View Manufacturing Portfolio](/about)**
+**[Schedule a Discovery Call](/contact)** | **[View Manufacturing Portfolio](/portfolio)**
 
----
-
-_Coalbanks Creative Inc. specializes in video production for industrial environments across Southern Alberta. We believe great manufacturing stories deserve cinematography that matches the craftsmanship we're showcasing._

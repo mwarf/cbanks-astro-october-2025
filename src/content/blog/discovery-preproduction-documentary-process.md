@@ -4,15 +4,15 @@ description: "A detailed look at how we spend Weeks 1-2 finding your story and p
 pubDate: "Nov 01 2025"
 image: "/images/blog-field-interview.webp"
 author: "Coalbanks Creative Inc."
+tags: ["process", "discovery", "pre-production"]
 ---
-
 
 
 _Documentary-style films start with deep discovery—not cameras._
 
 ---
 
-This is Part 2 of our documentary process series. [Read Part 1: Why Our 4-6 Week Process Works →](/blog/why-4-week-documentary-process-works)
+This is Part 2 of our documentary process series. [Read Part 1: Why Our 4-6 Week Process Works →](/blog/documentary-film-process-4-weeks)
 
 Most video companies rush straight to production. We spend **2 weeks finding your story** first.
 
@@ -229,7 +229,6 @@ You'll have:
 
 ---
 
-## The Bottom Line
 
 **Discovery and pre-production are where great films begin.**
 
@@ -243,7 +242,7 @@ That's why our films get watched—and why our clients rarely need revisions.
 
 **Next in the series:** Production & Post-Production (coming soon)
 
-**Previous:** [Part 1: Why Our 4-6 Week Process Works →](/blog/why-4-week-documentary-process-works)
+**Previous:** [Part 1: Why Our 4-6 Week Process Works →](/blog/documentary-film-process-4-weeks)
 
 ---
 
@@ -253,6 +252,3 @@ Our discovery process is complimentary for qualified projects. You'll walk away 
 
 **[Schedule a Discovery Call](/contact)**
 
----
-
-_Coalbanks Creative: Documentary-style films delivered in 4-6 weeks. 65+ films since 2019. 73% average completion rate._

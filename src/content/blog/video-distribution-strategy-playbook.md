@@ -4,6 +4,7 @@ description: "Don't let your investment die on a hard drive. Here is a clear str
 pubDate: "Dec 19 2025"
 image: "/images/blog-distribution-strategy-video.webp"
 author: "Coalbanks Creative Inc."
+tags: ["distribution", "strategy", "roi"]
 ---
 
 _Production is only 50% of the work. Distribution is the other 50%._
@@ -348,7 +349,6 @@ Here's exactly when to distribute what:
 - Make it optional (never mandatory)
 - Recognize sharers (thank them publicly)
 
-## The Bottom Line
 
 Distribution isn't an afterthought. It's half the battle.
 

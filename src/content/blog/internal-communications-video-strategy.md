@@ -4,6 +4,7 @@ description: "Marketing isn't the only place for video. Discover how Southern Al
 pubDate: "Dec 20 2025"
 image: "/images/blog-safety-video.webp"
 author: "Coalbanks Creative Inc."
+tags: ["internal-comms", "strategy", "corporate-video"]
 ---
 
 _Your most important audience isn't your customer. It's your team._
@@ -255,7 +256,6 @@ You have two options:
 
 Whether DIY or professional, the goal is the same: clear, accurate, useful content your team will actually watch.
 
-## The Bottom Line
 
 Your employees are your most important audience. They're also the most expensive to replace.
 

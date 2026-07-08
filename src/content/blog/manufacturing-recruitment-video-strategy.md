@@ -1,11 +1,11 @@
 ---
-title: "The 67.6% Problem: Why Southern Alberta Manufacturers Can't Find Workers (And How Video Changes Everything)"
+title: "The Two-Thirds Problem: Why Manufacturers Can't Find Workers — And How Video Helps"
 description: "Learn how Southern Alberta manufacturers use authentic video content to solve the skills gap and attract quality candidates."
 pubDate: "Nov 01 2025"
 image: "/images/blog-candid-industrial-filming.webp"
 author: "Coalbanks Creative Inc."
+tags: ["manufacturing", "recruitment", "strategy"]
 ---
-
 
 
 ## The Hiring Crisis That's Crippling Growth
@@ -14,7 +14,7 @@ A Lethbridge precision manufacturer posts a millwright position. They receive 12
 
 This isn't a hiring problem. It's an expectations problem.
 
-Southern Alberta manufacturers face a stark reality: **67.6% report skills gaps**, yet traditional recruitment methods leave both employers and candidates guessing about fit, culture, and day-to-day reality. The result? High turnover, longer time-to-hire, and growing frustration on both sides.
+Southern Alberta manufacturers face a stark reality: **two in three report skills gaps**, yet traditional recruitment methods leave both employers and candidates guessing about fit, culture, and day-to-day reality. The result? High turnover, longer time-to-hire, and growing frustration on both sides.
 
 But some manufacturers are solving this crisis with a simple tool that changes everything: authentic video recruitment content.
 
@@ -65,49 +65,13 @@ Top manufacturing talent is in demand. They're not going to choose a company bas
 
 ## What Works: The Video Recruitment Revolution
 
-Forward-thinking manufacturers are discovering that authentic video content solves the expectations problem. The results are compelling:
+Forward-thinking manufacturers are converging on the same three plays:
 
-### Case Study 1: FMC Technologies' Employee Spotlight Strategy
+**Employee spotlights.** Short, regular videos of real workers talking about the job, their path, and what the work is actually like. When candidates see real people thriving in a role, they can judge fit honestly before applying — which raises application quality and cuts early quits.
 
-**Challenge**: High turnover in challenging roles
-**Solution**: Weekly employee spotlight videos showing real workers discussing their job satisfaction, career paths, and day-to-day responsibilities
+**Long-form profiles, short cuts.** A fuller employee story for your careers page, cut into short pieces for social. Better-informed candidates arrive with realistic expectations — and realistic expectations are what retention is made of.
 
-**Results**:
-
-- **300% increase in email click-through rates**
-- **40x higher sharing rate** than text content
-- **Significant reduction in early-stage resignations**
-- **Increased quality of applications** from candidates who understood the role
-
-**Key Insight**: When candidates see real people thriving in the role, they can honestly assess fit before applying.
-
-### Case Study 2: Stellantis Employee Series Approach
-
-**Challenge**: Attracting talent in competitive market
-**Solution**: Long-form employee profiles combined with short-form social content
-
-**Results**:
-
-- **High retention rates** among hires who viewed content
-- **Increased local community support** for manufacturing careers
-- **Improved employer brand recognition**
-- **Higher application quality** from better-informed candidates
-
-**Key Insight**: Employee testimonials build trust and set realistic expectations that reduce turnover.
-
-### Case Study 3: Plant Magazine's Facility Tour Best Practices
-
-**Challenge**: Conveying complex manufacturing environments
-**Solution**: Professional facility tours with expert commentary and safety highlights
-
-**Results**:
-
-- **157% increase in organic traffic** to recruitment pages
-- **80% improvement in landing page conversion rates**
-- **Reduced time-to-hire** by several weeks
-- **Higher offer acceptance rates**
-
-**Key Insight**: When candidates see the facility before applying, they arrive with realistic expectations and stronger commitment.
+**Facility tours.** Walk the floor on camera with someone who knows it. Manufacturing environments intimidate people who've never been inside one; showing the space removes the biggest unknown before the first interview.
 
 ## The 4 Video Types That Transform Manufacturing Recruitment
 
@@ -186,7 +150,7 @@ Professional video production is more accessible than ever, and the ROI from imp
 
 ## The Mobile-First Reality: Where Candidates Actually Look
 
-Here's a statistic that changes everything: **95% of job seekers use smartphones** for job research, and **6% of all applications** now come through mobile devices.
+Job seekers live on their phones. If your recruitment video isn't built for a small vertical screen, it isn't in the running.
 
 Your recruitment videos must be designed for mobile consumption:
 
@@ -249,8 +213,8 @@ The best manufacturing recruiters measure video performance beyond views. Focus 
 
 ### ROI Calculation Example
 
-**Investment**: $8,00 video production
-**Results**: 25% reduction in time-to-hire, 40% improvement in quality score
+**Investment**: $8,000 video production
+**Modeled outcome**: shorter time-to-hire, meaningfully better applicant quality
 **Savings**: Reduced recruiting costs, lower turnover, faster productivity
 **Payback Period**: 2-3 months
 
@@ -307,6 +271,3 @@ We've helped Southern Alberta manufacturers create recruitment videos that not o
 
 **Ready to solve your hiring challenges with video?** [Book a free consultation →](/contact)
 
----
-
-_Coalbanks Creative specializes in authentic documentary-style video production for manufacturing companies throughout Southern Alberta. Our clients achieve measurable improvements in recruitment outcomes because we understand that showing the real workplace trumps telling the perfect story._

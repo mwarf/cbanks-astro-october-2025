@@ -5,11 +5,9 @@ pubDate: "Nov 02 2025"
 slug: "nonprofit-storytelling-video-strategies-southern-alberta"
 image: "/images/blog-nonprofit-donation.webp"
 author: "Coalbanks Creative Inc."
+tags: ["nonprofit", "strategy", "storytelling"]
 ---
 
-
-
-_Coalbanks Creative Inc. | November 2, 2025_
 
 Southern Alberta nonprofits face unprecedented challenges:
 
@@ -135,34 +133,17 @@ This approach drives:
 
 **Expected Result:** Increased donor retention and upgrade rates
 
-## Real Results: Southern Alberta Food Bank Case Study
+## What a Realistic First Year Looks Like
 
-**The Challenge:**
+Here's the phased plan we'd sketch for a mid-size Southern Alberta nonprofit — illustrative numbers, scaled to a real budget:
 
-- Struggling to meet rising demand for food assistance
-- Declining volunteer base
-- Donor fatigue with traditional appeals
+**Months 1-2: Start small.** A $180 smartphone rig and four donor impact stories. The goal isn't polish — it's building the habit and learning what your audience responds to.
 
-**The Solution:**
+**Month 3: First professional piece.** A volunteer story (~$2,200). By now you know which stories land, so the budget goes where the evidence points.
 
-- Month 1-2: $180 smartphone setup, 4 donor impact stories
-- Month 3: $2,200 professional volunteer video
-- Month 4-6: $5,500 annual impact documentary
+**Months 4-6: The anchor film.** An annual impact documentary (~$5,500) that works your gala, your website, and your year-end appeal.
 
-**The Results:**
-
-- Total investment: $7,880
-- Total return: $47,000 in new donations
-- ROI: 497%
-- 67 new volunteers recruited (vs 12 previously)
-- 280% increase in email engagement
-
-**Key Insights:**
-
-- Started with smartphone videos to build confidence
-- Measured every metric and optimized based on performance
-- Focused on dignity and transformation in every story
-- Built a library of authentic content for ongoing use
+**Measure from day one:** email engagement on video sends versus text appeals, volunteer inquiries per story published, and donation pages reached from video links. Total first-year investment in this model: under $8,000 — less than many organizations spend on a single print campaign.
 
 ## Platform-Specific Strategies for Nonprofit Video
 
@@ -322,7 +303,6 @@ Plan next quarter based on proven results
 
 **Expected Result:** 497% ROI (Southern Alberta food bank benchmark)
 
-## The Bottom Line
 
 Your mission deserves to be seen. Your donors want to understand impact. Your community needs your story.
 
@@ -342,6 +322,3 @@ _Contact Coalbanks Creative to develop a video strategy specifically designed fo
 
 **About Coalbanks Creative**: We don't just create videos – we create measurable impact through authentic storytelling and data-driven optimization for Southern Alberta nonprofits.
 
----
-
-**SEO Keywords**: nonprofit video marketing, charitable giving Southern Alberta, donor engagement video, video fundraising strategies, nonprofit storytelling, Southern Alberta nonprofits

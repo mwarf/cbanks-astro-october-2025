@@ -4,8 +4,8 @@ description: "We achieve a 73% completion rate (vs 37% industry avg). Learn the 
 pubDate: "Nov 01 2025"
 image: "/images/blog-university-setup.webp"
 author: "Coalbanks Creative Inc."
+tags: ["measurement", "roi", "storytelling"]
 ---
-
 
 
 _Documentary-style brand films that people actually watch — not because they have to, but because the story matters._
@@ -215,7 +215,6 @@ During this call, we'll:
 
 **No sales pitch. Just an honest conversation about whether documentary-style filmmaking makes sense for your goals.**
 
-## The Bottom Line
 
 **73% completion rate isn't a statistic.**
 **It's proof that people care about good stories.**
@@ -226,19 +225,7 @@ Your customers already have stories. We help you tell them in a way that makes p
 
 ---
 
-## Related Posts
-
-**Want to learn more about our process?**
-- [The Discovery Call That Changes Everything →](/blog/discovery-call-pre-production-secret)
-- [Why Our 4-6 Week Process Works →](/blog/why-4-week-documentary-process-works)
-- [Authentic Storytelling for Corporate Video →](/blog/authentic-storytelling-corporate-video)
-
----
-
 **Ready to tell a story people actually want to watch?**
 
 [Start Your Discovery Call →](/contact)
 
----
-
-_Coalbanks Creative: Documentary-style films for brands in Southern Alberta. 65+ films delivered since 2019. 73% average completion rate. 4-6 week timeline._

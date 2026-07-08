@@ -28,7 +28,12 @@ export const homepageFAQ: FAQItem[] = [
   {
     question: "What kind of results can I expect?",
     answer:
-      "Our films average a 73% completion rate (vs. 37% industry average) because they don't sound like marketing. Clients see increased engagement, better recruitment results, and stronger investor interest.",
+      "People watch these films because they don't sound like marketing. Clients use them to attract the right hires, build trust with investors, and give their communities a reason to care. We define what success looks like for you during discovery.",
+  },
+  {
+    question: "Where do you film?",
+    answer:
+      "We're based in Lethbridge and work across Southern Alberta — Medicine Hat, Taber, Cardston, and everywhere in between. We regularly travel within 300km of Lethbridge, including Calgary and Cranbrook.",
   },
 ];
 
@@ -51,6 +56,12 @@ export const homepageFAQCategories: FAQCategory[] = [
     title: "Results",
     questions: [
       homepageFAQ[3], // Results
+    ],
+  },
+  {
+    title: "Location",
+    questions: [
+      homepageFAQ[4], // Where we film
     ],
   },
 ];
@@ -98,12 +109,27 @@ export const fullFAQ: FAQCategory[] = [
       {
         question: "What kind of results can I expect?",
         answer:
-          "Our films average a 73% completion rate (vs. 37% industry average) because they don't sound like marketing. Clients see increased engagement, better recruitment results, and stronger investor interest.",
+          "People watch these films because they don't sound like marketing. Clients use them to attract the right hires, build trust with investors, and give their communities a reason to care. We define what success looks like for you during discovery.",
       },
       {
         question: "How do I measure the success of my film?",
         answer:
           "We track metrics like view completion, shares, and most importantly, business outcomes like inquiries, applications, or sales that result from the film.",
+      },
+    ],
+  },
+  {
+    title: "Location",
+    questions: [
+      {
+        question: "Where is Coalbanks based?",
+        answer:
+          "We're a Lethbridge videography company — our studio is at 1401 28 St N in Lethbridge, Alberta. We've been filming Southern Alberta businesses, municipalities, and nonprofits since 2019.",
+      },
+      {
+        question: "Do you travel outside Lethbridge?",
+        answer:
+          "Yes. We regularly film within 300km of Lethbridge — Medicine Hat, Taber, Cardston, Calgary, and Cranbrook are all in range. Travel fees may apply for projects outside the immediate area, and we'll spell that out in the quote.",
       },
     ],
   },

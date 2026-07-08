@@ -10,15 +10,11 @@ tags: ["agriculture", "southern-alberta", "strategy"]
 
 ## From Fields to Followers: Why Agriculture's Oldest Industry Needs Its Newest Marketing Strategy
 
-A Lethbridge family farm posts a 60-second video of their 4-year-old son operating a toy tractor while their father explains their succession plan. The video gets 14,000 views in 48 hours, generates 23 direct inquiries about their CSA program, and leads to a feature in the Western Producer.
+Picture a Lethbridge family farm posting a 60-second video of their 4-year-old son on a toy tractor while his father explains the succession plan. Or a Cardston-area farmer running "Harvest 101" Instagram Stories through seeding season, showing daily progress and weather setbacks. Or a Coaldale organic farm going live from their booth during farmers market season to answer questions about how their food is grown.
 
-A Cardston-area farmer creates "Harvest 101" Instagram Stories during seeding season, showing daily progress and weather challenges. Their Instagram following grows from 200 to 2,400 in 3 months, and their direct-to-consumer grain sales increase 340%.
+None of that requires a big budget or a viral moment. It requires showing people what already happens on your farm — and that's exactly the kind of story Southern Alberta agriculture is sitting on.
 
-A Coaldale organic farm hosts a "Meet Your Farmer" Facebook Live during farmers market season. The stream reaches 8,000 local households, drives 180 people to their weekend market booth, and generates $4,200 in pre-orders for the following week.
-
-These aren't viral success stories from California or viral TikTok trends. **These are real results from Southern Alberta farms using video marketing to build authentic connections with their communities.**
-
-Welcome to the $12 billion opportunity that's transforming how Alberta agriculture reaches customers, builds trust, and grows revenue.
+It's also a serious commercial opportunity: Alberta's agri-food sector is a multi-billion-dollar industry, and the farms capturing more of that value are the ones consumers feel they know.
 
 ## The Agricultural Marketing Crisis (And Why Video Is the Answer)
 
@@ -40,12 +36,11 @@ Southern Alberta agriculture is facing a paradox in 2025. The region produces wo
 
 Agriculture is discovering what other industries learned years ago: **video marketing cuts through complexity, builds trust, and drives measurable results.**
 
-Here's what the data shows:
+Why it works for farms specifically:
 
-- **Video generates 12x higher engagement** than static content in agriculture
-- **Farms using video-first tactics report double and triple-digit gains** in local sales, event registrations, and online orders
-- **Farm Journal's crop tour content generated 14 million views** with 4.65% conversion rates
-- **Agricultural video campaigns show $5-$11 cost per conversion** when executed properly
+- **Video shows practices that are hard to explain in text** — soil health, animal care, water use — in a way consumers actually believe
+- **It compounds**: a season of short updates builds a following that a single brochure never will
+- **It travels**: the same footage works on your website, at a trade show, and in a grant or buyer pitch
 
 ## The Southern Alberta Agricultural Advantage
 
@@ -84,7 +79,7 @@ Show your farm's capabilities, scale, and sophistication.
 - **Equipment Demonstrations**: Highlight precision agriculture and technology
 - **Behind-the-Scenes Processing**: Show food safety and quality control
 
-**Real Success Story**: A Vauxhall-area potato farmer created monthly drone footage showing crop progression. The series generated 250,00 total views and led to a feature on CTV News, dramatically improving brand recognition.
+**Why this works**: Monthly drone footage of crop progression turns a growing season into a story people can follow. It's also the kind of visual local media loves to pick up — one good aerial sequence can carry a news feature.
 
 **Production Tips**:
 
@@ -103,7 +98,7 @@ Put faces to your farming operation and build personal connections.
 - "How has your farm operation evolved over the years?"
 - "What would you want consumers to know about your crops?"
 
-**Real Success Story**: A Butte family farm created monthly farmer spotlights featuring different family members discussing their roles. The series generated 89% higher engagement than standard farm updates and led to a 200% increase in farm gate sales.
+**Why this works**: A monthly spotlight featuring different family members gives your audience someone to root for. People buy from farms they feel they know, and faces build that faster than fields do.
 
 **Production Tips**:
 
@@ -122,7 +117,7 @@ Teach consumers about agriculture while showcasing your expertise.
 - **Quality Control Processes**: "From field to table: our food safety standards"
 - **Technology Showcases**: "How precision agriculture improves yields"
 
-**Real Success Story**: A Lethbridge-area grain farmer created "Field Science" educational videos explaining crop rotation, soil health, and sustainable farming practices. The series generated 156,000 total views and led to speaking invitations at agricultural conferences.
+**Why this works**: A recurring educational series — crop rotation, soil health, why you do what you do — positions you as the credible voice on your own practices. That authority pays off with consumers, buyers, and industry peers alike.
 
 **Production Tips**:
 
@@ -141,7 +136,7 @@ Drive attendance to farm events, u-pick operations, and farm-to-table experience
 - **Live Q&A Sessions**: "Ask a farmer anything about our crops"
 - **Customer Testimonials**: "What visitors love about our farm experience"
 
-**Real Success Story**: A Fort Macleod-area pumpkin farm created autumn-themed video content featuring families enjoying their farm. The videos generated 340% increase in event attendance and $85,000 in additional revenue over harvest season.
+**Why this works**: Agritourism sells an experience, and video is the only medium that lets people preview one. Families deciding where to spend a Saturday will pick the farm they've already seen themselves at.
 
 **Production Tips**:
 
@@ -301,12 +296,9 @@ The best agricultural video marketing tracks beyond views to measure real busine
 - **Click-Through Rates**: Video-to-website conversion
 - **Social Growth**: Follower growth and community engagement
 
-### **ROI Calculation Example**
+### **How to Calculate Your ROI**
 
-**Investment**: $6,00 video production (4 videos per year)
-**Results**: 40% increase in agritourism attendance, 25% increase in direct sales
-**Revenue Impact**: $35,000 additional annual revenue
-**ROI**: 583% return on investment
+Take the annual revenue you can attribute to video — new direct sales, event tickets, orders that mention it — subtract what you spent producing it, and divide by that spend. Track it for a full season before judging: agricultural buying cycles are long, and the same video keeps working across multiple seasons.
 
 ## Common Agricultural Video Mistakes (Avoid These)
 

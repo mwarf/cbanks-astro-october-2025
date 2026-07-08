@@ -5,6 +5,7 @@ import { render } from 'astro:content';
 import BlogPost from '@/components/blocks/BlogPost.astro';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
+import { SITE_URL } from '@/consts';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -18,6 +19,24 @@ type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
 const { title, description, image, tags } = post.data;
 const { Content, headings } = await render(post);
+
+// BlogPosting structured data. Author/publisher reference the LocalBusiness
+// node emitted by BaseHead so each article is tied to the business entity.
+const postUrl = new URL(`/blog/${post.id}`, Astro.site).href;
+const articleSchema = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: title,
+	description,
+	...(image ? { image: new URL(image, Astro.site).href } : {}),
+	datePublished: post.data.pubDate.toISOString(),
+	dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+	author: { "@id": `${SITE_URL}/#business` },
+	publisher: { "@id": `${SITE_URL}/#business` },
+	mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+	...(tags.length > 0 ? { keywords: tags.join(", ") } : {}),
+};
+const safeArticleJson = JSON.stringify(articleSchema).replace(/</g, "\\u003c");
 
 // Fetch related posts (prioritize matching tags, then recency)
 const allPosts = await getCollection('blog');
@@ -36,6 +55,7 @@ const relatedPosts = allPosts
 
 ---
 <DefaultLayout title={title} description={description} image={image} ogType="article">
+	<script type="application/ld+json" set:html={safeArticleJson} />
 	<BreadcrumbSchema items={[
 		{ name: "Home", url: "/" },
 		{ name: "Blog", url: "/blog" },

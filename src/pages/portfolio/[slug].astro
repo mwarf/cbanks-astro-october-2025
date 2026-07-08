@@ -6,6 +6,8 @@ import { ArrowLeft } from "lucide-react";
 import { ProjectActions } from "@/components/blocks/project-actions";
 import { EpisodesSidebar } from "@/components/blocks/episodes-sidebar";
 import { projectFromEntry } from "@/lib/portfolio-utils";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema.astro";
+import { SITE_URL } from "@/consts";
 
 export async function getStaticPaths() {
   const entries = await getCollection('portfolio');
@@ -18,12 +20,36 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const project = projectFromEntry(entry);
 const { Content } = await render(entry);
+
+// VideoObject structured data — makes the film a crawlable video entity
+// (video rich-result eligible) tied to the LocalBusiness node from BaseHead.
+const videoSchema = project.videoUrl
+  ? {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: project.title,
+      description: project.description,
+      thumbnailUrl: new URL(project.image, Astro.site).href,
+      uploadDate: project.pubDate.toISOString(),
+      embedUrl: project.videoUrl,
+      publisher: { "@id": `${SITE_URL}/#business` },
+    }
+  : null;
+const safeVideoJson = videoSchema
+  ? JSON.stringify(videoSchema).replace(/</g, "\\u003c")
+  : null;
 ---
 
 <DefaultLayout
   title={project.title}
   description={project.description}
 >
+  {safeVideoJson && <script type="application/ld+json" set:html={safeVideoJson} />}
+  <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Portfolio", url: "/portfolio" },
+    { name: project.title, url: `/portfolio/${project.id}` }
+  ]} />
   <div class="relative min-h-screen">
     {/* Hero Section */}
     <div class="relative h-[70vh] w-full overflow-hidden bg-black">

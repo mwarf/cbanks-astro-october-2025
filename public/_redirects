@@ -1,2 +1,10 @@
+# Consolidate crawl signals on the apex domain (www must be attached to the
+# Pages project as a custom domain for this to fire).
+https://www.coalbanks.com/* https://coalbanks.com/:splat 301
+
 /blog/why-4-week-documentary-process-works /blog/documentary-film-process-4-weeks 301
 /blog/why-4-week-documentary-process-works/ /blog/documentary-film-process-4-weeks 301
+
+# Old portfolio URL that contained a space (renamed July 2026)
+/portfolio/harnarayan-singh-peace%20patron /portfolio/harnarayan-singh-peace-patron 301
+/portfolio/harnarayan-singh-peace%20patron/ /portfolio/harnarayan-singh-peace-patron 301

@@ -3,13 +3,14 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+// "Contact" is intentionally absent: the "Start a Project" CTA beside the
+// nav links goes to /contact, and a duplicate link crowds the pill.
 const ITEMS = [
   { label: "Services", href: "/services/videography" },
   { label: "About", href: "/about" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const { pathname = "" } = Astro.props;

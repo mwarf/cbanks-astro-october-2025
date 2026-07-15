@@ -3,7 +3,7 @@ title: "Where the Story Comes Together: Inside Our Editing Suite"
 description: "What actually happens in post-production — and why a 3-minute film takes 40-70 hours to edit. A transparent walk through our editing workflow."
 pubDate: "Nov 02 2025"
 slug: "where-story-comes-together-editing-suite"
-image: "/images/blog-edit-suite.webp"
+image: "/images/blog-bts-dual-monitor-review.webp"
 author: "Coalbanks Creative Inc."
 tags: ["post-production", "behind-the-scenes", "process"]
 ---

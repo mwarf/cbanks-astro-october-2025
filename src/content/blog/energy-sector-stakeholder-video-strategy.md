@@ -2,7 +2,7 @@
 title: "From Complexity to Clarity: How Energy Companies Use Video to Win Stakeholder Buy-In"
 description: "Learn how energy companies use video to communicate complex projects to multiple stakeholders and secure project approvals."
 pubDate: "Nov 01 2025"
-image: "/images/blog-solar-array-coulee.webp"
+image: "/images/blog-bts-heavy-equipment-site.webp"
 author: "Coalbanks Creative Inc."
 tags: ["energy", "strategy", "stakeholders"]
 ---

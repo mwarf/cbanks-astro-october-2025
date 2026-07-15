@@ -2,7 +2,7 @@
 title: "From Idea to Impact: Our 4-6 Week Documentary Film Process"
 description: "See how we deliver professional documentary-style films in 4-6 weeks. Our streamlined process from discovery to delivery."
 pubDate: "Nov 01 2025"
-image: "/images/blog-documentary-interview.webp"
+image: "/images/blog-bts-field-production-tent.webp"
 author: "Coalbanks Creative Inc."
 tags: ["process", "behind-the-scenes"]
 ---

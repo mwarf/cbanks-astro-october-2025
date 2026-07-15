@@ -2,7 +2,7 @@
 title: "The Two-Thirds Problem: Why Manufacturers Can't Find Workers — And How Video Helps"
 description: "Learn how Southern Alberta manufacturers use authentic video content to solve the skills gap and attract quality candidates."
 pubDate: "Nov 01 2025"
-image: "/images/blog-candid-industrial-filming.webp"
+image: "/images/blog-bts-warehouse-interview.webp"
 author: "Coalbanks Creative Inc."
 tags: ["manufacturing", "recruitment", "strategy"]
 ---

@@ -2,7 +2,7 @@
 title: "Safety, Culture, and Training: Why Internal Video Matters"
 description: "Marketing isn't the only place for video. Discover how Southern Alberta's top industrial companies use video internally to improve safety culture, standardize training, and connect teams."
 pubDate: "Dec 20 2025"
-image: "/images/blog-safety-video.webp"
+image: "/images/blog-bts-hivis-crew-shop.webp"
 author: "Coalbanks Creative Inc."
 tags: ["internal-comms", "strategy", "corporate-video"]
 ---

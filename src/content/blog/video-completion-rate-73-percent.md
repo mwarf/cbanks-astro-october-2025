@@ -2,7 +2,7 @@
 title: "The Unskippable Stat: How We Achieve a 73% Video Completion Rate"
 description: "We achieve a 73% completion rate (vs 37% industry avg). Learn the documentary-style secrets to creating brand videos people actually watch."
 pubDate: "Nov 01 2025"
-image: "/images/blog-university-setup.webp"
+image: "/images/blog-bts-director-monitor.webp"
 author: "Coalbanks Creative Inc."
 tags: ["measurement", "roi", "storytelling"]
 ---

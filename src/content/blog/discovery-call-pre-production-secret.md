@@ -3,7 +3,7 @@ title: "The 90-Minute Call That Decides Whether Your Film Works"
 description: "Why do most video projects fail? They skip discovery. Learn how our pre-production process guarantees authentic stories that actually drive results."
 pubDate: "Nov 02 2025"
 slug: "discovery-call-pre-production-secret"
-image: "/images/blog-meeting-collaboration.webp"
+image: "/images/blog-bts-location-conversation.webp"
 author: "Coalbanks Creative Inc."
 tags: ["process", "discovery", "pre-production"]
 ---

@@ -11,7 +11,7 @@ tags:
     "community engagement",
     "Southern Alberta",
   ]
-image: "/images/blog-sample-council-chamber.webp"
+image: "/images/blog-bts-council-chambers.webp"
 ---
 
 When's the last time you voluntarily watched a municipal video all the way through?

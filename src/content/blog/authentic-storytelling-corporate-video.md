@@ -2,7 +2,7 @@
 title: "Why Your Corporate Video Gets Skipped (And How to Fix It)"
 description: "Most corporate videos get made, approved, and forgotten. Here's what documentary-style storytelling does differently — and how to find the story worth telling."
 pubDate: "Nov 02 2025"
-image: "/images/blog-corporate-interview.webp"
+image: "/images/blog-bts-lodge-interview.webp"
 author: "Coalbanks Creative Inc."
 tags: ["storytelling", "process", "corporate-video"]
 ---

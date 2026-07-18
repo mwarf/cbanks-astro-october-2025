@@ -30,7 +30,7 @@ The gap between "pretty video" and "effective video" is closed during discovery.
 Here's what goes wrong when companies skip it:
 
 ### The Assumption Trap
-The client says "recruitment video" and the agency assumes they know what that means. But a recruitment video for welders looks completely different than one for engineers. Seasonal timing matters for agriculture. Regulatory compliance is existential for energy companies.
+The client says "recruitment video" and the agency assumes they know what that means. But a [recruitment video](/services/production) for welders looks completely different than one for engineers. Seasonal timing matters for agriculture. Regulatory compliance is existential for energy companies.
 
 ### The Feature Fallacy
 Clients lead with what they want to show (new equipment, facility tour) rather than what they need to achieve (reduce time-to-hire by 30%, increase qualified applicants). Features are easy to discuss. Outcomes require deeper conversation.

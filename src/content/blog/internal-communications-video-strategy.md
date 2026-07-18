@@ -126,7 +126,7 @@ Internal videos need **clarity**.
 - The audio _does_ need to be crisp.
 - The information _does_ need to be accurate.
 
-This often means internal video production is faster and more cost-effective than marketing collateral. It's a utility tool, not a vanity project.
+This often means internal [video production](/services/production) is faster and more cost-effective than marketing collateral. It's a utility tool, not a vanity project.
 
 ## What Internal Video Actually Costs
 

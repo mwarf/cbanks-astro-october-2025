@@ -233,4 +233,4 @@ So take a breath. Trust the crew. And just tell your story.
 
 ---
 
-**Planning a shoot?** [Share this guide with your team](/contact) to help them get ready.
+**Planning a shoot?** Share this guide with your team to help them get ready — or explore our [Lethbridge videography services](/services/videography) if you're still picking a crew.

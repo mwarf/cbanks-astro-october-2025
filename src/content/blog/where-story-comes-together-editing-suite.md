@@ -8,7 +8,7 @@ author: "Coalbanks Creative Inc."
 tags: ["post-production", "behind-the-scenes", "process"]
 ---
 
-Let me show you something most video production companies won't.
+Let me show you something most [video production companies](/services/production) won't.
 
 **Raw interview clip (32 seconds):** A manufacturing manager talking about company culture — but there's a 4-second pause mid-sentence while he searches for words. He says "um" three times. A forklift beeps loudly in the background. The lighting throws harsh shadows under his eyes. He stumbles over "precision" and restarts the sentence. His shirt collar is slightly crooked.
 

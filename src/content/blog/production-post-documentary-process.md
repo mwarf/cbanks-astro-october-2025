@@ -289,7 +289,7 @@ We build flexibility into the schedule. If weather impacts outdoor shooting, we 
 
 But they only work because of the discovery and planning we did in Weeks 1-2. That's why we never skip those phases—they're the foundation that makes efficient production possible.
 
-**Documentary-style filming** captures authentic moments instead of staged setups.
+**[Documentary-style filming](/services/videography)** captures authentic moments instead of staged setups.
 
 **Story-driven editing** creates films people want to watch instead of corporate videos they skip.
 

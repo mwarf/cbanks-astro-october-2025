@@ -320,5 +320,5 @@ Start with one authentic beneficiary story this month. The ROI will prove itself
 
 _Contact Coalbanks Creative to develop a video strategy specifically designed for your nonprofit's mission and budget._
 
-**About Coalbanks Creative**: We don't just create videos – we create measurable impact through authentic storytelling and data-driven optimization for Southern Alberta nonprofits.
+**About Coalbanks Creative**: We don't just create videos – we create measurable impact through authentic storytelling and data-driven optimization for Southern Alberta nonprofits. Learn more about our [documentary video production services](/services/production).
 

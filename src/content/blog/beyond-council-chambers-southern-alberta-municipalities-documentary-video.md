@@ -125,3 +125,5 @@ The municipalities that invest in authentic, well-produced documentary content w
 
 The ones that keep posting council chamber recordings will keep wondering why no one's watching.
 
+If your municipality is ready for more than meeting recordings, here's how our [documentary video production for Southern Alberta organizations](/services/production) works.
+

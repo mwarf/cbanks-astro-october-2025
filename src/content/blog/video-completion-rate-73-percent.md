@@ -169,7 +169,7 @@ Every great story follows a pattern. We use the hero's journey adapted for brand
 
 ### For HR Leaders
 
-- **Recruitment videos** that actually attract candidates
+- **[Recruitment videos](/services/production)** that actually attract candidates
 - **Employee testimonials** people want to share
 - **Company culture** shown, not told
 - **Retention rates** improve when employees are proud to represent you

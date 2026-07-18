@@ -23,7 +23,7 @@ This isn't a soundstage. This is a working factory floor with CNC machines, over
 
 And somewhere in this environment, we need to capture authentic moments that make potential employees think: "That's where I want to work."
 
-Welcome to manufacturing video production—where the story meets the reality of where stories actually happen.
+Welcome to [manufacturing video production](/services/production)—where the story meets the reality of where stories actually happen.
 
 ## Why Manufacturing Video is Different
 

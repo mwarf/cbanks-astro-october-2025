@@ -46,4 +46,4 @@ It doesn't require being unpolished — we shoot on cinema cameras and grade eve
 
 Your customers don't want to hear about your company. They want to see themselves in your stories. Make the film that shows them that, and you won't have to ask anyone to watch it twice — they'll send it to someone.
 
-Ready to find yours? [Start with a discovery call](/contact) — 1–2 weeks of asking better questions before a camera ever comes out.
+Ready to find yours? See how our [documentary-style video production](/services/production) works, then [start with a discovery call](/contact) — 1–2 weeks of asking better questions before a camera ever comes out.

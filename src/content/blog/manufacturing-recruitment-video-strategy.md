@@ -146,7 +146,7 @@ Modern manufacturing facilities offer compelling visual content—automated syst
 
 ### 4. **Cost-Effective Production**
 
-Professional video production is more accessible than ever, and the ROI from improved recruitment outcomes far exceeds production costs.
+[Professional video production](/services/production) is more accessible than ever, and the ROI from improved recruitment outcomes far exceeds production costs.
 
 ## The Mobile-First Reality: Where Candidates Actually Look
 

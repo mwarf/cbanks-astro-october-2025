@@ -342,7 +342,7 @@ Our communities are built on real relationships, genuine connections to place, a
 
 Your business is part of this region's growth, innovation, and community building. But those stories only resonate when they're told in a way that respects our values, our intelligence, and our connection to this place.
 
-Documentary-style filmmaking doesn't just tell your story—it shows how you fit into the larger narrative of Southern Alberta's continued success.
+[Documentary-style filmmaking](/services/videography) doesn't just tell your story—it shows how you fit into the larger narrative of Southern Alberta's continued success.
 
 **Ready to create video content that speaks Albertan?**
 

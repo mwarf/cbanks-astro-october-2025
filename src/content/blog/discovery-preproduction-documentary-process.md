@@ -8,7 +8,7 @@ tags: ["process", "discovery", "pre-production"]
 ---
 
 
-_Documentary-style films start with deep discovery—not cameras._
+_[Documentary-style films](/services/production) start with deep discovery—not cameras._
 
 ---
 

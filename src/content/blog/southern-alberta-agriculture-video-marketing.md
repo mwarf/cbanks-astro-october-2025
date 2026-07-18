@@ -363,7 +363,7 @@ Our approach combines:
 - **Seasonal Strategy**: Content that aligns with agricultural rhythms
 - **Multi-Platform Distribution**: Reach customers where they actually consume content
 
-We've helped Southern Alberta farms create video content that not only showcases their operations but drives measurable growth in direct sales, agritourism attendance, and brand recognition.
+We help Southern Alberta farms and agri-businesses tell their stories on camera — see our [video production for Southern Alberta businesses](/services/production).
 
 **Ready to turn your farm story into marketing success?** [Book a free consultation →](/contact)
 

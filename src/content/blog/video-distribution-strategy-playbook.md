@@ -199,7 +199,7 @@ From a single brand story video, here's what we create:
 
 **Real example:**
 
-A manufacturing client's 4-minute recruitment video became:
+A manufacturing client's 4-minute [recruitment video](/services/production) became:
 
 - 1 full video (website, YouTube)
 - 6 vertical clips (Instagram, TikTok)

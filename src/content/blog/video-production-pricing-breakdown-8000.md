@@ -1,6 +1,6 @@
 ---
-title: "Anatomy of an $8,000 Film: A Transparent Pricing Breakdown"
-description: "See exactly where $8,000 goes in professional video production. Transparent breakdown of discovery, production, and post-production costs."
+title: "How Much Does Video Production Cost in Alberta? Anatomy of an $8,000 Film"
+description: "What does professional video production cost in Alberta? A transparent, line-by-line breakdown of a real $8,000 documentary-style brand film — discovery, production, post, and profit."
 pubDate: "Nov 01 2025"
 image: "/images/blog-bts-cinema-camera-prep.webp"
 author: "Coalbanks Creative Inc."
@@ -11,6 +11,8 @@ tags: ["pricing", "process", "transparency"]
 _Documentary-style brand films that don't hide behind vague packages or "call for pricing."_
 
 ---
+
+**The short answer:** in Alberta, professional video production typically starts around $1,500 for event or aerial coverage, $8,000 for a [documentary-style story package](/services/production), and $15,000+ for a full brand documentary. What follows is the complete, line-by-line breakdown of where an $8,000 film budget actually goes.
 
 **Most video companies won't tell you this.**
 
